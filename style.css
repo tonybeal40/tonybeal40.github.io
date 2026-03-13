@@ -1037,7 +1037,19 @@ h1 { font-size: clamp(34px, 4.8vw, 60px); line-height: 1.04; margin: 0 0 16px; }
   width: 100%;
   max-width: 980px;
   border-radius: 16px;
-  border: 1px solid rgba(232, 204, 138, 0.25);
   display: block;
   margin: 4px 0 14px;
+}
+.resume-banner-cover {
+  border: 2px solid rgba(96, 224, 248, 0.35);
+  object-fit: cover;
+  object-position: center;
+  max-height: 290px;
+}
+.resume-banner-targets {
+  border: 2px solid rgba(232, 204, 138, 0.35);
+  object-fit: cover;
+  object-position: center 30%;
+  max-height: 230px;
+  filter: saturate(1.05) contrast(1.05);
 }
