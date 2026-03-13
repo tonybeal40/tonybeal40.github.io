@@ -71,6 +71,14 @@ img { display: block; max-width: 100%; }
   padding: 0 48px 80px;
 }
 
+.cin-hero-text {
+  max-width: 760px;
+  padding: 16px 18px;
+  border-radius: 14px;
+  background: linear-gradient(to right, rgba(5,8,16,.42), rgba(5,8,16,.18));
+  backdrop-filter: blur(2px);
+}
+
 .cin-overline {
   font-size: 11px; font-weight: 700; letter-spacing: .18em;
   text-transform: uppercase; color: var(--gold);
@@ -85,6 +93,7 @@ img { display: block; max-width: 100%; }
   line-height: .92;
   letter-spacing: -.03em;
   color: var(--white);
+  text-shadow: 0 3px 22px rgba(0,0,0,.55), 0 1px 2px rgba(0,0,0,.7);
   margin-bottom: 28px;
   animation: fadeUp .9s ease .35s both;
 }
