@@ -18,51 +18,91 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css?v=20260313-sprint5" />
+  <link rel="stylesheet" href="style.css?v=20260313-sprint6" />
 </head>
 <body>
+  <!-- animated particle canvas -->
+  <canvas id="bgCanvas" aria-hidden="true"></canvas>
+
   <main class="site">
-    <section class="hero reveal">
+
+    <!-- ── HERO ── -->
+    <section class="hero hero-animate">
       <div class="hero-copy">
         <p class="eyebrow">Revenue Systems • Business Development • Sales Operations</p>
-        <h1>RevOps + BizDev Leadership<br/>That Turns Strategy Into<br/>Pipeline and Interviews</h1>
-        <p class="lede">15+ years turning commercial strategy into measurable pipeline. Recruiter-ready, operator-led, execution-first.</p>
-        <div class="proof-strip" aria-label="Career proof points">
+        <h1 class="hero-headline">
+          <span class="line-reveal">RevOps + BizDev</span>
+          <span class="line-reveal delay-a">Leadership That Turns</span>
+          <span class="line-reveal delay-b gradient-text">Strategy Into Pipeline</span>
+        </h1>
+        <p class="lede line-reveal delay-c">15+ years turning commercial strategy into measurable pipeline. Recruiter-ready, operator-led, execution-first.</p>
+        <div class="proof-strip line-reveal delay-d" aria-label="Career proof points">
           <span>$6M+ Pipeline Generated</span>
           <span>3,750+ Accounts Developed</span>
           <span>1,000+ Customers Acquired</span>
         </div>
-        <div class="cta-row">
-          <a class="btn btn-primary" href="mailto:tonybeal40@gmail.com?subject=Interview%20Request%20-%20Tony%20Beal">Book Interview Call</a>
-          <a class="btn" href="TonyBeal_Resume.pdf">Download Resume PDF</a>
-          <a class="btn" href="https://www.linkedin.com/in/tony-beal40/" target="_blank" rel="noopener">LinkedIn</a>
+        <div class="cta-row line-reveal delay-e">
+          <a class="btn btn-primary glow-btn" href="mailto:tonybeal40@gmail.com?subject=Interview%20Request%20-%20Tony%20Beal">
+            <span>Book Interview Call</span>
+          </a>
+          <a class="btn" href="resume.html">View Resumes</a>
+          <a class="btn" href="https://www.linkedin.com/in/tony-beal40/" target="_blank" rel="noopener">LinkedIn Profile ↗</a>
+          <a class="btn" href="https://www.linkedin.com/services/page/195844335b985238a0/" target="_blank" rel="noopener">LinkedIn Services ↗</a>
+          <a class="btn" href="https://www.linkedin.com/newsletters/7297852613121712128/" target="_blank" rel="noopener">Newsletter ↗</a>
         </div>
       </div>
       <div class="hero-visual">
-        <div id="photoCard" class="photo-card">
-          <img id="heroPhoto" src="headshot-final.png" alt="Tony Beal headshot" />
-          <div class="photo-fallback" aria-hidden="true">TB</div>
+        <div class="photo-ring-outer">
+          <div class="photo-ring-spin"></div>
+          <div id="photoCard" class="photo-card">
+            <img id="heroPhoto" src="headshot-final.png" alt="Tony Beal headshot" />
+            <div class="photo-fallback" aria-hidden="true">TB</div>
+          </div>
+        </div>
+        <div class="hero-name-badge">
+          <strong>Tony Beal</strong>
+          <span>Revenue · Growth · Operations</span>
         </div>
       </div>
     </section>
 
+    <!-- ── KPI COUNTERS ── -->
     <section class="kpis reveal delay-1">
-      <article><h3 class="count" data-target="15" data-suffix="+">0</h3><p>Years in B2B sales</p></article>
-      <article><h3 class="count" data-target="3750" data-suffix="+">0</h3><p>Accounts developed</p></article>
-      <article><h3 class="count" data-target="1000" data-suffix="+">0</h3><p>Customers acquired</p></article>
-      <article><h3 class="count" data-prefix="$" data-target="6" data-suffix="M+">0</h3><p>Pipeline generated</p></article>
+      <article>
+        <div class="kpi-icon">📈</div>
+        <h3 class="count" data-target="15" data-suffix="+">0</h3>
+        <p>Years in B2B sales</p>
+      </article>
+      <article>
+        <div class="kpi-icon">🏢</div>
+        <h3 class="count" data-target="3750" data-suffix="+">0</h3>
+        <p>Accounts developed</p>
+      </article>
+      <article>
+        <div class="kpi-icon">🤝</div>
+        <h3 class="count" data-target="1000" data-suffix="+">0</h3>
+        <p>Customers acquired</p>
+      </article>
+      <article>
+        <div class="kpi-icon">💰</div>
+        <h3 class="count" data-prefix="$" data-target="6" data-suffix="M+">0</h3>
+        <p>Pipeline generated</p>
+      </article>
     </section>
 
-    <section class="panel reveal delay-2">
+    <!-- ── TARGET ROLES ── -->
+    <section class="panel roles-panel reveal delay-2">
       <h2>Target Roles</h2>
-      <ul>
-        <li>Director of Business Development</li>
-        <li>RevOps Manager / Director</li>
-        <li>Sales Operations Leadership</li>
-        <li>Strategic / Enterprise Account Growth</li>
-      </ul>
+      <div class="role-chips">
+        <a class="role-chip" href="resume-revops.html">Director of Revenue Operations</a>
+        <a class="role-chip" href="resume-business-development.html">Director of Business Development</a>
+        <a class="role-chip" href="resume-sales-operations.html">Sales Operations Leadership</a>
+        <a class="role-chip" href="resume-business-development.html">Strategic / Enterprise Account Growth</a>
+      </div>
+      <a class="btn btn-primary" style="margin-top:20px;display:inline-block" href="resume.html">Explore All Resumes →</a>
     </section>
 
+    <!-- ── LINKEDIN AUTHORITY ── -->
     <section class="panel linkedin-panel reveal delay-2">
       <div class="linkedin-head">
         <h2>LinkedIn Authority Snapshot</h2>
@@ -90,11 +130,11 @@
 
       <div class="linkedin-media-row">
         <figure class="li-shot">
-          <img src="assets/linkedin-background-banner.png" alt="LinkedIn profile background banner" />
+          <img src="assets/linkedin-background-banner.png" alt="LinkedIn profile background banner" loading="lazy" />
           <figcaption>Brand profile banner</figcaption>
         </figure>
         <figure class="li-shot featured-post">
-          <img src="assets/linkedin-article-cover.png" alt="LinkedIn article cover visual" />
+          <img src="assets/linkedin-article-cover.png" alt="LinkedIn article cover visual" loading="lazy" />
           <figcaption>
             Featured article creative
             <a href="https://www.linkedin.com/in/tony-beal40/" target="_blank" rel="noopener">Read on LinkedIn ↗</a>
@@ -103,43 +143,109 @@
       </div>
     </section>
 
-    <section class="panel reveal delay-2">
-      <h2>Contact</h2>
-      <p><strong>Email:</strong> <a href="mailto:tonybeal40@gmail.com">tonybeal40@gmail.com</a></p>
-      <p><strong>Location:</strong> Greater St. Louis • Open to Remote/Hybrid</p>
+    <!-- ── CONTACT ── -->
+    <section class="panel contact-panel reveal delay-2">
+      <h2>Let's Talk</h2>
+      <p class="contact-sub">Available for interviews and introductory conversations now.</p>
+      <div class="contact-grid">
+        <a class="contact-card" href="mailto:tonybeal40@gmail.com?subject=Interview%20Request%20-%20Tony%20Beal">
+          <span class="contact-icon">✉️</span>
+          <strong>Email</strong>
+          <span>tonybeal40@gmail.com</span>
+        </a>
+        <a class="contact-card" href="https://www.linkedin.com/in/tony-beal40/" target="_blank" rel="noopener">
+          <span class="contact-icon">💼</span>
+          <strong>LinkedIn</strong>
+          <span>tony-beal40</span>
+        </a>
+        <div class="contact-card no-link">
+          <span class="contact-icon">📍</span>
+          <strong>Location</strong>
+          <span>Greater St. Louis · Remote / Hybrid</span>
+        </div>
+      </div>
     </section>
+
   </main>
 
   <script>
-    const revealObserver = new IntersectionObserver((entries)=>{
-      entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); revealObserver.unobserve(e.target);} });
-    },{threshold:0.15});
-    document.querySelectorAll('.reveal').forEach(el=>revealObserver.observe(el));
-
-    const countObserver = new IntersectionObserver((entries)=>{
-      entries.forEach(entry=>{
-        if(!entry.isIntersecting) return;
-        const el = entry.target;
-        const t = Number(el.dataset.target||0);
-        const p = el.dataset.prefix||'';
-        const s = el.dataset.suffix||'';
-        const start = performance.now();
-        const dur = 1200;
-        const run=(now)=>{
-          const x=Math.min((now-start)/dur,1);
-          const v=Math.floor(t*(1-Math.pow(1-x,3)));
-          el.textContent = p + v.toLocaleString() + s;
-          if(x<1) requestAnimationFrame(run);
-        };
-        requestAnimationFrame(run);
-        countObserver.unobserve(el);
+  // ── Particle canvas background ──
+  (function(){
+    const canvas = document.getElementById('bgCanvas');
+    const ctx = canvas.getContext('2d');
+    let W, H, particles = [];
+    function resize(){ W = canvas.width = window.innerWidth; H = canvas.height = window.innerHeight; }
+    resize(); window.addEventListener('resize', resize);
+    function rand(a,b){ return a + Math.random()*(b-a); }
+    for(let i=0;i<70;i++) particles.push({
+      x:rand(0,1), y:rand(0,1), r:rand(0.8,2.4),
+      vx:rand(-0.06,0.06), vy:rand(-0.04,0.04),
+      a:rand(0.2,0.6)
+    });
+    function draw(){
+      ctx.clearRect(0,0,W,H);
+      particles.forEach(p=>{
+        p.x += p.vx/W*10; p.y += p.vy/H*10;
+        if(p.x<0) p.x=1; if(p.x>1) p.x=0;
+        if(p.y<0) p.y=1; if(p.y>1) p.y=0;
+        ctx.beginPath();
+        ctx.arc(p.x*W, p.y*H, p.r, 0, Math.PI*2);
+        ctx.fillStyle = `rgba(96,165,250,${p.a})`;
+        ctx.fill();
       });
-    },{threshold:0.5});
-    document.querySelectorAll('.count').forEach(el=>countObserver.observe(el));
+      // draw faint connection lines
+      for(let i=0;i<particles.length;i++){
+        for(let j=i+1;j<particles.length;j++){
+          const dx=(particles[i].x-particles[j].x)*W;
+          const dy=(particles[i].y-particles[j].y)*H;
+          const d=Math.sqrt(dx*dx+dy*dy);
+          if(d<120){
+            ctx.beginPath();
+            ctx.moveTo(particles[i].x*W, particles[i].y*H);
+            ctx.lineTo(particles[j].x*W, particles[j].y*H);
+            ctx.strokeStyle=`rgba(96,165,250,${0.12*(1-d/120)})`;
+            ctx.lineWidth=0.6;
+            ctx.stroke();
+          }
+        }
+      }
+      requestAnimationFrame(draw);
+    }
+    draw();
+  })();
 
-    const heroPhoto = document.getElementById('heroPhoto');
-    const card = document.getElementById('photoCard');
-    heroPhoto.addEventListener('error',()=>card.classList.add('no-photo'));
+  // ── Reveal on scroll ──
+  const revealObserver = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); revealObserver.unobserve(e.target); }});
+  },{threshold:0.12});
+  document.querySelectorAll('.reveal').forEach(el=>revealObserver.observe(el));
+
+  // ── Animated counters ──
+  const countObserver = new IntersectionObserver((entries)=>{
+    entries.forEach(entry=>{
+      if(!entry.isIntersecting) return;
+      const el = entry.target;
+      const t = Number(el.dataset.target||0);
+      const p = el.dataset.prefix||'';
+      const s = el.dataset.suffix||'';
+      const dur = 1600;
+      const start = performance.now();
+      const run=(now)=>{
+        const x = Math.min((now-start)/dur, 1);
+        const ease = 1 - Math.pow(1-x, 4);
+        el.textContent = p + Math.floor(t*ease).toLocaleString() + s;
+        if(x<1) requestAnimationFrame(run);
+      };
+      requestAnimationFrame(run);
+      countObserver.unobserve(el);
+    });
+  },{threshold:0.4});
+  document.querySelectorAll('.count').forEach(el=>countObserver.observe(el));
+
+  // ── Hero photo error fallback ──
+  const heroPhoto = document.getElementById('heroPhoto');
+  const card = document.getElementById('photoCard');
+  heroPhoto.addEventListener('error',()=>card.classList.add('no-photo'));
   </script>
 </body>
 </html>
