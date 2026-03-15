@@ -216,9 +216,6 @@ a { text-decoration: none; color: inherit; }
   color: rgba(255,255,255,0.5);
   text-align: center;
 }
-  padding: 80px 0 60px;
-  overflow: hidden;
-}
 .p-hero-grid-overlay {
   position: absolute;
   inset: 0;
