@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Tony Beal | Revenue Operations &amp; AI Sales Systems Leader | Pipeline Generation | GTM Strategy</title>
-  <meta name="description" content="Tony Beal is a Revenue Operations leader specializing in AI-driven lead generation, sales pipeline management, CRM optimization, and GTM strategy. 15+ years B2B. $6M+ pipeline. Remote nationwide." />
+  <meta name="description" content="Tony Beal is a Revenue Operations leader specializing in AI-driven lead generation, sales pipeline management, CRM optimization, and GTM strategy. 15+ years B2B. $10M+ pipeline. Remote nationwide." />
   <meta name="keywords" content="Revenue Operations, RevOps, AI-Driven Lead Generation, Sales Pipeline Management, Go-to-Market Strategy, LinkedIn Sales Navigator, Apollo.io Prospecting, Revenue Growth Strategy, CRM Optimization, Sales Automation, Strategic Business Development, Pipeline Analytics, Sales Enablement, GTM Strategy, Forecast Modeling, Revenue Intelligence, Pipeline Forecasting, Data-Driven Sales Strategy, Sales Process Optimization, AI Workflow Design, Prompt Engineering, AI Pipeline Systems, AI-Assisted Prospecting, Workflow Optimization, AI Integration, Salesforce, HubSpot CRM, Sales Navigator, Enterprise Sales, Territory Development, Contract Negotiation, Deal Velocity, Quota Attainment, Account-Based Marketing, Demand Generation, Cross-Functional Leadership, Tony Beal, Revenue Operations Leader, St. Louis Missouri, Remote RevOps" />
   <link rel="canonical" href="https://tonybeal.net/" />
 
@@ -60,7 +60,7 @@
       {
         "@type": "Question",
         "name": "What results has Tony Beal produced?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Tony Beal has generated $6M+ in pipeline, targeted 3,700+ accounts, acquired 1,000+ customers, and built AI-powered prospecting systems using 40,000+ engineered prompts. He has 10,000+ LinkedIn followers and 22,899+ article views." }
+        "acceptedAnswer": { "@type": "Answer", "text": "Tony Beal has generated $10M+ in pipeline, targeted 3,700+ accounts, acquired 1,000+ customers, and built AI-powered prospecting systems using 40,000+ engineered prompts. He has 10,000+ LinkedIn followers and 22,899+ article views." }
       },
       {
         "@type": "Question",
@@ -323,6 +323,8 @@
       gap: 60px;
       align-items: center;
       width: 100%;
+      position: relative;
+      z-index: 1;
     }
 
     .hero-text {
@@ -340,12 +342,14 @@
     }
 
     .hero-title {
-      font-size: clamp(52px, 8vw, 96px);
+      font-size: clamp(32px, 5vw, 56px);
       font-weight: 900;
       color: #FFFFFF;
       line-height: 1.0;
       letter-spacing: -0.03em;
     }
+
+    .hero-eyebrow { font-size: 14px; font-weight: 600; color: #60A5FA; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 12px; }
 
     .hero-subtitle {
       font-size: 18px;
@@ -1385,6 +1389,45 @@
 
 /* --- SEO hidden text --- */
 .seo-text { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+
+/* Hero availability */
+.hero-availability { font-size: 13px; color: #64748B; margin-top: 16px; }
+.hero-availability strong { color: #34D399; }
+
+/* Hero photo caption */
+.hero-photo-caption { text-align: center; margin-bottom: 8px; }
+.hero-photo-caption strong { display: block; font-size: 16px; font-weight: 700; color: #fff; }
+.hero-photo-caption span { display: block; font-size: 12px; color: #64748B; line-height: 1.8; }
+
+/* Grid animation */
+.hero-grid-anim {
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle, rgba(37,99,235,0.15) 1px, transparent 1px);
+  background-size: 40px 40px;
+  animation: gridDrift 20s linear infinite;
+  pointer-events: none;
+  z-index: 0;
+}
+@keyframes gridDrift {
+  0% { background-position: 0 0; }
+  100% { background-position: 40px 40px; }
+}
+
+/* Ways Grid */
+.ways-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.ways-card { background: #F8FAFC; border: 1px solid #E2E8F0; border-radius: 16px; padding: 32px; display: flex; flex-direction: column; gap: 12px; transition: all 0.2s; }
+.ways-card:hover { transform: translateY(-4px); box-shadow: 0 16px 40px rgba(37,99,235,0.1); border-color: #BFDBFE; }
+.ways-card.ways-primary { background: linear-gradient(135deg, #EFF6FF, #F0F9FF); border-color: #BFDBFE; }
+.ways-icon { font-size: 32px; }
+.ways-card h3 { font-size: 18px; font-weight: 700; color: #1E293B; }
+.ways-card p { font-size: 14px; color: #64748B; line-height: 1.7; }
+.ways-card ul { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 6px; }
+.ways-card ul li { font-size: 13px; color: #475569; padding-left: 16px; position: relative; }
+.ways-card ul li::before { content: '→'; position: absolute; left: 0; color: #2563EB; font-weight: 700; }
+.ways-cta { margin-top: auto; font-size: 14px; font-weight: 600; color: #2563EB; text-decoration: none; }
+.ways-cta:hover { color: #1D4ED8; }
+@media (max-width: 900px) { .ways-grid { grid-template-columns: 1fr; } }
   </style>
 </head>
 <body>
@@ -1409,35 +1452,37 @@
        HERO
   ===================================================== -->
   <section class="hero">
+    <div class="hero-grid-anim" aria-hidden="true"></div>
     <div class="hero-container">
       <div class="hero-text">
-        <p class="overline">Revenue Operations · AI Pipeline Systems · Business Development</p>
-        <h1 class="hero-title">Tony Beal</h1>
+        <p class="overline">Revenue Operations | AI Sales Systems | Pipeline Generation | GTM Strategy</p>
+        <p class="hero-eyebrow">Tony Beal</p>
+        <h1 class="hero-title">Revenue Systems That Turn<br/><em>Target Accounts Into Pipeline</em></h1>
         <p class="hero-subtitle"><span id="typed-text"></span><span class="cursor">|</span></p>
-        <p class="hero-body">Helping companies nationwide build scalable pipeline through RevOps strategy, AI automation, and data-driven sales systems.</p>
+        <p class="hero-body">I build AI-driven revenue systems that generate pipeline, optimize sales operations, and help B2B companies grow faster — available for full-time roles or fractional RevOps projects.</p>
         <div class="hero-btns">
-          <a href="resume.html" class="btn btn-primary">View Resume</a>
-          <a href="https://www.linkedin.com/in/tony-beal40/" class="btn btn-outline" target="_blank">Connect on LinkedIn</a>
-          <a href="mailto:tonybeal40@gmail.com" class="btn btn-ghost">Email Tony</a>
+          <a href="resume.html" class="btn btn-primary btn-lg">Download Resume</a>
+          <a href="https://www.linkedin.com/in/tony-beal40/" class="btn btn-outline" target="_blank" rel="noopener">Connect on LinkedIn</a>
         </div>
+        <p class="hero-availability">Available for full-time roles or fractional RevOps projects · Remote Nationwide</p>
         <div class="hero-metrics">
           <div class="metric-card">
             <div>
               <span class="metric-number count" data-target="15">0</span><span class="metric-suffix">+</span>
             </div>
-            <span class="metric-label">Years B2B Sales</span>
+            <span class="metric-label">Years Revenue Leadership</span>
           </div>
           <div class="metric-card">
             <div>
-              <span class="metric-prefix">$</span><span class="metric-number count" data-target="6">0</span><span class="metric-suffix">M+</span>
+              <span class="metric-prefix">$</span><span class="metric-number count" data-target="10">0</span><span class="metric-suffix">M+</span>
             </div>
-            <span class="metric-label">Pipeline Generated</span>
+            <span class="metric-label">Sales Pipeline Generated</span>
           </div>
           <div class="metric-card">
             <div>
               <span class="metric-number count" data-target="3700">0</span><span class="metric-suffix">+</span>
             </div>
-            <span class="metric-label">Target Accounts</span>
+            <span class="metric-label">Target Accounts Built</span>
           </div>
           <div class="metric-card">
             <div>
@@ -1450,6 +1495,11 @@
       <div class="hero-photo-col">
         <div class="hero-photo-frame">
           <img src="headshot-hero.png" alt="Tony Beal Revenue Operations Leader" class="hero-photo" />
+        </div>
+        <div class="hero-photo-caption">
+          <strong>Tony Beal</strong>
+          <span>Revenue Operations Leader</span>
+          <span>AI Sales Systems Builder</span>
         </div>
         <div class="location-badge">📍 Greater St. Louis | Remote Nationwide</div>
       </div>
@@ -1599,8 +1649,8 @@
         <div class="timeline-item reveal">
           <div class="timeline-year">2023</div>
           <div class="timeline-content">
-            <h3>$6M+ Pipeline Generated</h3>
-            <p>Reached $6M+ in cumulative pipeline through AI-powered targeting, account intelligence systems, and systematic RevOps programs across multiple markets.</p>
+            <h3>$10M+ Pipeline Generated</h3>
+            <p>Reached $10M+ in cumulative pipeline through AI-powered targeting, account intelligence systems, and systematic RevOps programs across multiple markets.</p>
           </div>
         </div>
         <div class="timeline-item reveal">
@@ -1682,7 +1732,7 @@
       <p class="section-sub">Real results from systematic pipeline programs</p>
       <div class="results-grid">
         <div class="result-card">
-          <span class="result-number">$6M+</span>
+          <span class="result-number">$10M+</span>
           <span class="result-label">Pipeline Built</span>
           <p class="result-desc">Through AI-assisted targeting and systematic outbound programs</p>
         </div>
@@ -2217,12 +2267,62 @@
   </section>
 
   <!-- =====================================================
+       WAYS I HELP COMPANIES
+  ===================================================== -->
+  <section class="section section-white reveal">
+    <div class="container">
+      <p class="section-label">Engagement models</p>
+      <h2 class="section-title">Ways I Help Companies Grow</h2>
+      <p class="section-sub">Available for full-time leadership, fractional RevOps, or revenue system implementation projects</p>
+      <div class="ways-grid">
+        <div class="ways-card ways-primary">
+          <div class="ways-icon">🏢</div>
+          <h3>Full-Time Revenue Leadership</h3>
+          <p>Director-level Revenue Operations, Sales Operations, or Business Development leadership. Remote-first. Available immediately.</p>
+          <ul>
+            <li>Director of Revenue Operations</li>
+            <li>Sales Operations Leadership</li>
+            <li>Director of Business Development</li>
+            <li>RevOps Strategy &amp; AI Systems</li>
+          </ul>
+          <a href="resume.html" class="ways-cta">View Resumes →</a>
+        </div>
+        <div class="ways-card">
+          <div class="ways-icon">⚡</div>
+          <h3>Fractional RevOps</h3>
+          <p>Part-time embedded revenue operations leadership for scaling companies that need systems without a full-time hire.</p>
+          <ul>
+            <li>Pipeline system design</li>
+            <li>CRM architecture and optimization</li>
+            <li>Sales process mapping</li>
+            <li>Revenue reporting dashboards</li>
+          </ul>
+          <a href="mailto:tonybeal40@gmail.com?subject=Fractional RevOps Inquiry" class="ways-cta">Start a Conversation →</a>
+        </div>
+        <div class="ways-card">
+          <div class="ways-icon">🤖</div>
+          <h3>Revenue System Implementation</h3>
+          <p>Build AI-powered lead generation engines, outbound automation, and pipeline intelligence systems from scratch.</p>
+          <ul>
+            <li>AI prospecting engine setup</li>
+            <li>LinkedIn + Apollo targeting system</li>
+            <li>Outbound automation workflows</li>
+            <li>Pipeline intelligence dashboards</li>
+          </ul>
+          <a href="mailto:tonybeal40@gmail.com?subject=Revenue System Project" class="ways-cta">Discuss a Project →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================
        FINAL CTA
   ===================================================== -->
   <section class="section section-dark">
     <div class="cta-center">
-      <h2 class="section-title">Ready for Your Next Hire?</h2>
-      <p>Tony is available for remote opportunities across the US. Let's build revenue systems together.</p>
+      <h2 class="section-title">Ready to Build Revenue Systems<br/><em>That Actually Generate Pipeline?</em></h2>
+      <p style="color:#94A3B8;font-size:17px;max-width:560px;margin:0 auto 8px;">Tony is available for full-time remote leadership roles or fractional RevOps projects with companies nationwide.</p>
+      <p style="color:#64748B;font-size:14px;margin-bottom:32px;">Greater St. Louis · Remote Nationwide · Available Immediately</p>
       <div class="cta-btns">
         <a href="resume.html" class="btn btn-primary btn-lg">Download Resume</a>
         <a href="https://www.linkedin.com/in/tony-beal40/" class="btn btn-outline btn-lg" target="_blank">LinkedIn</a>
@@ -2248,7 +2348,7 @@
       </nav>
       <span class="footer-copy">© 2026 Tony Beal. All rights reserved.</span>
     </div>
-    <p class="seo-text">Tony Beal is a Revenue Operations Leader and AI Sales Systems expert based in Greater St. Louis, Missouri, available for remote opportunities nationwide across the United States. Specializing in Revenue Operations (RevOps), AI-Driven Lead Generation, Sales Pipeline Management, Go-to-Market Strategy, LinkedIn Sales Navigator, Apollo.io Prospecting, Revenue Growth Strategy, CRM Optimization, Sales Automation, Strategic Business Development, Pipeline Analytics, Sales Enablement, GTM Strategy, Forecast Modeling, Revenue Intelligence, Pipeline Forecasting, Data-Driven Sales Strategy, Sales Process Optimization, AI Workflow Design, Prompt Engineering, AI Pipeline Systems, AI-Assisted Prospecting, Enterprise Sales, Territory Development, Contract Negotiation, Deal Velocity, Quota Attainment, Account-Based Marketing (ABM), Demand Generation, Cross-Functional Leadership, Stakeholder Alignment, Salesforce, HubSpot CRM, Zapier, Excel, Tableau, Marketing Automation. Spearheaded AI-driven outbound system generating 1,400 qualified prospects. Orchestrated $6M+ pipeline through LinkedIn and Apollo-driven prospecting systems. Architected revenue intelligence dashboards across manufacturing, pharma, nutraceuticals, and food and beverage markets. Remote Revenue Operations Director. Remote Sales Operations Leadership. Remote Business Development Director.</p>
+    <p class="seo-text">Tony Beal is a Revenue Operations Leader and AI Sales Systems expert based in Greater St. Louis, Missouri, available for remote opportunities nationwide across the United States. Specializing in Revenue Operations (RevOps), AI-Driven Lead Generation, Sales Pipeline Management, Go-to-Market Strategy, LinkedIn Sales Navigator, Apollo.io Prospecting, Revenue Growth Strategy, CRM Optimization, Sales Automation, Strategic Business Development, Pipeline Analytics, Sales Enablement, GTM Strategy, Forecast Modeling, Revenue Intelligence, Pipeline Forecasting, Data-Driven Sales Strategy, Sales Process Optimization, AI Workflow Design, Prompt Engineering, AI Pipeline Systems, AI-Assisted Prospecting, Enterprise Sales, Territory Development, Contract Negotiation, Deal Velocity, Quota Attainment, Account-Based Marketing (ABM), Demand Generation, Cross-Functional Leadership, Stakeholder Alignment, Salesforce, HubSpot CRM, Zapier, Excel, Tableau, Marketing Automation. Spearheaded AI-driven outbound system generating 1,400 qualified prospects. Orchestrated $10M+ pipeline through LinkedIn and Apollo-driven prospecting systems. Architected revenue intelligence dashboards across manufacturing, pharma, nutraceuticals, and food and beverage markets. Remote Revenue Operations Director. Remote Sales Operations Leadership. Remote Business Development Director.</p>
   </footer>
 
   <script>
@@ -2301,9 +2401,10 @@
     const typedPhrases = [
       'Revenue Operations Leader',
       'AI Sales Systems Builder',
-      'Pipeline Infrastructure Expert',
-      'Remote RevOps Consultant',
-      'B2B Revenue Strategist'
+      'Pipeline Generation Expert',
+      'GTM Strategy Architect',
+      'Remote RevOps Operator',
+      'B2B Revenue Systems Builder'
     ];
     let tpIdx = 0, tpChar = 0, tpDeleting = false;
     const typedEl = document.getElementById('typed-text');
