@@ -397,20 +397,22 @@
     }
 
     .hero-photo-frame {
-      width: 280px;
-      height: 280px;
+      width: 320px;
+      height: 320px;
       border-radius: 50%;
-      border: 3px solid #2563EB;
-      box-shadow: 0 0 0 6px rgba(37,99,235,0.15), 0 0 48px rgba(37,99,235,0.3);
+      border: 4px solid #2563EB;
+      box-shadow: 0 0 0 8px rgba(37,99,235,0.12), 0 0 80px rgba(37,99,235,0.35), 0 32px 64px rgba(0,0,0,0.5);
       overflow: hidden;
       flex-shrink: 0;
+      position: relative;
     }
 
     .hero-photo {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      object-position: center top;
+      object-position: center 15%;
+      filter: contrast(1.05) brightness(1.02);
     }
 
     .location-badge {
@@ -523,9 +525,15 @@
 
     .tony-photo {
       width: 100%;
-      border-radius: 16px;
-      box-shadow: 0 16px 48px rgba(0,0,0,0.15);
+      border-radius: 20px;
+      box-shadow: 0 24px 64px rgba(37,99,235,0.18), 0 8px 24px rgba(0,0,0,0.12);
       object-fit: cover;
+      object-position: center top;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .tony-photo:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 32px 80px rgba(37,99,235,0.25), 0 12px 32px rgba(0,0,0,0.15);
     }
 
     .tony-bio {
@@ -1328,7 +1336,7 @@
       </div>
       <div class="hero-photo-col">
         <div class="hero-photo-frame">
-          <img src="headshot-final.png" alt="Tony Beal" class="hero-photo" />
+          <img src="headshot-hero.png" alt="Tony Beal Revenue Operations Leader" class="hero-photo" />
         </div>
         <div class="location-badge">📍 Greater St. Louis | Remote Nationwide</div>
       </div>
@@ -1401,7 +1409,7 @@
     <div class="container">
       <div class="meet-tony-grid">
         <div>
-          <img src="headshot-final.png" alt="Tony Beal" class="tony-photo" />
+          <img src="headshot-about.png" alt="Tony Beal AI Sales Systems and Revenue Operations Expert" class="tony-photo" />
         </div>
         <div class="tony-bio">
           <h2 class="section-title text-left">Meet Tony Beal</h2>
