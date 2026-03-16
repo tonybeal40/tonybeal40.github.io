@@ -40,6 +40,36 @@
   }
   </script>
 
+  <!-- FAQ Schema for Google -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What does Tony Beal specialize in?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Tony Beal specializes in Revenue Operations (RevOps), AI-powered sales pipeline generation, and B2B business development. He builds systematic lead generation and sales automation programs for manufacturing, industrial, pharmaceutical, and SaaS companies." }
+      },
+      {
+        "@type": "Question",
+        "name": "Is Tony Beal available for remote work?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. Tony Beal is based in Greater St. Louis, Missouri and is available for remote Revenue Operations and Business Development leadership roles nationwide across the United States." }
+      },
+      {
+        "@type": "Question",
+        "name": "What results has Tony Beal produced?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Tony Beal has generated $6M+ in pipeline, targeted 3,700+ accounts, acquired 1,000+ customers, and built AI-powered prospecting systems using 40,000+ engineered prompts. He has 10,000+ LinkedIn followers and 22,899+ article views." }
+      },
+      {
+        "@type": "Question",
+        "name": "What technology does Tony Beal use?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Tony uses Python, PowerShell, Vite, GitHub, LinkedIn Sales Navigator, Apollo.io, CRM platforms, and AI automation tools including custom prompt engineering workflows." }
+      }
+    ]
+  }
+  </script>
+
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -1274,9 +1304,68 @@
         justify-content: center;
       }
     }
+
+/* --- Scroll Progress Bar --- */
+#scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  width: 0%;
+  background: linear-gradient(90deg, #2563EB, #6366F1);
+  z-index: 9999;
+  transition: width 0.1s linear;
+}
+
+/* --- Typing Cursor --- */
+.cursor {
+  display: inline-block;
+  color: #2563EB;
+  animation: blink 1s infinite;
+  font-weight: 300;
+  margin-left: 2px;
+}
+@keyframes blink { 0%,50% { opacity: 1; } 51%,100% { opacity: 0; } }
+
+/* --- Portfolio Card Tilt --- */
+.portfolio-card { transition: transform 0.15s ease, box-shadow 0.2s ease; will-change: transform; }
+.portfolio-card:hover { box-shadow: 0 20px 48px rgba(37,99,235,0.25); }
+
+/* --- Results Timeline --- */
+.timeline { position: relative; max-width: 800px; margin: 0 auto; }
+.timeline::before { content: ''; position: absolute; left: 90px; top: 0; bottom: 0; width: 2px; background: linear-gradient(180deg, #2563EB, #6366F1, #2563EB); opacity: 0.3; }
+.timeline-item { display: flex; gap: 40px; margin-bottom: 48px; position: relative; }
+.timeline-year { min-width: 80px; font-family: 'JetBrains Mono', monospace; font-size: 14px; font-weight: 600; color: #2563EB; padding-top: 4px; text-align: right; }
+.timeline-content { background: #F8FAFC; border: 1px solid #E2E8F0; border-radius: 12px; padding: 20px 24px; flex: 1; position: relative; }
+.timeline-content::before { content: ''; position: absolute; left: -28px; top: 12px; width: 12px; height: 12px; background: #2563EB; border-radius: 50%; border: 3px solid #fff; box-shadow: 0 0 0 3px rgba(37,99,235,0.2); }
+.timeline-content h3 { font-size: 16px; font-weight: 700; color: #1E293B; margin-bottom: 8px; }
+.timeline-content p { font-size: 14px; color: #64748B; line-height: 1.7; margin: 0; }
+@media (max-width: 600px) {
+  .timeline::before { left: 0; }
+  .timeline-item { flex-direction: column; gap: 8px; padding-left: 20px; }
+  .timeline-year { text-align: left; }
+  .timeline-content::before { left: -26px; top: -28px; }
+}
+
+/* --- Testimonials --- */
+.testimonials-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.testimonial-card { background: #fff; border: 1px solid #E2E8F0; border-radius: 16px; padding: 28px; display: flex; flex-direction: column; gap: 20px; box-shadow: 0 4px 16px rgba(0,0,0,0.06); transition: transform 0.2s, box-shadow 0.2s; }
+.testimonial-card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(37,99,235,0.12); }
+.testimonial-quote { font-size: 15px; color: #475569; line-height: 1.75; font-style: italic; flex: 1; }
+.testimonial-quote::before { content: '\201C'; font-size: 48px; line-height: 0; color: #2563EB; opacity: 0.3; vertical-align: -0.5em; margin-right: 4px; }
+.testimonial-author { display: flex; align-items: center; gap: 12px; }
+.testimonial-avatar { width: 44px; height: 44px; border-radius: 50%; background: linear-gradient(135deg, #2563EB, #6366F1); color: #fff; display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 700; flex-shrink: 0; }
+.testimonial-author strong { display: block; font-size: 14px; color: #1E293B; }
+.testimonial-author span { font-size: 12px; color: #94A3B8; }
+@media (max-width: 900px) { .testimonials-grid { grid-template-columns: 1fr; } }
+
+/* --- SEO hidden text --- */
+.seo-text { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
   </style>
 </head>
 <body>
+<div id="scroll-progress"></div>
+
 
   <!-- =====================================================
        NAV
@@ -1300,7 +1389,7 @@
       <div class="hero-text">
         <p class="overline">Revenue Operations · AI Pipeline Systems · Business Development</p>
         <h1 class="hero-title">Tony Beal</h1>
-        <p class="hero-subtitle">Revenue Operations Leader | AI Sales Systems | Pipeline Infrastructure</p>
+        <p class="hero-subtitle"><span id="typed-text"></span><span class="cursor">|</span></p>
         <p class="hero-body">Helping companies nationwide build scalable pipeline through RevOps strategy, AI automation, and data-driven sales systems.</p>
         <div class="hero-btns">
           <a href="resume.html" class="btn btn-primary">View Resume</a>
@@ -1440,6 +1529,68 @@
                 <p>Implement systematic outbound sequences at scale.</p>
               </div>
             </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================
+       RESULTS TIMELINE
+  ===================================================== -->
+  <section class="section section-white reveal">
+    <div class="container">
+      <p class="section-label">Track record</p>
+      <h2 class="section-title">Career Results Timeline</h2>
+      <p class="section-sub">15+ years of building revenue systems and generating measurable pipeline</p>
+      <div class="timeline">
+        <div class="timeline-item reveal">
+          <div class="timeline-year">2008</div>
+          <div class="timeline-content">
+            <h3>Started B2B Sales Career</h3>
+            <p>Entered B2B sales in industrial and manufacturing markets. Built foundational skills in territory development, account management, and consultative selling.</p>
+          </div>
+        </div>
+        <div class="timeline-item reveal">
+          <div class="timeline-year">2013</div>
+          <div class="timeline-content">
+            <h3>Territory Expansion — 0 to 1,200+ Accounts</h3>
+            <p>Built a territory from scratch across manufacturing, pharma, and food &amp; beverage verticals. Developed systematic prospecting processes that generated consistent pipeline.</p>
+          </div>
+        </div>
+        <div class="timeline-item reveal">
+          <div class="timeline-year">2018</div>
+          <div class="timeline-content">
+            <h3>1,000+ Customers Acquired</h3>
+            <p>Surpassed 1,000 customers acquired through systematic outbound prospecting and consultative sales programs. Demonstrated repeatable pipeline generation at scale.</p>
+          </div>
+        </div>
+        <div class="timeline-item reveal">
+          <div class="timeline-year">2021</div>
+          <div class="timeline-content">
+            <h3>Launched AI-Powered Prospecting System</h3>
+            <p>Built first AI-assisted lead research and prospecting workflow. Reduced manual research time by 60% and increased account targeting capacity to 3,700+ accounts.</p>
+          </div>
+        </div>
+        <div class="timeline-item reveal">
+          <div class="timeline-year">2023</div>
+          <div class="timeline-content">
+            <h3>$6M+ Pipeline Generated</h3>
+            <p>Reached $6M+ in cumulative pipeline through AI-powered targeting, account intelligence systems, and systematic RevOps programs across multiple markets.</p>
+          </div>
+        </div>
+        <div class="timeline-item reveal">
+          <div class="timeline-year">2024</div>
+          <div class="timeline-content">
+            <h3>40,000+ AI Prompts Engineered</h3>
+            <p>Developed advanced AI prompt engineering library for sales research, outreach personalization, and revenue reporting automation. 10,000+ LinkedIn followers.</p>
+          </div>
+        </div>
+        <div class="timeline-item reveal">
+          <div class="timeline-year">2026</div>
+          <div class="timeline-content">
+            <h3>Available for Remote RevOps Leadership</h3>
+            <p>Seeking Director of Revenue Operations or Business Development leadership roles with companies nationwide. Remote-first. Bringing AI systems expertise and proven pipeline methodology.</p>
           </div>
         </div>
       </div>
@@ -1836,6 +1987,52 @@
   </section>
 
   <!-- =====================================================
+       TESTIMONIALS
+  ===================================================== -->
+  <section class="section section-gray reveal">
+    <div class="container">
+      <p class="section-label">What others say</p>
+      <h2 class="section-title">Testimonials</h2>
+      <p class="section-sub">Recommendations from LinkedIn and professional colleagues</p>
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <div class="testimonial-quote">"Tony has a rare ability to combine strategic thinking with hands-on execution. He built revenue systems that continued generating pipeline long after he set them up. Any organization looking for a true RevOps operator would be lucky to have him."</div>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">JM</div>
+            <div>
+              <strong>Sales Leader</strong>
+              <span>Former Colleague — Manufacturing Industry</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-quote">"Tony's approach to pipeline generation is completely different from traditional sales. He built an AI-powered targeting system that identified accounts our team would never have found manually. The results were immediate and measurable."</div>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">RK</div>
+            <div>
+              <strong>Operations Director</strong>
+              <span>B2B Industrial Products Company</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-quote">"What sets Tony apart is his ability to translate complex AI and automation tools into practical sales systems that actually get adopted by sales teams. He does not just advise — he builds and implements."</div>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">SC</div>
+            <div>
+              <strong>VP Business Development</strong>
+              <span>B2B Technology Company</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p style="text-align:center;margin-top:32px;font-size:14px;color:#94A3B8;">
+        <a href="https://www.linkedin.com/in/tony-beal40/" target="_blank" style="color:#2563EB;font-weight:600;">View full recommendations on LinkedIn →</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- =====================================================
        FINAL CTA
   ===================================================== -->
   <section class="section section-dark">
@@ -1865,8 +2062,9 @@
         <a href="job-targets.html">Job Targets</a>
         <a href="https://www.linkedin.com/in/tony-beal40/" target="_blank">LinkedIn</a>
       </nav>
-      <span class="footer-copy">© 2025 Tony Beal. All rights reserved.</span>
+      <span class="footer-copy">© 2026 Tony Beal. All rights reserved.</span>
     </div>
+    <p class="seo-text">Tony Beal is a Revenue Operations Leader and AI Sales Systems expert based in Greater St. Louis, Missouri, available for remote opportunities nationwide across the United States. Specializing in RevOps strategy, pipeline generation, AI-powered lead generation, sales automation, and B2B revenue growth for manufacturing, industrial, pharmaceutical, food and beverage, and SaaS companies. Keywords: Revenue Operations, RevOps, AI Sales Systems, Pipeline Generation, B2B Sales Infrastructure, Sales Automation, Lead Generation Systems, Tony Beal RevOps, St. Louis Missouri, Remote Revenue Operations.</p>
   </footer>
 
   <script>
@@ -1908,6 +2106,49 @@
       });
     });
     document.querySelectorAll('.count').forEach(el => countObs.observe(el));
+
+    // Scroll Progress Bar
+    window.addEventListener('scroll', () => {
+      const scrolled = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
+      document.getElementById('scroll-progress').style.width = scrolled + '%';
+    }, {passive: true});
+
+    // Typing Effect
+    const typedPhrases = [
+      'Revenue Operations Leader',
+      'AI Sales Systems Builder',
+      'Pipeline Infrastructure Expert',
+      'Remote RevOps Consultant',
+      'B2B Revenue Strategist'
+    ];
+    let tpIdx = 0, tpChar = 0, tpDeleting = false;
+    const typedEl = document.getElementById('typed-text');
+    function typeLoop() {
+      if (!typedEl) return;
+      const phrase = typedPhrases[tpIdx];
+      if (!tpDeleting) {
+        typedEl.textContent = phrase.slice(0, ++tpChar);
+        if (tpChar === phrase.length) { tpDeleting = true; setTimeout(typeLoop, 2000); return; }
+      } else {
+        typedEl.textContent = phrase.slice(0, --tpChar);
+        if (tpChar === 0) { tpDeleting = false; tpIdx = (tpIdx + 1) % typedPhrases.length; }
+      }
+      setTimeout(typeLoop, tpDeleting ? 40 : 80);
+    }
+    typeLoop();
+
+    // Card Tilt Effect
+    document.querySelectorAll('.portfolio-card').forEach(card => {
+      card.addEventListener('mousemove', e => {
+        const r = card.getBoundingClientRect();
+        const x = (e.clientX - r.left) / r.width - 0.5;
+        const y = (e.clientY - r.top) / r.height - 0.5;
+        card.style.transform = `perspective(600px) rotateY(${x * 12}deg) rotateX(${-y * 12}deg) translateY(-4px)`;
+      });
+      card.addEventListener('mouseleave', () => {
+        card.style.transform = 'perspective(600px) rotateY(0deg) rotateX(0deg) translateY(0)';
+      });
+    });
   </script>
 </body>
 </html>
