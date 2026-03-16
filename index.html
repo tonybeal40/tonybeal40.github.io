@@ -1358,6 +1358,7 @@
 .testimonial-author strong { display: block; font-size: 14px; color: #1E293B; }
 .testimonial-author span { font-size: 12px; color: #94A3B8; }
 @media (max-width: 900px) { .testimonials-grid { grid-template-columns: 1fr; } }
+.testimonial-hidden { display: none; }
 
 /* --- SEO hidden text --- */
 .seo-text { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
@@ -1992,43 +1993,127 @@
   <section class="section section-gray reveal">
     <div class="container">
       <p class="section-label">What others say</p>
-      <h2 class="section-title">Testimonials</h2>
-      <p class="section-sub">Recommendations from LinkedIn and professional colleagues</p>
-      <div class="testimonials-grid">
+      <h2 class="section-title">LinkedIn Recommendations</h2>
+      <p class="section-sub">14 recommendations from managers, colleagues, and clients across manufacturing, pharma, and B2B sales</p>
+      <div class="testimonials-grid" id="testimonials-grid">
+
         <div class="testimonial-card">
-          <div class="testimonial-quote">"Tony has a rare ability to combine strategic thinking with hands-on execution. He built revenue systems that continued generating pipeline long after he set them up. Any organization looking for a true RevOps operator would be lucky to have him."</div>
+          <div class="testimonial-quote">"It's an honor to recommend Tony Beal. Tony's exceptional sales aptitude and relentless drive set him apart, consistently making him a top performer. Tony had an incredible ability to exceed all sales goals — not just meeting expectations but surpassing them with regularity. Tony is the kind of person who elevates any team or organization he joins."</div>
           <div class="testimonial-author">
-            <div class="testimonial-avatar">JM</div>
-            <div>
-              <strong>Sales Leader</strong>
-              <span>Former Colleague — Manufacturing Industry</span>
-            </div>
+            <div class="testimonial-avatar">BB</div>
+            <div><strong>Benjamin Bequette</strong><span>Founder/CEO, Future of Factory | Managed Tony directly</span></div>
           </div>
         </div>
+
         <div class="testimonial-card">
-          <div class="testimonial-quote">"Tony's approach to pipeline generation is completely different from traditional sales. He built an AI-powered targeting system that identified accounts our team would never have found manually. The results were immediate and measurable."</div>
+          <div class="testimonial-quote">"Tony did a fantastic job working for us for over a decade. He is a natural salesperson, with an extremely optimistic, cheerful, and friendly personality. Tony's also very hard working and can be trusted to follow through on a project through completion. He would be a strong addition to any organization."</div>
           <div class="testimonial-author">
-            <div class="testimonial-avatar">RK</div>
-            <div>
-              <strong>Operations Director</strong>
-              <span>B2B Industrial Products Company</span>
-            </div>
+            <div class="testimonial-avatar">BC</div>
+            <div><strong>Brett Cherry</strong><span>Chief Operating Officer, BioGaia USA | Managed Tony directly</span></div>
           </div>
         </div>
+
         <div class="testimonial-card">
-          <div class="testimonial-quote">"What sets Tony apart is his ability to translate complex AI and automation tools into practical sales systems that actually get adopted by sales teams. He does not just advise — he builds and implements."</div>
+          <div class="testimonial-quote">"Tony's work ethic is impressive. He consistently goes above and beyond. He's always refining his processes, and never seems to be satisfied with defining and staying in any kind of rut when it comes to emerging technologies and strategies. Totally dependable, reliable, and willing to help wherever he can. A consummate professional and asset to any team."</div>
           <div class="testimonial-author">
-            <div class="testimonial-avatar">SC</div>
-            <div>
-              <strong>VP Business Development</strong>
-              <span>B2B Technology Company</span>
-            </div>
+            <div class="testimonial-avatar">AR</div>
+            <div><strong>Aaron Radzwilowicz</strong><span>Graphic Designer, Natoli Engineering</span></div>
           </div>
         </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-quote">"Tony brings a thoughtful, strategic approach to lead generation and business development, and he does a great job using data and AI-driven tools in a practical way that actually drives results. I would highly recommend Tony to anyone looking for a professional who genuinely cares about helping others grow their business."</div>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">MW</div>
+            <div><strong>Matthew Worley</strong><span>Sales Manager, BC Adhesives</span></div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-quote">"As the Director of Business Development at Proform Manufacturing, Tony demonstrates an exceptional strategic mindset and a deep understanding of the precision manufacturing industry. His commitment to excellence and innovation is apparent in every aspect of his work."</div>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">RA</div>
+            <div><strong>Robert Ainbinder</strong><span>AI-Augmented Revenue &amp; GTM Leader | Tony's client</span></div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-quote">"I've had the privilege of working alongside Tony for over 8 years. Tony consistently stood out for his exceptional ability to exceed sales targets, close deals, and build rapport with customers. He is a strategic thinker, skilled negotiator, and a true team player. He would be an invaluable asset to any sales organization."</div>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">JN</div>
+            <div><strong>Jared Novosel</strong><span>Lead Account Manager, Honeywell Intelligrated | Managed Tony directly</span></div>
+          </div>
+        </div>
+
+        <div class="testimonial-card testimonial-hidden">
+          <div class="testimonial-quote">"Tony is a great salesman and a fantastic key account manager. He is a positive and professional leader that always strives to grow his part of the business. A good negotiator and very good at understanding the customers' needs."</div>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">JA</div>
+            <div><strong>Joakim Annwall</strong><span>Regional Director, BioGaia Inc | Managed Tony directly</span></div>
+          </div>
+        </div>
+
+        <div class="testimonial-card testimonial-hidden">
+          <div class="testimonial-quote">"Tony is a wonderful person to work with and have on your team! He is hard working and willing to do whatever he needs to do in order to get a job done. He holds an incredible amount of knowledge and is eager to share that with the people he works with. It has been a pleasure to work with someone like Tony!"</div>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">KS</div>
+            <div><strong>Kimberly Shoemaker</strong><span>Catalog Marketing Specialist, Natoli Engineering</span></div>
+          </div>
+        </div>
+
+        <div class="testimonial-card testimonial-hidden">
+          <div class="testimonial-quote">"Tony is an excellent person to have on your team. Tony is dedicated, loyal and an excellent communicator. His passion and commitment to the job are qualities only the best employees portray."</div>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">TM</div>
+            <div><strong>Tara Masidonski</strong><span>Senior Manager Sales Support, BioGaia USA</span></div>
+          </div>
+        </div>
+
+        <div class="testimonial-card testimonial-hidden">
+          <div class="testimonial-quote">"Tony worked on a lot of high level projects. Hit the ground running and almost immediately produced results the company needed. Super positive attitude too!"</div>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">JW</div>
+            <div><strong>Josiah Webb</strong><span>Purchasing &amp; Inventory Specialist</span></div>
+          </div>
+        </div>
+
+        <div class="testimonial-card testimonial-hidden">
+          <div class="testimonial-quote">"I've had the pleasure of working closely with Tony at BioGaia, and I can't say enough about the impact he had on our team. Tony not only helped train me but also led by example, showing incredible dedication, hard work, and passion for sales. Tony's leadership and support were invaluable."</div>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">BL</div>
+            <div><strong>Brett Lewis</strong><span>Account Manager, Distribution Management Inc</span></div>
+          </div>
+        </div>
+
+        <div class="testimonial-card testimonial-hidden">
+          <div class="testimonial-quote">"I had the pleasure of working with Tony during our time together at BioGaia, and I can confidently say that he was a fantastic colleague. Tony was not only incredibly hardworking but also highly knowledgeable in his field. His positive attitude and friendly demeanor made him a joy to work with. I highly recommend Tony for any role — he's a true asset!"</div>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">MS</div>
+            <div><strong>Mark Saksa</strong><span>Sales Consultant, Performance Health | Managed Tony directly</span></div>
+          </div>
+        </div>
+
+        <div class="testimonial-card testimonial-hidden">
+          <div class="testimonial-quote">"Tony is a great person to have on your team! He's dedicated and brings fantastic energy to every project he works on."</div>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">HP</div>
+            <div><strong>Haley Palmer</strong><span>Brand Strategist, Supplements &amp; Food &amp; Beverage</span></div>
+          </div>
+        </div>
+
+        <div class="testimonial-card testimonial-hidden">
+          <div class="testimonial-quote">"Tony understands people and has a strong ability to build relationships. Tony was able to follow through on all requests on time and even went above and beyond. Tony takes a realistic approach to business and knows how to work efficiently and effectively."</div>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">AK</div>
+            <div><strong>Azeem Khan</strong><span>President/Owner, AK Custom Homes</span></div>
+          </div>
+        </div>
+
       </div>
-      <p style="text-align:center;margin-top:32px;font-size:14px;color:#94A3B8;">
-        <a href="https://www.linkedin.com/in/tony-beal40/" target="_blank" style="color:#2563EB;font-weight:600;">View full recommendations on LinkedIn →</a>
-      </p>
+      <div style="text-align:center;margin-top:32px;display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
+        <button id="show-all-btn" onclick="showAllTestimonials()" class="btn btn-outline" style="font-size:14px;">Show All 14 Recommendations ↓</button>
+        <a href="https://www.linkedin.com/in/tony-beal40/" target="_blank" class="btn btn-ghost" style="font-size:14px;">View on LinkedIn →</a>
+      </div>
     </div>
   </section>
 
@@ -2149,6 +2234,16 @@
         card.style.transform = 'perspective(600px) rotateY(0deg) rotateX(0deg) translateY(0)';
       });
     });
+
+    // Show all testimonials
+    function showAllTestimonials() {
+      document.querySelectorAll('.testimonial-hidden').forEach(el => {
+        el.style.display = 'flex';
+        el.classList.remove('testimonial-hidden');
+      });
+      const btn = document.getElementById('show-all-btn');
+      if (btn) btn.style.display = 'none';
+    }
   </script>
 </body>
 </html>
