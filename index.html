@@ -969,6 +969,28 @@
       color: #94A3B8;
       font-weight: 500;
     }
+    .vis-growth { display: block; font-size: 11px; color: #34D399; font-weight: 600; margin-top: 6px; }
+
+    /* Newsletter Feature */
+    .newsletter-feature { display: grid; grid-template-columns: 1fr 340px; gap: 48px; margin-top: 56px; background: rgba(30,41,59,0.4); border: 1px solid rgba(255,255,255,0.07); border-radius: 20px; padding: 40px; }
+    .nl-badge { display: inline-block; background: rgba(37,99,235,0.2); border: 1px solid rgba(37,99,235,0.3); border-radius: 999px; padding: 4px 14px; font-size: 12px; font-weight: 600; color: #93C5FD; margin-bottom: 16px; }
+    .nl-title { font-size: 28px; font-weight: 800; color: #fff; margin-bottom: 12px; }
+    .nl-desc { font-size: 15px; color: #94A3B8; line-height: 1.7; margin-bottom: 24px; }
+    .nl-demo-label { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: #64748B; margin-bottom: 12px; }
+    .nl-demographics { display: flex; flex-direction: column; gap: 10px; margin-bottom: 16px; }
+    .nl-demo-item { display: flex; align-items: center; gap: 10px; }
+    .nl-demo-bar-wrap { flex: 1; height: 6px; background: rgba(255,255,255,0.06); border-radius: 999px; overflow: hidden; }
+    .nl-demo-bar { height: 100%; background: linear-gradient(90deg, #2563EB, #6366F1); border-radius: 999px; }
+    .nl-demo-title { font-size: 13px; color: #94A3B8; min-width: 160px; }
+    .nl-demo-pct { font-size: 13px; font-weight: 700; color: #60A5FA; font-family: 'JetBrains Mono', monospace; min-width: 32px; text-align: right; }
+    .nl-btns { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 24px; }
+    .nl-stats-card { background: rgba(15,23,42,0.6); border: 1px solid rgba(255,255,255,0.07); border-radius: 16px; padding: 32px; display: flex; flex-direction: column; gap: 0; }
+    .nl-stat-row { display: flex; align-items: center; gap: 16px; padding: 16px 0; border-bottom: 1px solid rgba(255,255,255,0.06); }
+    .nl-stat-row:first-child { padding-top: 0; }
+    .nl-stat-num { font-family: 'JetBrains Mono', monospace; font-size: 28px; font-weight: 700; color: #60A5FA; min-width: 80px; }
+    .nl-stat-label { font-size: 13px; color: #64748B; line-height: 1.5; }
+    .nl-stat-label em { color: #34D399; font-style: normal; font-weight: 600; }
+    @media (max-width: 900px) { .newsletter-feature { grid-template-columns: 1fr; } }
 
     /* =====================================================
        BOOKS
@@ -1865,24 +1887,100 @@
   ===================================================== -->
   <section class="section section-dark reveal">
     <div class="container">
+      <p class="section-label" style="color:#93C5FD;opacity:0.7;">Social proof &amp; reach</p>
       <h2 class="section-title">Industry Visibility</h2>
-      <p class="section-sub"></p>
+      <p class="section-sub" style="color:#94A3B8;">Building authority and reach in revenue operations, AI sales systems, and B2B pipeline strategy</p>
       <div class="visibility-grid">
         <div class="vis-card">
           <span class="vis-number">10,000+</span>
           <span class="vis-label">LinkedIn Followers</span>
+          <span class="vis-growth">+109.4% YoY</span>
         </div>
         <div class="vis-card">
-          <span class="vis-number">281K+</span>
-          <span class="vis-label">Annual Impressions</span>
+          <span class="vis-number">37,266+</span>
+          <span class="vis-label">Newsletter Impressions</span>
+          <span class="vis-growth">+93.3% Past 365 Days</span>
         </div>
         <div class="vis-card">
-          <span class="vis-number">22,899+</span>
+          <span class="vis-number">21,930+</span>
           <span class="vis-label">Article Views</span>
+          <span class="vis-growth">+168.7% Past 365 Days</span>
         </div>
         <div class="vis-card">
-          <span class="vis-number">1,478+</span>
+          <span class="vis-number">1,479+</span>
           <span class="vis-label">Newsletter Subscribers</span>
+          <span class="vis-growth">+400% Past 7 Days</span>
+        </div>
+      </div>
+
+      <!-- NEWSLETTER FEATURE -->
+      <div class="newsletter-feature">
+        <div class="newsletter-left">
+          <span class="nl-badge">📰 LinkedIn Newsletter</span>
+          <h3 class="nl-title">The Results Pipeline</h3>
+          <p class="nl-desc">Real talk for business owners and sales pros — leads, calls, and results. No fluff, just action. Published monthly.</p>
+          <div class="nl-demo-label">Subscriber Demographics — Who Reads This:</div>
+          <div class="nl-demographics">
+            <div class="nl-demo-item">
+              <div class="nl-demo-bar-wrap">
+                <div class="nl-demo-bar" style="width:100%"></div>
+              </div>
+              <span class="nl-demo-title">Chief Executive Officer</span>
+              <span class="nl-demo-pct">4%</span>
+            </div>
+            <div class="nl-demo-item">
+              <div class="nl-demo-bar-wrap">
+                <div class="nl-demo-bar" style="width:100%"></div>
+              </div>
+              <span class="nl-demo-title">President</span>
+              <span class="nl-demo-pct">4%</span>
+            </div>
+            <div class="nl-demo-item">
+              <div class="nl-demo-bar-wrap">
+                <div class="nl-demo-bar" style="width:100%"></div>
+              </div>
+              <span class="nl-demo-title">Founder</span>
+              <span class="nl-demo-pct">4%</span>
+            </div>
+            <div class="nl-demo-item">
+              <div class="nl-demo-bar-wrap">
+                <div class="nl-demo-bar" style="width:78%"></div>
+              </div>
+              <span class="nl-demo-title">Owner</span>
+              <span class="nl-demo-pct">3%</span>
+            </div>
+            <div class="nl-demo-item">
+              <div class="nl-demo-bar-wrap">
+                <div class="nl-demo-bar" style="width:52%"></div>
+              </div>
+              <span class="nl-demo-title">Sales Manager</span>
+              <span class="nl-demo-pct">2%</span>
+            </div>
+          </div>
+          <p style="font-size:12px;color:#475569;margin-top:8px;font-style:italic;">CEOs, Presidents, and Founders make up the top reader segments — the exact decision-makers who hire RevOps leaders.</p>
+          <div class="nl-btns">
+            <a href="https://www.linkedin.com/newsletters/the-results-pipeline-7297852613121712128/" target="_blank" rel="noopener" class="btn btn-primary">Subscribe to Newsletter</a>
+            <a href="https://www.linkedin.com/in/tony-beal40/" target="_blank" rel="noopener" class="btn btn-outline" style="border-color:rgba(147,197,253,0.3);color:#93C5FD;">Follow on LinkedIn</a>
+          </div>
+        </div>
+        <div class="newsletter-right">
+          <div class="nl-stats-card">
+            <div class="nl-stat-row">
+              <span class="nl-stat-num">477</span>
+              <span class="nl-stat-label">Engagements<br/><em>+74.8% YoY</em></span>
+            </div>
+            <div class="nl-stat-row">
+              <span class="nl-stat-num">21,930</span>
+              <span class="nl-stat-label">Article Views<br/><em>+168.7% YoY</em></span>
+            </div>
+            <div class="nl-stat-row">
+              <span class="nl-stat-num">37,266</span>
+              <span class="nl-stat-label">Impressions<br/><em>+93.3% YoY</em></span>
+            </div>
+            <div style="margin-top:20px;padding-top:20px;border-top:1px solid rgba(255,255,255,0.08);">
+              <p style="font-size:13px;color:#64748B;line-height:1.6;">Published monthly. Topics include AI sales systems, RevOps strategy, pipeline generation, and B2B revenue growth.</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
