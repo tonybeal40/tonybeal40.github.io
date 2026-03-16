@@ -1233,9 +1233,15 @@
     /* =====================================================
        RESPONSIVE
     ===================================================== */
+    @media (max-width: 900px) {
+      .testimonials-grid { grid-template-columns: 1fr; }
+      .ways-grid { grid-template-columns: 1fr; }
+      .newsletter-feature { grid-template-columns: 1fr; }
+    }
+
     @media (max-width: 768px) {
       .section {
-        padding: 64px 20px;
+        padding: 56px 20px;
       }
 
       .nav-links {
@@ -1244,8 +1250,8 @@
 
       .hero-container {
         grid-template-columns: 1fr;
-        padding: 48px 20px 60px;
-        gap: 48px;
+        padding: 40px 20px 56px;
+        gap: 36px;
       }
 
       .hero-photo-col {
@@ -1329,6 +1335,189 @@
       .footer-links {
         flex-wrap: wrap;
         justify-content: center;
+      }
+    }
+
+    /* Small mobile — 480px and below */
+    @media (max-width: 480px) {
+      .section {
+        padding: 48px 16px;
+      }
+
+      .hero-container {
+        padding: 32px 16px 48px;
+        gap: 28px;
+      }
+
+      .hero-title {
+        font-size: 28px;
+        letter-spacing: -0.02em;
+      }
+
+      .hero-subtitle {
+        font-size: 16px;
+      }
+
+      .hero-body {
+        font-size: 15px;
+      }
+
+      .hero-photo-frame {
+        width: 160px;
+        height: 160px;
+      }
+
+      .hero-metrics {
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+      }
+
+      .metric-number {
+        font-size: 24px;
+      }
+
+      .metric-suffix {
+        font-size: 18px;
+      }
+
+      .metric-prefix {
+        font-size: 15px;
+      }
+
+      .metric-card {
+        padding: 14px;
+      }
+
+      .hero-btns {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .hero-btns .btn {
+        width: 100%;
+        justify-content: center;
+        padding: 14px 20px;
+        font-size: 15px;
+      }
+
+      .section-title {
+        font-size: 24px;
+      }
+
+      .section-sub {
+        font-size: 16px;
+      }
+
+      .results-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+      }
+
+      .result-number {
+        font-size: 26px;
+      }
+
+      .visibility-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+      }
+
+      .vis-number {
+        font-size: 24px;
+      }
+
+      .books-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+      }
+
+      .systems-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .portfolio-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .newsletter-feature {
+        padding: 24px 20px;
+      }
+
+      .nl-title {
+        font-size: 22px;
+      }
+
+      .nl-stats-card {
+        padding: 20px;
+      }
+
+      .nl-stat-num {
+        font-size: 22px;
+        min-width: 64px;
+      }
+
+      .ways-card {
+        padding: 24px 20px;
+      }
+
+      .philosophy-card,
+      .problem-block,
+      .portfolio-card,
+      .process-step,
+      .dashboard-panel {
+        padding: 24px 20px;
+      }
+
+      .timeline-item {
+        flex-direction: column;
+        gap: 8px;
+        padding-left: 20px;
+      }
+
+      .timeline::before {
+        left: 0;
+      }
+
+      .timeline-year {
+        text-align: left;
+        min-width: unset;
+      }
+
+      .timeline-content::before {
+        left: -26px;
+        top: -28px;
+      }
+
+      .opportunity-rows {
+        margin-bottom: 24px;
+      }
+
+      .opportunity-row {
+        padding: 16px 18px;
+      }
+
+      .cta-btns {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .cta-btns .btn {
+        width: 100%;
+        justify-content: center;
+      }
+
+      .btn-lg {
+        padding: 14px 24px;
+        font-size: 15px;
+      }
+
+      .nav-inner {
+        padding: 0 16px;
+      }
+
+      /* Systems I Build inline grid override */
+      .systems-marketing-grid {
+        grid-template-columns: 1fr !important;
       }
     }
 
@@ -1763,23 +1952,23 @@
       <p class="overline" style="text-align:center;margin-bottom:12px;">What I build</p>
       <h2 class="section-title">Revenue Systems I Build</h2>
       <p class="section-sub">The systems that turn target accounts into predictable pipeline</p>
-      <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:28px;max-width:1000px;margin:0 auto;">
-        <div style="background:#F8FAFC;border:1px solid #E2E8F0;border-radius:16px;padding:36px 32px;border-top:4px solid #2563EB;transition:all 0.2s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 16px 40px rgba(37,99,235,0.1)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
+      <div class="systems-marketing-grid" style="display:grid;grid-template-columns:repeat(2,1fr);gap:28px;max-width:1000px;margin:0 auto;">
+        <div style="background:#F8FAFC;border:1px solid #E2E8F0;border-radius:16px;padding:36px 32px;border-top:4px solid #2563EB;transition:all 0.2s;">
           <div style="font-size:32px;margin-bottom:16px;">🤖</div>
           <h3 style="font-size:20px;font-weight:800;color:#1E293B;margin-bottom:10px;">AI Prospecting Engines</h3>
           <p style="font-size:15px;color:#64748B;line-height:1.7;">LinkedIn + Apollo targeting systems that identify and engage high-value accounts. Built with 40,000+ engineered prompts for precision outreach at scale.</p>
         </div>
-        <div style="background:#F8FAFC;border:1px solid #E2E8F0;border-radius:16px;padding:36px 32px;border-top:4px solid #6366F1;transition:all 0.2s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 16px 40px rgba(99,102,241,0.1)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
+        <div style="background:#F8FAFC;border:1px solid #E2E8F0;border-radius:16px;padding:36px 32px;border-top:4px solid #6366F1;transition:all 0.2s;">
           <div style="font-size:32px;margin-bottom:16px;">📊</div>
           <h3 style="font-size:20px;font-weight:800;color:#1E293B;margin-bottom:10px;">RevOps Intelligence Dashboards</h3>
           <p style="font-size:15px;color:#64748B;line-height:1.7;">Real-time pipeline visibility and forecasting for leadership teams. Data-driven sales reporting that turns CRM data into decisions that drive revenue.</p>
         </div>
-        <div style="background:#F8FAFC;border:1px solid #E2E8F0;border-radius:16px;padding:36px 32px;border-top:4px solid #0891B2;transition:all 0.2s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 16px 40px rgba(8,145,178,0.1)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
+        <div style="background:#F8FAFC;border:1px solid #E2E8F0;border-radius:16px;padding:36px 32px;border-top:4px solid #0891B2;transition:all 0.2s;">
           <div style="font-size:32px;margin-bottom:16px;">⚡</div>
           <h3 style="font-size:20px;font-weight:800;color:#1E293B;margin-bottom:10px;">Outbound Automation Systems</h3>
           <p style="font-size:15px;color:#64748B;line-height:1.7;">Multi-channel prospecting workflows that increase pipeline velocity for enterprise sales teams. Automated sequences that engage accounts at scale without sacrificing personalization.</p>
         </div>
-        <div style="background:#F8FAFC;border:1px solid #E2E8F0;border-radius:16px;padding:36px 32px;border-top:4px solid #059669;transition:all 0.2s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 16px 40px rgba(5,150,105,0.1)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
+        <div style="background:#F8FAFC;border:1px solid #E2E8F0;border-radius:16px;padding:36px 32px;border-top:4px solid #059669;transition:all 0.2s;">
           <div style="font-size:32px;margin-bottom:16px;">🎯</div>
           <h3 style="font-size:20px;font-weight:800;color:#1E293B;margin-bottom:10px;">Go-To-Market Strategy</h3>
           <p style="font-size:15px;color:#64748B;line-height:1.7;">Market positioning and pipeline architecture that opens new revenue channels. ICP definition, territory mapping, and account segmentation that aligns sales and marketing on the same targets.</p>

@@ -22,7 +22,7 @@
 
     /* NAV */
     .site-nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(15,23,42,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(255,255,255,0.07); }
-    .nav-inner { max-width: 1160px; margin: 0 auto; padding: 0 32px; height: 64px; display: flex; align-items: center; justify-content: space-between; }
+    .nav-inner { max-width: 1160px; margin: 0 auto; padding: 0 24px; height: 64px; display: flex; align-items: center; justify-content: space-between; }
     .nav-brand { font-size: 18px; font-weight: 800; background: linear-gradient(135deg, #2563EB, #6366F1); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
     .nav-links { display: flex; align-items: center; gap: 24px; }
     .nav-links a { font-size: 14px; font-weight: 500; color: rgba(255,255,255,0.75); }
@@ -35,7 +35,7 @@
 
     /* HERO BAR */
     .page-hero { padding: 120px 0 64px; background: linear-gradient(135deg, #0F172A 0%, #1E3A5F 50%, #0F172A 100%); border-bottom: 1px solid rgba(255,255,255,0.07); }
-    .container { max-width: 1160px; margin: 0 auto; padding: 0 32px; }
+    .container { max-width: 1160px; margin: 0 auto; padding: 0 24px; }
     .breadcrumb { display: flex; align-items: center; gap: 8px; font-size: 13px; color: #64748B; margin-bottom: 20px; }
     .breadcrumb a { color: #60A5FA; }
     .breadcrumb span { color: #475569; }
@@ -102,6 +102,21 @@
     }
     @media (max-width: 600px) {
       .nav-links a:not(.btn) { display: none; }
+      .container { padding: 0 16px; }
+      .nav-inner { padding: 0 16px; }
+      .page-hero { padding: 96px 0 48px; }
+      .page-title { font-size: clamp(26px, 7vw, 42px); }
+      .page-sub { font-size: 16px; }
+      .page-meta { gap: 10px; }
+      .meta-badge { font-size: 12px; padding: 5px 12px; }
+      .page-body { padding: 40px 0 64px; }
+      .tier-title { font-size: 18px; }
+      .sidebar-card { padding: 20px 16px; }
+      .sidebar-link { padding: 13px 14px; min-height: 48px; }
+      .cadence-step { gap: 10px; }
+      .role-card { padding: 16px 18px; }
+      .role-card h4 { font-size: 14px; }
+      .btn { min-height: 44px; }
     }
   </style>
 </head>
