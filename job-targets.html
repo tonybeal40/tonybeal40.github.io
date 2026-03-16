@@ -1,57 +1,445 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Active Job Targets | Tony Beal</title>
-  <meta name="description" content="Prioritized target companies for RevOps, Sales Ops, and Business Development applications." />
-  <link rel="stylesheet" href="style.v11.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Active Job Targets | Tony Beal | Revenue Operations Leader</title>
+  <meta name="description" content="Tony Beal's prioritized target companies for Director of Revenue Operations, Sales Operations, and Business Development leadership roles." />
+  <link rel="canonical" href="https://tonybeal.net/job-targets.html" />
+  <meta property="og:title" content="Active Job Targets | Tony Beal" />
+  <meta property="og:description" content="Prioritized target companies for RevOps, Sales Ops, and Business Development leadership roles." />
+  <meta property="og:url" content="https://tonybeal.net/job-targets.html" />
+  <meta name="twitter:card" content="summary" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', system-ui, sans-serif; background: #0F172A; color: #F1F5F9; -webkit-font-smoothing: antialiased; line-height: 1.6; }
+    a { color: #60A5FA; text-decoration: none; }
+    a:hover { color: #fff; }
+
+    /* NAV */
+    .site-nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(15,23,42,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(255,255,255,0.07); }
+    .nav-inner { max-width: 1160px; margin: 0 auto; padding: 0 32px; height: 64px; display: flex; align-items: center; justify-content: space-between; }
+    .nav-brand { font-size: 18px; font-weight: 800; background: linear-gradient(135deg, #2563EB, #6366F1); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .nav-links { display: flex; align-items: center; gap: 24px; }
+    .nav-links a { font-size: 14px; font-weight: 500; color: rgba(255,255,255,0.75); }
+    .nav-links a:hover { color: #fff; }
+    .btn { display: inline-flex; align-items: center; gap: 6px; padding: 9px 18px; border-radius: 8px; font-size: 13px; font-weight: 600; cursor: pointer; border: 1px solid transparent; transition: all 0.2s; text-decoration: none; }
+    .btn-primary { background: #2563EB; color: #fff; border-color: #2563EB; }
+    .btn-primary:hover { background: #1D4ED8; color: #fff; }
+    .btn-outline { background: transparent; color: #93C5FD; border-color: rgba(147,197,253,0.3); }
+    .btn-outline:hover { border-color: #93C5FD; color: #fff; }
+
+    /* HERO BAR */
+    .page-hero { padding: 120px 0 64px; background: linear-gradient(135deg, #0F172A 0%, #1E3A5F 50%, #0F172A 100%); border-bottom: 1px solid rgba(255,255,255,0.07); }
+    .container { max-width: 1160px; margin: 0 auto; padding: 0 32px; }
+    .breadcrumb { display: flex; align-items: center; gap: 8px; font-size: 13px; color: #64748B; margin-bottom: 20px; }
+    .breadcrumb a { color: #60A5FA; }
+    .breadcrumb span { color: #475569; }
+    .page-title { font-size: clamp(32px, 5vw, 52px); font-weight: 900; color: #fff; line-height: 1.1; margin-bottom: 16px; }
+    .page-title em { font-style: italic; background: linear-gradient(135deg, #2563EB, #6366F1); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .page-sub { font-size: 18px; color: #94A3B8; max-width: 600px; margin-bottom: 32px; }
+    .page-meta { display: flex; gap: 24px; flex-wrap: wrap; }
+    .meta-badge { background: rgba(37,99,235,0.15); border: 1px solid rgba(37,99,235,0.3); border-radius: 999px; padding: 6px 16px; font-size: 13px; font-weight: 600; color: #93C5FD; }
+
+    /* MAIN CONTENT */
+    .page-body { padding: 64px 0 96px; }
+    .targets-layout { display: grid; grid-template-columns: 1fr 320px; gap: 48px; align-items: start; }
+
+    /* TIER SECTIONS */
+    .tier-section { margin-bottom: 48px; }
+    .tier-label { display: inline-flex; align-items: center; gap: 8px; background: linear-gradient(135deg, #2563EB, #6366F1); border-radius: 6px; padding: 4px 12px; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: #fff; margin-bottom: 16px; }
+    .tier-label.tier2 { background: linear-gradient(135deg, #0891B2, #0284C7); }
+    .tier-label.tier3 { background: linear-gradient(135deg, #059669, #0D9488); }
+    .tier-title { font-size: 22px; font-weight: 700; color: #fff; margin-bottom: 8px; }
+    .tier-desc { font-size: 14px; color: #64748B; margin-bottom: 24px; }
+
+    /* COMPANY CARDS */
+    .company-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+    .company-card { background: rgba(30,41,59,0.6); border: 1px solid rgba(255,255,255,0.07); border-radius: 14px; padding: 20px 24px; display: flex; align-items: center; justify-content: space-between; gap: 16px; transition: all 0.2s; cursor: pointer; }
+    .company-card:hover { background: rgba(37,99,235,0.1); border-color: rgba(37,99,235,0.4); transform: translateY(-2px); }
+    .company-info { flex: 1; }
+    .company-name { font-size: 15px; font-weight: 700; color: #fff; margin-bottom: 4px; }
+    .company-fit { font-size: 12px; color: #64748B; }
+    .company-tag { font-size: 11px; font-weight: 600; padding: 3px 10px; border-radius: 999px; background: rgba(37,99,235,0.2); color: #93C5FD; white-space: nowrap; }
+    .company-tag.green { background: rgba(5,150,105,0.2); color: #34D399; }
+    .company-tag.purple { background: rgba(99,102,241,0.2); color: #A5B4FC; }
+    .company-arrow { color: #2563EB; font-size: 18px; opacity: 0.6; }
+
+    /* SIDEBAR */
+    .sidebar { position: sticky; top: 88px; }
+    .sidebar-card { background: rgba(30,41,59,0.5); border: 1px solid rgba(255,255,255,0.07); border-radius: 16px; padding: 28px; margin-bottom: 24px; }
+    .sidebar-card h3 { font-size: 16px; font-weight: 700; color: #fff; margin-bottom: 16px; }
+    .cadence-steps { display: flex; flex-direction: column; gap: 16px; }
+    .cadence-step { display: flex; gap: 12px; }
+    .step-num { width: 28px; height: 28px; border-radius: 50%; background: linear-gradient(135deg, #2563EB, #6366F1); display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 700; color: #fff; flex-shrink: 0; font-family: 'JetBrains Mono', monospace; }
+    .step-text { font-size: 13px; color: #94A3B8; line-height: 1.6; padding-top: 4px; }
+    .sidebar-links { display: flex; flex-direction: column; gap: 12px; }
+    .sidebar-link { display: flex; align-items: center; gap: 10px; padding: 12px 16px; background: rgba(37,99,235,0.1); border: 1px solid rgba(37,99,235,0.2); border-radius: 10px; font-size: 14px; font-weight: 600; color: #93C5FD; transition: all 0.2s; }
+    .sidebar-link:hover { background: rgba(37,99,235,0.2); color: #fff; }
+    .sidebar-link-icon { font-size: 18px; }
+
+    /* ROLES SECTION */
+    .roles-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-bottom: 48px; }
+    .role-card { background: rgba(30,41,59,0.6); border: 1px solid rgba(255,255,255,0.07); border-radius: 14px; padding: 20px 24px; }
+    .role-card h4 { font-size: 15px; font-weight: 700; color: #fff; margin-bottom: 6px; }
+    .role-card p { font-size: 13px; color: #64748B; }
+    .role-card .resume-link { display: inline-flex; align-items: center; gap: 6px; margin-top: 10px; font-size: 13px; font-weight: 600; color: #60A5FA; }
+
+    /* FOOTER */
+    .page-footer { border-top: 1px solid rgba(255,255,255,0.07); padding: 32px 0; text-align: center; }
+    .page-footer p { font-size: 13px; color: #475569; }
+    .page-footer a { color: #60A5FA; }
+
+    @media (max-width: 900px) {
+      .targets-layout { grid-template-columns: 1fr; }
+      .sidebar { position: static; }
+      .company-grid { grid-template-columns: 1fr; }
+      .roles-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 600px) {
+      .nav-links a:not(.btn) { display: none; }
+    }
+  </style>
 </head>
 <body>
-  <main class="resume-wrap">
-    <header class="resume-head">
-      <img class="resume-banner resume-banner-targets" src="assets/banner-job-targets-clear.svg" alt="Active Job Targets banner" />
-      <p class="resume-kicker">Tony Beal</p>
-      <h1>Active Job Targets</h1>
-      <p>High-fit companies prioritized for RevOps, Sales Ops, and BD leadership roles.</p>
-      <p><a href="index.html">← Back to Home</a> · <a href="resume.html">Resume Hub</a> · <a href="cover-letters.html">Cover Letter Kit</a></p>
-    </header>
 
-    <section class="resume-card">
-      <h2>Tier 1 — Highest Priority</h2>
-      <ul>
-        <li><a href="https://jobs.danaher.com/global/en" target="_blank" rel="noopener">Danaher Careers</a> — Industrial enterprise fit</li>
-        <li><a href="https://www.hubspot.com/careers" target="_blank" rel="noopener">HubSpot Careers</a> — GTM systems + RevOps fit</li>
-        <li><a href="https://www.apollo.io/careers" target="_blank" rel="noopener">Apollo.io Careers</a> — Outbound + pipeline intelligence fit</li>
-        <li><a href="https://www.3m.com/3M/en_US/careers-us/" target="_blank" rel="noopener">3M Careers</a> — Industrial enterprise sales systems fit</li>
-        <li><a href="https://www.siemens.com/global/en/home/company/jobs.html" target="_blank" rel="noopener">Siemens Jobs</a> — Complex enterprise GTM fit</li>
-        <li><a href="https://monday.com/careers" target="_blank" rel="noopener">monday.com Careers</a> — Workflow and operations fit</li>
-      </ul>
-    </section>
+  <nav class="site-nav">
+    <div class="nav-inner">
+      <a href="/" class="nav-brand">Tony Beal</a>
+      <div class="nav-links">
+        <a href="/">Home</a>
+        <a href="resume.html">Resume</a>
+        <a href="mailto:tonybeal40@gmail.com" class="btn btn-primary">Book a Call</a>
+      </div>
+    </div>
+  </nav>
 
-    <section class="resume-card">
-      <h2>Tier 1 — Strong Additional Targets</h2>
-      <ul>
-        <li><a href="https://jobs.thermofisher.com" target="_blank" rel="noopener">Thermo Fisher Scientific</a></li>
-        <li><a href="https://www.emerson.com/en-us/careers" target="_blank" rel="noopener">Emerson Electric</a></li>
-        <li><a href="https://www.parker.com/us/en/careers.html" target="_blank" rel="noopener">Parker Hannifin</a></li>
-        <li><a href="https://careers.honeywell.com" target="_blank" rel="noopener">Honeywell Careers</a></li>
-        <li><a href="https://careers.gehealthcare.com" target="_blank" rel="noopener">GE HealthCare Careers</a></li>
-        <li><a href="https://www.zoominfo.com/company/careers" target="_blank" rel="noopener">ZoomInfo Careers</a></li>
-        <li><a href="https://ramp.com/careers" target="_blank" rel="noopener">Ramp Careers</a></li>
-        <li><a href="https://www.rippling.com/careers" target="_blank" rel="noopener">Rippling Careers</a></li>
-      </ul>
-    </section>
+  <div class="page-hero">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="/">Home</a>
+        <span>›</span>
+        <span>Job Targets</span>
+      </div>
+      <h1 class="page-title">Active Job <em>Targets</em></h1>
+      <p class="page-sub">Prioritized companies and roles for remote Revenue Operations, Sales Operations, and Business Development leadership opportunities.</p>
+      <div class="page-meta">
+        <span class="meta-badge">📍 Remote Nationwide</span>
+        <span class="meta-badge">🎯 30+ Target Companies</span>
+        <span class="meta-badge">⚡ Actively Applying</span>
+      </div>
+    </div>
+  </div>
 
-    <section class="resume-card">
-      <h2>Execution Cadence</h2>
-      <ol>
-        <li>Pick 5 targets/day from this list.</li>
-        <li>Use role-specific resume from Resume Hub.</li>
-        <li>Customize one cover letter template.</li>
-        <li>Apply + log outreach + LinkedIn follow-up same day.</li>
-      </ol>
-    </section>
-  </main>
+  <div class="page-body">
+    <div class="container">
+
+      <!-- TARGET ROLES -->
+      <div style="margin-bottom:48px;">
+        <h2 style="font-size:20px;font-weight:700;color:#fff;margin-bottom:8px;">Target Roles</h2>
+        <p style="font-size:14px;color:#64748B;margin-bottom:24px;">Open to remote opportunities across the United States in these leadership positions</p>
+        <div class="roles-grid">
+          <div class="role-card">
+            <h4>Director of Revenue Operations</h4>
+            <p>RevOps strategy, CRM architecture, pipeline reporting, sales process design</p>
+            <a href="resume-revops.html" class="resume-link">View RevOps Resume →</a>
+          </div>
+          <div class="role-card">
+            <h4>Director of Business Development</h4>
+            <p>New market development, strategic partnerships, enterprise account growth</p>
+            <a href="resume-business-development.html" class="resume-link">View BD Resume →</a>
+          </div>
+          <div class="role-card">
+            <h4>Sales Operations Leadership</h4>
+            <p>Sales process optimization, territory planning, CRM enablement, analytics</p>
+            <a href="resume-sales-operations.html" class="resume-link">View Sales Ops Resume →</a>
+          </div>
+          <div class="role-card">
+            <h4>RevOps Strategy &amp; AI Sales Systems</h4>
+            <p>AI-powered pipeline generation, automation workflows, revenue intelligence</p>
+            <a href="resume-revops.html" class="resume-link">View RevOps Resume →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="targets-layout">
+        <div>
+
+          <!-- TIER 1 -->
+          <div class="tier-section">
+            <div class="tier-label">⭐ Tier 1 — Highest Priority</div>
+            <h2 class="tier-title">Top Target Companies</h2>
+            <p class="tier-desc">Best fit for AI-driven RevOps, pipeline systems, and B2B sales leadership</p>
+            <div class="company-grid">
+              <a class="company-card" href="https://jobs.danaher.com/global/en" target="_blank" rel="noopener">
+                <div class="company-info">
+                  <div class="company-name">Danaher</div>
+                  <div class="company-fit">Industrial enterprise · RevOps fit</div>
+                </div>
+                <span class="company-tag">Industrial</span>
+                <span class="company-arrow">→</span>
+              </a>
+              <a class="company-card" href="https://www.hubspot.com/careers" target="_blank" rel="noopener">
+                <div class="company-info">
+                  <div class="company-name">HubSpot</div>
+                  <div class="company-fit">GTM systems + RevOps · Strong fit</div>
+                </div>
+                <span class="company-tag green">SaaS</span>
+                <span class="company-arrow">→</span>
+              </a>
+              <a class="company-card" href="https://www.apollo.io/careers" target="_blank" rel="noopener">
+                <div class="company-info">
+                  <div class="company-name">Apollo.io</div>
+                  <div class="company-fit">Outbound + pipeline intelligence</div>
+                </div>
+                <span class="company-tag green">SaaS</span>
+                <span class="company-arrow">→</span>
+              </a>
+              <a class="company-card" href="https://www.salesforce.com/company/careers/" target="_blank" rel="noopener">
+                <div class="company-info">
+                  <div class="company-name">Salesforce</div>
+                  <div class="company-fit">CRM + RevOps · Enterprise fit</div>
+                </div>
+                <span class="company-tag green">SaaS</span>
+                <span class="company-arrow">→</span>
+              </a>
+              <a class="company-card" href="https://www.3m.com/3M/en_US/careers-us/" target="_blank" rel="noopener">
+                <div class="company-info">
+                  <div class="company-name">3M</div>
+                  <div class="company-fit">Industrial enterprise sales systems</div>
+                </div>
+                <span class="company-tag">Industrial</span>
+                <span class="company-arrow">→</span>
+              </a>
+              <a class="company-card" href="https://www.siemens.com/global/en/home/company/jobs.html" target="_blank" rel="noopener">
+                <div class="company-info">
+                  <div class="company-name">Siemens</div>
+                  <div class="company-fit">Complex enterprise GTM fit</div>
+                </div>
+                <span class="company-tag">Industrial</span>
+                <span class="company-arrow">→</span>
+              </a>
+              <a class="company-card" href="https://monday.com/careers" target="_blank" rel="noopener">
+                <div class="company-info">
+                  <div class="company-name">monday.com</div>
+                  <div class="company-fit">Workflow and operations fit</div>
+                </div>
+                <span class="company-tag green">SaaS</span>
+                <span class="company-arrow">→</span>
+              </a>
+              <a class="company-card" href="https://www.zoominfo.com/company/careers" target="_blank" rel="noopener">
+                <div class="company-info">
+                  <div class="company-name">ZoomInfo</div>
+                  <div class="company-fit">Data intelligence + pipeline tools</div>
+                </div>
+                <span class="company-tag green">SaaS</span>
+                <span class="company-arrow">→</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- TIER 2 -->
+          <div class="tier-section">
+            <div class="tier-label tier2">🎯 Tier 2 — Strong Fit</div>
+            <h2 class="tier-title">Enterprise &amp; Industrial Targets</h2>
+            <p class="tier-desc">Large-scale B2B companies with strong RevOps and sales operations infrastructure needs</p>
+            <div class="company-grid">
+              <a class="company-card" href="https://jobs.thermofisher.com" target="_blank" rel="noopener">
+                <div class="company-info">
+                  <div class="company-name">Thermo Fisher Scientific</div>
+                  <div class="company-fit">Life sciences · Pharma channel fit</div>
+                </div>
+                <span class="company-tag">Pharma</span>
+                <span class="company-arrow">→</span>
+              </a>
+              <a class="company-card" href="https://www.emerson.com/en-us/careers" target="_blank" rel="noopener">
+                <div class="company-info">
+                  <div class="company-name">Emerson Electric</div>
+                  <div class="company-fit">Industrial automation · Sales ops</div>
+                </div>
+                <span class="company-tag">Industrial</span>
+                <span class="company-arrow">→</span>
+              </a>
+              <a class="company-card" href="https://www.parker.com/us/en/careers.html" target="_blank" rel="noopener">
+                <div class="company-info">
+                  <div class="company-name">Parker Hannifin</div>
+                  <div class="company-fit">Motion &amp; control · Territory fit</div>
+                </div>
+                <span class="company-tag">Industrial</span>
+                <span class="company-arrow">→</span>
+              </a>
+              <a class="company-card" href="https://careers.honeywell.com" target="_blank" rel="noopener">
+                <div class="company-info">
+                  <div class="company-name">Honeywell</div>
+                  <div class="company-fit">Industrial tech · BD leadership</div>
+                </div>
+                <span class="company-tag">Industrial</span>
+                <span class="company-arrow">→</span>
+              </a>
+              <a class="company-card" href="https://careers.gehealthcare.com" target="_blank" rel="noopener">
+                <div class="company-info">
+                  <div class="company-name">GE HealthCare</div>
+                  <div class="company-fit">Healthcare · Pharma sales systems</div>
+                </div>
+                <span class="company-tag">Pharma</span>
+                <span class="company-arrow">→</span>
+              </a>
+              <a class="company-card" href="https://ramp.com/careers" target="_blank" rel="noopener">
+                <div class="company-info">
+                  <div class="company-name">Ramp</div>
+                  <div class="company-fit">FinTech · GTM + RevOps fit</div>
+                </div>
+                <span class="company-tag green">SaaS</span>
+                <span class="company-arrow">→</span>
+              </a>
+              <a class="company-card" href="https://www.rippling.com/careers" target="_blank" rel="noopener">
+                <div class="company-info">
+                  <div class="company-name">Rippling</div>
+                  <div class="company-fit">HR tech · Sales ops fit</div>
+                </div>
+                <span class="company-tag green">SaaS</span>
+                <span class="company-arrow">→</span>
+              </a>
+              <a class="company-card" href="https://www.outreach.io/company/careers" target="_blank" rel="noopener">
+                <div class="company-info">
+                  <div class="company-name">Outreach</div>
+                  <div class="company-fit">Sales engagement · RevOps native</div>
+                </div>
+                <span class="company-tag green">SaaS</span>
+                <span class="company-arrow">→</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- TIER 3 -->
+          <div class="tier-section">
+            <div class="tier-label tier3">🌱 Tier 3 — Growth &amp; Mid-Market</div>
+            <h2 class="tier-title">High-Growth Companies</h2>
+            <p class="tier-desc">Scaling companies where a strong RevOps leader can build systems from the ground up</p>
+            <div class="company-grid">
+              <a class="company-card" href="https://www.gong.io/company/careers/" target="_blank" rel="noopener">
+                <div class="company-info">
+                  <div class="company-name">Gong</div>
+                  <div class="company-fit">Revenue intelligence · AI sales fit</div>
+                </div>
+                <span class="company-tag purple">AI</span>
+                <span class="company-arrow">→</span>
+              </a>
+              <a class="company-card" href="https://chorus.ai/company/careers" target="_blank" rel="noopener">
+                <div class="company-info">
+                  <div class="company-name">Clari</div>
+                  <div class="company-fit">Pipeline forecasting · RevOps</div>
+                </div>
+                <span class="company-tag purple">AI</span>
+                <span class="company-arrow">→</span>
+              </a>
+              <a class="company-card" href="https://www.salesloft.com/company/careers/" target="_blank" rel="noopener">
+                <div class="company-info">
+                  <div class="company-name">Salesloft</div>
+                  <div class="company-fit">Sales engagement · RevOps tools</div>
+                </div>
+                <span class="company-tag green">SaaS</span>
+                <span class="company-arrow">→</span>
+              </a>
+              <a class="company-card" href="https://careers. abbott.com" target="_blank" rel="noopener">
+                <div class="company-info">
+                  <div class="company-name">Abbott Laboratories</div>
+                  <div class="company-fit">Healthcare · Pharma BD fit</div>
+                </div>
+                <span class="company-tag">Pharma</span>
+                <span class="company-arrow">→</span>
+              </a>
+              <a class="company-card" href="https://www.w.w.grainger.com/en/careers" target="_blank" rel="noopener">
+                <div class="company-info">
+                  <div class="company-name">Grainger</div>
+                  <div class="company-fit">Industrial distribution · Sales ops</div>
+                </div>
+                <span class="company-tag">Industrial</span>
+                <span class="company-arrow">→</span>
+              </a>
+              <a class="company-card" href="https://jobs.fastenal.com" target="_blank" rel="noopener">
+                <div class="company-info">
+                  <div class="company-name">Fastenal</div>
+                  <div class="company-fit">Industrial supply · Territory mgmt</div>
+                </div>
+                <span class="company-tag">Industrial</span>
+                <span class="company-arrow">→</span>
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- SIDEBAR -->
+        <div class="sidebar">
+          <div class="sidebar-card">
+            <h3>📋 Application Cadence</h3>
+            <div class="cadence-steps">
+              <div class="cadence-step">
+                <div class="step-num">01</div>
+                <div class="step-text">Pick 5 target companies from this list each day</div>
+              </div>
+              <div class="cadence-step">
+                <div class="step-num">02</div>
+                <div class="step-text">Select the role-specific resume from the Resume Hub</div>
+              </div>
+              <div class="cadence-step">
+                <div class="step-num">03</div>
+                <div class="step-text">Customize a cover letter for the specific role</div>
+              </div>
+              <div class="cadence-step">
+                <div class="step-num">04</div>
+                <div class="step-text">Apply, log outreach, and LinkedIn follow-up same day</div>
+              </div>
+              <div class="cadence-step">
+                <div class="step-num">05</div>
+                <div class="step-text">Follow up 5 business days after applying</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="sidebar-card">
+            <h3>🔗 Quick Links</h3>
+            <div class="sidebar-links">
+              <a href="resume.html" class="sidebar-link">
+                <span class="sidebar-link-icon">📄</span> Resume Hub
+              </a>
+              <a href="resume-revops.html" class="sidebar-link">
+                <span class="sidebar-link-icon">📊</span> RevOps Resume
+              </a>
+              <a href="resume-business-development.html" class="sidebar-link">
+                <span class="sidebar-link-icon">🤝</span> BD Resume
+              </a>
+              <a href="resume-sales-operations.html" class="sidebar-link">
+                <span class="sidebar-link-icon">⚙️</span> Sales Ops Resume
+              </a>
+              <a href="cover-letters.html" class="sidebar-link">
+                <span class="sidebar-link-icon">✉️</span> Cover Letter Kit
+              </a>
+              <a href="https://www.linkedin.com/in/tony-beal40/" target="_blank" class="sidebar-link">
+                <span class="sidebar-link-icon">💼</span> LinkedIn Profile
+              </a>
+            </div>
+          </div>
+
+          <div class="sidebar-card" style="background:linear-gradient(135deg,rgba(37,99,235,0.15),rgba(99,102,241,0.15));border-color:rgba(37,99,235,0.3);">
+            <h3 style="color:#93C5FD;">📬 Open to Outreach</h3>
+            <p style="font-size:13px;color:#94A3B8;margin-bottom:16px;">If you're a recruiter or hiring manager at any of these companies, Tony would welcome a conversation.</p>
+            <a href="mailto:tonybeal40@gmail.com?subject=Interview Opportunity - Revenue Operations" class="btn btn-primary" style="width:100%;justify-content:center;">Email Tony Directly</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="page-footer">
+    <div class="container">
+      <p>© 2026 Tony Beal · Revenue Operations Leader · Greater St. Louis · Remote Nationwide · <a href="/">tonybeal.net</a></p>
+    </div>
+  </footer>
+
 </body>
 </html>
