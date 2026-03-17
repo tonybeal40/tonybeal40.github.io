@@ -1,5 +1,86 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1584" height="396" viewBox="0 0 1584 396">
   <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0A0F1E"/>
+      <stop offset="60%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#0D1530"/>
+    </linearGradient>
+    <radialGradient id="glowLeft" cx="30%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#2563EB" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#2563EB" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowMid" cx="65%" cy="40%" r="40%">
+      <stop offset="0%" stop-color="#6366F1" stop-opacity="0.1"/>
+      <stop offset="100%" stop-color="#6366F1" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#60A5FA"/>
+      <stop offset="50%" stop-color="#818CF8"/>
+      <stop offset="100%" stop-color="#34D399"/>
+    </linearGradient>
+    <linearGradient id="divGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#2563EB" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#2563EB" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#6366F1" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1584" height="396" fill="url(#bg)"/>
+  <rect width="1584" height="396" fill="url(#glowLeft)"/>
+  <rect width="1584" height="396" fill="url(#glowMid)"/>
+
+  <!-- Subtle dot grid - full background, very faint -->
+  <pattern id="dots" x="0" y="0" width="32" height="32" patternUnits="userSpaceOnUse">
+    <circle cx="1" cy="1" r="1" fill="#2563EB" fill-opacity="0.1"/>
+  </pattern>
+  <rect width="1584" height="396" fill="url(#dots)"/>
+
+  <!-- Left accent line -->
+  <rect x="64" y="60" width="3" height="276" fill="url(#divGrad)" rx="2"/>
+
+  <!-- Available Now badge - top right area (away from profile photo zone) -->
+  <rect x="1360" y="40" width="164" height="36" rx="18" fill="rgba(52,211,153,0.12)" stroke="#34D399" stroke-opacity="0.5" stroke-width="1.5"/>
+  <circle cx="1382" cy="58" r="6" fill="#34D399"/>
+  <text x="1397" y="63" font-family="'Arial', sans-serif" font-size="13" font-weight="700"
+        fill="#34D399" letter-spacing="1.5">AVAILABLE NOW</text>
+
+  <!-- Overline -->
+  <text x="88" y="108" font-family="'Arial', sans-serif" font-size="13" font-weight="700"
+        fill="#60A5FA" letter-spacing="3">REVENUE OPERATIONS  ·  AI SALES SYSTEMS  ·  GTM STRATEGY</text>
+
+  <!-- Main name -->
+  <text x="88" y="185" font-family="'Arial Black', 'Arial', sans-serif" font-size="76" font-weight="900"
+        fill="url(#titleGrad)" letter-spacing="-2">Tony Beal</text>
+
+  <!-- Tagline -->
+  <text x="88" y="232" font-family="'Arial', sans-serif" font-size="21" font-weight="400"
+        fill="#94A3B8" letter-spacing="0.3">Building AI-driven revenue systems that generate pipeline for B2B companies</text>
+
+  <!-- Stat cards -->
+  <rect x="88" y="264" width="150" height="58" rx="8" fill="rgba(37,99,235,0.12)" stroke="#2563EB" stroke-opacity="0.3" stroke-width="1"/>
+  <text x="163" y="287" font-family="'Arial Black', 'Arial', sans-serif" font-size="20" font-weight="900" fill="#60A5FA" text-anchor="middle">$20M+</text>
+  <text x="163" y="308" font-family="'Arial', sans-serif" font-size="11" font-weight="600" fill="#64748B" text-anchor="middle" letter-spacing="1">PIPELINE</text>
+
+  <rect x="252" y="264" width="150" height="58" rx="8" fill="rgba(99,102,241,0.12)" stroke="#6366F1" stroke-opacity="0.3" stroke-width="1"/>
+  <text x="327" y="287" font-family="'Arial Black', 'Arial', sans-serif" font-size="20" font-weight="900" fill="#818CF8" text-anchor="middle">15+</text>
+  <text x="327" y="308" font-family="'Arial', sans-serif" font-size="11" font-weight="600" fill="#64748B" text-anchor="middle" letter-spacing="1">YEARS B2B</text>
+
+  <rect x="416" y="264" width="150" height="58" rx="8" fill="rgba(52,211,153,0.1)" stroke="#34D399" stroke-opacity="0.3" stroke-width="1"/>
+  <text x="491" y="287" font-family="'Arial Black', 'Arial', sans-serif" font-size="20" font-weight="900" fill="#34D399" text-anchor="middle">11K+</text>
+  <text x="491" y="308" font-family="'Arial', sans-serif" font-size="11" font-weight="600" fill="#64748B" text-anchor="middle" letter-spacing="1">FOLLOWERS</text>
+
+  <rect x="580" y="264" width="150" height="58" rx="8" fill="rgba(37,99,235,0.12)" stroke="#2563EB" stroke-opacity="0.3" stroke-width="1"/>
+  <text x="655" y="287" font-family="'Arial Black', 'Arial', sans-serif" font-size="20" font-weight="900" fill="#60A5FA" text-anchor="middle">3,700+</text>
+  <text x="655" y="308" font-family="'Arial', sans-serif" font-size="11" font-weight="600" fill="#64748B" text-anchor="middle" letter-spacing="1">ACCOUNTS</text>
+
+  <!-- Website URL bottom right - away from photo area -->
+  <text x="1540" y="370" font-family="'Arial', sans-serif" font-size="15" font-weight="600"
+        fill="#334155" text-anchor="end" letter-spacing="1">tonybeal.net</text>
+
+</svg>
+
+  <defs>
     <!-- Background gradient -->
     <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#0A0F1E"/>
