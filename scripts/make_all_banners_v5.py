@@ -160,7 +160,7 @@ def edge_lines(draw):
         draw.point((x,H-1), fill=(rc,gc,bc))
         draw.point((x,H-2), fill=(rc,gc,bc))
 
-def draw_name(draw, LX=50):
+def draw_name(draw, LX=200):
     t1, t2 = "TONY", " BEAL"
     t1w = int(draw.textlength(t1, font=F["name"]))
     draw.text((LX+3,63), t1+t2, font=F["name"], fill=(0,0,0,160))
@@ -169,15 +169,15 @@ def draw_name(draw, LX=50):
     for dx in [LX-20, LX+t1w+int(draw.textlength(t2,font=F["name"]))+8]:
         draw.polygon([(dx+6,72),(dx+12,66),(dx+18,72),(dx+12,78)], fill=(96,165,250,160))
 
-def draw_divider(draw, LX=50, y=174):
-    for xi in range(720):
+def draw_divider(draw, LX=200, y=174):
+    for xi in range(900):
         t = xi/720
         rc=int(37+(139-37)*t); gc=int(99+(92-99)*t); bc=int(235+(246-235)*t)
         al=int(220*(1-t**0.5))
         draw.point((LX+xi,y),   fill=(rc,gc,bc,al))
         draw.point((LX+xi,y+1), fill=(rc,gc,bc,al//2))
 
-def draw_url(draw, LX=50):
+def draw_url(draw, LX=200):
     txt = ">>  tonybeal.net"
     uw = int(draw.textlength(txt, font=F["role"]))
     draw.rounded_rectangle([LX-6,H-40,LX+uw+14,H-6], radius=14,
@@ -194,7 +194,7 @@ def save(canvas, name):
 # ─────────────────────────────────────────────────────────────────────────────
 def slide1():
     canvas, draw = build_base()
-    LX = 50
+    LX = 200
     accent_stripe(draw)
 
     # Available badge
@@ -217,9 +217,9 @@ def slide1():
         oy = 182 + i*28
         draw.text((LX,oy), label, font=F["tag"], fill=(255,255,255))
         lw     = int(draw.textlength(label, font=F["tag"]))
-        bstart = LX+lw+14; bend = bstart+250
+        bstart = LX+lw+14; bend = bstart+340
         draw.rounded_rectangle([bstart,oy+5,bend,oy+17], radius=5, fill=(255,255,255,18))
-        fill_x = bstart+int(250*pct/100)
+        fill_x = bstart+int(340*pct/100)
         draw.rounded_rectangle([bstart,oy+5,fill_x,oy+17], radius=5, fill=(*col,210))
         draw.ellipse([fill_x-5,oy+4,fill_x+5,oy+18], fill=(255,255,255,180))
         draw.text((bend+10,oy+2), f"{pct}%", font=F["sm"], fill=col)
@@ -227,7 +227,7 @@ def slide1():
     # Stat cards
     stats = [("$20M+","PIPELINE",(245,158,11),82),("15+","YRS IN B2B",(99,102,241),94),
              ("11K+","FOLLOWERS",(52,211,153),88),("3.7K+","ACCOUNTS",(96,165,250),76)]
-    sx,sy,cw,ch = LX,272,140,84
+    sx,sy,cw,ch = LX,272,160,84
     for val,lbl,col,gauge in stats:
         draw.rounded_rectangle([sx+3,sy+3,sx+cw+3,sy+ch+3], radius=10, fill=(0,0,0,80))
         draw.rounded_rectangle([sx,sy,sx+cw,sy+ch], radius=10, fill=(6,10,30,200), outline=(*col,120), width=1)
@@ -253,7 +253,7 @@ def slide1():
 # ─────────────────────────────────────────────────────────────────────────────
 def slide2():
     canvas, draw = build_base(seed=13)
-    LX = 50
+    LX = 200
     accent_stripe(draw)
 
     # Top label
@@ -268,7 +268,7 @@ def slide2():
         ("3,700+", "Accounts Worked",     (96, 165,250)),
     ]
     cols2  = 2
-    tw, th = 310, 136
+    tw, th = 360, 136
     gap    = 18
     start_x = LX
     start_y = 60
@@ -307,7 +307,7 @@ def slide2():
 # ─────────────────────────────────────────────────────────────────────────────
 def slide3():
     canvas, draw = build_base(seed=14)
-    LX = 50
+    LX = 200
     accent_stripe(draw)
 
     draw.text((LX,18), "WHAT I BUILD FOR YOU", font=F["badge"], fill=(99,102,241))
@@ -320,7 +320,7 @@ def slide3():
         ("AI Sales\nSystems",    "Outreach  |  Scoring\nAutomation  |  AI Tools",(99,102,241),"02"),
         ("GTM\nStrategy",        "Positioning  |  ICP\nPlaybooks  |  Enablement",(16,185,129),"03"),
     ]
-    pw2 = 200; ph2 = 290; gap2 = 20; sy2 = 52
+    pw2 = 250; ph2 = 290; gap2 = 22; sy2 = 52
     for i,(title,desc,col,num) in enumerate(pillars):
         tx2 = LX + i*(pw2+gap2)
         # Shadow
@@ -363,7 +363,7 @@ def slide3():
 # ─────────────────────────────────────────────────────────────────────────────
 def slide4():
     canvas, draw = build_base(seed=15)
-    LX = 50
+    LX = 200
     accent_stripe(draw)
 
     # Decorative corner accent lines instead of quote mark
@@ -383,7 +383,7 @@ def slide4():
         draw.text((LX,   22+i*58),   line, font=F["h3"], fill=col)
 
     # Accent rule
-    draw.line([(LX,210),(LX+480,210)], fill=(96,165,250,160), width=2)
+    draw.line([(LX,210),(LX+700,210)], fill=(96,165,250,160), width=2)
 
     # Attribution
     draw.text((LX, 222), "— Tony Beal  |  Revenue Architect  |  AI Sales Strategist",
@@ -409,7 +409,7 @@ def slide4():
 # ─────────────────────────────────────────────────────────────────────────────
 def slide5():
     canvas, draw = build_base(seed=16)
-    LX = 50
+    LX = 200
     accent_stripe(draw)
 
     # Glowing CTA headline
@@ -421,7 +421,7 @@ def slide5():
                   fill=(255,255,255) if i==0 else (96,165,250))
 
     # Glow line
-    draw.line([(LX,200),(LX+560,200)], fill=(245,158,11,180), width=3)
+    draw.line([(LX,200),(LX+750,200)], fill=(245,158,11,180), width=3)
 
     # Sub-line
     draw.text((LX, 212), "Let's build something that actually drives results.", font=F["tag"],
