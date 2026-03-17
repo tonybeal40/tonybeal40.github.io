@@ -9,10 +9,11 @@ W, H = 1584, 396
 PHOTO_PATH = r"c:\Users\tonyb\.openclaw\workspace\tonybeal-site\headshot-hero.png"
 BASE       = r"c:\Users\tonyb\.openclaw\workspace\tonybeal-site\assets"
 
-PHOTO_CX = 200
+PHOTO_CX = 1384  # right side
 PHOTO_CY = 198
 PHOTO_R  = 158
-TXT_L    = 410   # pushed right to clear photo + glow rings
+TXT_L    = 26    # text starts from left edge
+TXT_R    = 1160  # text ends before photo zone
 TXT_R    = 1558
 
 # ── Fonts ─────────────────────────────────────────────────────────────────────
@@ -167,40 +168,38 @@ def slide1(f):
     dramatic_vignette(c)
     d  = ImageDraw.Draw(c)
 
-    # Vertical left rule of text zone
-    d.line([(TXT_L, 24), (TXT_L, H-24)], fill=(*A, 90), width=2)
+    # Vertical right rule of text zone
+    d.line([(TXT_R, 24), (TXT_R, H-24)], fill=(*A, 90), width=2)
 
     # Available pill
-    badge_pill(d, "● AVAILABLE NOW", TXT_L+18, 22, (8,25,16), (52,211,153),
+    badge_pill(d, "● AVAILABLE NOW", TXT_L+26, 22, (8,25,16), (52,211,153),
                (52,211,153), f["badge"])
 
-    # Overline — right aligned, small caps feel
+    # Overline — left aligned
     over = "REVENUE OPERATIONS  ·  AI SALES SYSTEMS  ·  GTM STRATEGY"
-    rtxt(d, over, f["over"], 74, A)
+    ltxt(d, over, f["over"], 74, A)
     ow = d.textlength(over, font=f["over"])
-    d.line([(TXT_R-ow, 92), (TXT_R, 92)], fill=(*A, 100), width=1)
+    d.line([(TXT_L+26, 92), (TXT_L+26+ow, 92)], fill=(*A, 100), width=1)
 
-    # NAME — right aligned, fits in one line, leaves room for stats
+    # NAME — left aligned
     name = "TONY BEAL"
-    nw   = d.textlength(name, font=f["name"])
-    nx   = int(TXT_R - nw)
-    d.text((nx+5, 96), name, font=f["name"], fill=(10,20,60,220))
-    d.text((nx+2, 94), name, font=f["name"], fill=(40,70,180,160))
-    d.text((nx,   92), name, font=f["name"], fill=(255,255,255))
+    lx   = TXT_L + 26
+    d.text((lx+5, 96), name, font=f["name"], fill=(10,20,60,220))
+    d.text((lx+2, 94), name, font=f["name"], fill=(40,70,180,160))
+    d.text((lx,   92), name, font=f["name"], fill=(255,255,255))
 
-    # Tagline — directly under name
+    # Tagline
     tag = "AI-Powered Revenue Systems  ·  B2B Companies"
-    rtxt(d, tag, f["tag"], 238, (180,200,240))
+    ltxt(d, tag, f["tag"], 238, (180,200,240))
 
     # Thin divider
     d.line([(TXT_L+18, 256), (TXT_R, 256)], fill=(*A,40), width=1)
 
-    # Stats row — 4 cards right-aligned
+    # Stats row — left-aligned
     stats = [("$20M+","PIPELINE",(37,99,235)),("15+","YRS B2B",(99,102,241)),
              ("11K+","FOLLOWERS",(16,185,129)),("3,700+","ACCOUNTS",(37,99,235))]
     cw, ch = 156, 100
-    total  = len(stats)*cw + (len(stats)-1)*10
-    sx     = TXT_R - total
+    sx     = TXT_L + 26
     for i,(v,l,ac) in enumerate(stats):
         cx = sx + i*(cw+10); cy = 264
         d.rounded_rectangle([cx, cy, cx+cw, cy+ch], radius=8,
@@ -226,7 +225,7 @@ def slide2(f):
     place_photo(c, PHOTO_CX, PHOTO_CY, PHOTO_R, A)
     dramatic_vignette(c)
     d = ImageDraw.Draw(c)
-    d.line([(TXT_L, 24), (TXT_L, H-24)], fill=(*A, 90), width=2)
+    d.line([(TXT_R, 24), (TXT_R, H-24)], fill=(*A, 90), width=2)
 
     # Headline
     ctxt(d, "THE NUMBERS", f["md"], 22, A)
@@ -270,7 +269,7 @@ def slide3(f):
     place_photo(c, PHOTO_CX, PHOTO_CY, PHOTO_R, A)
     dramatic_vignette(c)
     d = ImageDraw.Draw(c)
-    d.line([(TXT_L, 24), (TXT_L, H-24)], fill=(*A, 90), width=2)
+    d.line([(TXT_R, 24), (TXT_R, H-24)], fill=(*A, 90), width=2)
 
     ltxt(d, "WHAT I BUILD", f["md"], 16, A)
     hw = d.textlength("WHAT I BUILD", font=f["md"])
@@ -309,7 +308,7 @@ def slide4(f):
     place_photo(c, PHOTO_CX, PHOTO_CY, PHOTO_R, A)
     dramatic_vignette(c)
     d = ImageDraw.Draw(c)
-    d.line([(TXT_L, 24), (TXT_L, H-24)], fill=(*A, 90), width=2)
+    d.line([(TXT_R, 24), (TXT_R, H-24)], fill=(*A, 90), width=2)
 
     # Faint large quote mark watermark
     d.text((TXT_L+10, -22), "\u201c", font=f["name"], fill=(*A, 22))
@@ -358,7 +357,7 @@ def slide5(f):
     place_photo(c, PHOTO_CX, PHOTO_CY, PHOTO_R, A)
     dramatic_vignette(c)
     d = ImageDraw.Draw(c)
-    d.line([(TXT_L, 24), (TXT_L, H-24)], fill=(*A, 90), width=2)
+    d.line([(TXT_R, 24), (TXT_R, H-24)], fill=(*A, 90), width=2)
 
     badge_pill(d, "● AVAILABLE NOW", TXT_L+18, 26, (28,16,2), A, A, f["badge"])
 
