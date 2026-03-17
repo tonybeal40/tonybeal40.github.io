@@ -91,9 +91,9 @@ def build_base(orb_palette=None, seed=12):
         v = random.randint(50,100)
         pd.point((x,y), fill=(v,v,v,random.randint(4,10)))
 
-    # ── Photo — circle portrait, far right, doesn't touch text ──
-    R        = 178          # circle radius
-    CX       = W - R - 30  # circle center x (far right, clear of text)
+    # ── Photo — circle portrait, right-center, balanced with content ──
+    R        = 170          # circle radius
+    CX       = 1300         # circle center x (pulled left to close dead zone)
     CY       = H // 2      # vertically centered
 
     # Multi-ring glow behind circle
@@ -170,8 +170,8 @@ def draw_name(draw, LX=200):
         draw.polygon([(dx+6,72),(dx+12,66),(dx+18,72),(dx+12,78)], fill=(96,165,250,160))
 
 def draw_divider(draw, LX=200, y=174):
-    for xi in range(900):
-        t = xi/720
+    for xi in range(1080):
+        t = xi/900
         rc=int(37+(139-37)*t); gc=int(99+(92-99)*t); bc=int(235+(246-235)*t)
         al=int(220*(1-t**0.5))
         draw.point((LX+xi,y),   fill=(rc,gc,bc,al))
@@ -217,7 +217,7 @@ def slide1():
         oy = 182 + i*28
         draw.text((LX,oy), label, font=F["tag"], fill=(255,255,255))
         lw     = int(draw.textlength(label, font=F["tag"]))
-        bstart = LX+lw+14; bend = bstart+340
+        bstart = LX+lw+14; bend = bstart+480
         draw.rounded_rectangle([bstart,oy+5,bend,oy+17], radius=5, fill=(255,255,255,18))
         fill_x = bstart+int(340*pct/100)
         draw.rounded_rectangle([bstart,oy+5,fill_x,oy+17], radius=5, fill=(*col,210))
@@ -227,7 +227,7 @@ def slide1():
     # Stat cards
     stats = [("$20M+","PIPELINE",(245,158,11),82),("15+","YRS IN B2B",(99,102,241),94),
              ("11K+","FOLLOWERS",(52,211,153),88),("3.7K+","ACCOUNTS",(96,165,250),76)]
-    sx,sy,cw,ch = LX,272,160,84
+    sx,sy,cw,ch = LX,272,210,84
     for val,lbl,col,gauge in stats:
         draw.rounded_rectangle([sx+3,sy+3,sx+cw+3,sy+ch+3], radius=10, fill=(0,0,0,80))
         draw.rounded_rectangle([sx,sy,sx+cw,sy+ch], radius=10, fill=(6,10,30,200), outline=(*col,120), width=1)
@@ -242,7 +242,7 @@ def slide1():
         gw=int((cw-16)*gauge/100)
         draw.rounded_rectangle([sx+8,sy+ch-12,sx+cw-8,sy+ch-4], radius=3, fill=(255,255,255,15))
         draw.rounded_rectangle([sx+8,sy+ch-12,sx+8+gw,sy+ch-4], radius=3, fill=(*col,180))
-        sx += cw+10
+        sx += cw+14
 
     draw_url(draw, LX)
     edge_lines(draw)
@@ -268,7 +268,7 @@ def slide2():
         ("3,700+", "Accounts Worked",     (96, 165,250)),
     ]
     cols2  = 2
-    tw, th = 360, 136
+    tw, th = 450, 136
     gap    = 18
     start_x = LX
     start_y = 60
@@ -320,7 +320,7 @@ def slide3():
         ("AI Sales\nSystems",    "Outreach  |  Scoring\nAutomation  |  AI Tools",(99,102,241),"02"),
         ("GTM\nStrategy",        "Positioning  |  ICP\nPlaybooks  |  Enablement",(16,185,129),"03"),
     ]
-    pw2 = 250; ph2 = 290; gap2 = 22; sy2 = 52
+    pw2 = 295; ph2 = 290; gap2 = 22; sy2 = 52
     for i,(title,desc,col,num) in enumerate(pillars):
         tx2 = LX + i*(pw2+gap2)
         # Shadow
@@ -383,7 +383,7 @@ def slide4():
         draw.text((LX,   22+i*58),   line, font=F["h3"], fill=col)
 
     # Accent rule
-    draw.line([(LX,210),(LX+700,210)], fill=(96,165,250,160), width=2)
+    draw.line([(LX,210),(LX+900,210)], fill=(96,165,250,160), width=2)
 
     # Attribution
     draw.text((LX, 222), "— Tony Beal  |  Revenue Architect  |  AI Sales Strategist",
@@ -391,7 +391,7 @@ def slide4():
 
     # Tag chips row
     tags = [("#RevOps",(37,99,235)),("#AI Sales",(99,102,241)),
-            ("#GTM",(16,185,129)),("#B2B",(245,158,11))]
+            ("#GTM",(16,185,129)),("#B2B",(245,158,11)),("#Pipeline",(96,165,250)),("#Automation",(52,211,153))]
     tx3 = LX; ty3 = 260
     for tag,col in tags:
         tw3 = int(draw.textlength(tag, font=F["badge"]))
@@ -421,14 +421,14 @@ def slide5():
                   fill=(255,255,255) if i==0 else (96,165,250))
 
     # Glow line
-    draw.line([(LX,200),(LX+750,200)], fill=(245,158,11,180), width=3)
+    draw.line([(LX,200),(LX+900,200)], fill=(245,158,11,180), width=3)
 
     # Sub-line
     draw.text((LX, 212), "Let's build something that actually drives results.", font=F["tag"],
               fill=(200,215,255))
 
     # Big CTA button
-    bx5,by5,bw5,bh5 = LX,252,300,56
+    bx5,by5,bw5,bh5 = LX,252,400,56
     # Outer glow
     for gi in range(8,0,-1):
         draw.rounded_rectangle([bx5-gi,by5-gi,bx5+bw5+gi,by5+bh5+gi], radius=30,
