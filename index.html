@@ -218,11 +218,13 @@
     .nav-brand {
       font-size: 20px;
       font-weight: 800;
-      background: linear-gradient(135deg, #60A5FA 0%, #6366F1 100%);
+      background: linear-gradient(135deg, #60A5FA 0%, #818CF8 50%, #60A5FA 100%);
+      background-size: 200% auto;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
       letter-spacing: -0.02em;
+      animation: titleShimmer 5s linear infinite;
     }
 
     .nav-links {
@@ -316,11 +318,30 @@
       align-items: center;
       background-color: #0F172A;
       background-image:
-        radial-gradient(ellipse 70% 50% at 70% 40%, rgba(37,99,235,0.12) 0%, transparent 60%),
-        radial-gradient(rgba(37,99,235,0.15) 1px, transparent 1px);
-      background-size: 100% 100%, 32px 32px;
+        radial-gradient(ellipse 80% 60% at 60% 30%, rgba(99,102,241,0.18) 0%, transparent 55%),
+        radial-gradient(ellipse 50% 40% at 20% 70%, rgba(37,99,235,0.12) 0%, transparent 50%),
+        radial-gradient(rgba(37,99,235,0.12) 1px, transparent 1px);
+      background-size: 100% 100%, 100% 100%, 32px 32px;
       position: relative;
       overflow: hidden;
+    }
+
+    /* Animated orb behind the headline */
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 20%;
+      left: 30%;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(37,99,235,0.08) 0%, transparent 70%);
+      border-radius: 50%;
+      animation: heroOrb 8s ease-in-out infinite alternate;
+      pointer-events: none;
+    }
+    @keyframes heroOrb {
+      from { transform: translate(0, 0) scale(1); opacity: 0.6; }
+      to   { transform: translate(60px, -40px) scale(1.15); opacity: 1; }
     }
 
     .hero-container {
@@ -348,6 +369,24 @@
       letter-spacing: 0.12em;
       text-transform: uppercase;
       color: #60A5FA;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .status-dot {
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #34D399;
+      flex-shrink: 0;
+      box-shadow: 0 0 0 0 rgba(52,211,153,0.5);
+      animation: statusPing 2s ease-out infinite;
+    }
+    @keyframes statusPing {
+      0%   { box-shadow: 0 0 0 0 rgba(52,211,153,0.6); }
+      70%  { box-shadow: 0 0 0 8px rgba(52,211,153,0); }
+      100% { box-shadow: 0 0 0 0 rgba(52,211,153,0); }
     }
 
     .hero-title {
@@ -356,6 +395,20 @@
       color: #FFFFFF;
       line-height: 1.0;
       letter-spacing: -0.03em;
+    }
+
+    .hero-title em {
+      font-style: normal;
+      background: linear-gradient(90deg, #60A5FA 0%, #818CF8 50%, #34D399 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      background-size: 200% auto;
+      animation: titleShimmer 4s linear infinite;
+    }
+    @keyframes titleShimmer {
+      0%   { background-position: 0% center; }
+      100% { background-position: 200% center; }
     }
 
     .hero-eyebrow { font-size: 14px; font-weight: 600; color: #60A5FA; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 12px; }
@@ -397,6 +450,12 @@
       flex-direction: column;
       gap: 4px;
       backdrop-filter: blur(8px);
+      transition: border-color 0.3s, box-shadow 0.3s, transform 0.2s;
+    }
+    .metric-card:hover {
+      border-color: rgba(37,99,235,0.5);
+      box-shadow: 0 0 24px rgba(37,99,235,0.2);
+      transform: translateY(-2px);
     }
 
     .metric-number {
@@ -1840,11 +1899,11 @@
     <div class="hero-grid-anim" aria-hidden="true"></div>
     <div class="hero-container">
       <div class="hero-text">
-        <p class="overline">Revenue Operations | AI Sales Systems | Pipeline Generation | GTM Strategy</p>
+        <p class="overline"><span class="status-dot"></span>Revenue Operations | AI Sales Systems | Pipeline Generation | GTM Strategy</p>
         <p class="hero-eyebrow">Tony Beal</p>
         <!-- Proof bar -->
         <div class="hero-proof-bar">
-          <span class="proof-pill">✅ 10K+ LinkedIn Followers</span>
+          <span class="proof-pill">✅ 10K+ LinkedIn Audience</span>
           <span class="proof-pill">🤖 AI Systems Builder</span>
           <span class="proof-pill">📍 Remote Nationwide</span>
         </div>
@@ -1902,7 +1961,7 @@
             </div>
             <div class="impact-item">
               <span class="impact-icon">👥</span>
-              <span>10,000+ LinkedIn followers</span>
+              <span>10K+ LinkedIn Audience</span>
             </div>
             <div class="impact-item">
               <span class="impact-icon">🤖</span>
@@ -2077,7 +2136,7 @@
           <div class="timeline-year">2024</div>
           <div class="timeline-content">
             <h3>40,000+ AI Prompts Engineered</h3>
-            <p>Developed advanced AI prompt engineering library for sales research, outreach personalization, and revenue reporting automation. 10,000+ LinkedIn followers.</p>
+            <p>Developed advanced AI prompt engineering library for sales research, outreach personalization, and revenue reporting automation. 10K+ LinkedIn audience.</p>
           </div>
         </div>
         <div class="timeline-item reveal">
@@ -2403,8 +2462,8 @@
       <p class="section-sub" style="color:#94A3B8;">Building authority and reach in revenue operations, AI sales systems, and B2B pipeline strategy</p>
       <div class="visibility-grid">
         <div class="vis-card">
-          <span class="vis-number">10,000+</span>
-          <span class="vis-label">LinkedIn Followers</span>
+          <span class="vis-number">10K+</span>
+          <span class="vis-label">LinkedIn Audience</span>
           <span class="vis-growth">+109.4% YoY</span>
         </div>
         <div class="vis-card">
