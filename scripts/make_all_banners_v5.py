@@ -184,9 +184,66 @@ def draw_url(draw, LX=200):
                             fill=(6,15,45,220), outline=(96,165,250,180), width=2)
     draw.text((LX+3,H-38), txt, font=F["role"], fill=(96,165,250))
 
+NETFLIX_SUBTITLES = {
+    "linkedin-banner-v2.png": "A Revenue Systems Story",
+    "linkedin-banner-slide2.png": "The Numbers Episode",
+    "linkedin-banner-slide3.png": "The Build Blueprint",
+    "linkedin-banner-slide4.png": "Pipeline Manifesto",
+    "linkedin-banner-slide5.png": "Final Call To Action",
+}
+
+def apply_netflix_finish(canvas, subtitle="", episode="E01"):
+    """Cinematic polish: vignette, grain, and subtitle bars."""
+    img = canvas.convert("RGBA")
+
+    # Stronger vignette
+    vignette = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+    vd = ImageDraw.Draw(vignette)
+    cx, cy = W // 2, H // 2
+    max_r = int((W**2 + H**2) ** 0.5 / 2)
+    for r in range(max_r, 0, -12):
+        t = 1 - (r / max_r)
+        a = int(165 * (t ** 1.8))
+        vd.ellipse([cx-r, cy-r, cx+r, cy+r], outline=(0, 0, 0, a), width=18)
+    img = Image.alpha_composite(img, vignette)
+
+    # Film grain
+    grain = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+    gd = ImageDraw.Draw(grain)
+    noise_points = 10000
+    for _ in range(noise_points):
+        x = random.randint(0, W - 1)
+        y = random.randint(0, H - 1)
+        v = random.randint(120, 255)
+        a = random.randint(8, 28)
+        gd.point((x, y), fill=(v, v, v, a))
+    grain = grain.filter(ImageFilter.GaussianBlur(0.35))
+    img = Image.alpha_composite(img, grain)
+
+    # Subtitle bars (cinematic letterbox)
+    bars = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+    bd = ImageDraw.Draw(bars)
+    bar_h = 34
+    bd.rectangle([0, 0, W, bar_h], fill=(0, 0, 0, 220))
+    bd.rectangle([0, H - bar_h, W, H], fill=(0, 0, 0, 230))
+
+    top_text = f"TONY BEAL // REVOPS SERIES // {episode}"
+    tdw = int(bd.textlength(top_text, font=F["badge"]))
+    bd.text(((W - tdw) // 2, 9), top_text, font=F["badge"], fill=(220, 220, 220, 225))
+
+    if subtitle:
+        sfont = F["tag"]
+        sw = int(bd.textlength(subtitle, font=sfont))
+        bd.text(((W - sw) // 2, H - bar_h + 6), subtitle, font=sfont, fill=(255, 255, 255, 235))
+
+    img = Image.alpha_composite(img, bars)
+    return img
+
 def save(canvas, name):
     out = os.path.join(ASSETS, name)
-    canvas.convert("RGB").save(out, "PNG")
+    subtitle = NETFLIX_SUBTITLES.get(name, "")
+    polished = apply_netflix_finish(canvas, subtitle=subtitle)
+    polished.convert("RGB").save(out, "PNG")
     print(f"Saved: {out}")
 
 # ─────────────────────────────────────────────────────────────────────────────
@@ -447,12 +504,37 @@ def slide5():
     edge_lines(draw)
     save(canvas, "linkedin-banner-slide5.png")
 
+def export_carousel_pdf():
+    out_dir = os.path.join(BASE, "..", "outputs", "linkedin-banners")
+    os.makedirs(out_dir, exist_ok=True)
+
+    slide_files = [
+        "linkedin-banner-v2.png",
+        "linkedin-banner-slide2.png",
+        "linkedin-banner-slide3.png",
+        "linkedin-banner-slide4.png",
+        "linkedin-banner-slide5.png",
+    ]
+
+    pages = []
+    for f in slide_files:
+        p = os.path.join(ASSETS, f)
+        img = Image.open(p).convert("RGB")
+        out_png = os.path.join(out_dir, f.replace("v2", "slide1"))
+        img.save(out_png, "PNG")
+        pages.append(img)
+
+    pdf_path = os.path.join(out_dir, "linkedin-netflix-carousel.pdf")
+    pages[0].save(pdf_path, "PDF", save_all=True, append_images=pages[1:], resolution=150.0)
+    print(f"Saved PDF carousel: {pdf_path}")
+
 # ─────────────────────────────────────────────────────────────────────────────
 if __name__ == "__main__":
-    print("Building all 5 LinkedIn banner slides...")
+    print("Building all 5 LinkedIn banner slides (Netflix mode)...")
     slide1()
     slide2()
     slide3()
     slide4()
     slide5()
-    print("Done! All 5 slides saved to assets/")
+    export_carousel_pdf()
+    print("Done! Slides + carousel PDF saved to outputs/linkedin-banners/")
