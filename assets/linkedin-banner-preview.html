@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8"/>
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { width:1584px; height:396px; overflow:hidden; background:#0A0F1E; }
+  .banner {
+    width:1584px; height:396px;
+    background: linear-gradient(135deg, #060D1F 0%, #0F172A 50%, #0D1530 100%);
+    position:relative; overflow:hidden; font-family:'Arial Black',Arial,sans-serif;
+  }
+  /* Glow orbs */
+  .orb1 { position:absolute; right:200px; top:-80px; width:600px; height:600px;
+    background:radial-gradient(circle, rgba(37,99,235,0.22) 0%, transparent 70%); border-radius:50%; }
+  .orb2 { position:absolute; right:600px; bottom:-100px; width:400px; height:400px;
+    background:radial-gradient(circle, rgba(99,102,241,0.15) 0%, transparent 70%); border-radius:50%; }
+  /* Dot grid */
+  .grid { position:absolute; inset:0;
+    background-image: radial-gradient(circle, rgba(37,99,235,0.18) 1px, transparent 1px);
+    background-size:32px 32px; }
+  /* Decorative lines */
+  .deco-lines { position:absolute; right:0; top:0; bottom:0; width:340px; opacity:0.12; }
+  /* Available badge */
+  .badge {
+    position:absolute; top:32px; left:60px;
+    background:rgba(52,211,153,0.12); border:1.5px solid rgba(52,211,153,0.5);
+    border-radius:20px; padding:7px 18px 7px 12px;
+    display:flex; align-items:center; gap:8px;
+  }
+  .badge-dot { width:10px; height:10px; border-radius:50%; background:#34D399;
+    box-shadow:0 0 8px rgba(52,211,153,0.8); }
+  .badge-text { font-size:13px; font-weight:700; color:#34D399; letter-spacing:1.5px; font-family:Arial; }
+  /* Right content area */
+  .content { position:absolute; right:56px; top:0; bottom:0; width:960px;
+    display:flex; flex-direction:column; justify-content:center; align-items:flex-end; gap:0; }
+  .overline { font-size:12px; font-weight:700; color:#60A5FA; letter-spacing:3px;
+    text-transform:uppercase; font-family:Arial; margin-bottom:10px; }
+  .name {
+    font-size:88px; font-weight:900; letter-spacing:-3px; line-height:1;
+    background:linear-gradient(90deg, #60A5FA 0%, #818CF8 50%, #34D399 100%);
+    -webkit-background-clip:text; -webkit-text-fill-color:transparent;
+    background-clip:text; margin-bottom:10px;
+  }
+  .tagline { font-size:20px; color:#94A3B8; font-family:Arial; font-weight:400;
+    text-align:right; margin-bottom:22px; max-width:780px; }
+  /* Stats row */
+  .stats { display:flex; gap:12px; }
+  .stat {
+    background:rgba(255,255,255,0.05); border-radius:10px; padding:10px 20px;
+    text-align:center; border:1px solid rgba(255,255,255,0.1); min-width:130px;
+  }
+  .stat-num { font-size:22px; font-weight:900; display:block; }
+  .stat-lbl { font-size:10px; font-weight:700; letter-spacing:1.5px;
+    color:#64748B; font-family:Arial; text-transform:uppercase; }
+  .s1 .stat-num { color:#60A5FA; }
+  .s2 .stat-num { color:#818CF8; }
+  .s3 .stat-num { color:#34D399; }
+  .s4 .stat-num { color:#60A5FA; }
+  /* URL */
+  .url { position:absolute; bottom:20px; right:60px;
+    font-size:14px; color:#334155; font-family:Arial; font-weight:600; letter-spacing:1px; }
+  /* Right accent line */
+  .accent-line { position:absolute; right:52px; top:50px; width:3px; height:296px;
+    background:linear-gradient(180deg, transparent, #2563EB, transparent); border-radius:2px; }
+</style>
+</head>
+<body>
+<div class="banner">
+  <div class="grid"></div>
+  <div class="orb1"></div>
+  <div class="orb2"></div>
+  <div class="accent-line"></div>
+  <div class="badge">
+    <div class="badge-dot"></div>
+    <span class="badge-text">AVAILABLE NOW</span>
+  </div>
+  <div class="content">
+    <div class="overline">Revenue Operations &nbsp;·&nbsp; AI Sales Systems &nbsp;·&nbsp; GTM Strategy</div>
+    <div class="name">Tony Beal</div>
+    <div class="tagline">Building AI-driven revenue systems that generate pipeline for B2B companies</div>
+    <div class="stats">
+      <div class="stat s1"><span class="stat-num">$20M+</span><span class="stat-lbl">Pipeline</span></div>
+      <div class="stat s2"><span class="stat-num">15+</span><span class="stat-lbl">Years B2B</span></div>
+      <div class="stat s3"><span class="stat-num">11K+</span><span class="stat-lbl">Followers</span></div>
+      <div class="stat s4"><span class="stat-num">3,700+</span><span class="stat-lbl">Accounts</span></div>
+    </div>
+  </div>
+  <div class="url">tonybeal.net</div>
+</div>
+</body>
+</html>
