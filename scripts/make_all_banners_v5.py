@@ -7,7 +7,7 @@ import math, random, os
 
 W, H   = 1584, 396
 BASE   = r"c:\Users\tonyb\.openclaw\workspace\tonybeal-site"
-PHOTO  = os.path.join(BASE, "headshot-hero.png")
+PHOTO  = os.path.join(BASE, "headshot-new.png")
 ASSETS = os.path.join(BASE, "assets")
 
 def ft(f, s):
@@ -91,46 +91,48 @@ def build_base(orb_palette=None, seed=12):
         v = random.randint(50,100)
         pd.point((x,y), fill=(v,v,v,random.randint(4,10)))
 
-    # ── Photo ──
+    # ── Photo — circle portrait, far right, doesn't touch text ──
+    R        = 178          # circle radius
+    CX       = W - R - 30  # circle center x (far right, clear of text)
+    CY       = H // 2      # vertically centered
+
+    # Multi-ring glow behind circle
+    hl = Image.new("RGBA", (W, H), (0,0,0,0))
+    hd2 = ImageDraw.Draw(hl)
+    for rad in range(R+60, R-1, -3):
+        t = (rad - R) / 60
+        a = int(28 * math.exp(-t * 3))
+        hd2.ellipse([CX-rad, CY-rad, CX+rad, CY+rad], fill=(99,102,241,a))
+    canvas = Image.alpha_composite(canvas, hl)
+
+    # Load + scale photo to fill circle
     photo = Image.open(PHOTO).convert("RGBA")
     pw, ph = photo.size
-    target_w = int(W * 0.62)
-    scale    = target_w / pw
-    nw       = target_w
-    nh       = int(ph * scale)
-    if nh < H:
-        scale = H / ph; nh = H; nw = int(pw * scale)
-    photo = photo.resize((nw, nh), Image.LANCZOS)
-    y_off = int(nh * 0.22)
-    photo = photo.crop((0, y_off, nw, y_off + H))
-    rgb   = ImageEnhance.Contrast(photo.convert("RGB")).enhance(1.35)
-    rgb   = ImageEnhance.Brightness(rgb).enhance(1.15)
-    pe    = rgb.convert("RGBA")
-    orig  = Image.open(PHOTO).convert("RGBA").resize((nw, nh), Image.LANCZOS).crop((0,y_off,nw,y_off+H))
-    pe.putalpha(orig.split()[3])
-    fade_w = min(380, nw)
-    for x in range(fade_w):
-        a = int(255*(x/fade_w)**1.5)
-        for yp in range(H):
-            r2,g2,b2,a2 = pe.getpixel((x,yp))
-            pe.putpixel((x,yp),(r2,g2,b2,min(a2,a)))
-    for xi in range(30):
-        x = nw-1-xi; a = int(255*(xi/30)**0.7)
-        for yp in range(H):
-            r2,g2,b2,a2 = pe.getpixel((x,yp))
-            pe.putpixel((x,yp),(r2,g2,b2,min(a2,a)))
-    px = W - nw
-    canvas.paste(pe, (px,0), pe)
+    diam   = R * 2
+    scale  = diam / min(pw, ph)
+    nw2    = int(pw * scale); nh2 = int(ph * scale)
+    photo  = photo.resize((nw2, nh2), Image.LANCZOS)
+    # Centre-crop to exact circle diameter
+    cx_off = (nw2 - diam) // 2; cy_off = (nh2 - diam) // 2
+    photo  = photo.crop((cx_off, cy_off, cx_off+diam, cy_off+diam))
 
-    # Glow halo
-    halo_cx = px + nw//2; halo_cy = H//2
-    hl = Image.new("RGBA",(W,H),(0,0,0,0))
-    hd2 = ImageDraw.Draw(hl)
-    for rad in range(260,0,-5):
-        t = rad/260; a = int(18*math.exp(-((1-t)*3)**1.5))
-        hd2.ellipse([halo_cx-rad,halo_cy-rad,halo_cx+rad,halo_cy+rad],fill=(99,102,241,a))
-    canvas = Image.alpha_composite(canvas, hl)
-    canvas.paste(pe, (px,0), pe)
+    # Create circular mask
+    mask = Image.new("L", (diam, diam), 0)
+    ImageDraw.Draw(mask).ellipse([0,0,diam,diam], fill=255)
+
+    # Darken/blend the light background of new photo
+    rgb3   = ImageEnhance.Brightness(photo.convert("RGB")).enhance(0.85)
+    rgb3   = ImageEnhance.Contrast(rgb3).enhance(1.2)
+    photo_rgb = rgb3.convert("RGBA")
+    photo_rgb.putalpha(mask)
+
+    # Paste circle onto canvas
+    canvas.paste(photo_rgb, (CX - R, CY - R), photo_rgb)
+
+    # Decorative ring border on top
+    bd = ImageDraw.Draw(canvas)
+    bd.ellipse([CX-R-3, CY-R-3, CX+R+3, CY+R+3], outline=(96,165,250,200), width=3)
+    bd.ellipse([CX-R-7, CY-R-7, CX+R+7, CY+R+7], outline=(96,165,250,50),  width=2)
 
     # Dark scrim left zone
     scrim = Image.new("RGBA",(W,H),(0,0,0,0))
