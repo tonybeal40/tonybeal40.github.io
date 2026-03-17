@@ -1626,6 +1626,73 @@
 .ways-cta { margin-top: auto; font-size: 14px; font-weight: 600; color: #2563EB; text-decoration: none; }
 .ways-cta:hover { color: #1D4ED8; }
 @media (max-width: 900px) { .ways-grid { grid-template-columns: 1fr; } }
+/* Impact Snapshot Card */
+.impact-snapshot {
+  background: rgba(30,41,59,0.85);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 16px;
+  padding: 24px;
+  width: 100%;
+  max-width: 320px;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+}
+.impact-snapshot-title {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #60A5FA;
+  margin-bottom: 16px;
+}
+.impact-snapshot-items {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+.impact-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  color: #CBD5E1;
+  font-weight: 500;
+}
+.impact-icon {
+  font-size: 16px;
+  width: 20px;
+  flex-shrink: 0;
+}
+.impact-focus {
+  border-top: 1px solid rgba(255,255,255,0.08);
+  padding-top: 14px;
+}
+.impact-focus-label {
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #64748B;
+  margin-bottom: 10px;
+}
+.impact-focus-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.impact-focus-tags span {
+  font-size: 11px;
+  font-weight: 600;
+  color: #93C5FD;
+  background: rgba(37,99,235,0.15);
+  border: 1px solid rgba(37,99,235,0.25);
+  border-radius: 999px;
+  padding: 3px 10px;
+}
+@media (max-width: 768px) {
+  .impact-snapshot { max-width: 100%; }
+}
   </style>
 </head>
 <body>
@@ -1700,6 +1767,35 @@
           <span>AI Sales Systems Builder</span>
         </div>
         <div class="location-badge">📍 Greater St. Louis | Remote Nationwide</div>
+        <div class="impact-snapshot">
+          <div class="impact-snapshot-title">Impact Snapshot</div>
+          <div class="impact-snapshot-items">
+            <div class="impact-item">
+              <span class="impact-icon">📈</span>
+              <span>$10M+ pipeline generated</span>
+            </div>
+            <div class="impact-item">
+              <span class="impact-icon">👥</span>
+              <span>10,000+ LinkedIn followers</span>
+            </div>
+            <div class="impact-item">
+              <span class="impact-icon">🤖</span>
+              <span>AI outbound systems built</span>
+            </div>
+            <div class="impact-item">
+              <span class="impact-icon">📅</span>
+              <span>15+ years B2B leadership</span>
+            </div>
+          </div>
+          <div class="impact-focus">
+            <div class="impact-focus-label">Current Focus</div>
+            <div class="impact-focus-tags">
+              <span>Revenue Operations</span>
+              <span>AI Sales Infrastructure</span>
+              <span>Pipeline Generation</span>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -1874,13 +1970,13 @@
   ===================================================== -->
   <section id="systems" class="section section-gray reveal">
     <div class="container">
-      <h2 class="section-title">Revenue Systems Portfolio</h2>
-      <p class="section-sub">AI-powered systems built for scalable B2B pipeline growth</p>
+      <h2 class="section-title">Selected Work</h2>
+      <p class="section-sub">Systems and tools built for scalable B2B pipeline growth</p>
       <div class="portfolio-grid">
         <div class="portfolio-card">
           <svg viewBox="0 0 100 60" class="chart-svg"><polyline points="0,50 20,35 40,40 60,20 80,25 100,10" fill="none" stroke="#2563EB" stroke-width="2"/></svg>
-          <h3 class="card-title">AI Lead Generation Engine</h3>
-          <p class="card-desc">Automated prospecting system using AI to identify and engage ideal customer profiles.</p>
+          <h3 class="card-title">TonyOS</h3>
+          <p class="card-desc">AI-powered revenue operations dashboard that maps prospects, outreach, and pipeline activity into a unified intelligence system.</p>
           <div class="card-tags">
             <span class="card-tag">AI</span>
             <span class="card-tag">Prospecting</span>
@@ -1890,7 +1986,7 @@
         <div class="portfolio-card">
           <svg viewBox="0 0 100 60" class="chart-svg"><rect x="5" y="35" width="15" height="25" fill="#2563EB" rx="2"/><rect x="25" y="20" width="15" height="40" fill="#6366F1" rx="2"/><rect x="45" y="28" width="15" height="32" fill="#2563EB" rx="2"/><rect x="65" y="10" width="15" height="50" fill="#6366F1" rx="2"/><rect x="85" y="18" width="10" height="42" fill="#2563EB" rx="2"/></svg>
           <h3 class="card-title">Customer Intelligence Dashboard</h3>
-          <p class="card-desc">Real-time visibility into account health, engagement signals, and pipeline status.</p>
+          <p class="card-desc">Tool that aggregates company research, buyer signals, and market insights for faster prospect targeting and account prioritization.</p>
           <div class="card-tags">
             <span class="card-tag">Analytics</span>
             <span class="card-tag">CRM</span>
@@ -1899,8 +1995,8 @@
         </div>
         <div class="portfolio-card">
           <svg viewBox="0 0 100 60" class="chart-svg"><polygon points="10,5 90,5 70,30 30,30" fill="#2563EB" opacity="0.8"/><polygon points="30,32 70,32 55,50 45,50" fill="#6366F1" opacity="0.9"/></svg>
-          <h3 class="card-title">Pipeline Visibility System</h3>
-          <p class="card-desc">End-to-end pipeline tracking from first touch to closed-won with stage analytics.</p>
+          <h3 class="card-title">Marketing Genius</h3>
+          <p class="card-desc">Lead generation and campaign intelligence platform built to improve visibility into outreach performance and prospect engagement.</p>
           <div class="card-tags">
             <span class="card-tag">Pipeline</span>
             <span class="card-tag">RevOps</span>
@@ -1909,8 +2005,8 @@
         </div>
         <div class="portfolio-card">
           <svg viewBox="0 0 100 60" class="chart-svg"><circle cx="50" cy="30" r="6" fill="#2563EB"/><circle cx="20" cy="15" r="4" fill="#6366F1"/><circle cx="80" cy="15" r="4" fill="#6366F1"/><circle cx="20" cy="45" r="4" fill="#6366F1"/><circle cx="80" cy="45" r="4" fill="#6366F1"/><line x1="50" y1="30" x2="20" y2="15" stroke="#2563EB" stroke-width="1.5" opacity="0.6"/><line x1="50" y1="30" x2="80" y2="15" stroke="#2563EB" stroke-width="1.5" opacity="0.6"/><line x1="50" y1="30" x2="20" y2="45" stroke="#2563EB" stroke-width="1.5" opacity="0.6"/><line x1="50" y1="30" x2="80" y2="45" stroke="#2563EB" stroke-width="1.5" opacity="0.6"/></svg>
-          <h3 class="card-title">Outbound Targeting Framework</h3>
-          <p class="card-desc">Territory-based targeting system mapping 3,700+ accounts across key verticals.</p>
+          <h3 class="card-title">Natoli Message Center</h3>
+          <p class="card-desc">AI-assisted framework for creating consistent messaging and outreach across marketing and sales channels at scale.</p>
           <div class="card-tags">
             <span class="card-tag">Outbound</span>
             <span class="card-tag">Territory</span>
@@ -2498,6 +2594,37 @@
   </section>
 
   <!-- =====================================================
+       THINKING
+  ===================================================== -->
+  <section class="section section-dark reveal">
+    <div class="container">
+      <p class="overline" style="text-align:center;margin-bottom:12px;">Strategic perspective</p>
+      <h2 class="section-title">Thinking</h2>
+      <p class="section-sub" style="color:#94A3B8;">Frameworks and opinions on where revenue growth is actually won</p>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;max-width:1100px;margin:0 auto;">
+        <div style="background:rgba(30,41,59,0.6);border:1px solid rgba(255,255,255,0.08);border-radius:16px;padding:36px 28px;transition:all 0.2s;">
+          <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:#60A5FA;margin-bottom:16px;">Revenue Systems</div>
+          <h3 style="font-size:20px;font-weight:800;color:#fff;line-height:1.3;margin-bottom:16px;">AI Will Not Replace Sales. It Will Replace Bad Sales Systems.</h3>
+          <p style="font-size:14px;color:#94A3B8;line-height:1.75;">The reps who thrive aren't the ones fighting AI — they're the ones who build systems around it. The real advantage is infrastructure, not effort.</p>
+        </div>
+        <div style="background:rgba(30,41,59,0.6);border:1px solid rgba(255,255,255,0.08);border-radius:16px;padding:36px 28px;transition:all 0.2s;">
+          <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:#6366F1;margin-bottom:16px;">Pipeline Strategy</div>
+          <h3 style="font-size:20px;font-weight:800;color:#fff;line-height:1.3;margin-bottom:16px;">Why Most Outbound Fails Before the First Email Is Sent</h3>
+          <p style="font-size:14px;color:#94A3B8;line-height:1.75;">Outbound doesn't fail at execution — it fails at targeting. The wrong ICP, the wrong accounts, the wrong timing. Fix the list first, then fix the message.</p>
+        </div>
+        <div style="background:rgba(30,41,59,0.6);border:1px solid rgba(255,255,255,0.08);border-radius:16px;padding:36px 28px;transition:all 0.2s;">
+          <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:#0891B2;margin-bottom:16px;">RevOps Leadership</div>
+          <h3 style="font-size:20px;font-weight:800;color:#fff;line-height:1.3;margin-bottom:16px;">The Real Bottleneck in Revenue Teams Isn't Effort. It's Infrastructure.</h3>
+          <p style="font-size:14px;color:#94A3B8;line-height:1.75;">Most revenue teams work hard. Few have the systems to show for it. CRM hygiene, pipeline visibility, and account intelligence are what separate consistent performers from inconsistent ones.</p>
+        </div>
+      </div>
+      <div style="text-align:center;margin-top:40px;">
+        <a href="https://www.linkedin.com/newsletters/the-results-pipeline-7297852613121712128/" target="_blank" rel="noopener" class="btn btn-outline">Read The Results Pipeline Newsletter →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================
        FINAL CTA
   ===================================================== -->
   <section class="section section-dark">
@@ -2520,13 +2647,15 @@
     <div class="footer-inner">
       <div class="footer-brand">
         <strong>Tony Beal</strong>
-        <span>Revenue Operations Leader</span>
+        <span>Revenue Operations &amp; AI-Driven Pipeline Systems</span>
+        <span style="font-size:12px;color:#475569;margin-top:2px;">Helping companies turn strategy into pipeline.</span>
       </div>
       <nav class="footer-links">
         <a href="/">Home</a>
         <a href="resume.html">Resume</a>
         <a href="job-targets.html">Job Targets</a>
         <a href="https://www.linkedin.com/in/tony-beal40/" target="_blank">LinkedIn</a>
+        <a href="mailto:tbeal@tonybeal.net">Email</a>
       </nav>
       <span class="footer-copy">© 2026 Tony Beal. All rights reserved.</span>
     </div>
