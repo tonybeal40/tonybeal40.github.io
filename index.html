@@ -1626,6 +1626,56 @@
 .ways-cta { margin-top: auto; font-size: 14px; font-weight: 600; color: #2563EB; text-decoration: none; }
 .ways-cta:hover { color: #1D4ED8; }
 @media (max-width: 900px) { .ways-grid { grid-template-columns: 1fr; } }
+/* Dashboard Mockup Visuals */
+.dash-mockup {
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  border: 1px solid rgba(255,255,255,0.1);
+  font-family: 'JetBrains Mono', monospace;
+}
+.dash-dark { background: #0F172A; }
+.dash-light { background: #F8FAFC; border-color: #E2E8F0; }
+.dash-topbar {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 12px;
+  background: rgba(255,255,255,0.04);
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+.dash-topbar.light { background: #F1F5F9; border-bottom-color: #E2E8F0; }
+.dash-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+.dash-dot.red { background: #EF4444; }
+.dash-dot.yellow { background: #F59E0B; }
+.dash-dot.green { background: #10B981; }
+.dash-title { font-size: 10px; font-weight: 600; color: #94A3B8; margin-left: 4px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.dash-body { padding: 12px; }
+.dash-stat-row { display: flex; gap: 8px; margin-bottom: 10px; }
+.dash-stat { flex: 1; background: rgba(255,255,255,0.05); border-radius: 6px; padding: 8px; text-align: center; border: 1px solid rgba(255,255,255,0.06); }
+.dash-stat-num { font-size: 13px; font-weight: 700; color: #60A5FA; }
+.dash-stat-lbl { font-size: 9px; color: #64748B; margin-top: 2px; text-transform: uppercase; letter-spacing: 0.05em; }
+.dash-bar-row { display: flex; align-items: center; gap: 8px; margin-bottom: 6px; }
+.dash-bar-label { font-size: 9px; color: #94A3B8; min-width: 64px; text-align: right; }
+.dash-bar-track { flex: 1; height: 5px; background: rgba(255,255,255,0.06); border-radius: 999px; overflow: hidden; }
+.dash-bar-fill { height: 100%; border-radius: 999px; }
+.dash-table { font-size: 10px; }
+.dash-table-row { display: grid; grid-template-columns: 1fr 36px 20px; gap: 4px; padding: 5px 4px; border-bottom: 1px solid #F1F5F9; align-items: center; }
+.dash-table-row.header { font-weight: 700; color: #94A3B8; font-size: 9px; text-transform: uppercase; }
+.score-high { color: #2563EB; font-weight: 700; text-align: center; }
+.score-med { color: #F59E0B; font-weight: 700; text-align: center; }
+.signal-dot { width: 8px; height: 8px; border-radius: 50%; margin: 0 auto; }
+.green-dot { background: #10B981; }
+.yellow-dot { background: #F59E0B; }
+.dash-sequence { display: flex; flex-direction: column; gap: 6px; }
+.dash-seq-step { display: flex; align-items: center; gap: 8px; padding: 6px 8px; background: #F8FAFC; border-radius: 6px; border: 1px solid #E2E8F0; }
+.dash-seq-step.muted { opacity: 0.45; }
+.seq-num { font-size: 9px; font-weight: 700; color: #2563EB; min-width: 16px; }
+.seq-label { font-size: 10px; color: #1E293B; font-weight: 600; flex: 1; }
+.seq-check { font-size: 10px; color: #10B981; font-weight: 700; }
+.pulse-dot { width: 8px; height: 8px; border-radius: 50%; background: #2563EB; animation: pulse 1.5s infinite; }
+@keyframes pulse { 0%,100% { opacity: 1; transform: scale(1); } 50% { opacity: 0.5; transform: scale(1.3); } }
+
 /* Impact Snapshot Card */
 .impact-snapshot {
   background: rgba(30,41,59,0.85);
@@ -1974,7 +2024,26 @@
       <p class="section-sub">Systems and tools built for scalable B2B pipeline growth</p>
       <div class="portfolio-grid">
         <div class="portfolio-card">
-          <svg viewBox="0 0 100 60" class="chart-svg"><polyline points="0,50 20,35 40,40 60,20 80,25 100,10" fill="none" stroke="#2563EB" stroke-width="2"/></svg>
+          <!-- TonyOS Dashboard Mockup -->
+          <div class="dash-mockup dash-dark">
+            <div class="dash-topbar"><span class="dash-dot red"></span><span class="dash-dot yellow"></span><span class="dash-dot green"></span><span class="dash-title">TonyOS · Mission Control</span></div>
+            <div class="dash-body">
+              <div class="dash-stat-row">
+                <div class="dash-stat"><div class="dash-stat-num">3,714</div><div class="dash-stat-lbl">Accounts</div></div>
+                <div class="dash-stat"><div class="dash-stat-num">$10M+</div><div class="dash-stat-lbl">Pipeline</div></div>
+                <div class="dash-stat"><div class="dash-stat-num">87%</div><div class="dash-stat-lbl">Coverage</div></div>
+              </div>
+              <div class="dash-bar-row">
+                <div class="dash-bar-label">Prospecting</div><div class="dash-bar-track"><div class="dash-bar-fill" style="width:92%;background:#2563EB"></div></div>
+              </div>
+              <div class="dash-bar-row">
+                <div class="dash-bar-label">Outreach</div><div class="dash-bar-track"><div class="dash-bar-fill" style="width:74%;background:#6366F1"></div></div>
+              </div>
+              <div class="dash-bar-row">
+                <div class="dash-bar-label">Pipeline</div><div class="dash-bar-track"><div class="dash-bar-fill" style="width:81%;background:#0891B2"></div></div>
+              </div>
+            </div>
+          </div>
           <h3 class="card-title">TonyOS</h3>
           <p class="card-desc">AI-powered revenue operations dashboard that maps prospects, outreach, and pipeline activity into a unified intelligence system.</p>
           <div class="card-tags">
@@ -1984,7 +2053,19 @@
           </div>
         </div>
         <div class="portfolio-card">
-          <svg viewBox="0 0 100 60" class="chart-svg"><rect x="5" y="35" width="15" height="25" fill="#2563EB" rx="2"/><rect x="25" y="20" width="15" height="40" fill="#6366F1" rx="2"/><rect x="45" y="28" width="15" height="32" fill="#2563EB" rx="2"/><rect x="65" y="10" width="15" height="50" fill="#6366F1" rx="2"/><rect x="85" y="18" width="10" height="42" fill="#2563EB" rx="2"/></svg>
+          <!-- Customer Intelligence Mockup -->
+          <div class="dash-mockup dash-light">
+            <div class="dash-topbar light"><span class="dash-dot red"></span><span class="dash-dot yellow"></span><span class="dash-dot green"></span><span class="dash-title" style="color:#64748B">Customer Intelligence · Dashboard</span></div>
+            <div class="dash-body">
+              <div class="dash-table">
+                <div class="dash-table-row header"><span>Company</span><span>Score</span><span>Signal</span></div>
+                <div class="dash-table-row"><span>Honeywell</span><span class="score-high">94</span><span class="signal-dot green-dot"></span></div>
+                <div class="dash-table-row"><span>3M</span><span class="score-high">91</span><span class="signal-dot green-dot"></span></div>
+                <div class="dash-table-row"><span>Danaher</span><span class="score-med">78</span><span class="signal-dot yellow-dot"></span></div>
+                <div class="dash-table-row"><span>Emerson</span><span class="score-med">72</span><span class="signal-dot yellow-dot"></span></div>
+              </div>
+            </div>
+          </div>
           <h3 class="card-title">Customer Intelligence Dashboard</h3>
           <p class="card-desc">Tool that aggregates company research, buyer signals, and market insights for faster prospect targeting and account prioritization.</p>
           <div class="card-tags">
@@ -1994,7 +2075,24 @@
           </div>
         </div>
         <div class="portfolio-card">
-          <svg viewBox="0 0 100 60" class="chart-svg"><polygon points="10,5 90,5 70,30 30,30" fill="#2563EB" opacity="0.8"/><polygon points="30,32 70,32 55,50 45,50" fill="#6366F1" opacity="0.9"/></svg>
+          <!-- Marketing Genius Mockup -->
+          <div class="dash-mockup dash-dark">
+            <div class="dash-topbar"><span class="dash-dot red"></span><span class="dash-dot yellow"></span><span class="dash-dot green"></span><span class="dash-title">Marketing Genius · Campaigns</span></div>
+            <div class="dash-body">
+              <svg viewBox="0 0 280 90" style="width:100%;height:auto;">
+                <defs><linearGradient id="mgGrad" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#2563EB" stop-opacity="0.5"/><stop offset="100%" stop-color="#2563EB" stop-opacity="0"/></linearGradient></defs>
+                <polygon points="0,80 40,60 80,65 120,35 160,42 200,18 240,22 280,8 280,90 0,90" fill="url(#mgGrad)"/>
+                <polyline points="0,80 40,60 80,65 120,35 160,42 200,18 240,22 280,8" fill="none" stroke="#2563EB" stroke-width="2"/>
+                <circle cx="120" cy="35" r="4" fill="#2563EB"/>
+                <circle cx="200" cy="18" r="4" fill="#6366F1"/>
+                <circle cx="280" cy="8" r="4" fill="#34D399"/>
+              </svg>
+              <div style="display:flex;gap:12px;margin-top:4px;">
+                <span style="font-size:10px;color:#60A5FA;font-weight:700;">↑ 142 leads/mo</span>
+                <span style="font-size:10px;color:#34D399;font-weight:700;">↑ 23% conversion</span>
+              </div>
+            </div>
+          </div>
           <h3 class="card-title">Marketing Genius</h3>
           <p class="card-desc">Lead generation and campaign intelligence platform built to improve visibility into outreach performance and prospect engagement.</p>
           <div class="card-tags">
@@ -2004,12 +2102,23 @@
           </div>
         </div>
         <div class="portfolio-card">
-          <svg viewBox="0 0 100 60" class="chart-svg"><circle cx="50" cy="30" r="6" fill="#2563EB"/><circle cx="20" cy="15" r="4" fill="#6366F1"/><circle cx="80" cy="15" r="4" fill="#6366F1"/><circle cx="20" cy="45" r="4" fill="#6366F1"/><circle cx="80" cy="45" r="4" fill="#6366F1"/><line x1="50" y1="30" x2="20" y2="15" stroke="#2563EB" stroke-width="1.5" opacity="0.6"/><line x1="50" y1="30" x2="80" y2="15" stroke="#2563EB" stroke-width="1.5" opacity="0.6"/><line x1="50" y1="30" x2="20" y2="45" stroke="#2563EB" stroke-width="1.5" opacity="0.6"/><line x1="50" y1="30" x2="80" y2="45" stroke="#2563EB" stroke-width="1.5" opacity="0.6"/></svg>
-          <h3 class="card-title">Natoli Message Center</h3>
-          <p class="card-desc">AI-assisted framework for creating consistent messaging and outreach across marketing and sales channels at scale.</p>
+          <!-- AI Outreach System Mockup -->
+          <div class="dash-mockup dash-light">
+            <div class="dash-topbar light"><span class="dash-dot red"></span><span class="dash-dot yellow"></span><span class="dash-dot green"></span><span class="dash-title" style="color:#64748B">AI Outreach · Sequence Builder</span></div>
+            <div class="dash-body">
+              <div class="dash-sequence">
+                <div class="dash-seq-step"><span class="seq-num">01</span><span class="seq-label">ICP Match</span><span class="seq-check">✓</span></div>
+                <div class="dash-seq-step"><span class="seq-num">02</span><span class="seq-label">AI Personalize</span><span class="seq-check">✓</span></div>
+                <div class="dash-seq-step"><span class="seq-num">03</span><span class="seq-label">Send + Track</span><span class="seq-check pulse-dot"></span></div>
+                <div class="dash-seq-step muted"><span class="seq-num">04</span><span class="seq-label">Score & Qualify</span><span class="seq-check">—</span></div>
+              </div>
+            </div>
+          </div>
+          <h3 class="card-title">AI Outreach System</h3>
+          <p class="card-desc">AI-assisted framework for creating consistent personalized messaging and outreach sequences across marketing and sales channels at scale.</p>
           <div class="card-tags">
             <span class="card-tag">Outbound</span>
-            <span class="card-tag">Territory</span>
+            <span class="card-tag">AI</span>
             <span class="card-tag">ICP</span>
           </div>
         </div>
