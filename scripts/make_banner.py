@@ -51,46 +51,46 @@ draw = ImageDraw.Draw(canvas)
 
 # ── Fonts ────────────────────────────────────────────────────────────────────
 try:
-    font_name  = ImageFont.truetype("C:/Windows/Fonts/arialbd.ttf", 88)
-    font_tag   = ImageFont.truetype("C:/Windows/Fonts/arial.ttf",   22)
-    font_over  = ImageFont.truetype("C:/Windows/Fonts/arialbd.ttf", 13)
-    font_stat  = ImageFont.truetype("C:/Windows/Fonts/arialbd.ttf", 24)
-    font_lbl   = ImageFont.truetype("C:/Windows/Fonts/arial.ttf",   12)
-    font_badge = ImageFont.truetype("C:/Windows/Fonts/arialbd.ttf", 13)
-    font_url   = ImageFont.truetype("C:/Windows/Fonts/arial.ttf",   14)
+    font_name  = ImageFont.truetype("C:/Windows/Fonts/arialbd.ttf", 120)
+    font_tag   = ImageFont.truetype("C:/Windows/Fonts/arial.ttf",   32)
+    font_over  = ImageFont.truetype("C:/Windows/Fonts/arialbd.ttf", 20)
+    font_stat  = ImageFont.truetype("C:/Windows/Fonts/arialbd.ttf", 36)
+    font_lbl   = ImageFont.truetype("C:/Windows/Fonts/arial.ttf",   18)
+    font_badge = ImageFont.truetype("C:/Windows/Fonts/arialbd.ttf", 18)
+    font_url   = ImageFont.truetype("C:/Windows/Fonts/arial.ttf",   18)
 except:
     font_name = font_tag = font_over = font_stat = font_lbl = font_badge = font_url = ImageFont.load_default()
 
-RIGHT = 1530  # right anchor x
+RIGHT = 1550  # right anchor x
 
 # ── AVAILABLE NOW badge ──────────────────────────────────────────────────────
-bx, by = 62, 34
-draw.rounded_rectangle([bx, by, bx+165, by+38], radius=19,
+bx, by = 80, 28
+draw.rounded_rectangle([bx, by, bx+230, by+50], radius=25,
                         fill=(10, 38, 28), outline=(52, 211, 153), width=2)
-draw.ellipse([bx+14, by+14, bx+27, by+27], fill=(52, 211, 153))
-draw.text((bx+34, by+10), "AVAILABLE NOW", font=font_badge, fill=(52, 211, 153))
+draw.ellipse([bx+16, by+17, bx+33, by+34], fill=(52, 211, 153))
+draw.text((bx+42, by+13), "AVAILABLE NOW", font=font_badge, fill=(52, 211, 153))
 
 # ── Overline ─────────────────────────────────────────────────────────────────
 overline = "REVENUE OPERATIONS  ·  AI SALES SYSTEMS  ·  GTM STRATEGY"
 ow = draw.textlength(overline, font=font_over)
-draw.text((RIGHT - ow, 88), overline, font=font_over, fill=(96, 165, 250))
+draw.text((RIGHT - ow, 30), overline, font=font_over, fill=(96, 165, 250))
 
 # Thin separator line under overline
-draw.line([(RIGHT - ow, 108), (RIGHT, 108)], fill=(37, 99, 235), width=1)
+draw.line([(RIGHT - ow, 58), (RIGHT, 58)], fill=(37, 99, 235), width=1)
 
 # ── Name: WHITE with blue drop shadow ────────────────────────────────────────
 name = "Tony Beal"
 nw = draw.textlength(name, font=font_name)
 nx = int(RIGHT - nw)
 # Multi-layer shadow for depth
-draw.text((nx+4, 122+4), name, font=font_name, fill=(5, 15, 50))    # deep shadow
-draw.text((nx+2, 122+2), name, font=font_name, fill=(30, 60, 140))  # mid shadow
-draw.text((nx,   122),   name, font=font_name, fill=(255, 255, 255)) # pure white
+draw.text((nx+4, 68+4), name, font=font_name, fill=(5, 15, 50))    # deep shadow
+draw.text((nx+2, 68+2), name, font=font_name, fill=(30, 60, 140))  # mid shadow
+draw.text((nx,   68),   name, font=font_name, fill=(255, 255, 255)) # pure white
 
 # ── Tagline: bright light gray ───────────────────────────────────────────────
-tag = "Building AI-driven revenue systems that generate pipeline for B2B companies"
+tag = "AI-driven revenue systems that generate pipeline for B2B companies"
 tw = draw.textlength(tag, font=font_tag)
-draw.text((RIGHT - tw, 224), tag, font=font_tag, fill=(210, 220, 240))
+draw.text((RIGHT - tw, 200), tag, font=font_tag, fill=(210, 220, 240))
 
 # ── Stat cards ───────────────────────────────────────────────────────────────
 stats = [
@@ -99,25 +99,25 @@ stats = [
     ("11K+",   "FOLLOWERS",  (16, 185, 129), (52, 211, 153)),
     ("3,700+", "ACCOUNTS",   (37, 99, 235),  (255, 255, 255)),
 ]
-card_w, card_h = 148, 62
+card_w, card_h = 170, 80
 # right-align the row of cards
 total_cards_w = len(stats) * card_w + (len(stats)-1) * 10
 sx = RIGHT - total_cards_w
 
 for i, (val, lbl, border, text_c) in enumerate(stats):
     cx = sx + i * (card_w + 10)
-    cy = 280
-    draw.rounded_rectangle([cx, cy, cx+card_w, cy+card_h], radius=8,
+    cy = 256
+    draw.rounded_rectangle([cx, cy, cx+card_w, cy+card_h], radius=10,
                             fill=(14, 22, 50), outline=border, width=2)
     vw = draw.textlength(val, font=font_stat)
-    draw.text((cx + (card_w-vw)//2, cy+7), val, font=font_stat, fill=text_c)
+    draw.text((cx + (card_w-vw)//2, cy+8), val, font=font_stat, fill=text_c)
     lw = draw.textlength(lbl, font=font_lbl)
-    draw.text((cx + (card_w-lw)//2, cy+38), lbl, font=font_lbl, fill=(148, 163, 184))
+    draw.text((cx + (card_w-lw)//2, cy+50), lbl, font=font_lbl, fill=(148, 163, 184))
 
 # ── tonybeal.net ─────────────────────────────────────────────────────────────
 url = "tonybeal.net"
 uw = draw.textlength(url, font=font_url)
-draw.text((RIGHT - uw, 360), url, font=font_url, fill=(96, 116, 139))
+draw.text((RIGHT - uw, 352), url, font=font_url, fill=(96, 116, 139))
 
 # ── Save ─────────────────────────────────────────────────────────────────────
 out_path = r"c:\Users\tonyb\.openclaw\workspace\tonybeal-site\assets\linkedin-banner-v2.png"
