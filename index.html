@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <!-- Google Tag Manager -->
@@ -93,9 +93,14 @@ j=d.createElement(s),dl=l!="dataLayer"?"&l="+l:"";j.async=true;j.src=
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="preload" as="image" href="headshot-hero.webp" fetchpriority="high" />
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600&display=swap" /></noscript>
 
   <style>
+    /* Font display swap for async font loading */
+    @font-face { font-family: 'Inter'; font-display: swap; src: local('Inter'); }
+
     /* =====================================================
        RESET
     ===================================================== */
@@ -423,9 +428,9 @@ j=d.createElement(s),dl=l!="dataLayer"?"&l="+l:"";j.async=true;j.src=
       animation: statusPing 2s ease-out infinite;
     }
     @keyframes statusPing {
-      0%   { box-shadow: 0 0 0 0 rgba(52,211,153,0.6); }
-      70%  { box-shadow: 0 0 0 8px rgba(52,211,153,0); }
-      100% { box-shadow: 0 0 0 0 rgba(52,211,153,0); }
+      0%   { transform: scale(1); opacity: 0.7; }
+      70%  { transform: scale(2.5); opacity: 0; }
+      100% { transform: scale(1); opacity: 0; }
     }
 
     .hero-title {
@@ -1734,7 +1739,7 @@ j=d.createElement(s),dl=l!="dataLayer"?"&l="+l:"";j.async=true;j.src=
 .testimonials-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
 .testimonial-card { background: #fff; border: 1px solid #E2E8F0; border-radius: 16px; padding: 28px; display: flex; flex-direction: column; gap: 20px; box-shadow: 0 4px 16px rgba(0,0,0,0.06); transition: transform 0.2s, box-shadow 0.2s; }
 .testimonial-card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(37,99,235,0.12); }
-.testimonial-quote { font-size: 15px; color: #475569; line-height: 1.75; font-style: italic; flex: 1; }
+.testimonial-quote { font-size: 15px; color: #334155; line-height: 1.75; font-style: italic; flex: 1; }
 .testimonial-quote::before { content: '\201C'; font-size: 48px; line-height: 0; color: #2563EB; opacity: 0.3; vertical-align: -0.5em; margin-right: 4px; }
 .testimonial-author { display: flex; align-items: center; gap: 12px; }
 .testimonial-avatar { width: 44px; height: 44px; border-radius: 50%; background: linear-gradient(135deg, #2563EB, #6366F1); color: #fff; display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 700; flex-shrink: 0; }
@@ -1766,8 +1771,9 @@ j=d.createElement(s),dl=l!="dataLayer"?"&l="+l:"";j.async=true;j.src=
   z-index: 0;
 }
 @keyframes gridDrift {
-  0% { background-position: 0 0; }
-  100% { background-position: 40px 40px; }
+  0% { transform: translate3d(0, 0, 0); }
+  100% { transform: translate3d(40px, 40px, 0); }
+}
 }
 
 /* Ways Grid */
@@ -1946,6 +1952,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- =====================================================
        HERO
   ===================================================== -->
+  <main id="main-content">
   <section class="hero">
     <div class="hero-grid-anim" aria-hidden="true"></div>
     <div class="hero-container">
@@ -1995,7 +2002,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
       <div class="hero-photo-col">
         <div class="hero-photo-frame">
-          <img src="headshot-hero.png" alt="Tony Beal Revenue Operations Leader" class="hero-photo" />
+          <picture>
+          <source srcset="headshot-hero.webp" type="image/webp" />
+          <img src="headshot-hero.png" alt="Tony Beal Revenue Operations Leader" class="hero-photo" width="300" height="300" fetchpriority="high" />
+        </picture>
         </div>
         <div class="hero-photo-caption">
           <strong>Tony Beal</strong>
@@ -2102,7 +2112,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="container">
       <div class="meet-tony-grid">
         <div>
-          <img src="headshot-about.png" loading="lazy" alt="Tony Beal AI Sales Systems and Revenue Operations Expert" class="tony-photo" />
+          <picture>
+          <source srcset="headshot-about.webp" type="image/webp" />
+          <img src="headshot-about.png" loading="lazy" alt="Tony Beal AI Sales Systems and Revenue Operations Expert" class="tony-photo" width="400" height="400" />
+        </picture>
         </div>
         <div class="tony-bio">
           <h2 class="section-title text-left">Meet Tony Beal</h2>
@@ -2996,6 +3009,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- =====================================================
        FOOTER
   ===================================================== -->
+  </main>
   <footer class="site-footer">
     <div class="footer-inner">
       <div class="footer-brand">
@@ -3127,7 +3141,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       if (mobileMenu) mobileMenu.classList.remove('open');
     }
   </script>
-  <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
+  <script>window.addEventListener("load",function(){var s=document.createElement("script");s.src="https://platform.linkedin.com/badges/js/profile.js";s.async=true;s.defer=true;document.body.appendChild(s);});</script>
 </body>
 </html>
 
