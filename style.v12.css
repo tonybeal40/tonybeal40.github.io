@@ -2177,3 +2177,15 @@ ul {
 .consulting-badge:hover {
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
+
+/* Case Study Cards */
+.card-case-study { padding: 20px 0 0; }
+.card-csi { display: flex; flex-direction: column; gap: 10px; margin: 12px 0 16px; }
+.card-csi-row { display: flex; gap: 10px; align-items: flex-start; }
+.csi-label { 
+  font-size: 10px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase;
+  color: #64748B; min-width: 68px; padding-top: 2px; flex-shrink: 0;
+}
+.csi-text { font-size: 13px; color: #94A3B8; line-height: 1.55; margin: 0; }
+.csi-result .csi-label { color: #34D399; }
+.csi-result .csi-text { color: #E2E8F0; font-weight: 500; }
