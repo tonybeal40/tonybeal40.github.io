@@ -36,3 +36,17 @@ if (navToggle && siteHeader && siteNav) {
     }
   });
 }
+
+// Email obfuscation - builds mailto links at click time to prevent bot harvesting
+document.querySelectorAll('a[data-e]').forEach(function(link) {
+  var build = function() {
+    var s = link.getAttribute('data-s');
+    return link.getAttribute('data-e') + '@' + link.getAttribute('data-d') + (s ? '?subject=' + s : '');
+  };
+  link.addEventListener('mouseover', function() { link.href = 'mailto:' + build(); });
+  link.addEventListener('focus', function() { link.href = 'mailto:' + build(); });
+  link.addEventListener('click', function(e) {
+    e.preventDefault();
+    window.location.href = 'mailto:' + build();
+  });
+});
