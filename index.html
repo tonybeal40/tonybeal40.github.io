@@ -1321,6 +1321,26 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </section>
 
   <!-- =====================================================
+       EMAIL CAPTURE
+  ===================================================== -->
+  <section class="section section-gray reveal" id="playbook">
+    <div class="container" style="max-width:660px;text-align:center;">
+      <p class="section-label">Free Resource</p>
+      <h2 class="section-title">Get My AI Prospecting Playbook</h2>
+      <p class="section-sub">The exact system I used to build $15M+ in pipeline — sequences, targeting logic, and AI prompts. Yours free.</p>
+      <form id="playbook-form" action="https://formspree.io/f/mzdjnkkp" method="POST" style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:32px;">
+        <input type="email" name="email" placeholder="your@email.com" required
+          style="padding:14px 20px;border-radius:8px;border:2px solid #e2e8f0;font-size:1rem;min-width:280px;outline:none;transition:border-color 0.2s;background:#fff;"
+          onfocus="this.style.borderColor='#2563eb'" onblur="this.style.borderColor='#e2e8f0'">
+        <input type="hidden" name="_subject" value="New Playbook Request — tonybeal.net">
+        <button type="submit" class="btn btn-primary">Send Me the Playbook →</button>
+      </form>
+      <p id="playbook-thanks" style="display:none;margin-top:24px;color:#16a34a;font-weight:600;font-size:1.1rem;">✓ Done! Check your inbox — it's on its way.</p>
+      <p style="margin-top:16px;font-size:0.85rem;color:#94a3b8;">No spam. One email. Unsubscribe anytime.</p>
+    </div>
+  </section>
+
+  <!-- =====================================================
        ELEVATOR PITCH
   ===================================================== -->
   <section class="section section-white reveal" id="elevator-pitch">
@@ -1812,6 +1832,29 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       track('time_on_page', { event_category: 'Engagement', event_label: seconds + 's', value: seconds });
     }, seconds * 1000);
   });
+
+  // Playbook email capture — AJAX submit, no page redirect
+  var playbookForm = document.getElementById('playbook-form');
+  if (playbookForm) {
+    playbookForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      var data = new FormData(playbookForm);
+      fetch(playbookForm.action, {
+        method: 'POST',
+        body: data,
+        headers: { 'Accept': 'application/json' }
+      }).then(function(resp) {
+        if (resp.ok) {
+          playbookForm.style.display = 'none';
+          document.getElementById('playbook-thanks').style.display = 'block';
+          track('playbook_signup', { event_category: 'Lead', event_label: 'email_capture' });
+        }
+      }).catch(function() {
+        // fallback: let native submit happen
+        playbookForm.submit();
+      });
+    });
+  }
 })();
 </script>
 
