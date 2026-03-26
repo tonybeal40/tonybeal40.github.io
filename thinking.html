@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Revenue Operations Insights | Tony Beal</title>
+  <meta name="description" content="Tony Beal shares real-world revenue operations strategy, AI sales systems, B2B pipeline generation, and RevOps insights from 15+ years of B2B sales leadership." />
+  <meta name="keywords" content="revenue operations, revops, AI sales systems, pipeline generation, B2B outreach, CRM strategy, outbound automation, industrial sales, sales operations, GTM strategy, Tony Beal" />
+  <link rel="canonical" href="https://tonybeal.net/thinking.html" />
+  <meta property="og:title" content="Revenue Operations Insights | Tony Beal" />
+  <meta property="og:description" content="Real-world RevOps strategy, AI sales systems, and B2B pipeline insights from Tony Beal." />
+  <meta property="og:url" content="https://tonybeal.net/thinking.html" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="stylesheet" href="style.v12.css" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "name": "Revenue Operations Insights by Tony Beal",
+    "url": "https://tonybeal.net/thinking.html",
+    "author": {
+      "@type": "Person",
+      "name": "Tony Beal",
+      "url": "https://tonybeal.net"
+    },
+    "description": "Real-world revenue operations strategy, AI sales systems, and B2B pipeline insights."
+  }
+  </script>
+  <style>
+    .blog-hero {
+      background: #0F172A;
+      padding: 80px 20px 60px;
+      text-align: center;
+    }
+    .blog-hero .overline { color: #60A5FA; font-size: 12px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; margin-bottom: 14px; }
+    .blog-hero h1 { font-size: clamp(28px, 5vw, 42px); font-weight: 900; color: #fff; line-height: 1.2; margin-bottom: 16px; }
+    .blog-hero p { font-size: 17px; color: #94A3B8; max-width: 560px; margin: 0 auto; }
+
+    .blog-grid {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 60px 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 48px;
+    }
+
+    .article-card {
+      background: #fff;
+      border: 1px solid #E2E8F0;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+    }
+    .article-header {
+      background: #0F172A;
+      padding: 36px 40px 28px;
+    }
+    .article-meta { display: flex; gap: 12px; align-items: center; margin-bottom: 14px; flex-wrap: wrap; }
+    .article-tag {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      padding: 3px 10px;
+      border-radius: 20px;
+    }
+    .tag-blue { background: rgba(37,99,235,0.2); color: #60A5FA; }
+    .tag-purple { background: rgba(99,102,241,0.2); color: #A5B4FC; }
+    .tag-green { background: rgba(5,150,105,0.2); color: #6EE7B7; }
+    .tag-orange { background: rgba(234,88,12,0.2); color: #FDB07A; }
+    .article-date { font-size: 12px; color: #475569; }
+    .article-header h2 { font-size: clamp(20px, 3vw, 26px); font-weight: 800; color: #fff; line-height: 1.3; margin-bottom: 10px; }
+    .article-header .article-deck { font-size: 15px; color: #94A3B8; line-height: 1.7; }
+
+    .article-body { padding: 36px 40px; }
+    .article-body p { font-size: 15px; color: #334155; line-height: 1.85; margin-bottom: 20px; }
+    .article-body h3 { font-size: 18px; font-weight: 800; color: #0F172A; margin: 32px 0 12px; }
+    .article-body ul { margin: 0 0 20px 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 8px; }
+    .article-body ul li { font-size: 15px; color: #334155; line-height: 1.7; padding-left: 20px; position: relative; }
+    .article-body ul li::before { content: '→'; position: absolute; left: 0; color: #2563EB; font-weight: 700; }
+    .article-body blockquote {
+      border-left: 4px solid #2563EB;
+      background: #F0F9FF;
+      padding: 16px 20px;
+      border-radius: 0 8px 8px 0;
+      margin: 24px 0;
+      font-size: 16px;
+      font-style: italic;
+      color: #1e3a5f;
+      line-height: 1.7;
+    }
+    .stat-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin: 28px 0;
+    }
+    .stat-box {
+      background: #F8FAFC;
+      border: 1px solid #E2E8F0;
+      border-radius: 10px;
+      padding: 16px;
+      text-align: center;
+    }
+    .stat-box .num { font-size: 24px; font-weight: 900; color: #2563EB; display: block; }
+    .stat-box .lbl { font-size: 11px; color: #64748B; font-weight: 600; margin-top: 4px; display: block; }
+
+    .read-more {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-top: 8px;
+      font-size: 14px;
+      font-weight: 700;
+      color: #2563EB;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    .article-full { display: none; }
+    .article-full.open { display: block; }
+
+    .article-footer {
+      padding: 20px 40px 28px;
+      border-top: 1px solid #F1F5F9;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .author-chip {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .author-chip img {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+    .author-chip .author-name { font-size: 13px; font-weight: 700; color: #0F172A; }
+    .author-chip .author-title { font-size: 11px; color: #64748B; }
+    .share-cta {
+      margin-left: auto;
+      font-size: 13px;
+      color: #2563EB;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .blog-cta {
+      background: #0F172A;
+      padding: 60px 20px;
+      text-align: center;
+    }
+    .blog-cta h2 { font-size: 28px; font-weight: 800; color: #fff; margin-bottom: 12px; }
+    .blog-cta p { color: #94A3B8; font-size: 16px; margin-bottom: 28px; }
+    .blog-cta .btn-row { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+    .btn-primary { background: #2563EB; color: #fff; padding: 13px 28px; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 15px; }
+    .btn-ghost { border: 1px solid #334155; color: #94A3B8; padding: 13px 28px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 15px; }
+
+    @media (max-width: 600px) {
+      .article-header, .article-body, .article-footer { padding-left: 24px; padding-right: 24px; }
+      .stat-row { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="topbar">
+    <div class="topbar-inner">
+      <a href="/" class="logo">Tony Beal</a>
+      <div class="nav-links">
+        <a href="/#systems" class="nav-link">Work</a>
+        <a href="thinking.html" class="nav-link active">Thinking</a>
+        <a href="resume.html" class="nav-link">Resume</a>
+        <a href="https://calendly.com/tonybeal" class="nav-cta" target="_blank" rel="noopener">Book a Call</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <div class="blog-hero">
+    <div class="overline">Revenue Operations · AI Sales Systems · GTM Strategy</div>
+    <h1>How I Think About Pipeline</h1>
+    <p>Real-world insights from building revenue systems across industrial, manufacturing, and B2B markets.</p>
+  </div>
+
+  <!-- ARTICLES -->
+  <div class="blog-grid">
+
+    <!-- ARTICLE 1 -->
+    <article class="article-card" itemscope itemtype="https://schema.org/Article">
+      <div class="article-header">
+        <div class="article-meta">
+          <span class="article-tag tag-blue">AI Sales Systems</span>
+          <span class="article-tag tag-purple">Pipeline Generation</span>
+          <span class="article-date">March 2026</span>
+        </div>
+        <h2 itemprop="headline">How I Built a $15M Pipeline With One AI Outreach System — No SDR Team Required</h2>
+        <p class="article-deck">Most B2B companies think pipeline is a headcount problem. It's not. It's a systems problem. Here's exactly how I built and ran an enterprise-scale outbound program as a single operator.</p>
+      </div>
+      <div class="article-body">
+        <div class="stat-row">
+          <div class="stat-box"><span class="num">3,714</span><span class="lbl">Target Accounts</span></div>
+          <div class="stat-box"><span class="num">$15M+</span><span class="lbl">Pipeline Generated</span></div>
+          <div class="stat-box"><span class="num">40K+</span><span class="lbl">AI Prompts Built</span></div>
+        </div>
+
+        <p>In 2024 I built a revenue system that covered over 3,700 target accounts across manufacturing, pharmaceutical, and food &amp; beverage markets — as one person. No SDR team. No agency. Just a well-designed system running on LinkedIn, Apollo, and AI.</p>
+
+        <p>Here's the honest breakdown of how it works and why most outreach fails before it starts.</p>
+
+        <h3>The Problem With Traditional Outreach</h3>
+        <p>Most outbound fails because it's built on volume, not targeting. Companies hire SDRs, give them a list, and tell them to send 100 emails a day. The list is bad. The messaging is generic. The SDR burns out in 90 days. The pipeline number doesn't move.</p>
+
+        <blockquote>"The problem isn't that you're not reaching enough people. It's that you're reaching the wrong people with the wrong message."</blockquote>
+
+        <h3>Step 1: Build the Right Account List</h3>
+        <p>Before sending a single message, I spent weeks building a segmented ICP list — not just by industry, but by company size, buying signals, org structure, and decision-maker profile. LinkedIn Sales Navigator is the tool. The secret is in the filters most people ignore: headcount growth, posted job titles, recent hires in operations or procurement.</p>
+        <ul>
+          <li>Target companies with 50–500 employees in industrial/manufacturing/pharma</li>
+          <li>Filter for recent operations, procurement, or leadership hires (buying signal)</li>
+          <li>Score accounts before outreach — not every account deserves your time</li>
+        </ul>
+
+        <h3>Step 2: AI Personalization at Scale</h3>
+        <p>This is where the system separates itself. I built 40,000+ engineered prompts that pull account-specific data — company news, LinkedIn activity, job postings, technology stack — and generate personalized opening lines at scale. Not mail merge. Actual signal-based personalization.</p>
+        <ul>
+          <li>Use OpenAI API with structured prompts for consistent output quality</li>
+          <li>Pull 3 signals per account before generating the message</li>
+          <li>A/B test subject lines and openers monthly — the data tells you what works</li>
+        </ul>
+
+        <h3>Step 3: Multi-Touch Sequencing</h3>
+        <p>One message doesn't build pipeline. A structured 5–7 touch sequence does — LinkedIn connection, message, email, follow-up email, LinkedIn InMail, phone call on high-value targets. The system tracks where each contact is in the sequence and triggers the next step automatically.</p>
+
+        <div class="article-full">
+          <h3>Step 4: CRM Integration and Pipeline Tracking</h3>
+          <p>Every response, every click, every booked call goes into the CRM immediately. No manual data entry. The system pushes contact data, sequence status, and engagement history directly into HubSpot or Salesforce depending on the client stack. This is where most operators drop the ball — they do the outreach but don't track it properly, so they can never improve.</p>
+
+          <h3>The Result</h3>
+          <p>Over 18 months, this system generated $15M+ in cumulative pipeline across 4 verticals. 87% account coverage. 1,000+ new customers acquired. And it ran on my laptop.</p>
+          <p>The point isn't to brag about the number. The point is that pipeline at scale is a solved problem if you're willing to build the system instead of hiring more humans to do bad work faster.</p>
+
+          <blockquote>"If your pipeline depends on a person making 80 calls a day, you don't have a sales system. You have a person-dependent process that will break the moment they leave."</blockquote>
+
+          <h3>What This Means for Your Company</h3>
+          <ul>
+            <li>You can cover 5–10× more accounts than your current headcount allows</li>
+            <li>AI personalization beats generic messaging at any volume</li>
+            <li>The system compounds — data gets better every month</li>
+            <li>One operator with the right system outperforms a 5-person SDR team without one</li>
+          </ul>
+        </div>
+
+        <button class="read-more" onclick="toggleArticle(this)">Read full article ↓</button>
+      </div>
+      <div class="article-footer">
+        <div class="author-chip">
+          <img src="headshot-final.png" alt="Tony Beal" onerror="this.style.display='none'" />
+          <div>
+            <div class="author-name">Tony Beal</div>
+            <div class="author-title">Revenue Operations · AI Sales Systems</div>
+          </div>
+        </div>
+        <a href="https://linkedin.com/in/tony-beal40/" class="share-cta" target="_blank" rel="noopener">Follow on LinkedIn →</a>
+      </div>
+    </article>
+
+    <!-- ARTICLE 2 -->
+    <article class="article-card" itemscope itemtype="https://schema.org/Article">
+      <div class="article-header">
+        <div class="article-meta">
+          <span class="article-tag tag-green">RevOps</span>
+          <span class="article-tag tag-blue">CRM Strategy</span>
+          <span class="article-date">March 2026</span>
+        </div>
+        <h2 itemprop="headline">The RevOps Stack That Actually Works for Industrial B2B (And What to Skip)</h2>
+        <p class="article-deck">Industrial and manufacturing companies don't need the same RevOps stack as a SaaS startup. Here's what I've learned deploying CRM and outbound infrastructure across factories, distribution companies, and B2B operators.</p>
+      </div>
+      <div class="article-body">
+        <p>Most RevOps advice is written for software companies with $50M in ARR and a 20-person ops team. Industrial B2B is a completely different environment — longer sales cycles, relationship-driven buyers, smaller tech budgets, and decision-makers who don't live in their inbox.</p>
+
+        <p>Here's what actually works in that environment, based on real deployments — not theory.</p>
+
+        <h3>What Industrial B2B Actually Needs</h3>
+        <ul>
+          <li><strong>A CRM that salespeople actually use</strong> — HubSpot wins here over Salesforce for smaller industrial teams. Simpler interface, faster adoption, better mobile app for field reps.</li>
+          <li><strong>Account-level tracking, not just contact-level</strong> — In industrial sales, you're selling to a company, not a person. Your CRM needs to show the full account picture.</li>
+          <li><strong>Pipeline by territory and vertical</strong> — Not just a single pipeline view. Industrial teams need to see what's happening by region, by product line, by account tier.</li>
+        </ul>
+
+        <h3>The Lean Stack That Works</h3>
+        <div class="stat-row">
+          <div class="stat-box"><span class="num" style="font-size:16px;">HubSpot</span><span class="lbl">CRM + Sequences</span></div>
+          <div class="stat-box"><span class="num" style="font-size:16px;">Apollo</span><span class="lbl">Prospecting</span></div>
+          <div class="stat-box"><span class="num" style="font-size:16px;">LinkedIn</span><span class="lbl">Account Intel</span></div>
+        </div>
+
+        <p>That's it. Three tools, properly configured, beat a 10-tool stack that nobody uses correctly. The goal isn't to have the most sophisticated tech. The goal is to have accurate pipeline data and consistent outreach — and those three tools can deliver both for most industrial B2B companies.</p>
+
+        <div class="article-full">
+          <h3>What to Skip (At First)</h3>
+          <ul>
+            <li><strong>Marketing automation platforms</strong> — Don't buy Marketo or Pardot until you've filled the top of the funnel with outbound. Most industrial B2B companies don't have enough inbound to justify the cost.</li>
+            <li><strong>Complex custom objects in Salesforce</strong> — Unless you have a dedicated admin, Salesforce customization becomes a black hole. Keep it simple until you have the volume to justify complexity.</li>
+            <li><strong>Intent data tools</strong> — Bombora, G2, etc. are powerful but expensive. Nail your ICP list first. Intent data is a multiplier on a working system, not a substitute for one.</li>
+          </ul>
+
+          <h3>The Configuration That Matters Most</h3>
+          <p>Whatever CRM you're using, the most important configuration decisions are:</p>
+          <ul>
+            <li>Deal stages that match your actual sales process (not a generic template)</li>
+            <li>Required fields at each stage — if you don't enforce data hygiene at entry, the forecast will always be wrong</li>
+            <li>Activity logging rules — what counts as a "touch," what moves a deal forward</li>
+            <li>Closed-lost reasons that are actually useful — "no decision" is not a reason. It's an excuse.</li>
+          </ul>
+
+          <blockquote>"The most expensive CRM problem isn't bad software. It's good software with bad data. Garbage in, garbage out — no matter how much you paid for the platform."</blockquote>
+        </div>
+
+        <button class="read-more" onclick="toggleArticle(this)">Read full article ↓</button>
+      </div>
+      <div class="article-footer">
+        <div class="author-chip">
+          <img src="headshot-final.png" alt="Tony Beal" onerror="this.style.display='none'" />
+          <div>
+            <div class="author-name">Tony Beal</div>
+            <div class="author-title">Revenue Operations · CRM Architecture</div>
+          </div>
+        </div>
+        <a href="https://linkedin.com/in/tony-beal40/" class="share-cta" target="_blank" rel="noopener">Follow on LinkedIn →</a>
+      </div>
+    </article>
+
+    <!-- ARTICLE 3 -->
+    <article class="article-card" itemscope itemtype="https://schema.org/Article">
+      <div class="article-header">
+        <div class="article-meta">
+          <span class="article-tag tag-orange">GTM Strategy</span>
+          <span class="article-tag tag-purple">Account Targeting</span>
+          <span class="article-date">February 2026</span>
+        </div>
+        <h2 itemprop="headline">How to Score 3,700 Accounts Without a Full SDR Team — The Account Intelligence Framework</h2>
+        <p class="article-deck">Manual account research kills productivity before the first message goes out. Here's the framework I use to score, segment, and prioritize large account lists so the best opportunities always rise to the top.</p>
+      </div>
+      <div class="article-body">
+        <p>When you're targeting thousands of accounts, you can't treat them all the same. The company that's ready to buy this quarter looks completely different from one you should nurture for 18 months. If you can't tell the difference before you start outreach, you're wasting your best energy on the wrong targets.</p>
+
+        <p>Account scoring solves this. But most scoring models I've seen are either too complicated to maintain or too simple to be useful. Here's the framework that works in practice.</p>
+
+        <h3>The 4 Signals That Actually Predict Pipeline</h3>
+        <ul>
+          <li><strong>Fit signals</strong> — Does the company match your ICP? Industry, size, geography, business model. Binary — they fit or they don't.</li>
+          <li><strong>Growth signals</strong> — Is the company growing? Recent hires, job postings, funding, expansion news. Growing companies have problems to solve and budget to solve them.</li>
+          <li><strong>Intent signals</strong> — Are they showing interest in the category? Visiting competitor sites, posting content about the problem you solve, hiring for roles that indicate a need.</li>
+          <li><strong>Timing signals</strong> — Are there external events that create urgency? Leadership changes, M&amp;A activity, regulatory changes, seasonality patterns specific to their industry.</li>
+        </ul>
+
+        <h3>How to Score Without Buying Expensive Intent Tools</h3>
+        <p>You don't need Bombora to score accounts. LinkedIn Sales Navigator gives you growth signals for free if you know where to look. Here's what I track manually before AI assists with the rest:</p>
+
+        <div class="article-full">
+          <ul>
+            <li>Company headcount change in the last 6 months (Navigator shows this)</li>
+            <li>Open job postings in operations, procurement, or the specific function you sell to</li>
+            <li>Recent posts by decision-makers on LinkedIn — topic, sentiment, engagement</li>
+            <li>Technology stack from Apollo or ZoomInfo — what tools are they already using?</li>
+          </ul>
+
+          <h3>The Scoring Matrix</h3>
+          <p>I weight signals like this for most industrial B2B accounts:</p>
+          <ul>
+            <li>ICP fit (must-have): Pass/fail gate — accounts that don't fit don't get scored</li>
+            <li>Company growth signals: 40% of total score</li>
+            <li>Timing/trigger events: 35% of total score</li>
+            <li>Intent signals: 25% of total score</li>
+          </ul>
+
+          <p>Accounts scoring 70+ go into Tier 1 (high-touch outreach). 40–69 go to Tier 2 (sequenced outreach). Below 40 go to a nurture list — not ignored, but not prioritized.</p>
+
+          <blockquote>"Account scoring isn't about finding the perfect prospect. It's about finding the right prospect at the right time with the right message — and doing that at scale."</blockquote>
+
+          <h3>What This Does to Your Numbers</h3>
+          <p>When I implemented this framework, Tier 1 accounts converted to pipeline at 3× the rate of unscored outreach. Not because the messaging was better — because the targeting was better. You can't out-message bad targeting.</p>
+          <ul>
+            <li>60% reduction in manual research time per account</li>
+            <li>3× pipeline conversion rate on Tier 1 accounts vs. unscored outreach</li>
+            <li>Enabled single-operator coverage of 3,700+ accounts</li>
+          </ul>
+        </div>
+
+        <button class="read-more" onclick="toggleArticle(this)">Read full article ↓</button>
+      </div>
+      <div class="article-footer">
+        <div class="author-chip">
+          <img src="headshot-final.png" alt="Tony Beal" onerror="this.style.display='none'" />
+          <div>
+            <div class="author-name">Tony Beal</div>
+            <div class="author-title">Revenue Operations · GTM Strategy</div>
+          </div>
+        </div>
+        <a href="https://linkedin.com/in/tony-beal40/" class="share-cta" target="_blank" rel="noopener">Follow on LinkedIn →</a>
+      </div>
+    </article>
+
+  </div><!-- /blog-grid -->
+
+  <!-- CTA -->
+  <div class="blog-cta">
+    <h2>Want to Build This in Your Company?</h2>
+    <p>I build revenue systems for industrial and B2B companies that generate real pipeline — not just activity.</p>
+    <div class="btn-row">
+      <a href="https://calendly.com/tonybeal" class="btn-primary" target="_blank" rel="noopener">Book a Call</a>
+      <a href="resume.html" class="btn-ghost">View Resume</a>
+    </div>
+  </div>
+
+  <script>
+    function toggleArticle(btn) {
+      const body = btn.closest('.article-body');
+      const full = body.querySelector('.article-full');
+      const open = full.classList.toggle('open');
+      btn.textContent = open ? 'Show less ↑' : 'Read full article ↓';
+    }
+  </script>
+
+</body>
+</html>
