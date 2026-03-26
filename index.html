@@ -1108,6 +1108,142 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </section>
 
   <!-- =====================================================
+       ELEVATOR PITCH
+  ===================================================== -->
+  <section class="section section-white reveal" id="elevator-pitch">
+    <div class="container">
+      <p class="section-label">In your own words</p>
+      <h2 class="section-title">How Tony Answers the Hard Questions</h2>
+      <p class="section-sub">Five questions every hiring committee asks — answered directly. No spin, no filler.</p>
+
+      <div style="max-width:820px;margin:0 auto;display:flex;flex-direction:column;gap:0;">
+
+        <details class="pitch-item" open>
+          <summary class="pitch-q">
+            <span class="pitch-num">01</span>
+            <span>"Tell me about yourself."</span>
+            <span class="pitch-arrow">+</span>
+          </summary>
+          <div class="pitch-a">
+            <p>I am a Marketing and Sales Operations leader with 15 years of B2B experience building revenue systems at the intersection of brand strategy, pipeline generation, and commercial technology. At Natoli Engineering, I built the full stack: StoryBrand brand positioning, marketing dashboards, email campaigns to 20,000+ contacts, LinkedIn content strategy, AI-powered market scanning tools using the OpenAI API, and a custom CRM backend integration. At Proform Manufacturing, I built $6M+ in pipeline from zero. I have managed 3,700+ accounts, hit quota for eight consecutive years, and grown a LinkedIn presence to 11,000+ followers with over 300,000 impressions.</p>
+            <p>What I bring is simple: I connect marketing activity to revenue outcomes — and I have the systems and track record to prove it works.</p>
+          </div>
+        </details>
+
+        <details class="pitch-item">
+          <summary class="pitch-q">
+            <span class="pitch-num">02</span>
+            <span>"What makes you different from other marketing leaders?"</span>
+            <span class="pitch-arrow">+</span>
+          </summary>
+          <div class="pitch-a">
+            <p>Most marketing directors understand campaigns. I understand how campaigns connect to closed revenue. I have built the CRM architecture that tracks every touchpoint from first impression to signed contract. I have applied StoryBrand to sharpen brand positioning. I run SEO on live digital properties. I have grown social reach to 11,000+ followers. I built websites from the backend up and executed email campaigns to 20,000+ contacts.</p>
+            <p>What I bring that a traditional marketing director often cannot: hard accountability to revenue outcomes. Every program gets measured. Every dollar earns its place.</p>
+          </div>
+        </details>
+
+        <details class="pitch-item">
+          <summary class="pitch-q">
+            <span class="pitch-num">03</span>
+            <span>"What is your leadership style?"</span>
+            <span class="pitch-arrow">+</span>
+          </summary>
+          <div class="pitch-a">
+            <p>High standards, low drama. I build clear systems, set clear expectations, and give my team autonomy to execute. I do not micromanage creative decisions — I set strategic direction and get out of the way. I step back in when data tells me something needs to change.</p>
+            <p>I have been described as direct, decisive, and development-oriented. I genuinely invest in the people I lead, and I believe a focused two-person team with the right systems can outperform a ten-person team operating without clarity.</p>
+          </div>
+        </details>
+
+        <details class="pitch-item">
+          <summary class="pitch-q">
+            <span class="pitch-num">04</span>
+            <span>"How do you approach a new role in the first 90 days?"</span>
+            <span class="pitch-arrow">+</span>
+          </summary>
+          <div class="pitch-a">
+            <p>Listen first. I spend the first 30 days understanding the existing pipeline, the CRM state, the ICP, and where the real friction is — before committing to a plan. Most teams already know what is broken. They need someone to build the fix, not just name it.</p>
+            <p>Days 31–90: I build the foundation. CRM architecture, ICP targeting, outbound sequences, and a reporting dashboard that tells the story the leadership team actually needs to see. By day 90, we have a system running and measurable data coming in.</p>
+          </div>
+        </details>
+
+        <details class="pitch-item">
+          <summary class="pitch-q">
+            <span class="pitch-num">05</span>
+            <span>"Where do you see the biggest revenue opportunity for most B2B companies?"</span>
+            <span class="pitch-arrow">+</span>
+          </summary>
+          <div class="pitch-a">
+            <p>Three places. First, brand clarity — most B2B companies have unclear messaging that forces prospects to work too hard to understand the value proposition. StoryBrand fixes this fast. Second, website conversion — most B2B websites have traffic but no conversion infrastructure. Fixing CTAs, persona-aligned content, and CRM tracking turns existing traffic into pipeline immediately. Third, MQL-to-pipeline visibility — connecting every marketing activity to pipeline data so leadership can see exactly where revenue is coming from and where to invest next.</p>
+            <p>These three together compound. They are not theory — they are how I have built $15M+ in pipeline across every market I have worked in.</p>
+          </div>
+        </details>
+
+      </div>
+
+      <div style="text-align:center;margin-top:40px;">
+        <a href="#" onclick="openResumeDrawer('revops');return false;" class="btn btn-primary">View Resume</a>
+        <a href="https://www.linkedin.com/in/tony-beal40/" target="_blank" rel="noopener" class="btn btn-outline" style="margin-left:12px;">Connect on LinkedIn</a>
+      </div>
+    </div>
+  </section>
+
+  <style>
+  .pitch-item {
+    border-bottom: 1px solid #e2e8f0;
+  }
+  .pitch-item:first-child { border-top: 1px solid #e2e8f0; }
+  .pitch-q {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 20px 4px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 700;
+    color: #0f172a;
+    list-style: none;
+    user-select: none;
+  }
+  .pitch-q::-webkit-details-marker { display: none; }
+  .pitch-q:hover { color: #2563eb; }
+  .pitch-num {
+    font-size: 11px;
+    font-weight: 800;
+    color: #2563eb;
+    background: #eff6ff;
+    padding: 3px 8px;
+    border-radius: 4px;
+    flex-shrink: 0;
+    letter-spacing: 0.05em;
+  }
+  .pitch-q > span:nth-child(2) { flex: 1; }
+  .pitch-arrow {
+    font-size: 20px;
+    font-weight: 300;
+    color: #94a3b8;
+    flex-shrink: 0;
+    transition: transform .2s;
+  }
+  details[open] .pitch-arrow { transform: rotate(45deg); color: #2563eb; }
+  .pitch-a {
+    padding: 4px 4px 24px 52px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .pitch-a p {
+    font-size: 15px;
+    color: #475569;
+    line-height: 1.8;
+    margin: 0;
+  }
+  @media (max-width: 640px) {
+    .pitch-q { font-size: 14px; gap: 12px; }
+    .pitch-a { padding-left: 0; }
+  }
+  </style>
+
+  <!-- =====================================================
        FINAL CTA
   ===================================================== -->
   <section class="section section-dark" id="contact">
