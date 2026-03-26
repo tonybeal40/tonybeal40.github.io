@@ -1274,17 +1274,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <button class="resume-drawer-close" onclick="closeResumeDrawer()" aria-label="Close resume">&times;</button>
   </div>
 
-  <div class="resume-drawer-tabs">
-    <button class="resume-tab" data-resume="revops"      onclick="switchResume('revops')">RevOps &amp; GTM</button>
-    <button class="resume-tab" data-resume="industrial"  onclick="switchResume('industrial')">Industrial</button>
-    <button class="resume-tab" data-resume="consulting"  onclick="switchResume('consulting')">Consulting</button>
-    <button class="resume-tab" data-resume="logistics"   onclick="switchResume('logistics')">Logistics</button>
-  </div>
-
   <div class="resume-drawer-actions">
     <span class="resume-action-badge" id="resume-action-badge">
-      Select the version that matches your role — each is ATS-optimized.
+      <strong>Marketing &amp; Sales Operations Leader</strong> — Tony Beal
     </span>
+    <a href="resume-revops.html" target="_blank" style="padding:6px 14px;border-radius:5px;font-size:12px;font-weight:600;border:1px solid #cbd5e1;color:#475569;text-decoration:none;background:transparent;">Open Full Page</a>
     <button class="resume-copy-link-btn" onclick="copyResumeLink()" id="resume-copy-btn">Copy Link</button>
     <button class="resume-print-btn" onclick="printResume()">Print / PDF</button>
   </div>
@@ -1300,10 +1294,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <script>
 (function() {
   const VERSIONS = {
-    revops:     { label: 'RevOps & GTM Systems',            file: 'resumes/resume-revops.html' },
-    industrial: { label: 'Industrial Sales & Territory',    file: 'resumes/resume-industrial.html' },
-    consulting: { label: 'AI & Revenue Consulting',         file: 'resumes/resume-consulting.html' },
-    logistics:  { label: 'Logistics & Supply Chain BD',     file: 'resumes/resume-logistics.html' },
+    revops: { label: 'Marketing & Sales Operations Leader', file: 'resume-revops.html' },
   };
 
   let currentVersion = null;
@@ -1323,17 +1314,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   };
 
   window.switchResume = function(version) {
-    if (!VERSIONS[version]) return;
+    if (!VERSIONS[version]) version = 'revops';
     currentVersion = version;
-
-    // Update tabs
-    document.querySelectorAll('.resume-tab').forEach(t => {
-      t.classList.toggle('active', t.dataset.resume === version);
-    });
-
-    // Update badge
-    document.getElementById('resume-action-badge').innerHTML =
-      'Viewing: <strong>' + VERSIONS[version].label + '</strong>';
 
     // Show loading, hide frame
     const frame = document.getElementById('resume-frame');
@@ -1375,10 +1357,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   // Auto-open if URL has ?resume=xxx
   const params = new URLSearchParams(window.location.search);
   const resumeParam = params.get('resume');
-  if (resumeParam && VERSIONS[resumeParam]) {
-    window.addEventListener('DOMContentLoaded', function() {
-      setTimeout(() => openResumeDrawer(resumeParam), 300);
-    });
+  if (resumeParam) {
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', function() {
+        setTimeout(() => openResumeDrawer(resumeParam), 200);
+      });
+    } else {
+      setTimeout(() => openResumeDrawer(resumeParam), 200);
+    }
   }
 
   // Keyboard close
