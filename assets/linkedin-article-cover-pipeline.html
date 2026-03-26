@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 1200px;
+    height: 644px;
+    overflow: hidden;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background: #0F172A;
+  }
+
+  .bg {
+    position: relative;
+    width: 1200px;
+    height: 644px;
+    background: linear-gradient(135deg, #0F172A 0%, #0F172A 55%, #0C1E3E 100%);
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+  }
+
+  /* Grid lines decoration */
+  .grid {
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(37,99,235,0.07) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(37,99,235,0.07) 1px, transparent 1px);
+    background-size: 60px 60px;
+  }
+
+  /* Glow blobs */
+  .glow-blue {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(37,99,235,0.18) 0%, transparent 70%);
+    top: -100px;
+    right: 100px;
+    pointer-events: none;
+  }
+  .glow-purple {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(129,140,248,0.1) 0%, transparent 70%);
+    bottom: -50px;
+    left: 200px;
+    pointer-events: none;
+  }
+
+  /* Left accent bar */
+  .accent-bar {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 6px;
+    background: linear-gradient(180deg, #2563EB 0%, #818CF8 100%);
+  }
+
+  /* Content */
+  .content {
+    position: relative;
+    z-index: 10;
+    padding: 0 90px;
+    max-width: 780px;
+  }
+
+  .overline {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 22px;
+  }
+  .overline-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #2563EB;
+    flex-shrink: 0;
+  }
+  .overline-text {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #60A5FA;
+  }
+
+  h1 {
+    font-size: 58px;
+    font-weight: 900;
+    line-height: 1.1;
+    color: #F8FAFC;
+    letter-spacing: -0.02em;
+    margin-bottom: 24px;
+  }
+  h1 span {
+    background: linear-gradient(90deg, #60A5FA, #818CF8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .deck {
+    font-size: 20px;
+    color: #94A3B8;
+    line-height: 1.5;
+    margin-bottom: 40px;
+    max-width: 640px;
+  }
+
+  .stats {
+    display: flex;
+    gap: 40px;
+  }
+  .stat-item {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  .stat-num {
+    font-size: 28px;
+    font-weight: 900;
+    color: #60A5FA;
+    letter-spacing: -0.02em;
+  }
+  .stat-lbl {
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #475569;
+  }
+
+  /* Right side photo area */
+  .photo-area {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 420px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    overflow: hidden;
+  }
+  .photo-area img {
+    width: 340px;
+    object-fit: cover;
+    object-position: top center;
+    opacity: 0.88;
+    filter: brightness(0.9) contrast(1.05);
+  }
+  /* Fade photo into background */
+  .photo-fade {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, #0F172A 0%, transparent 35%, transparent 80%, #0F172A 100%);
+  }
+  .photo-fade-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 180px;
+    background: linear-gradient(0deg, #0F172A 0%, transparent 100%);
+  }
+
+  /* Bottom bar */
+  .bottom-bar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 56px;
+    background: rgba(15,23,42,0.85);
+    border-top: 1px solid rgba(37,99,235,0.25);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 90px;
+    z-index: 20;
+  }
+  .bottom-name {
+    font-size: 15px;
+    font-weight: 700;
+    color: #E2E8F0;
+    letter-spacing: 0.01em;
+  }
+  .bottom-url {
+    font-size: 13px;
+    font-weight: 600;
+    color: #60A5FA;
+    letter-spacing: 0.04em;
+  }
+  .bottom-tags {
+    display: flex;
+    gap: 12px;
+  }
+  .tag {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #475569;
+  }
+  .tag + .tag::before {
+    content: '·';
+    margin-right: 12px;
+    color: #1E293B;
+  }
+</style>
+</head>
+<body>
+<div class="bg">
+  <div class="grid"></div>
+  <div class="glow-blue"></div>
+  <div class="glow-purple"></div>
+  <div class="accent-bar"></div>
+
+  <!-- RIGHT PHOTO -->
+  <div class="photo-area">
+    <img src="../headshot-final.png" alt="Tony Beal"
+         onerror="this.src='../headshot-hero.webp'" />
+    <div class="photo-fade"></div>
+    <div class="photo-fade-bottom"></div>
+  </div>
+
+  <!-- MAIN CONTENT -->
+  <div class="content">
+    <div class="overline">
+      <div class="overline-dot"></div>
+      <span class="overline-text">Revenue Operations · AI Sales Systems</span>
+    </div>
+
+    <h1>$15M Pipeline.<br><span>No SDR Team.</span></h1>
+
+    <p class="deck">How one operator built enterprise-scale B2B pipeline<br>with precision targeting and AI — not volume.</p>
+
+    <div class="stats">
+      <div class="stat-item">
+        <span class="stat-num">3,700+</span>
+        <span class="stat-lbl">Accounts Targeted</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num">23%</span>
+        <span class="stat-lbl">Open Rate</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num">4.1%</span>
+        <span class="stat-lbl">Reply Rate</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- BOTTOM BAR -->
+  <div class="bottom-bar">
+    <span class="bottom-name">Tony Beal</span>
+    <div class="bottom-tags">
+      <span class="tag">RevOps</span>
+      <span class="tag">AI Prospecting</span>
+      <span class="tag">Pipeline Generation</span>
+    </div>
+    <span class="bottom-url">tonybeal.net/thinking</span>
+  </div>
+</div>
+</body>
+</html>
