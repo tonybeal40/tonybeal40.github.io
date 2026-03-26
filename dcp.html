@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Disney College Program — Interview Prep for Will</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #f8fafc; color: #1e293b; line-height: 1.6; }
+
+    /* TOP BANNER */
+    .top-banner {
+      background: #0F172A;
+      color: #fff;
+      text-align: center;
+      padding: 18px 20px 14px;
+    }
+    .top-banner .label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: #60A5FA;
+      margin-bottom: 6px;
+    }
+    .top-banner h1 {
+      font-size: 22px;
+      font-weight: 800;
+      color: #fff;
+      margin-bottom: 4px;
+    }
+    .top-banner p { font-size: 14px; color: #94A3B8; }
+
+    /* PROGRESS BAR */
+    .progress-bar { background: #1e3a5f; height: 6px; }
+    .progress-fill { height: 6px; background: linear-gradient(90deg, #2563EB, #60A5FA); width: 0%; transition: width 0.5s; }
+
+    /* CONTAINER */
+    .container { max-width: 720px; margin: 0 auto; padding: 24px 16px 60px; }
+
+    /* SECTION HEADERS */
+    .section-head {
+      background: #1e293b;
+      color: #fff;
+      border-radius: 10px 10px 0 0;
+      padding: 14px 20px;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: #60A5FA;
+      margin-top: 32px;
+    }
+    .section-body {
+      background: #fff;
+      border: 1px solid #e2e8f0;
+      border-top: none;
+      border-radius: 0 0 10px 10px;
+      padding: 20px;
+    }
+
+    /* INTRO CARD */
+    .intro-card {
+      background: linear-gradient(135deg, #1e3a5f 0%, #1e293b 100%);
+      border-radius: 12px;
+      padding: 24px;
+      color: #fff;
+      margin-bottom: 8px;
+    }
+    .intro-card h2 { font-size: 19px; font-weight: 800; margin-bottom: 8px; }
+    .intro-card p { font-size: 14px; color: #CBD5E1; line-height: 1.7; }
+    .intro-card .pills { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
+    .intro-card .pill {
+      background: rgba(96,165,250,0.15);
+      border: 1px solid rgba(96,165,250,0.3);
+      color: #93C5FD;
+      font-size: 12px;
+      font-weight: 600;
+      padding: 4px 12px;
+      border-radius: 20px;
+    }
+
+    /* QUESTION CARDS */
+    .q-list { display: flex; flex-direction: column; gap: 0; }
+    .q-item {
+      border-bottom: 1px solid #f1f5f9;
+      padding: 0;
+    }
+    .q-item:last-child { border-bottom: none; }
+    .q-trigger {
+      width: 100%;
+      background: none;
+      border: none;
+      text-align: left;
+      padding: 16px 4px;
+      cursor: pointer;
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+    }
+    .q-num {
+      min-width: 28px;
+      height: 28px;
+      background: #EFF6FF;
+      color: #2563EB;
+      font-size: 12px;
+      font-weight: 800;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+    .q-num.red { background: #FEF2F2; color: #DC2626; }
+    .q-num.green { background: #F0FDF4; color: #059669; }
+    .q-num.purple { background: #F5F3FF; color: #7C3AED; }
+    .q-num.orange { background: #FFF7ED; color: #EA580C; }
+    .q-text { flex: 1; }
+    .q-text strong { font-size: 15px; font-weight: 700; color: #0f172a; display: block; margin-bottom: 2px; }
+    .q-text .q-tag { font-size: 11px; color: #94A3B8; font-weight: 500; }
+    .q-arrow { font-size: 16px; color: #CBD5E1; margin-left: auto; flex-shrink: 0; padding-top: 6px; transition: transform 0.2s; }
+    .q-trigger[aria-expanded="true"] .q-arrow { transform: rotate(180deg); }
+
+    .q-answer {
+      display: none;
+      padding: 0 4px 16px 42px;
+    }
+    .q-answer.open { display: block; }
+    .answer-label {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: #2563EB;
+      margin-bottom: 6px;
+    }
+    .answer-box {
+      background: #F0F9FF;
+      border-left: 3px solid #2563EB;
+      border-radius: 0 8px 8px 0;
+      padding: 12px 14px;
+      font-size: 14px;
+      color: #1e293b;
+      line-height: 1.75;
+      font-style: italic;
+    }
+    .answer-tip {
+      margin-top: 8px;
+      font-size: 12.5px;
+      color: #64748B;
+      background: #f8fafc;
+      border-radius: 6px;
+      padding: 8px 10px;
+    }
+    .answer-tip strong { color: #0f172a; }
+
+    /* WARNING BOXES */
+    .warn-box {
+      background: #FEF2F2;
+      border: 1px solid #FECACA;
+      border-left: 4px solid #DC2626;
+      border-radius: 8px;
+      padding: 12px 14px;
+      margin-top: 10px;
+      font-size: 13px;
+      color: #7F1D1D;
+    }
+    .warn-box strong { color: #DC2626; display: block; margin-bottom: 4px; }
+
+    /* MOCK INTERVIEW */
+    .mock-wrap { display: flex; flex-direction: column; gap: 16px; }
+    .mock-line { display: flex; gap: 12px; align-items: flex-start; }
+    .mock-avatar {
+      min-width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      flex-shrink: 0;
+    }
+    .mock-avatar.recruiter { background: #EFF6FF; }
+    .mock-avatar.will { background: #F0FDF4; }
+    .mock-bubble {
+      border-radius: 12px;
+      padding: 12px 14px;
+      font-size: 14px;
+      line-height: 1.7;
+      max-width: 100%;
+    }
+    .mock-bubble.recruiter {
+      background: #F1F5F9;
+      color: #1e293b;
+    }
+    .mock-bubble.will {
+      background: #EFF6FF;
+      color: #1e3a5f;
+      border-left: 3px solid #2563EB;
+    }
+    .mock-name {
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      margin-bottom: 4px;
+    }
+    .mock-name.recruiter { color: #94A3B8; }
+    .mock-name.will { color: #2563EB; }
+    .correction {
+      background: #FFF7ED;
+      border: 1px solid #FED7AA;
+      border-left: 3px solid #EA580C;
+      border-radius: 8px;
+      padding: 10px 12px;
+      font-size: 12.5px;
+      color: #7C2D12;
+      margin-top: 4px;
+      margin-left: 48px;
+    }
+    .correction strong { color: #EA580C; }
+
+    /* CHEAT SHEET */
+    .cheat-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    @media (max-width: 480px) { .cheat-grid { grid-template-columns: 1fr; } }
+    .cheat-card {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      padding: 14px;
+    }
+    .cheat-card .cheat-title { font-size: 12px; font-weight: 800; color: #0f172a; margin-bottom: 8px; text-transform: uppercase; letter-spacing: .06em; }
+    .cheat-card ul { list-style: none; display: flex; flex-direction: column; gap: 5px; }
+    .cheat-card ul li { font-size: 13px; color: #475569; padding-left: 16px; position: relative; }
+    .cheat-card ul li::before { content: '→'; position: absolute; left: 0; color: #2563EB; font-size: 11px; top: 2px; }
+
+    /* FINAL CTA */
+    .final-cta {
+      background: linear-gradient(135deg, #1e3a5f, #0f172a);
+      border-radius: 12px;
+      padding: 28px 24px;
+      text-align: center;
+      margin-top: 32px;
+      color: #fff;
+    }
+    .final-cta h3 { font-size: 20px; font-weight: 800; margin-bottom: 10px; }
+    .final-cta p { font-size: 14px; color: #CBD5E1; margin-bottom: 20px; }
+    .final-cta .big-pill {
+      display: inline-block;
+      background: #2563EB;
+      color: #fff;
+      font-size: 15px;
+      font-weight: 700;
+      padding: 12px 28px;
+      border-radius: 8px;
+      text-decoration: none;
+    }
+
+    /* DIVIDER */
+    .divider { height: 1px; background: #E2E8F0; margin: 8px 0; }
+
+    /* STATUS BADGES */
+    .badge { display: inline-block; font-size: 11px; font-weight: 700; padding: 2px 10px; border-radius: 20px; }
+    .badge-blue { background: #EFF6FF; color: #2563EB; }
+    .badge-red { background: #FEF2F2; color: #DC2626; }
+    .badge-green { background: #F0FDF4; color: #059669; }
+    .badge-orange { background: #FFF7ED; color: #EA580C; }
+
+    /* KEYBOARD HINT */
+    .hint { text-align: center; font-size: 12px; color: #94A3B8; margin: 12px 0 0; }
+  </style>
+</head>
+<body>
+
+<div class="top-banner">
+  <div class="label">Disney College Program · Interview Prep</div>
+  <h1>Will — You've Got This 🏰</h1>
+  <p>Read every section. Practice the answers out loud. Know your 3 zoo stories.</p>
+</div>
+<div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
+
+<div class="container">
+
+  <!-- INTRO -->
+  <div class="intro-card" style="margin-top:8px;">
+    <h2>What Disney Is Actually Testing You On</h2>
+    <p>Forget "I love Disney." They're hiring <strong style="color:#fff;">operational Cast Members</strong> — people who show up, follow rules, serve guests, and work as a team. Your zoo experience is a <strong style="color:#60A5FA;">massive advantage</strong> because 95% of applicants have zero attraction operations background.</p>
+    <div class="pills">
+      <span class="pill">Guest Service</span>
+      <span class="pill">Operations Discipline</span>
+      <span class="pill">Teamwork</span>
+      <span class="pill">Reliability</span>
+      <span class="pill">Safety Mindset</span>
+    </div>
+  </div>
+  <div class="hint">👆 Tap any question below to see the best answer</div>
+
+  <!-- SECTION 1: GUARANTEED QUESTIONS -->
+  <div class="section-head">🎯 Section 1 — Questions Asked Every Time</div>
+  <div class="section-body">
+    <div class="q-list">
+
+      <div class="q-item">
+        <button class="q-trigger" aria-expanded="false" onclick="toggle(this)">
+          <span class="q-num">1</span>
+          <span class="q-text"><strong>Tell me about yourself.</strong><span class="q-tag">Opening · Almost guaranteed</span></span>
+          <span class="q-arrow">▼</span>
+        </button>
+        <div class="q-answer">
+          <div class="answer-label">Strong Answer</div>
+          <div class="answer-box">"I'm a junior at Murray State University studying Agricultural Systems Technology with a focus in business. At the Saint Louis Zoo, I'm an Attractions Supervisor and Railroad Engineer — I lead teams, manage daily operations, and make sure guests have a safe and positive experience. I've worked in high-volume environments where safety and communication matter a lot. I'm excited to bring that into the Disney College Program."</div>
+          <div class="answer-tip">⏱ Keep it to <strong>30–45 seconds.</strong> End it there. Don't ramble.</div>
+        </div>
+      </div>
+
+      <div class="q-item">
+        <button class="q-trigger" aria-expanded="false" onclick="toggle(this)">
+          <span class="q-num">2</span>
+          <span class="q-text"><strong>Why do you want to do the Disney College Program?</strong><span class="q-tag">Almost guaranteed</span></span>
+          <span class="q-arrow">▼</span>
+        </button>
+        <div class="q-answer">
+          <div class="answer-label">Strong Answer</div>
+          <div class="answer-box">"I'm interested because it combines high-volume guest service with strong operational structure. At the zoo I've seen how important safety, teamwork, and communication are in creating a great guest experience. Disney is known for doing that at a world-class level, and I want to be part of that environment while continuing to grow those skills professionally."</div>
+          <div class="warn-box"><strong>❌ Don't say:</strong> "I've always loved Disney since I was little" — everyone says this. Lead with operational experience.</div>
+        </div>
+      </div>
+
+      <div class="q-item">
+        <button class="q-trigger" aria-expanded="false" onclick="toggle(this)">
+          <span class="q-num">3</span>
+          <span class="q-text"><strong>What roles are you interested in?</strong><span class="q-tag">Always asked</span></span>
+          <span class="q-arrow">▼</span>
+        </button>
+        <div class="q-answer">
+          <div class="answer-label">Strong Answer</div>
+          <div class="answer-box">"I'm most interested in Attractions and Operations because that's closest to my experience at the zoo, but I'm genuinely flexible. I understand the parks need people in a lot of different areas and I'm comfortable working wherever I'm most needed."</div>
+          <div class="answer-tip">✅ <strong>Select most roles</strong> on the application. Picking only one looks inflexible. Recruiters place people where operations need them.</div>
+        </div>
+      </div>
+
+      <div class="q-item">
+        <button class="q-trigger" aria-expanded="false" onclick="toggle(this)">
+          <span class="q-num">4</span>
+          <span class="q-text"><strong>Are you okay with nights, weekends, and holidays?</strong><span class="q-tag">Every interview — must answer correctly</span></span>
+          <span class="q-arrow">▼</span>
+        </button>
+        <div class="q-answer">
+          <div class="answer-label">Strong Answer</div>
+          <div class="answer-box">"Yes, absolutely. I understand the parks operate every day of the year and I'm fully comfortable with flexible scheduling — nights, weekends, and holidays included."</div>
+          <div class="warn-box"><strong>❌ Do not hesitate here.</strong> Any pause or "I'd prefer…" is a red flag to the recruiter.</div>
+        </div>
+      </div>
+
+      <div class="q-item">
+        <button class="q-trigger" aria-expanded="false" onclick="toggle(this)">
+          <span class="q-num">5</span>
+          <span class="q-text"><strong>Are you okay living with roommates?</strong><span class="q-tag">DCP Housing screening</span></span>
+          <span class="q-arrow">▼</span>
+        </button>
+        <div class="q-answer">
+          <div class="answer-label">Strong Answer</div>
+          <div class="answer-box">"Yes, I'm comfortable living with roommates. I think it's actually part of the experience of the program and I look forward to meeting people from different backgrounds."</div>
+          <div class="answer-tip">Short and clean. This is a yes/no screening question — don't overthink it.</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- SECTION 2: BEHAVIORAL QUESTIONS -->
+  <div class="section-head">💬 Section 2 — Behavioral Questions (Real Situations)</div>
+  <div class="section-body">
+    <p style="font-size:13px;color:#64748B;margin-bottom:16px;">For every answer use <strong>Situation → Action → Result</strong>. Keep it under 90 seconds. Use real zoo stories.</p>
+    <div class="q-list">
+
+      <div class="q-item">
+        <button class="q-trigger" aria-expanded="false" onclick="toggle(this)">
+          <span class="q-num green">6</span>
+          <span class="q-text"><strong>Tell me about a time you helped a guest.</strong><span class="q-tag">Most common behavioral question</span></span>
+          <span class="q-arrow">▼</span>
+        </button>
+        <div class="q-answer">
+          <div class="answer-label">Strong Answer</div>
+          <div class="answer-box">"At the zoo, a family was trying to make it to the railroad before the last departure. They weren't sure where to go and were worried they'd miss it. I told them the schedule, walked them to the right entrance, and radioed my team to hold the boarding for just a moment. They made it and were really grateful. It was a small thing but it made a big difference for them."</div>
+          <div class="answer-tip">✅ Notice: <strong>specific situation → clear action → guest result.</strong> This is the formula.</div>
+        </div>
+      </div>
+
+      <div class="q-item">
+        <button class="q-trigger" aria-expanded="false" onclick="toggle(this)">
+          <span class="q-num green">7</span>
+          <span class="q-text"><strong>Tell me about a time you dealt with a difficult or upset guest.</strong><span class="q-tag">High frequency</span></span>
+          <span class="q-arrow">▼</span>
+        </button>
+        <div class="q-answer">
+          <div class="answer-label">Strong Answer</div>
+          <div class="answer-box">"We had a situation at the zoo where a guest was upset about the wait time for the railroad — it was a really busy day. I listened to their frustration without interrupting, acknowledged that waiting is tough, and explained what was causing the delay. I gave them an honest update on timing. Once they felt heard and had information, they calmed down. They actually thanked me on the way out."</div>
+          <div class="answer-tip">Key signals: <strong>stayed calm, listened first, gave information.</strong> That's exactly what Disney looks for.</div>
+        </div>
+      </div>
+
+      <div class="q-item">
+        <button class="q-trigger" aria-expanded="false" onclick="toggle(this)">
+          <span class="q-num green">8</span>
+          <span class="q-text"><strong>Tell me about a time you worked on a team.</strong><span class="q-tag">Always in the mix</span></span>
+          <span class="q-arrow">▼</span>
+        </button>
+        <div class="q-answer">
+          <div class="answer-label">Strong Answer</div>
+          <div class="answer-box">"As Attractions Supervisor I work with a team every shift. On busy days, communication is critical — everyone needs to know their role. I focus on making sure my team is set up, checking in when things get hectic, and stepping in wherever there's a gap. The goal is always to keep things running smoothly for the guests and support each other."</div>
+        </div>
+      </div>
+
+      <div class="q-item">
+        <button class="q-trigger" aria-expanded="false" onclick="toggle(this)">
+          <span class="q-num green">9</span>
+          <span class="q-text"><strong>Tell me about a time you followed safety procedures.</strong><span class="q-tag">Disney loves this one</span></span>
+          <span class="q-arrow">▼</span>
+        </button>
+        <div class="q-answer">
+          <div class="answer-label">Strong Answer</div>
+          <div class="answer-box">"Safety is built into every shift at the zoo. Before operating the railroad, there's a pre-operation checklist — I go through every item every time, no exceptions. One time I caught an issue during a pre-check that could have been a problem during operation. We held the departure, reported it, and got it resolved before guests boarded. That's what the procedures are there for."</div>
+          <div class="answer-tip">🏆 This answer is <strong>gold</strong>. Pre-check story = real operational thinking. Most applicants have nothing like this.</div>
+        </div>
+      </div>
+
+      <div class="q-item">
+        <button class="q-trigger" aria-expanded="false" onclick="toggle(this)">
+          <span class="q-num green">10</span>
+          <span class="q-text"><strong>Tell me about a time you had a conflict with a coworker.</strong><span class="q-tag">From real Reddit reports</span></span>
+          <span class="q-arrow">▼</span>
+        </button>
+        <div class="q-answer">
+          <div class="answer-label">Strong Answer</div>
+          <div class="answer-box">"There was a time a team member and I had different views on how to handle a guest queue during a high-traffic period. Instead of letting it become a problem, I talked to them privately, explained my reasoning, and asked for their input too. We found a middle ground that worked. I try to address things directly and professionally rather than letting tension build."</div>
+          <div class="warn-box"><strong>❌ Never blame the coworker.</strong> Keep the answer focused on how YOU handled it professionally.</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- SECTION 3: SITUATIONAL / WHAT WOULD YOU DO -->
+  <div class="section-head">🎢 Section 3 — Situational Questions (What Would You Do?)</div>
+  <div class="section-body">
+    <div class="q-list">
+
+      <div class="q-item">
+        <button class="q-trigger" aria-expanded="false" onclick="toggle(this)">
+          <span class="q-num red">11</span>
+          <span class="q-text"><strong>What would you do if a ride shuts down and guests are upset?</strong><span class="q-tag">From Reddit — real DCP question</span></span>
+          <span class="q-arrow">▼</span>
+        </button>
+        <div class="q-answer">
+          <div class="answer-label">Strong Answer</div>
+          <div class="answer-box">"I would stay calm and communicate clearly. First, I'd acknowledge the guests' frustration — waiting is hard. Then I'd give them what information I have, even if it's just 'we're working on it and I'll update you shortly.' If there are alternatives I can offer, I'd mention those. My goal would be to keep the environment calm and make sure guests feel taken care of even when things aren't going as planned."</div>
+        </div>
+      </div>
+
+      <div class="q-item">
+        <button class="q-trigger" aria-expanded="false" onclick="toggle(this)">
+          <span class="q-num red">12</span>
+          <span class="q-text"><strong>What would you do if a product or item is out of stock?</strong><span class="q-tag">Merchandise / Food roles</span></span>
+          <span class="q-arrow">▼</span>
+        </button>
+        <div class="q-answer">
+          <div class="answer-label">Strong Answer</div>
+          <div class="answer-box">"I'd apologize for the inconvenience and let the guest know what's available. If I could find out when it's back in stock or point them toward another location that might have it, I'd do that. The goal is to not just say 'sorry we're out' but to try and help them find a solution."</div>
+        </div>
+      </div>
+
+      <div class="q-item">
+        <button class="q-trigger" aria-expanded="false" onclick="toggle(this)">
+          <span class="q-num red">13</span>
+          <span class="q-text"><strong>What would you do if you didn't know the answer to a guest's question?</strong><span class="q-tag">Tests humility + teamwork</span></span>
+          <span class="q-arrow">▼</span>
+        </button>
+        <div class="q-answer">
+          <div class="answer-label">Strong Answer</div>
+          <div class="answer-box">"I'd be honest — I'd tell the guest I don't know but that I'll find out for them. I'd radio or check with a coworker or lead rather than guess and give wrong information. Getting them the right answer matters more than appearing like I know everything."</div>
+        </div>
+      </div>
+
+      <div class="q-item">
+        <button class="q-trigger" aria-expanded="false" onclick="toggle(this)">
+          <span class="q-num red">14</span>
+          <span class="q-text"><strong>What would you do if a child was upset or disappointed?</strong><span class="q-tag">Emotional intelligence screening</span></span>
+          <span class="q-arrow">▼</span>
+        </button>
+        <div class="q-answer">
+          <div class="answer-label">Strong Answer</div>
+          <div class="answer-box">"I'd get down to their level if appropriate, acknowledge how they feel, and try to redirect in a positive way. Kids respond to warmth and calm energy. I'd try to find something positive in the situation — point out something fun nearby, or just take a moment to make them feel seen. The magic of the experience matters a lot for families."</div>
+        </div>
+      </div>
+
+      <div class="q-item">
+        <button class="q-trigger" aria-expanded="false" onclick="toggle(this)">
+          <span class="q-num red">15</span>
+          <span class="q-text"><strong>How would you keep the magic alive if something goes wrong?</strong><span class="q-tag">Disney curveball — from real interviews</span></span>
+          <span class="q-arrow">▼</span>
+        </button>
+        <div class="q-answer">
+          <div class="answer-label">Strong Answer</div>
+          <div class="answer-box">"I think the magic isn't about everything being perfect — it's about how Cast Members respond when things aren't. A calm, warm, helpful response in a difficult moment can actually be more memorable than a perfect experience. I'd focus on the guest, stay positive, and do whatever I can to turn the situation around for them."</div>
+          <div class="answer-tip">This is the most "Disney" answer on the list. It shows you understand the brand at a deeper level.</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- SECTION 4: OPERATIONAL REALITY CHECK -->
+  <div class="section-head">⚙️ Section 4 — Operational Reality Questions</div>
+  <div class="section-body">
+    <p style="font-size:13px;color:#64748B;margin-bottom:16px;">These screen out people who aren't ready for the physical reality of park work. Answer all of these with a confident yes.</p>
+    <div class="cheat-grid">
+      <div class="cheat-card">
+        <div class="cheat-title">Answer YES to all of these</div>
+        <ul>
+          <li>Stand / walk for long periods?</li>
+          <li>Work outdoors in summer heat?</li>
+          <li>Handle repetitive tasks all shift?</li>
+          <li>Comfortable handling cash?</li>
+          <li>Work with large crowds?</li>
+          <li>Willing to relocate for program?</li>
+        </ul>
+      </div>
+      <div class="cheat-card">
+        <div class="cheat-title">What recruiters are listening for</div>
+        <ul>
+          <li>No hesitation on hard questions</li>
+          <li>Calm, easy tone throughout</li>
+          <li>"Team" language, not "I" heavy</li>
+          <li>No complaints about past jobs</li>
+          <li>Answers under 90 seconds</li>
+          <li>Real stories, not hypotheticals</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 5: MOCK INTERVIEW -->
+  <div class="section-head">🎤 Section 5 — Full Mock Interview (Read This Out Loud)</div>
+  <div class="section-body">
+    <p style="font-size:13px;color:#64748B;margin-bottom:20px;">Practice this like the real call. Read both sides. Say your answers out loud — not in your head.</p>
+    <div class="mock-wrap">
+
+      <div class="mock-line">
+        <div class="mock-avatar recruiter">🧑‍💼</div>
+        <div>
+          <div class="mock-name recruiter">Disney Recruiter</div>
+          <div class="mock-bubble recruiter">Hi! Thanks for taking the time to chat today. Can you start by telling me a little about yourself?</div>
+        </div>
+      </div>
+
+      <div class="mock-line">
+        <div class="mock-avatar will">🙋</div>
+        <div>
+          <div class="mock-name will">Will</div>
+          <div class="mock-bubble will">"I'm a junior at Murray State University studying Agricultural Systems Technology with a business focus. I currently work at the Saint Louis Zoo as an Attractions Supervisor and Railroad Engineer. I lead teams, manage daily operations, and make sure guests have a safe experience. That operational environment has taught me a lot about communication, safety, and teamwork — which is exactly what I want to build on through this program."</div>
+        </div>
+      </div>
+
+      <div class="mock-line">
+        <div class="mock-avatar recruiter">🧑‍💼</div>
+        <div>
+          <div class="mock-name recruiter">Disney Recruiter</div>
+          <div class="mock-bubble recruiter">Great. Why do you want to do the Disney College Program specifically?</div>
+        </div>
+      </div>
+
+      <div class="mock-line">
+        <div class="mock-avatar will">🙋</div>
+        <div>
+          <div class="mock-name will">Will</div>
+          <div class="mock-bubble will">"Disney is known for doing guest experience and operational excellence at a level most places don't reach. I want to be in that environment — not just because of what Disney is, but because of what I can learn and contribute. My zoo experience gave me a strong foundation and I want to take it to the next level in a world-class operation."</div>
+        </div>
+      </div>
+
+      <div class="mock-line">
+        <div class="mock-avatar recruiter">🧑‍💼</div>
+        <div>
+          <div class="mock-name recruiter">Disney Recruiter</div>
+          <div class="mock-bubble recruiter">Tell me about a time you had to deal with an upset guest. What happened and how did you handle it?</div>
+        </div>
+      </div>
+
+      <div class="mock-line">
+        <div class="mock-avatar will">🙋</div>
+        <div>
+          <div class="mock-name will">Will</div>
+          <div class="mock-bubble will">"At the zoo on a busy Saturday, a guest was frustrated about the railroad wait time. Instead of getting defensive, I listened first — let them say what they needed to say. Then I acknowledged the frustration, explained what was causing the delay, and gave them an honest time estimate. Once they had information and felt heard, the situation completely shifted. They ended up having a great ride and thanked me afterward."</div>
+        </div>
+      </div>
+
+      <div class="mock-line">
+        <div class="mock-avatar recruiter">🧑‍💼</div>
+        <div>
+          <div class="mock-name recruiter">Disney Recruiter</div>
+          <div class="mock-bubble recruiter">Are you comfortable working nights, weekends, and holidays? The parks operate every day.</div>
+        </div>
+      </div>
+
+      <div class="mock-line">
+        <div class="mock-avatar will">🙋</div>
+        <div>
+          <div class="mock-name will">Will</div>
+          <div class="mock-bubble will">"Yes, absolutely. I understand parks operate 365 days a year and I'm fully comfortable with that. Flexible scheduling including nights, weekends, and holidays is not a problem for me."</div>
+        </div>
+      </div>
+
+      <div class="mock-line">
+        <div class="mock-avatar recruiter">🧑‍💼</div>
+        <div>
+          <div class="mock-name recruiter">Disney Recruiter</div>
+          <div class="mock-bubble recruiter">What roles are you most interested in, and are you flexible?</div>
+        </div>
+      </div>
+
+      <div class="mock-line">
+        <div class="mock-avatar will">🙋</div>
+        <div>
+          <div class="mock-name will">Will</div>
+          <div class="mock-bubble will">"Attractions and Operations are my top choice because they connect most directly to my experience, but I'm genuinely flexible. I understand the parks need people across a lot of areas and I'm comfortable being placed wherever the operation needs me most."</div>
+        </div>
+      </div>
+
+      <div class="mock-line">
+        <div class="mock-avatar recruiter">🧑‍💼</div>
+        <div>
+          <div class="mock-name recruiter">Disney Recruiter</div>
+          <div class="mock-bubble recruiter">Do you have any questions for me?</div>
+        </div>
+      </div>
+
+      <div class="mock-line">
+        <div class="mock-avatar will">🙋</div>
+        <div>
+          <div class="mock-name will">Will ✅ Ask this</div>
+          <div class="mock-bubble will">"What qualities do you typically see in candidates who do really well in the Disney College Program?"</div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="warn-box" style="margin-top:20px;">
+      <strong>❌ Common Mistakes to Avoid in the Mock</strong>
+      Saying "I've always loved Disney since I was a kid" as your main reason · Overtalking past 90 seconds · Complaining about a past job · Sounding scripted — know the story, not a memorized script · Hesitating on availability questions
+    </div>
+  </div>
+
+  <!-- SECTION 6: 3 ZOO STORIES -->
+  <div class="section-head">🦁 Section 6 — Your 3 Zoo Stories (Prepare These Before the Call)</div>
+  <div class="section-body">
+    <p style="font-size:13px;color:#475569;margin-bottom:16px;">These 3 stories will answer almost every behavioral question naturally. Know them cold.</p>
+    <div class="q-list">
+
+      <div class="q-item">
+        <button class="q-trigger" aria-expanded="false" onclick="toggle(this)">
+          <span class="q-num purple">A</span>
+          <span class="q-text"><strong>Story 1 — Helping a Guest</strong><span class="q-tag">Answers: Q6, Q7, Q14</span></span>
+          <span class="q-arrow">▼</span>
+        </button>
+        <div class="q-answer">
+          <div class="answer-tip"><strong>Think of a real moment</strong> where you went out of your way for a guest. Family made the last train? Helped someone lost? Turned a bad moment into a good one? That's your story. Write it out tonight in 3 sentences: what happened, what you did, what the result was.</div>
+        </div>
+      </div>
+
+      <div class="q-item">
+        <button class="q-trigger" aria-expanded="false" onclick="toggle(this)">
+          <span class="q-num purple">B</span>
+          <span class="q-text"><strong>Story 2 — Solving a Problem</strong><span class="q-tag">Answers: Q8, Q10, Q11, Q12</span></span>
+          <span class="q-arrow">▼</span>
+        </button>
+        <div class="q-answer">
+          <div class="answer-tip"><strong>Think of a real operational challenge.</strong> Long lines, equipment issue, short-staffed shift, something that went wrong. What did you do? How did it resolve? That's your problem-solving story.</div>
+        </div>
+      </div>
+
+      <div class="q-item">
+        <button class="q-trigger" aria-expanded="false" onclick="toggle(this)">
+          <span class="q-num purple">C</span>
+          <span class="q-text"><strong>Story 3 — Leading or Supporting a Team</strong><span class="q-tag">Answers: Q8, Q9, Q10</span></span>
+          <span class="q-arrow">▼</span>
+        </button>
+        <div class="q-answer">
+          <div class="answer-tip"><strong>Think of a moment you supported or stepped up for your team.</strong> Covered for someone? Kept a busy shift organized? Communicated clearly when things were hectic? That's your team story.</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- CHEAT SHEET -->
+  <div class="section-head">📋 Quick Reference — Day of the Interview</div>
+  <div class="section-body">
+    <div class="cheat-grid">
+      <div class="cheat-card">
+        <div class="cheat-title">Say These Things</div>
+        <ul>
+          <li>"guest experience"</li>
+          <li>"safety procedures"</li>
+          <li>"team communication"</li>
+          <li>"high-volume environment"</li>
+          <li>"I'm flexible"</li>
+          <li>"support my team"</li>
+        </ul>
+      </div>
+      <div class="cheat-card">
+        <div class="cheat-title">Never Say These</div>
+        <ul>
+          <li>"I've always loved Disney"</li>
+          <li>"My old job was…" (negatively)</li>
+          <li>"I prefer weekdays"</li>
+          <li>"Only Attractions"</li>
+          <li>"I don't know" (without offering to find out)</li>
+          <li>"It's not my fault"</li>
+        </ul>
+      </div>
+      <div class="cheat-card">
+        <div class="cheat-title">Your Biggest Advantages</div>
+        <ul>
+          <li>Real attraction ops experience</li>
+          <li>Led teams of 30 people</li>
+          <li>Safety-trained operator</li>
+          <li>High-volume guest environment</li>
+          <li>Can talk about real stories</li>
+        </ul>
+      </div>
+      <div class="cheat-card">
+        <div class="cheat-title">Before the Interview</div>
+        <ul>
+          <li>Know your 3 zoo stories cold</li>
+          <li>Practice out loud (not in your head)</li>
+          <li>Quiet room, good connection</li>
+          <li>Resume nearby to reference</li>
+          <li>Water on the table</li>
+          <li>Be 5 min early to the call</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- FINAL CTA -->
+  <div class="final-cta">
+    <h3>You're More Prepared Than 90% of Applicants 🏆</h3>
+    <p>Most people walk in with Disney enthusiasm. You're walking in with attraction operations experience, safety training, and team leadership. Use it. Good luck Will.</p>
+    <a href="#top" class="big-pill" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">↑ Back to Top</a>
+  </div>
+
+</div><!-- /container -->
+
+<script>
+  function toggle(btn) {
+    const answer = btn.nextElementSibling;
+    const expanded = btn.getAttribute('aria-expanded') === 'true';
+    btn.setAttribute('aria-expanded', !expanded);
+    answer.classList.toggle('open', !expanded);
+    updateProgress();
+  }
+
+  function updateProgress() {
+    const total = document.querySelectorAll('.q-trigger').length;
+    const opened = document.querySelectorAll('.q-trigger[aria-expanded="true"]').length;
+    document.getElementById('progressFill').style.width = Math.round((opened / total) * 100) + '%';
+  }
+</script>
+
+</body>
+</html>
