@@ -162,7 +162,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <a href="thinking.html">Thinking</a>
         <a href="resume.html" target="_blank" rel="noopener">Resume</a>
         <span class="nav-available-badge"><span class="nav-status-dot"></span>Available</span>
-        <a href="#" data-e="tbeal" data-d="tonybeal.net" class="btn btn-primary btn-sm">Book a Call</a>
+        <a href="https://calendly.com/tonybeal40/30min" target="_blank" rel="noopener" class="btn btn-primary btn-sm" onclick="gtag('event','book_call_click',{'event_category':'CTA','event_label':'nav'})">Book a Call</a>
       </div>
       <button class="nav-hamburger" id="nav-hamburger" aria-label="Open menu">
         <span></span><span></span><span></span>
@@ -173,7 +173,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <a href="#systems" onclick="closeMobileNav()">Systems</a>
       <a href="thinking.html" onclick="closeMobileNav()">Thinking</a>
       <a href="resume.html" target="_blank" rel="noopener" onclick="closeMobileNav()">Resume</a>
-      <a href="#" data-e="tbeal" data-d="tonybeal.net" class="btn btn-primary" style="text-align:center;">Book a Call</a>
+      <a href="https://calendly.com/tonybeal40/30min" target="_blank" rel="noopener" class="btn btn-primary" style="text-align:center;" onclick="gtag('event','book_call_click',{'event_category':'CTA','event_label':'mobile_nav'})">Book a Call</a>
       <a href="https://www.linkedin.com/in/tony-beal40/" target="_blank" rel="noopener">LinkedIn</a>
     </div>
   </nav>
@@ -199,7 +199,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <p class="hero-body">I design and deploy AI-driven outreach and RevOps systems that generate qualified pipeline, improve visibility, and accelerate revenue growth across industrial and B2B markets.</p>
         <div class="hero-btns">
           <a href="resume.html" target="_blank" rel="noopener" class="btn btn-primary btn-lg">View Executive Resume</a>
-          <a href="#" data-e="tbeal" data-d="tonybeal.net" class="btn btn-outline btn-lg">Book a Call</a>
+          <a href="https://calendly.com/tonybeal40/30min" target="_blank" rel="noopener" class="btn btn-outline btn-lg" onclick="gtag('event','book_call_click',{'event_category':'CTA','event_label':'hero'})">Book a Call</a>
         </div>
         <p class="hero-availability">Open to full-time leadership roles or high-impact RevOps engagements · Remote Nationwide</p>
         <div class="hero-metrics">
@@ -1748,9 +1748,77 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   });
 })();
 </script>
+<!-- =====================================================
+     GA4 CONVERSION TRACKING
+===================================================== -->
+<script>
+(function() {
+  // Helper: fire gtag event safely
+  function track(eventName, params) {
+    if (typeof gtag === 'function') {
+      gtag('event', eventName, params);
+    }
+  }
+
+  document.addEventListener('click', function(e) {
+    var el = e.target.closest('a, button');
+    if (!el) return;
+    var href = el.getAttribute('href') || '';
+    var text = el.textContent.trim();
+
+    // Book a Call — Calendly
+    if (href.includes('calendly.com')) {
+      track('book_call_click', { event_category: 'CTA', event_label: el.dataset.label || 'page' });
+    }
+    // Resume view
+    if (href.includes('resume')) {
+      track('resume_view', { event_category: 'Engagement', event_label: href });
+    }
+    // LinkedIn
+    if (href.includes('linkedin.com')) {
+      track('linkedin_click', { event_category: 'Social', event_label: 'linkedin' });
+    }
+    // Email
+    if (href.includes('mailto:')) {
+      track('email_click', { event_category: 'Contact', event_label: 'email' });
+    }
+    // Phone
+    if (href.includes('tel:')) {
+      track('phone_click', { event_category: 'Contact', event_label: 'phone' });
+    }
+    // Thinking / blog articles
+    if (href.includes('thinking.html')) {
+      track('blog_click', { event_category: 'Engagement', event_label: 'thinking' });
+    }
+  });
+
+  // Track scroll depth (25%, 50%, 75%, 100%)
+  var scrollDepths = [25, 50, 75, 100];
+  var firedDepths = {};
+  window.addEventListener('scroll', function() {
+    var scrollPct = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100);
+    scrollDepths.forEach(function(depth) {
+      if (scrollPct >= depth && !firedDepths[depth]) {
+        firedDepths[depth] = true;
+        track('scroll_depth', { event_category: 'Engagement', event_label: depth + '%', value: depth });
+      }
+    });
+  }, { passive: true });
+
+  // Track time on page (30s, 60s, 2min, 5min)
+  var timemarks = [30, 60, 120, 300];
+  timemarks.forEach(function(seconds) {
+    setTimeout(function() {
+      track('time_on_page', { event_category: 'Engagement', event_label: seconds + 's', value: seconds });
+    }, seconds * 1000);
+  });
+})();
+</script>
 
 </body>
 </html>
+
+
 
 
 
