@@ -1845,9 +1845,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         headers: { 'Accept': 'application/json' }
       }).then(function(resp) {
         if (resp.ok) {
-          playbookForm.style.display = 'none';
-          document.getElementById('playbook-thanks').style.display = 'block';
           track('playbook_signup', { event_category: 'Lead', event_label: 'email_capture' });
+          window.location.href = 'playbook.html';
         }
       }).catch(function() {
         // fallback: let native submit happen
