@@ -678,51 +678,197 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <section class="section section-gray reveal">
     <div class="container">
       <h2 class="section-title">Revenue Intelligence</h2>
-      <p class="section-sub">Real-time dashboard analytics driving pipeline decisions</p>
+      <p class="section-sub">The dashboards that tell the story leadership actually needs to see</p>
       <div class="dashboard-grid">
+
+        <!-- CHART 1: Pipeline Health — grouped bar chart -->
         <div class="dashboard-panel">
           <div class="panel-title">Pipeline Health</div>
-          <svg viewBox="0 0 240 120" style="width:100%;height:auto;">
-            <rect x="10" y="70" width="28" height="50" fill="#2563EB" rx="3"/>
-            <rect x="50" y="40" width="28" height="80" fill="#6366F1" rx="3"/>
-            <rect x="90" y="55" width="28" height="65" fill="#2563EB" rx="3"/>
-            <rect x="130" y="20" width="28" height="100" fill="#6366F1" rx="3"/>
-            <rect x="170" y="35" width="28" height="85" fill="#2563EB" rx="3"/>
-            <rect x="210" y="10" width="24" height="110" fill="#6366F1" rx="3"/>
+          <div class="panel-subtitle">Stage conversion by quarter</div>
+          <svg viewBox="0 0 260 140" style="width:100%;height:auto;overflow:visible;">
+            <defs>
+              <linearGradient id="barBlue" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#3B82F6"/>
+                <stop offset="100%" stop-color="#1D4ED8"/>
+              </linearGradient>
+              <linearGradient id="barIndigo" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#818CF8"/>
+                <stop offset="100%" stop-color="#4F46E5"/>
+              </linearGradient>
+            </defs>
+            <!-- Grid lines -->
+            <line x1="30" y1="10" x2="30" y2="110" stroke="#CBD5E1" stroke-width="1"/>
+            <line x1="30" y1="110" x2="255" y2="110" stroke="#CBD5E1" stroke-width="1"/>
+            <line x1="30" y1="80" x2="255" y2="80" stroke="#E2E8F0" stroke-width="0.5" stroke-dasharray="3,3"/>
+            <line x1="30" y1="55" x2="255" y2="55" stroke="#E2E8F0" stroke-width="0.5" stroke-dasharray="3,3"/>
+            <line x1="30" y1="30" x2="255" y2="30" stroke="#E2E8F0" stroke-width="0.5" stroke-dasharray="3,3"/>
+            <!-- Y labels -->
+            <text x="26" y="113" font-size="7" fill="#94A3B8" text-anchor="end">0</text>
+            <text x="26" y="83" font-size="7" fill="#94A3B8" text-anchor="end">25%</text>
+            <text x="26" y="58" font-size="7" fill="#94A3B8" text-anchor="end">50%</text>
+            <text x="26" y="33" font-size="7" fill="#94A3B8" text-anchor="end">75%</text>
+            <!-- Q1 -->
+            <rect x="36" y="74" width="13" height="36" fill="url(#barBlue)" rx="2">
+              <animate attributeName="height" from="0" to="36" dur="0.6s" fill="freeze" begin="0.1s"/>
+              <animate attributeName="y" from="110" to="74" dur="0.6s" fill="freeze" begin="0.1s"/>
+            </rect>
+            <rect x="51" y="64" width="13" height="46" fill="url(#barIndigo)" rx="2">
+              <animate attributeName="height" from="0" to="46" dur="0.6s" fill="freeze" begin="0.15s"/>
+              <animate attributeName="y" from="110" to="64" dur="0.6s" fill="freeze" begin="0.15s"/>
+            </rect>
+            <!-- Q2 -->
+            <rect x="86" y="60" width="13" height="50" fill="url(#barBlue)" rx="2">
+              <animate attributeName="height" from="0" to="50" dur="0.6s" fill="freeze" begin="0.2s"/>
+              <animate attributeName="y" from="110" to="60" dur="0.6s" fill="freeze" begin="0.2s"/>
+            </rect>
+            <rect x="101" y="48" width="13" height="62" fill="url(#barIndigo)" rx="2">
+              <animate attributeName="height" from="0" to="62" dur="0.6s" fill="freeze" begin="0.25s"/>
+              <animate attributeName="y" from="110" to="48" dur="0.6s" fill="freeze" begin="0.25s"/>
+            </rect>
+            <!-- Q3 -->
+            <rect x="136" y="44" width="13" height="66" fill="url(#barBlue)" rx="2">
+              <animate attributeName="height" from="0" to="66" dur="0.6s" fill="freeze" begin="0.3s"/>
+              <animate attributeName="y" from="110" to="44" dur="0.6s" fill="freeze" begin="0.3s"/>
+            </rect>
+            <rect x="151" y="32" width="13" height="78" fill="url(#barIndigo)" rx="2">
+              <animate attributeName="height" from="0" to="78" dur="0.6s" fill="freeze" begin="0.35s"/>
+              <animate attributeName="y" from="110" to="32" dur="0.6s" fill="freeze" begin="0.35s"/>
+            </rect>
+            <!-- Q4 -->
+            <rect x="186" y="28" width="13" height="82" fill="url(#barBlue)" rx="2">
+              <animate attributeName="height" from="0" to="82" dur="0.6s" fill="freeze" begin="0.4s"/>
+              <animate attributeName="y" from="110" to="28" dur="0.6s" fill="freeze" begin="0.4s"/>
+            </rect>
+            <rect x="201" y="14" width="13" height="96" fill="url(#barIndigo)" rx="2">
+              <animate attributeName="height" from="0" to="96" dur="0.6s" fill="freeze" begin="0.45s"/>
+              <animate attributeName="y" from="110" to="14" dur="0.6s" fill="freeze" begin="0.45s"/>
+            </rect>
+            <!-- X labels -->
+            <text x="50" y="122" font-size="7.5" fill="#64748B" text-anchor="middle">Q1</text>
+            <text x="101" y="122" font-size="7.5" fill="#64748B" text-anchor="middle">Q2</text>
+            <text x="151" y="122" font-size="7.5" fill="#64748B" text-anchor="middle">Q3</text>
+            <text x="201" y="122" font-size="7.5" fill="#64748B" text-anchor="middle">Q4</text>
+            <!-- Legend -->
+            <rect x="36" y="132" width="8" height="5" fill="url(#barBlue)" rx="1"/>
+            <text x="47" y="137" font-size="7" fill="#64748B">Target</text>
+            <rect x="90" y="132" width="8" height="5" fill="url(#barIndigo)" rx="1"/>
+            <text x="101" y="137" font-size="7" fill="#64748B">Actual</text>
           </svg>
           <span class="panel-metric">87% Stage Conversion</span>
         </div>
+
+        <!-- CHART 2: Lead Generation — smooth area chart with dots -->
         <div class="dashboard-panel">
           <div class="panel-title">Lead Generation</div>
-          <svg viewBox="0 0 240 120" style="width:100%;height:auto;">
-            <polyline points="0,100 40,70 80,80 120,40 160,50 200,20 240,10" fill="none" stroke="#2563EB" stroke-width="2.5"/>
-            <polyline points="0,100 40,70 80,80 120,40 160,50 200,20 240,10 240,120 0,120" fill="url(#lineGrad)" opacity="0.15"/>
+          <div class="panel-subtitle">New accounts activated per month</div>
+          <svg viewBox="0 0 260 140" style="width:100%;height:auto;overflow:visible;">
             <defs>
-              <linearGradient id="lineGrad" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="0%" stop-color="#2563EB"/>
-                <stop offset="100%" stop-color="transparent"/>
+              <linearGradient id="areaBlue" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#3B82F6" stop-opacity="0.35"/>
+                <stop offset="100%" stop-color="#3B82F6" stop-opacity="0.02"/>
               </linearGradient>
             </defs>
+            <!-- Grid -->
+            <line x1="30" y1="10" x2="30" y2="105" stroke="#CBD5E1" stroke-width="1"/>
+            <line x1="30" y1="105" x2="255" y2="105" stroke="#CBD5E1" stroke-width="1"/>
+            <line x1="30" y1="78" x2="255" y2="78" stroke="#E2E8F0" stroke-width="0.5" stroke-dasharray="3,3"/>
+            <line x1="30" y1="52" x2="255" y2="52" stroke="#E2E8F0" stroke-width="0.5" stroke-dasharray="3,3"/>
+            <line x1="30" y1="25" x2="255" y2="25" stroke="#E2E8F0" stroke-width="0.5" stroke-dasharray="3,3"/>
+            <!-- Y labels -->
+            <text x="26" y="108" font-size="7" fill="#94A3B8" text-anchor="end">0</text>
+            <text x="26" y="81" font-size="7" fill="#94A3B8" text-anchor="end">40</text>
+            <text x="26" y="55" font-size="7" fill="#94A3B8" text-anchor="end">90</text>
+            <text x="26" y="28" font-size="7" fill="#94A3B8" text-anchor="end">140</text>
+            <!-- Area fill — smooth cubic bezier -->
+            <path d="M35,95 C55,88 65,82 80,75 C95,68 105,72 120,62 C135,52 145,45 160,40 C175,35 185,28 200,22 C215,16 230,14 245,11 L245,105 L35,105 Z" fill="url(#areaBlue)"/>
+            <!-- Line -->
+            <path d="M35,95 C55,88 65,82 80,75 C95,68 105,72 120,62 C135,52 145,45 160,40 C175,35 185,28 200,22 C215,16 230,14 245,11" fill="none" stroke="#3B82F6" stroke-width="2.5" stroke-linecap="round"/>
+            <!-- Data points -->
+            <circle cx="35" cy="95" r="3.5" fill="#fff" stroke="#3B82F6" stroke-width="2"/>
+            <circle cx="80" cy="75" r="3.5" fill="#fff" stroke="#3B82F6" stroke-width="2"/>
+            <circle cx="120" cy="62" r="3.5" fill="#fff" stroke="#3B82F6" stroke-width="2"/>
+            <circle cx="160" cy="40" r="3.5" fill="#fff" stroke="#3B82F6" stroke-width="2"/>
+            <circle cx="200" cy="22" r="3.5" fill="#fff" stroke="#3B82F6" stroke-width="2"/>
+            <circle cx="245" cy="11" r="4.5" fill="#3B82F6" stroke="#fff" stroke-width="2"/>
+            <!-- X labels -->
+            <text x="35" y="117" font-size="7" fill="#64748B" text-anchor="middle">Jan</text>
+            <text x="80" y="117" font-size="7" fill="#64748B" text-anchor="middle">Mar</text>
+            <text x="120" y="117" font-size="7" fill="#64748B" text-anchor="middle">May</text>
+            <text x="160" y="117" font-size="7" fill="#64748B" text-anchor="middle">Jul</text>
+            <text x="200" y="117" font-size="7" fill="#64748B" text-anchor="middle">Sep</text>
+            <text x="245" y="117" font-size="7" fill="#64748B" text-anchor="middle">Nov</text>
+            <!-- Value callout on last point -->
+            <rect x="220" y="2" width="32" height="12" rx="3" fill="#1D4ED8"/>
+            <text x="236" y="11" font-size="7.5" fill="#fff" text-anchor="middle" font-weight="bold">+142</text>
           </svg>
           <span class="panel-metric">142 New Accounts/Mo</span>
         </div>
+
+        <!-- CHART 3: Pipeline Growth — two-line comparison -->
         <div class="dashboard-panel">
-          <div class="panel-title">Sales Performance</div>
-          <svg viewBox="0 0 240 120" style="width:100%;height:auto;">
+          <div class="panel-title">Pipeline Growth</div>
+          <div class="panel-subtitle">Year-over-year revenue trajectory</div>
+          <svg viewBox="0 0 260 140" style="width:100%;height:auto;overflow:visible;">
             <defs>
-              <linearGradient id="areaGrad" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="0%" stop-color="#6366F1" stop-opacity="0.4"/>
-                <stop offset="100%" stop-color="#6366F1" stop-opacity="0"/>
+              <linearGradient id="areaIndigo" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#6366F1" stop-opacity="0.3"/>
+                <stop offset="100%" stop-color="#6366F1" stop-opacity="0.02"/>
+              </linearGradient>
+              <linearGradient id="areaGray" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#94A3B8" stop-opacity="0.2"/>
+                <stop offset="100%" stop-color="#94A3B8" stop-opacity="0"/>
               </linearGradient>
             </defs>
-            <polygon points="0,90 40,75 80,65 120,50 160,35 200,20 240,15 240,120 0,120" fill="url(#areaGrad)"/>
-            <polyline points="0,90 40,75 80,65 120,50 160,35 200,20 240,15" fill="none" stroke="#6366F1" stroke-width="2.5"/>
+            <!-- Grid -->
+            <line x1="30" y1="10" x2="30" y2="105" stroke="#CBD5E1" stroke-width="1"/>
+            <line x1="30" y1="105" x2="255" y2="105" stroke="#CBD5E1" stroke-width="1"/>
+            <line x1="30" y1="78" x2="255" y2="78" stroke="#E2E8F0" stroke-width="0.5" stroke-dasharray="3,3"/>
+            <line x1="30" y1="52" x2="255" y2="52" stroke="#E2E8F0" stroke-width="0.5" stroke-dasharray="3,3"/>
+            <line x1="30" y1="25" x2="255" y2="25" stroke="#E2E8F0" stroke-width="0.5" stroke-dasharray="3,3"/>
+            <!-- Y labels -->
+            <text x="26" y="108" font-size="7" fill="#94A3B8" text-anchor="end">$0</text>
+            <text x="26" y="81" font-size="7" fill="#94A3B8" text-anchor="end">$4M</text>
+            <text x="26" y="55" font-size="7" fill="#94A3B8" text-anchor="end">$8M</text>
+            <text x="26" y="28" font-size="7" fill="#94A3B8" text-anchor="end">$15M</text>
+            <!-- Prior year area + line -->
+            <path d="M35,98 C75,93 110,88 145,82 C180,76 210,72 245,65 L245,105 L35,105 Z" fill="url(#areaGray)"/>
+            <path d="M35,98 C75,93 110,88 145,82 C180,76 210,72 245,65" fill="none" stroke="#94A3B8" stroke-width="1.5" stroke-dasharray="5,3"/>
+            <!-- Current year area + line -->
+            <path d="M35,100 C60,90 85,80 120,65 C150,52 180,35 210,22 C225,16 237,13 245,11 L245,105 L35,105 Z" fill="url(#areaIndigo)"/>
+            <path d="M35,100 C60,90 85,80 120,65 C150,52 180,35 210,22 C225,16 237,13 245,11" fill="none" stroke="#6366F1" stroke-width="2.5" stroke-linecap="round"/>
+            <!-- Dots current year -->
+            <circle cx="35" cy="100" r="3" fill="#fff" stroke="#6366F1" stroke-width="2"/>
+            <circle cx="120" cy="65" r="3" fill="#fff" stroke="#6366F1" stroke-width="2"/>
+            <circle cx="210" cy="22" r="3" fill="#fff" stroke="#6366F1" stroke-width="2"/>
+            <circle cx="245" cy="11" r="4.5" fill="#6366F1" stroke="#fff" stroke-width="2"/>
+            <!-- Growth badge -->
+            <rect x="214" y="2" width="38" height="12" rx="3" fill="#4F46E5"/>
+            <text x="233" y="11" font-size="7.5" fill="#fff" text-anchor="middle" font-weight="bold">+23% YoY</text>
+            <!-- X labels -->
+            <text x="35" y="117" font-size="7" fill="#64748B" text-anchor="middle">2022</text>
+            <text x="100" y="117" font-size="7" fill="#64748B" text-anchor="middle">2023</text>
+            <text x="170" y="117" font-size="7" fill="#64748B" text-anchor="middle">2024</text>
+            <text x="245" y="117" font-size="7" fill="#64748B" text-anchor="middle">2025</text>
+            <!-- Legend -->
+            <line x1="36" y1="130" x2="50" y2="130" stroke="#94A3B8" stroke-width="1.5" stroke-dasharray="4,2"/>
+            <text x="53" y="133" font-size="7" fill="#64748B">Prior Year</text>
+            <line x1="100" y1="130" x2="114" y2="130" stroke="#6366F1" stroke-width="2.5"/>
+            <text x="117" y="133" font-size="7" fill="#64748B">Current</text>
           </svg>
           <span class="panel-metric">23% YoY Growth</span>
         </div>
+
       </div>
     </div>
   </section>
+  <style>
+  .panel-subtitle {
+    font-size: 11px;
+    color: #94A3B8;
+    margin: -8px 0 10px;
+    font-weight: 400;
+  }
+  </style>
 
   <!-- =====================================================
        HOW COMPANIES WORK WITH TONY
