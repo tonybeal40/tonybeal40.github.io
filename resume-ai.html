@@ -235,11 +235,39 @@ j=d.createElement(s),dl=l!="dataLayer"?"&l="+l:"";j.async=true;j.src=
 
     /* ── PRINT ── */
     @media print {
-      @page { margin: 0.4in; size: letter; }
+      @page { margin: 0.2in 0.25in; size: letter portrait; }
       * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
       body { background: #fff !important; }
       .topbar { display: none !important; }
+      .hire-cta-bar { display: none !important; }
+      .print-book-call { display: flex !important; }
       .page-wrap { box-shadow: none !important; margin: 0 !important; border-radius: 0 !important; max-width: 100% !important; }
+      .resume-header { padding: 10px 24px 8px !important; gap: 14px !important; }
+      .header-photo { width: 52px !important; height: 52px !important; }
+      .header-name { font-size: 20px !important; margin-bottom: 2px !important; }
+      .header-title { font-size: 9px !important; margin-bottom: 5px !important; letter-spacing: 0.08em !important; }
+      .header-contacts { font-size: 9.5px !important; gap: 2px 10px !important; }
+      .resume-body { grid-template-columns: 1fr 200px !important; }
+      .left-col { padding: 12px 18px 12px 24px !important; }
+      .right-col { padding: 12px 14px !important; }
+      .section-head { font-size: 8.5px !important; margin-bottom: 4px !important; padding-bottom: 3px !important; }
+      .profile-text { font-size: 10.5px !important; line-height: 1.45 !important; margin-bottom: 10px !important; }
+      .exp-block { margin-bottom: 7px !important; }
+      .exp-header { margin-bottom: 1px !important; }
+      .exp-role { font-size: 11px !important; }
+      .exp-company { font-size: 10px !important; }
+      .exp-badge { font-size: 8.5px !important; padding: 1px 5px !important; }
+      .exp-sep { margin: 7px 0 !important; }
+      .exp-bullets { margin-top: 2px !important; padding-left: 11px !important; }
+      .exp-bullets li { font-size: 10.5px !important; line-height: 1.4 !important; margin-bottom: 0 !important; }
+      .skill-list { margin-bottom: 10px !important; }
+      .skill-list li { font-size: 10px !important; padding: 2px 0 !important; }
+      .tools-wrap { gap: 3px !important; margin-bottom: 10px !important; }
+      .tool-pill { font-size: 8.5px !important; padding: 1px 5px !important; }
+      .kn-list { margin-bottom: 10px !important; }
+      .kn-list li { font-size: 10px !important; padding: 1px 0 !important; }
+      .kn-list li::before { width: 4px !important; height: 4px !important; margin-top: 4px !important; }
+      .loc-list li { font-size: 10px !important; padding: 1px 0 !important; }
     }
 
     /* ── MOBILE ── */
