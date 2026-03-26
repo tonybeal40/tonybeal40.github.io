@@ -221,6 +221,11 @@
     }
     .loc-avail { color: #059669; font-weight: 700; }
 
+    /* ── IN IFRAME (drawer) — hide internal topbar ── */
+    html.in-iframe .topbar { display: none !important; }
+    html.in-iframe body { background: #fff; }
+    html.in-iframe .page-wrap { margin: 0 !important; border-radius: 0 !important; box-shadow: none !important; max-width: 100% !important; }
+
     /* ── PRINT ── */
     @media print {
       @page { margin: 0.4in; size: letter; }
@@ -245,6 +250,7 @@
 </head>
 <body>
 
+<script>if(window.self!==window.top){document.documentElement.classList.add('in-iframe');}</script>
 <!-- TOP NAV -->
 <nav class="topbar">
   <a href="index.html">tonybeal.net</a>
