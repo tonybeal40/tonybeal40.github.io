@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tony Beal | Revenue Technology & AI Systems Architect | Resume</title>
+  <meta name="description" content="Tony Beal — Revenue Technology Architect. Python, PowerShell, Docker, Ubuntu, OpenAI API, REST API integrations, custom CRM builds, OpenClaw AI platform. 40,000+ AI prompts engineered." />
+  <link rel="canonical" href="https://tonybeal.net/resume-tech.html" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #f1f5f9;
+      color: #1e293b;
+      min-height: 100vh;
+    }
+
+    /* ── TOP NAV BAR ── */
+    .topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 28px;
+      background: #f8fafc;
+      border-bottom: 1px solid #e2e8f0;
+      font-size: 13px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .topbar a { font-weight: 700; color: #0f172a; text-decoration: none; }
+    .topbar-right { display: flex; gap: 16px; align-items: center; }
+    .topbar-right a { color: #64748b; text-decoration: none; font-weight: 500; }
+    .topbar-right a:hover { color: #2563eb; }
+    .print-btn {
+      background: #2563EB; color: white; border: none;
+      padding: 6px 14px; border-radius: 6px;
+      font-weight: 600; font-size: 12px; cursor: pointer;
+    }
+
+    /* ── PAGE WRAPPER ── */
+    .page-wrap {
+      max-width: 900px;
+      margin: 24px auto 40px;
+      background: #fff;
+      box-shadow: 0 2px 20px rgba(0,0,0,0.09);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    /* ── HEADER ── */
+    .resume-header {
+      padding: 32px 40px 24px;
+      border-bottom: 2px solid #e8edf3;
+      display: flex;
+      align-items: center;
+      gap: 24px;
+    }
+    .header-photo {
+      width: 82px; height: 82px;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: top center;
+      border: 3px solid #e2e8f0;
+      flex-shrink: 0;
+    }
+    .header-info { flex: 1; }
+    .header-name {
+      font-size: 28px;
+      font-weight: 800;
+      color: #0f172a;
+      letter-spacing: -0.5px;
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+    .header-title {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: #64748b;
+      margin-bottom: 10px;
+    }
+    .header-contacts {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4px 16px;
+      font-size: 12px;
+      color: #475569;
+    }
+    .header-contacts a { color: #2563eb; text-decoration: none; }
+    .header-contacts a:hover { text-decoration: underline; }
+    .header-sep { color: #cbd5e1; }
+
+    /* ── BODY ── */
+    .resume-body {
+      display: grid;
+      grid-template-columns: 1fr 260px;
+      gap: 0;
+      padding: 0;
+    }
+
+    /* ── LEFT COLUMN ── */
+    .left-col { padding: 32px 32px 32px 40px; border-right: 1px solid #e8edf3; }
+
+    /* ── RIGHT COLUMN ── */
+    .right-col { padding: 32px 28px; background: #f8fafc; }
+
+    /* ── SECTION HEADINGS ── */
+    .section-head {
+      font-size: 10px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: #2563eb;
+      margin-bottom: 12px;
+      padding-bottom: 5px;
+      border-bottom: 1.5px solid #dbeafe;
+    }
+
+    /* ── PROFILE ── */
+    .profile-text {
+      font-size: 13px;
+      line-height: 1.75;
+      color: #334155;
+      margin-bottom: 28px;
+    }
+
+    /* ── EXPERIENCE ── */
+    .exp-block { margin-bottom: 20px; }
+    .exp-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 3px;
+    }
+    .exp-role {
+      font-size: 13.5px;
+      font-weight: 700;
+      color: #0f172a;
+    }
+    .exp-company {
+      font-size: 12px;
+      font-weight: 600;
+      color: #2563eb;
+    }
+    .exp-badge {
+      font-size: 10px;
+      font-weight: 600;
+      color: #64748b;
+      background: #f1f5f9;
+      padding: 2px 7px;
+      border-radius: 4px;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+    .exp-bullets {
+      margin-top: 5px;
+      padding-left: 14px;
+    }
+    .exp-bullets li {
+      font-size: 12px;
+      color: #334155;
+      line-height: 1.7;
+      margin-bottom: 2px;
+    }
+    .exp-bullets li strong { color: #0f172a; }
+    .exp-sep { border: none; border-top: 1px solid #f1f5f9; margin: 16px 0; }
+
+    /* ── RIGHT COL: SKILLS ── */
+    .skill-list { list-style: none; margin-bottom: 24px; }
+    .skill-list li {
+      font-size: 12.5px;
+      color: #334155;
+      padding: 6px 0;
+      border-bottom: 1px solid #e8edf3;
+      font-weight: 500;
+    }
+    .skill-list li:last-child { border-bottom: none; }
+
+    /* ── RIGHT COL: TOOLS ── */
+    .tools-wrap { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 24px; }
+    .tool-pill {
+      font-size: 11px;
+      font-weight: 600;
+      color: #1e40af;
+      background: #eff6ff;
+      border: 1px solid #bfdbfe;
+      padding: 3px 9px;
+      border-radius: 4px;
+    }
+
+    /* ── RIGHT COL: KEY NUMBERS ── */
+    .kn-list { list-style: none; margin-bottom: 24px; }
+    .kn-list li {
+      font-size: 12px;
+      color: #334155;
+      padding: 4px 0;
+      display: flex;
+      align-items: flex-start;
+      gap: 6px;
+    }
+    .kn-list li::before {
+      content: '';
+      display: inline-block;
+      width: 5px; height: 5px;
+      border-radius: 50%;
+      background: #2563eb;
+      margin-top: 5px;
+      flex-shrink: 0;
+    }
+
+    /* ── RIGHT COL: LOCATION ── */
+    .loc-list { list-style: none; }
+    .loc-list li {
+      font-size: 12px;
+      color: #334155;
+      padding: 3px 0;
+    }
+    .loc-avail { color: #059669; font-weight: 700; }
+
+    /* ── IN IFRAME (drawer) — hide internal topbar ── */
+    html.in-iframe .topbar { display: none !important; }
+    html.in-iframe body { background: #fff; }
+    html.in-iframe .page-wrap { margin: 0 !important; border-radius: 0 !important; box-shadow: none !important; max-width: 100% !important; }
+
+    /* ── PRINT ── */
+    @media print {
+      @page { margin: 0.4in; size: letter; }
+      * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+      body { background: #fff !important; }
+      .topbar { display: none !important; }
+      .page-wrap { box-shadow: none !important; margin: 0 !important; border-radius: 0 !important; max-width: 100% !important; }
+    }
+
+    /* ── MOBILE ── */
+    @media (max-width: 700px) {
+      .resume-header { flex-direction: column; align-items: flex-start; padding: 24px 20px 20px; }
+      .resume-body { grid-template-columns: 1fr; }
+      .left-col { border-right: none; border-bottom: 1px solid #e8edf3; padding: 24px 20px; }
+      .right-col { padding: 24px 20px; }
+      .header-contacts { flex-direction: column; gap: 4px; }
+      .header-sep { display: none; }
+      .topbar { padding: 10px 16px; }
+      .page-wrap { margin: 0; border-radius: 0; }
+    }
+  </style>
+</head>
+<body>
+
+<script>if(window.self!==window.top){document.documentElement.classList.add('in-iframe');}</script>
+<!-- TOP NAV -->
+<nav class="topbar">
+  <a href="index.html">tonybeal.net</a>
+  <div class="topbar-right">
+    <a href="resume.html">Resume Hub</a>
+    <span style="color:#cbd5e1;">|</span>
+    <a href="index.html">Home</a>
+    <span style="color:#cbd5e1;">|</span>
+    <button class="print-btn" onclick="window.print()">Print / Save PDF</button>
+  </div>
+</nav>
+
+<div class="page-wrap">
+
+  <!-- HEADER -->
+  <header class="resume-header">
+    <img src="headshot-hero.webp" alt="Tony Beal" class="header-photo"
+         onerror="this.src='headshot-hero.png'" />
+    <div class="header-info">
+      <div class="header-name">Tony Beal</div>
+      <div class="header-title">Revenue Technology Architect — AI Systems, APIs &amp; Custom Builds</div>
+      <div class="header-contacts">
+        <a href="mailto:tbeal@tonybeal.net">tbeal@tonybeal.net</a>
+        <span class="header-sep">·</span>
+        <a href="https://tonybeal.net">tonybeal.net</a>
+        <span class="header-sep">·</span>
+        <a href="https://linkedin.com/in/tony-beal40" target="_blank" rel="noopener">linkedin.com/in/tonybeal40</a>
+        <span class="header-sep">·</span>
+        <a href="tel:6182925320">(618) 292-5320</a>
+        <span class="header-sep">·</span>
+        <span>Greater St. Louis, MO</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- BODY -->
+  <div class="resume-body">
+
+    <!-- LEFT COLUMN -->
+    <main class="left-col">
+
+      <!-- PROFILE -->
+      <div class="section-head">Profile</div>
+      <p class="profile-text">
+        Revenue-focused technologist with 15+ years building commercial systems at the intersection of B2B sales operations and software engineering. Designed and deployed OpenClaw — a custom AI platform for revenue automation. Engineered 40,000+ AI prompts for B2B GTM workflows. Built custom CRM backend integrations using REST API architecture. Operates in Python, PowerShell, Docker, and Ubuntu environments. Combines deep commercial domain knowledge with real technical execution — not a marketer who dabbles in tools, but a systems builder who understands revenue. $15M+ pipeline generated through technology-first go-to-market programs.
+      </p>
+
+      <!-- EXPERIENCE -->
+      <div class="section-head">Experience</div>
+
+      <div class="exp-block">
+        <div class="exp-header">
+          <div>
+            <span class="exp-role">Revenue Systems Engineer &amp; AI Developer</span>
+            <span style="color:#94a3b8;font-size:12px;"> &mdash; </span>
+            <span class="exp-company">Natoli Engineering</span>
+          </div>
+          <span class="exp-badge">Recent</span>
+        </div>
+        <ul class="exp-bullets">
+          <li>Designed and built <strong>OpenClaw</strong> — custom AI platform for revenue automation, market scanning, and prospect intelligence generation</li>
+          <li>Engineered <strong>40,000+ AI prompts</strong> across GTM workflows: ICP scoring, outreach personalization, market analysis, competitive intelligence</li>
+          <li>Built custom <strong>CRM backend integration</strong> using REST API architecture to extend existing platform; no vendor dependency</li>
+          <li>Developed <strong>Python-based data pipelines</strong> for territory mapping, account intelligence, and pipeline reporting automation</li>
+          <li>Deployed AI-powered email automation to <strong>20,000+ contacts</strong> using custom segmentation and OpenAI-assisted personalization</li>
+        </ul>
+      </div>
+
+      <hr class="exp-sep" />
+
+      <div class="exp-block">
+        <div class="exp-header">
+          <div>
+            <span class="exp-role">CRM Architecture &amp; GTM Technology</span>
+            <span style="color:#94a3b8;font-size:12px;"> &mdash; </span>
+            <span class="exp-company">Proform Manufacturing</span>
+          </div>
+          <span class="exp-badge">Prior</span>
+        </div>
+        <ul class="exp-bullets">
+          <li>Architected <strong>Salesforce + HubSpot</strong> CRM infrastructure from zero: custom objects, workflows, automation sequences, and dashboards</li>
+          <li>Built AI-assisted account intelligence system integrating <strong>LinkedIn Sales Navigator + Apollo.io</strong> + custom prompt-engineered scoring</li>
+          <li>Generated <strong>$6M+ pipeline</strong> through technology-led outbound — AI scoring, automation sequences, CRM conversion tracking</li>
+          <li>Reduced manual SDR research time by <strong>60%</strong> through Python automation and AI-powered account enrichment pipelines</li>
+        </ul>
+      </div>
+
+      <hr class="exp-sep" />
+
+      <div class="exp-block">
+        <div class="exp-header">
+          <div>
+            <span class="exp-role">Web Systems &amp; Digital Infrastructure</span>
+            <span style="color:#94a3b8;font-size:12px;"> &mdash; </span>
+            <span class="exp-company">Wicks Aircraft Supply</span>
+          </div>
+          <span class="exp-badge">Prior</span>
+        </div>
+        <ul class="exp-bullets">
+          <li>Rebuilt full <strong>backend website infrastructure</strong>; designed and managed digital commercial presence from scratch</li>
+          <li>Integrated web, social, and CRM systems into unified commercial operation for small business environment</li>
+        </ul>
+      </div>
+
+      <hr class="exp-sep" />
+
+      <div class="exp-block">
+        <div class="exp-header">
+          <div>
+            <span class="exp-role">CRM &amp; Territory Operations</span>
+            <span style="color:#94a3b8;font-size:12px;"> &mdash; </span>
+            <span class="exp-company">BioGaia USA</span>
+          </div>
+          <span class="exp-badge">Prior</span>
+        </div>
+        <ul class="exp-bullets">
+          <li>Managed <strong>3,700+ accounts</strong> with disciplined CRM tracking, pipeline hygiene, and territory analytics</li>
+          <li>Exceeded quota <strong>8 consecutive years</strong> — systems-driven territory management and account development</li>
+        </ul>
+      </div>
+
+    </main>
+
+    <!-- RIGHT COLUMN -->
+    <aside class="right-col">
+
+      <!-- CORE SKILLS -->
+      <div class="section-head">Core Skills</div>
+      <ul class="skill-list">
+        <li>Python &amp; Backend Automation</li>
+        <li>OpenAI API &amp; Prompt Engineering</li>
+        <li>REST API Architecture</li>
+        <li>CRM Systems Development</li>
+        <li>Docker &amp; Ubuntu Environments</li>
+        <li>PowerShell Scripting</li>
+        <li>Data Pipeline Engineering</li>
+        <li>AI Platform Development (OpenClaw)</li>
+      </ul>
+
+      <!-- TOOLS -->
+      <div class="section-head">Tools</div>
+      <div class="tools-wrap">
+        <span class="tool-pill">Python</span>
+        <span class="tool-pill">PowerShell</span>
+        <span class="tool-pill">Docker</span>
+        <span class="tool-pill">Ubuntu</span>
+        <span class="tool-pill">GitHub</span>
+        <span class="tool-pill">VS Code</span>
+        <span class="tool-pill">OpenClaw</span>
+        <span class="tool-pill">OpenAI API</span>
+        <span class="tool-pill">REST APIs</span>
+        <span class="tool-pill">Salesforce API</span>
+        <span class="tool-pill">HubSpot API</span>
+        <span class="tool-pill">PostgreSQL</span>
+        <span class="tool-pill">Vite</span>
+        <span class="tool-pill">Apollo.io</span>
+        <span class="tool-pill">LinkedIn Nav</span>
+      </div>
+
+      <!-- KEY NUMBERS -->
+      <div class="section-head">Key Numbers</div>
+      <ul class="kn-list">
+        <li>40,000+ AI prompts engineered</li>
+        <li>1 custom AI platform built (OpenClaw)</li>
+        <li>$15M+ pipeline via tech systems</li>
+        <li>Custom CRM integration shipped</li>
+        <li>60% automation time reduction</li>
+        <li>3,700+ accounts tech-targeted</li>
+      </ul>
+
+      <!-- LOCATION -->
+      <div class="section-head">Location</div>
+      <ul class="loc-list">
+        <li>Greater St. Louis, MO</li>
+        <li>Remote Nationwide</li>
+        <li class="loc-avail">Immediately Available</li>
+      </ul>
+
+    </aside>
+  </div>
+</div>
+
+</body>
+</html>
