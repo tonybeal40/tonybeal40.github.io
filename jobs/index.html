@@ -1,0 +1,595 @@
+<!doctype html>
+<html lang="en">
+<head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({"gtm.start":
+new Date().getTime(),event:"gtm.js"});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!="dataLayer"?"&l="+l:"";j.async=true;j.src=
+"https://www.googletagmanager.com/gtm.js?id="+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,"script","dataLayer","GTM-NS6QDMBR");</script>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Career Pipeline OS | Tony Beal | Active Job Analysis</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Inter', system-ui, sans-serif; background: #0F172A; color: #F1F5F9; -webkit-font-smoothing: antialiased; line-height: 1.6; }
+  a { color: #60A5FA; text-decoration: none; }
+  a:hover { color: #fff; }
+
+  .site-nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(15,23,42,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(255,255,255,0.07); }
+  .nav-inner { max-width: 1160px; margin: 0 auto; padding: 0 24px; height: 64px; display: flex; align-items: center; justify-content: space-between; }
+  .nav-brand { font-size: 18px; font-weight: 800; background: linear-gradient(135deg, #2563EB, #6366F1); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+  .nav-links { display: flex; align-items: center; gap: 24px; }
+  .nav-links a { font-size: 14px; font-weight: 500; color: rgba(255,255,255,0.75); }
+  .nav-links a:hover { color: #fff; }
+  .btn { display: inline-flex; align-items: center; gap: 6px; padding: 9px 18px; border-radius: 8px; font-size: 13px; font-weight: 600; cursor: pointer; border: 1px solid transparent; transition: all 0.2s; text-decoration: none; }
+  .btn-primary { background: #2563EB; color: #fff; border-color: #2563EB; }
+  .btn-primary:hover { background: #1D4ED8; color: #fff; }
+  .btn-outline { background: transparent; color: #93C5FD; border-color: rgba(147,197,253,0.3); }
+  .btn-outline:hover { border-color: #93C5FD; color: #fff; }
+
+  .page-hero { padding: 120px 0 64px; background: linear-gradient(135deg, #0F172A 0%, #1E3A5F 50%, #0F172A 100%); border-bottom: 1px solid rgba(255,255,255,0.07); }
+  .container { max-width: 1160px; margin: 0 auto; padding: 0 24px; }
+  .breadcrumb { display: flex; align-items: center; gap: 8px; font-size: 13px; color: #64748B; margin-bottom: 20px; }
+  .breadcrumb a { color: #60A5FA; }
+  .page-title { font-size: clamp(32px, 5vw, 52px); font-weight: 900; color: #fff; line-height: 1.1; margin-bottom: 16px; }
+  .page-title em { font-style: italic; background: linear-gradient(135deg, #2563EB, #6366F1); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+  .page-sub { font-size: 18px; color: #94A3B8; max-width: 640px; margin-bottom: 32px; }
+  .page-meta { display: flex; gap: 12px; flex-wrap: wrap; }
+  .meta-badge { background: rgba(37,99,235,0.15); border: 1px solid rgba(37,99,235,0.3); border-radius: 999px; padding: 6px 16px; font-size: 13px; font-weight: 600; color: #93C5FD; }
+  .meta-badge.green { background: rgba(5,150,105,0.15); border-color: rgba(5,150,105,0.3); color: #6EE7B7; }
+
+  .page-body { padding: 64px 0 96px; }
+
+  /* LEGEND */
+  .legend { display: flex; gap: 24px; flex-wrap: wrap; margin-bottom: 40px; align-items: center; }
+  .legend-item { display: flex; align-items: center; gap: 8px; font-size: 13px; color: #94A3B8; }
+  .score-dot { width: 12px; height: 12px; border-radius: 50%; flex-shrink: 0; }
+  .score-dot.high { background: #22C55E; }
+  .score-dot.good { background: #3B82F6; }
+  .score-dot.mid { background: #F59E0B; }
+
+  /* JOB CARD */
+  .job-card { background: rgba(30,41,59,0.6); border: 1px solid rgba(255,255,255,0.07); border-radius: 16px; margin-bottom: 32px; overflow: hidden; transition: border-color 0.2s; }
+  .job-card:hover { border-color: rgba(37,99,235,0.3); }
+  .job-card-header { padding: 28px 32px 20px; display: grid; grid-template-columns: 1fr auto; gap: 24px; align-items: start; border-bottom: 1px solid rgba(255,255,255,0.06); }
+  .job-company { font-size: 22px; font-weight: 800; color: #fff; margin-bottom: 4px; }
+  .job-role { font-size: 15px; font-weight: 600; color: #93C5FD; margin-bottom: 8px; }
+  .job-meta-row { display: flex; gap: 12px; flex-wrap: wrap; }
+  .job-tag { background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.1); border-radius: 999px; padding: 3px 12px; font-size: 12px; font-weight: 500; color: #CBD5E1; }
+  .job-tag.salary { background: rgba(5,150,105,0.15); border-color: rgba(5,150,105,0.3); color: #6EE7B7; }
+  .score-block { text-align: center; flex-shrink: 0; }
+  .score-circle { width: 80px; height: 80px; border-radius: 50%; display: flex; flex-direction: column; align-items: center; justify-content: center; font-weight: 900; border: 3px solid; }
+  .score-circle.high { background: rgba(34,197,94,0.12); border-color: rgba(34,197,94,0.5); color: #22C55E; }
+  .score-circle.good { background: rgba(59,130,246,0.12); border-color: rgba(59,130,246,0.5); color: #60A5FA; }
+  .score-circle.mid { background: rgba(245,158,11,0.12); border-color: rgba(245,158,11,0.5); color: #FCD34D; }
+  .score-num { font-size: 28px; line-height: 1; }
+  .score-label { font-size: 9px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; opacity: 0.7; margin-top: 2px; }
+  .score-caption { font-size: 12px; color: #64748B; margin-top: 6px; font-weight: 600; }
+
+  .job-card-body { padding: 24px 32px 28px; display: grid; grid-template-columns: 1fr 1fr 300px; gap: 28px; }
+  .analysis-col h4 { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; color: #2563EB; margin-bottom: 10px; padding-bottom: 6px; border-bottom: 1px solid rgba(37,99,235,0.25); }
+  .pros-list { list-style: none; margin-bottom: 8px; }
+  .pros-list li { font-size: 13px; color: #CBD5E1; padding: 4px 0; display: flex; gap: 8px; line-height: 1.5; }
+  .pros-list li::before { content: '✓'; color: #22C55E; font-weight: 700; flex-shrink: 0; margin-top: 1px; }
+  .cons-list { list-style: none; }
+  .cons-list li { font-size: 13px; color: #94A3B8; padding: 4px 0; display: flex; gap: 8px; line-height: 1.5; }
+  .cons-list li::before { content: '△'; color: #F59E0B; font-weight: 700; flex-shrink: 0; margin-top: 1px; }
+
+  .action-col { border-left: 1px solid rgba(255,255,255,0.06); padding-left: 28px; }
+  .action-col h4 { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; color: #6366F1; margin-bottom: 10px; padding-bottom: 6px; border-bottom: 1px solid rgba(99,102,241,0.25); }
+  .outreach-block { margin-bottom: 16px; }
+  .outreach-label { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; color: #64748B; margin-bottom: 6px; }
+  .outreach-text { font-size: 12.5px; color: #CBD5E1; line-height: 1.6; background: rgba(15,23,42,0.5); border-radius: 8px; padding: 10px 12px; border: 1px solid rgba(255,255,255,0.05); cursor: text; }
+  .copy-note { font-size: 10px; color: #475569; margin-top: 4px; }
+
+  .asset-col { border-left: 1px solid rgba(255,255,255,0.06); padding-left: 28px; }
+  .asset-col h4 { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; color: #0891B2; margin-bottom: 10px; padding-bottom: 6px; border-bottom: 1px solid rgba(8,145,178,0.25); }
+  .asset-link { display: flex; align-items: center; gap: 10px; padding: 10px 14px; background: rgba(15,23,42,0.5); border: 1px solid rgba(255,255,255,0.07); border-radius: 8px; margin-bottom: 8px; text-decoration: none; transition: all 0.2s; color: #CBD5E1; font-size: 13px; font-weight: 600; }
+  .asset-link:hover { background: rgba(37,99,235,0.12); border-color: rgba(37,99,235,0.4); color: #93C5FD; }
+  .asset-icon { font-size: 16px; }
+  .asset-sub { font-size: 11px; color: #64748B; font-weight: 400; }
+  .resume-rec { background: rgba(37,99,235,0.1); border: 1px solid rgba(37,99,235,0.2); border-radius: 8px; padding: 10px 14px; margin-bottom: 8px; }
+  .resume-rec-label { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: #60A5FA; margin-bottom: 4px; }
+  .resume-rec-name { font-size: 13px; font-weight: 700; color: #fff; }
+  .priority-badge { display: inline-flex; align-items: center; gap: 6px; border-radius: 999px; padding: 4px 12px; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; margin-top: 8px; }
+  .priority-1 { background: rgba(34,197,94,0.15); color: #22C55E; border: 1px solid rgba(34,197,94,0.3); }
+  .priority-2 { background: rgba(59,130,246,0.15); color: #60A5FA; border: 1px solid rgba(59,130,246,0.3); }
+  .priority-3 { background: rgba(245,158,11,0.15); color: #FCD34D; border: 1px solid rgba(245,158,11,0.3); }
+
+  /* SUMMARY STRIP */
+  .summary-strip { background: rgba(37,99,235,0.08); border: 1px solid rgba(37,99,235,0.2); border-radius: 12px; padding: 24px 32px; margin-bottom: 48px; display: grid; grid-template-columns: repeat(5,1fr); gap: 16px; text-align: center; }
+  .strip-item { }
+  .strip-score { font-size: 32px; font-weight: 900; line-height: 1; }
+  .strip-score.s88 { color: #22C55E; }
+  .strip-score.s86 { color: #22C55E; }
+  .strip-score.s82 { color: #60A5FA; }
+  .strip-score.s79 { color: #60A5FA; }
+  .strip-score.s71 { color: #FCD34D; }
+  .strip-company { font-size: 11px; font-weight: 700; color: #94A3B8; margin-top: 4px; text-transform: uppercase; letter-spacing: 0.08em; }
+  .strip-rank { font-size: 10px; color: #475569; margin-top: 2px; }
+
+  footer.page-footer { background: rgba(15,23,42,0.8); border-top: 1px solid rgba(255,255,255,0.06); padding: 32px 0; margin-top: 64px; }
+  footer.page-footer p { font-size: 13px; color: #475569; text-align: center; }
+  footer.page-footer a { color: #60A5FA; }
+
+  @media (max-width: 900px) {
+    .job-card-body { grid-template-columns: 1fr; }
+    .action-col, .asset-col { border-left: none; padding-left: 0; border-top: 1px solid rgba(255,255,255,0.06); padding-top: 20px; }
+    .summary-strip { grid-template-columns: repeat(3,1fr); }
+    .job-card-header { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a href="../index.html" class="nav-brand">Tony Beal</a>
+    <div class="nav-links">
+      <a href="../job-targets.html">Mission Control</a>
+      <a href="../resume.html">Resumes</a>
+      <a href="../cover-letters.html">Cover Letters</a>
+      <a href="https://tonybeal.net">Site</a>
+      <a href="https://calendly.com/tonybeal40/30min" target="_blank" rel="noopener" class="btn btn-primary">Book a Call</a>
+    </div>
+  </div>
+</nav>
+
+<section class="page-hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="../index.html">tonybeal.net</a>
+      <span>›</span>
+      <a href="../job-targets.html">Mission Control</a>
+      <span>›</span>
+      <span>Career Pipeline OS</span>
+    </div>
+    <h1 class="page-title">Career <em>Pipeline OS</em></h1>
+    <p class="page-sub">Full analysis of active job targets — fit scores, alignment, execution assets, and outreach templates. Ready to deploy.</p>
+    <div class="page-meta">
+      <span class="meta-badge">5 Jobs Evaluated</span>
+      <span class="meta-badge green">All St. Louis, MO</span>
+      <span class="meta-badge">$80K–$180K Range</span>
+      <span class="meta-badge">BD / Industrial Sales</span>
+    </div>
+  </div>
+</section>
+
+<div class="page-body">
+  <div class="container">
+
+    <!-- SCORE SUMMARY -->
+    <div class="summary-strip">
+      <div class="strip-item">
+        <div class="strip-score s88">88</div>
+        <div class="strip-company">Airgas</div>
+        <div class="strip-rank">#1 Priority</div>
+      </div>
+      <div class="strip-item">
+        <div class="strip-score s86">86</div>
+        <div class="strip-company">Lever1</div>
+        <div class="strip-rank">#2 Priority</div>
+      </div>
+      <div class="strip-item">
+        <div class="strip-score s82">82</div>
+        <div class="strip-company">CRB</div>
+        <div class="strip-rank">#3 Priority</div>
+      </div>
+      <div class="strip-item">
+        <div class="strip-score s79">79</div>
+        <div class="strip-company">Vestal</div>
+        <div class="strip-rank">#4 Priority</div>
+      </div>
+      <div class="strip-item">
+        <div class="strip-score s71">71</div>
+        <div class="strip-company">Burns &amp; McDonnell</div>
+        <div class="strip-rank">#5 Priority</div>
+      </div>
+    </div>
+
+    <div class="legend">
+      <div class="legend-item"><div class="score-dot high"></div> 85–100: Top priority — apply immediately</div>
+      <div class="legend-item"><div class="score-dot good"></div> 75–84: Strong fit — apply with tailored assets</div>
+      <div class="legend-item"><div class="score-dot mid"></div> 65–74: Moderate fit — apply if bandwidth allows</div>
+    </div>
+
+    <!-- ═══ JOB 1: AIRGAS ═══ -->
+    <div class="job-card" id="airgas">
+      <div class="job-card-header">
+        <div>
+          <div class="job-company">Airgas</div>
+          <div class="job-role">Account Manager / Industrial New Business Development</div>
+          <div class="job-meta-row">
+            <span class="job-tag">St. Louis, MO</span>
+            <span class="job-tag">Hybrid / Field</span>
+            <span class="job-tag salary">$100K–$150K+</span>
+            <span class="job-tag">Industrial Gas &amp; Welding</span>
+            <div class="priority-badge priority-1">🔥 #1 Priority — Apply Now</div>
+          </div>
+        </div>
+        <div class="score-block">
+          <div class="score-circle high">
+            <span class="score-num">88</span>
+            <span class="score-label">Fit Score</span>
+          </div>
+          <div class="score-caption">Top Tier</div>
+        </div>
+      </div>
+      <div class="job-card-body">
+        <div class="analysis-col">
+          <h4>Why This Fits</h4>
+          <ul class="pros-list">
+            <li>Industrial B2B territory model — exactly Tony's DNA (3,700+ accounts, 1,200 built cold)</li>
+            <li>New business development + pipeline ownership — matches ProForm/BioGaia track record</li>
+            <li>Airgas sells into manufacturing accounts — Tony's home territory</li>
+            <li>Salary ceiling ($150K+) matches target comp range with OTE potential</li>
+            <li>Local St. Louis market — no relocation, strong existing network</li>
+            <li>Hybrid/field model — Tony's preferred working style</li>
+          </ul>
+          <h4 style="margin-top:16px;">Considerations</h4>
+          <ul class="cons-list">
+            <li>"Account Manager" title may be a step down from Director-level framing — negotiate title or focus on scope</li>
+            <li>Transactional/repeat-buy elements (gas + welding supply) alongside new business — confirm hunting vs. farming ratio</li>
+          </ul>
+        </div>
+        <div class="action-col">
+          <h4>Outreach Templates</h4>
+          <div class="outreach-block">
+            <div class="outreach-label">Email Subject Line</div>
+            <div class="outreach-text">Industrial BD Leader — $6M Pipeline from Zero → Airgas Territory Growth</div>
+          </div>
+          <div class="outreach-block">
+            <div class="outreach-label">Cover Letter Angle</div>
+            <div class="outreach-text">I've built cold industrial territories into active pipelines three times. Airgas's model — new logo hunting in manufacturing accounts — is exactly the environment where I generate the most impact. I know how plant managers think, what pain they respond to, and how to build trust fast in industrial buying cycles.</div>
+          </div>
+          <div class="outreach-block">
+            <div class="outreach-label">LinkedIn Connection Message</div>
+            <div class="outreach-text">Hi [Name] — saw the Airgas industrial BD role in St. Louis. I've built $6M+ pipelines in manufacturing territory from zero, including managing 3,700+ accounts across multi-state territory. Would love a quick conversation — does your calendar have 20 minutes this week?</div>
+            <div class="copy-note">Click to select and copy</div>
+          </div>
+        </div>
+        <div class="asset-col">
+          <h4>Execution Assets</h4>
+          <div class="resume-rec">
+            <div class="resume-rec-label">Best Resume Match</div>
+            <div class="resume-rec-name">Industrial BD Resume</div>
+          </div>
+          <a href="resume-airgas.html" class="asset-link">
+            <span class="asset-icon">📄</span>
+            <div><div>Tailored Resume</div><div class="asset-sub">Airgas — BD / Territory Development</div></div>
+          </a>
+          <a href="cover-airgas.html" class="asset-link">
+            <span class="asset-icon">✉️</span>
+            <div><div>Cover Letter</div><div class="asset-sub">Airgas — Industrial Pipeline Builder</div></div>
+          </a>
+          <a href="../resume-bizdev.html" class="asset-link" target="_blank">
+            <span class="asset-icon">🔗</span>
+            <div><div>Base BD Resume</div><div class="asset-sub">View / Print</div></div>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══ JOB 2: LEVER1 ═══ -->
+    <div class="job-card" id="lever1">
+      <div class="job-card-header">
+        <div>
+          <div class="job-company">Lever1</div>
+          <div class="job-role">Director of Business Development</div>
+          <div class="job-meta-row">
+            <span class="job-tag">St. Louis, MO</span>
+            <span class="job-tag">Hybrid / Local</span>
+            <span class="job-tag salary">$100K+</span>
+            <span class="job-tag">PEO / HR Services</span>
+            <div class="priority-badge priority-1">⭐ #2 Priority — Director Title</div>
+          </div>
+        </div>
+        <div class="score-block">
+          <div class="score-circle high">
+            <span class="score-num">86</span>
+            <span class="score-label">Fit Score</span>
+          </div>
+          <div class="score-caption">Top Tier</div>
+        </div>
+      </div>
+      <div class="job-card-body">
+        <div class="analysis-col">
+          <h4>Why This Fits</h4>
+          <ul class="pros-list">
+            <li>Director-level title — matches Tony's positioning and compensation expectations</li>
+            <li>Relationship-driven new business model — perfectly aligned to Tony's natural style</li>
+            <li>Local St. Louis focus — Tony's network is here, immediate advantage</li>
+            <li>LinkedIn brand + local community presence = biggest differentiator</li>
+            <li>BD function leadership — opportunity to build the pipeline system, not just execute it</li>
+          </ul>
+          <h4 style="margin-top:16px;">Considerations</h4>
+          <ul class="cons-list">
+            <li>PEO/HR services is a different industry from industrial manufacturing — some adjustment required</li>
+            <li>Comp ceiling ($100K+) is undefined — verify OTE and commission structure</li>
+            <li>Smaller organization scale — confirm growth trajectory and resource support</li>
+          </ul>
+        </div>
+        <div class="action-col">
+          <h4>Outreach Templates</h4>
+          <div class="outreach-block">
+            <div class="outreach-label">Email Subject Line</div>
+            <div class="outreach-text">Director of BD — St. Louis Network, Pipeline from Zero, Ready Now</div>
+          </div>
+          <div class="outreach-block">
+            <div class="outreach-label">Cover Letter Angle</div>
+            <div class="outreach-text">My network is St. Louis. I've built BD pipelines from zero in this market multiple times, and relationship-driven new business is where I generate outsized returns. Lever1's community-driven model is built exactly for how I operate — personally, strategically, and at the Director level.</div>
+          </div>
+          <div class="outreach-block">
+            <div class="outreach-label">LinkedIn Connection Message</div>
+            <div class="outreach-text">Hi [Name] — I've been following Lever1 for a while and the Director of BD role caught my eye. I have deep roots in the St. Louis business community and a track record of building BD functions from scratch. Happy to share more — would a quick call work this week?</div>
+            <div class="copy-note">Click to select and copy</div>
+          </div>
+        </div>
+        <div class="asset-col">
+          <h4>Execution Assets</h4>
+          <div class="resume-rec">
+            <div class="resume-rec-label">Best Resume Match</div>
+            <div class="resume-rec-name">BD Leadership Resume</div>
+          </div>
+          <a href="resume-lever1.html" class="asset-link">
+            <span class="asset-icon">📄</span>
+            <div><div>Tailored Resume</div><div class="asset-sub">Lever1 — Director of BD</div></div>
+          </a>
+          <a href="cover-lever1.html" class="asset-link">
+            <span class="asset-icon">✉️</span>
+            <div><div>Cover Letter</div><div class="asset-sub">Lever1 — Local Network BD</div></div>
+          </a>
+          <a href="../resume-bizdev.html" class="asset-link" target="_blank">
+            <span class="asset-icon">🔗</span>
+            <div><div>Base BD Resume</div><div class="asset-sub">View / Print</div></div>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══ JOB 3: CRB ═══ -->
+    <div class="job-card" id="crb">
+      <div class="job-card-header">
+        <div>
+          <div class="job-company">CRB</div>
+          <div class="job-role">Director, Business Development — Design-Build / Food &amp; Beverage</div>
+          <div class="job-meta-row">
+            <span class="job-tag">St. Louis, MO</span>
+            <span class="job-tag">Hybrid</span>
+            <span class="job-tag salary">$100K–$180K+</span>
+            <span class="job-tag">Design-Build / F&amp;B</span>
+            <div class="priority-badge priority-2">🎯 #3 Priority — High Ceiling</div>
+          </div>
+        </div>
+        <div class="score-block">
+          <div class="score-circle good">
+            <span class="score-num">82</span>
+            <span class="score-label">Fit Score</span>
+          </div>
+          <div class="score-caption">Strong Fit</div>
+        </div>
+      </div>
+      <div class="job-card-body">
+        <div class="analysis-col">
+          <h4>Why This Fits</h4>
+          <ul class="pros-list">
+            <li>Director-level BD — right seniority level, strategic focus</li>
+            <li>Food &amp; beverage manufacturing client base — Tony sold into F&amp;B ops at Natoli Engineering</li>
+            <li>Highest comp ceiling of any role ($180K+) — worth pursuing aggressively</li>
+            <li>Large project values = consultative, relationship-based sales — Tony's wheelhouse</li>
+            <li>Design-build model requires knowing how manufacturing plants think — Tony does</li>
+          </ul>
+          <h4 style="margin-top:16px;">Considerations</h4>
+          <ul class="cons-list">
+            <li>AEC/design-build construction is a specialized sector — no direct AEC background</li>
+            <li>Requires credibility with plant engineering + capital project decision-makers (Tony has adjacency but not direct)</li>
+            <li>Long sales cycles and RFP processes may differ from Tony's BD experience</li>
+          </ul>
+        </div>
+        <div class="action-col">
+          <h4>Outreach Templates</h4>
+          <div class="outreach-block">
+            <div class="outreach-label">Email Subject Line</div>
+            <div class="outreach-text">BD Director — 15 Years Selling into F&amp;B Manufacturing → CRB Opportunity</div>
+          </div>
+          <div class="outreach-block">
+            <div class="outreach-label">Cover Letter Angle</div>
+            <div class="outreach-text">I've built commercial relationships at the plant operations and engineering leadership level in food and beverage manufacturing. CRB sells to exactly these decision-makers — and I know what they prioritize, how they evaluate capital investments, and how to build the trust needed to win large design-build engagements.</div>
+          </div>
+          <div class="outreach-block">
+            <div class="outreach-label">LinkedIn Connection Message</div>
+            <div class="outreach-text">Hi [Name] — CRB's Director of BD role in F&amp;B design-build caught my attention. I've built BD relationships with food and beverage manufacturing operations leadership for years, and the consultative nature of large project BD is exactly where I add the most value. Would a quick call make sense?</div>
+            <div class="copy-note">Click to select and copy</div>
+          </div>
+        </div>
+        <div class="asset-col">
+          <h4>Execution Assets</h4>
+          <div class="resume-rec">
+            <div class="resume-rec-label">Best Resume Match</div>
+            <div class="resume-rec-name">BD + F&amp;B Manufacturing</div>
+          </div>
+          <a href="resume-crb.html" class="asset-link">
+            <span class="asset-icon">📄</span>
+            <div><div>Tailored Resume</div><div class="asset-sub">CRB — Director BD / Design-Build</div></div>
+          </a>
+          <a href="cover-crb.html" class="asset-link">
+            <span class="asset-icon">✉️</span>
+            <div><div>Cover Letter</div><div class="asset-sub">CRB — F&amp;B Manufacturing Angle</div></div>
+          </a>
+          <a href="../resume-bizdev.html" class="asset-link" target="_blank">
+            <span class="asset-icon">🔗</span>
+            <div><div>Base BD Resume</div><div class="asset-sub">View / Print</div></div>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══ JOB 4: VESTAL ═══ -->
+    <div class="job-card" id="vestal">
+      <div class="job-card-header">
+        <div>
+          <div class="job-company">Vestal</div>
+          <div class="job-role">Business Development Manager</div>
+          <div class="job-meta-row">
+            <span class="job-tag">St. Louis, MO</span>
+            <span class="job-tag">Hybrid</span>
+            <span class="job-tag salary">$80K–$126K</span>
+            <span class="job-tag">Industrial / Construction</span>
+            <div class="priority-badge priority-2">📌 #4 Priority — Apply if Bandwidth</div>
+          </div>
+        </div>
+        <div class="score-block">
+          <div class="score-circle good">
+            <span class="score-num">79</span>
+            <span class="score-label">Fit Score</span>
+          </div>
+          <div class="score-caption">Strong Fit</div>
+        </div>
+      </div>
+      <div class="job-card-body">
+        <div class="analysis-col">
+          <h4>Why This Fits</h4>
+          <ul class="pros-list">
+            <li>Industrial and manufacturing client base — strong Tony alignment</li>
+            <li>BD function in design/construction environment — relationship-driven, project-based</li>
+            <li>Mid-sized company — faster career growth potential, more direct impact</li>
+            <li>Outbound pipeline-building is core to the role — Tony's specialty</li>
+          </ul>
+          <h4 style="margin-top:16px;">Considerations</h4>
+          <ul class="cons-list">
+            <li>Lower comp ceiling ($80–126K) — negotiate aggressively or deprioritize vs. Airgas/CRB</li>
+            <li>Manager title (not Director) — possible step back in seniority framing</li>
+            <li>Less public brand recognition than Airgas/Burns &amp; McDonnell</li>
+          </ul>
+        </div>
+        <div class="action-col">
+          <h4>Outreach Templates</h4>
+          <div class="outreach-block">
+            <div class="outreach-label">Email Subject Line</div>
+            <div class="outreach-text">BD Manager — Industrial Pipeline Builder, St. Louis Market, Immediate Available</div>
+          </div>
+          <div class="outreach-block">
+            <div class="outreach-label">Cover Letter Angle</div>
+            <div class="outreach-text">Mid-sized industrial BD shops are where I do my best work — close to the customer, close to the outcome, and able to move fast. I've built new markets from zero twice in industrial manufacturing environments, and the type of outbound pipeline work Vestal needs is what I do every day.</div>
+          </div>
+          <div class="outreach-block">
+            <div class="outreach-label">LinkedIn Connection Message</div>
+            <div class="outreach-text">Hi [Name] — the Vestal BD Manager role in industrial/manufacturing resonates with my background. I've built pipeline in this exact environment and would love to share how I work. Do you have 20 minutes this week?</div>
+            <div class="copy-note">Click to select and copy</div>
+          </div>
+        </div>
+        <div class="asset-col">
+          <h4>Execution Assets</h4>
+          <div class="resume-rec">
+            <div class="resume-rec-label">Best Resume Match</div>
+            <div class="resume-rec-name">Industrial BD Resume</div>
+          </div>
+          <a href="resume-vestal.html" class="asset-link">
+            <span class="asset-icon">📄</span>
+            <div><div>Tailored Resume</div><div class="asset-sub">Vestal — BD Manager</div></div>
+          </a>
+          <a href="cover-vestal.html" class="asset-link">
+            <span class="asset-icon">✉️</span>
+            <div><div>Cover Letter</div><div class="asset-sub">Vestal — Industrial BD</div></div>
+          </a>
+          <a href="../resume-bizdev.html" class="asset-link" target="_blank">
+            <span class="asset-icon">🔗</span>
+            <div><div>Base BD Resume</div><div class="asset-sub">View / Print</div></div>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══ JOB 5: BURNS & McDONNELL ═══ -->
+    <div class="job-card" id="burnsmcd">
+      <div class="job-card-header">
+        <div>
+          <div class="job-company">Burns &amp; McDonnell</div>
+          <div class="job-role">Business Development Manager – Power</div>
+          <div class="job-meta-row">
+            <span class="job-tag">St. Louis, MO</span>
+            <span class="job-tag">Hybrid</span>
+            <span class="job-tag salary">$80K–$126K+</span>
+            <span class="job-tag">Energy / Infrastructure</span>
+            <div class="priority-badge priority-3">⚡ #5 Priority — Apply if Bandwidth</div>
+          </div>
+        </div>
+        <div class="score-block">
+          <div class="score-circle mid">
+            <span class="score-num">71</span>
+            <span class="score-label">Fit Score</span>
+          </div>
+          <div class="score-caption">Moderate Fit</div>
+        </div>
+      </div>
+      <div class="job-card-body">
+        <div class="analysis-col">
+          <h4>Why This Fits</h4>
+          <ul class="pros-list">
+            <li>Large engineering firm — strong brand, enterprise deal sizes, long-term growth potential</li>
+            <li>BD role is relationship and relationship-building heavy — Tony's core strength</li>
+            <li>Infrastructure/power sector has growing demand — durable opportunity</li>
+            <li>Coordination with internal delivery teams mirrors Tony's cross-functional experience</li>
+          </ul>
+          <h4 style="margin-top:16px;">Considerations</h4>
+          <ul class="cons-list">
+            <li>Power/energy sector is highly specialized — no direct utility/power background</li>
+            <li>Large firm culture may be more process-driven and slower-moving than Tony prefers</li>
+            <li>Lower base comp ($80–126K) relative to skills and target</li>
+            <li>Government/utility procurement cycles can be very long — quota timelines unclear</li>
+          </ul>
+        </div>
+        <div class="action-col">
+          <h4>Outreach Templates</h4>
+          <div class="outreach-block">
+            <div class="outreach-label">Email Subject Line</div>
+            <div class="outreach-text">BD Manager — Long-Cycle Relationship Selling, Infrastructure, St. Louis</div>
+          </div>
+          <div class="outreach-block">
+            <div class="outreach-label">Cover Letter Angle</div>
+            <div class="outreach-text">Long-cycle, relationship-based BD is what I do. I've navigated complex buying processes with multiple stakeholders, built executive-level trust over time, and coordinated with technical delivery teams to move deals forward. The sector is power infrastructure — but the BD mechanics are the same as anywhere I've operated.</div>
+          </div>
+          <div class="outreach-block">
+            <div class="outreach-label">LinkedIn Connection Message</div>
+            <div class="outreach-text">Hi [Name] — Burns &amp; McDonnell's BD Manager – Power role caught my eye. I specialize in long-cycle, relationship-based BD in technical solution environments and have been exploring energy infrastructure as a next step. Would you be open to a brief conversation?</div>
+            <div class="copy-note">Click to select and copy</div>
+          </div>
+        </div>
+        <div class="asset-col">
+          <h4>Execution Assets</h4>
+          <div class="resume-rec">
+            <div class="resume-rec-label">Best Resume Match</div>
+            <div class="resume-rec-name">BD + Infrastructure Resume</div>
+          </div>
+          <a href="resume-burnsmcd.html" class="asset-link">
+            <span class="asset-icon">📄</span>
+            <div><div>Tailored Resume</div><div class="asset-sub">Burns &amp; McDonnell — BDM Power</div></div>
+          </a>
+          <a href="cover-burnsmcd.html" class="asset-link">
+            <span class="asset-icon">✉️</span>
+            <div><div>Cover Letter</div><div class="asset-sub">Burns &amp; McDonnell — Infrastructure</div></div>
+          </a>
+          <a href="../resume-bizdev.html" class="asset-link" target="_blank">
+            <span class="asset-icon">🔗</span>
+            <div><div>Base BD Resume</div><div class="asset-sub">View / Print</div></div>
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<footer class="page-footer">
+  <div class="container">
+    <p>Career Pipeline OS &middot; Tony Beal &middot; <a href="https://tonybeal.net">tonybeal.net</a> &middot; <a href="../job-targets.html">Mission Control</a> &middot; Private — Not indexed</p>
+  </div>
+</footer>
+
+</body>
+</html>

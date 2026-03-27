@@ -1,0 +1,440 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({"gtm.start":
+new Date().getTime(),event:"gtm.js"});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!="dataLayer"?"&l="+l:"";j.async=true;j.src=
+"https://www.googletagmanager.com/gtm.js?id="+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,"script","dataLayer","GTM-NS6QDMBR");</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Tony Beal | Application Package — CRB</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Inter', sans-serif; background: #f1f5f9; color: #1e293b; min-height: 100vh; }
+
+  /* ── TOPBAR ── */
+  .topbar {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 10px 28px; background: #0f172a; border-bottom: 1px solid #1e293b;
+    font-size: 13px; position: sticky; top: 0; z-index: 100;
+  }
+  .topbar a { font-weight: 600; color: #93c5fd; text-decoration: none; }
+  .topbar a:hover { color: #fff; }
+  .topbar-center { font-size: 13px; font-weight: 600; color: #fff; }
+  .topbar-right { display: flex; gap: 12px; align-items: center; }
+  .btn-pdf {
+    background: #2563EB; color: white; border: none;
+    padding: 7px 16px; border-radius: 6px; font-weight: 700; font-size: 12px;
+    cursor: pointer; letter-spacing: 0.02em; transition: background 0.15s;
+  }
+  .btn-pdf:hover { background: #1d4ed8; }
+  .btn-call {
+    background: transparent; color: #93c5fd; border: 1px solid rgba(147,197,253,0.35);
+    padding: 7px 14px; border-radius: 6px; font-weight: 600; font-size: 12px;
+    text-decoration: none; transition: all 0.15s;
+  }
+  .btn-call:hover { background: rgba(147,197,253,0.1); color: #fff; }
+
+  /* ── PAGE SHELL ── */
+  .pkg-shell { max-width: 900px; margin: 0 auto; padding: 32px 0 64px; display: flex; flex-direction: column; gap: 28px; }
+
+  /* ── SECTION LABEL ── */
+  .doc-label { font-size: 10px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.14em; color: #64748b; padding: 0 4px; }
+
+  /* ── COVER LETTER ── */
+  .cover-wrap {
+    background: #fff; border-radius: 8px; box-shadow: 0 2px 20px rgba(0,0,0,0.09);
+    padding: 48px 56px;
+  }
+  .letter-sender { margin-bottom: 28px; }
+  .sender-name { font-size: 22px; font-weight: 800; color: #0f172a; letter-spacing: -0.4px; margin-bottom: 6px; }
+  .sender-contacts { font-size: 12px; color: #475569; display: flex; flex-wrap: wrap; gap: 3px 14px; }
+  .sender-contacts a { color: #2563eb; text-decoration: none; }
+  .sender-sep { color: #cbd5e1; }
+  .letter-date { font-size: 13px; color: #64748b; margin-bottom: 24px; }
+  .letter-subject {
+    font-size: 12px; font-weight: 700; color: #1e40af;
+    background: #eff6ff; border: 1px solid #bfdbfe;
+    border-radius: 5px; padding: 8px 14px; margin-bottom: 24px; display: inline-block;
+  }
+  .letter-salutation { font-size: 14px; font-weight: 600; color: #0f172a; margin-bottom: 18px; }
+  .letter-body p { font-size: 14px; line-height: 1.75; color: #334155; margin-bottom: 18px; }
+  .letter-closing { margin-top: 28px; }
+  .letter-closing p { font-size: 14px; color: #334155; line-height: 1.7; margin-bottom: 4px; }
+  .letter-closing .sig-name { font-size: 16px; font-weight: 800; color: #0f172a; margin-top: 12px; }
+  .letter-closing .sig-title { font-size: 12px; color: #64748b; margin-top: 2px; }
+  .cta-inline {
+    margin-top: 24px; padding: 16px 20px;
+    background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px;
+    display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px;
+  }
+  .cta-inline span { font-size: 13px; color: #475569; font-weight: 500; }
+  .cta-inline a { background: #2563eb; color: #fff; padding: 8px 18px; border-radius: 6px; font-weight: 700; text-decoration: none; font-size: 13px; }
+
+  /* ── RESUME ── */
+  .resume-wrap {
+    background: #fff; border-radius: 8px; box-shadow: 0 2px 20px rgba(0,0,0,0.09); overflow: hidden;
+  }
+  .resume-header {
+    padding: 28px 40px 20px; border-bottom: 2px solid #e8edf3;
+    display: flex; align-items: center; gap: 22px;
+  }
+  .header-photo {
+    width: 76px; height: 76px; border-radius: 50%;
+    object-fit: cover; object-position: top center;
+    border: 3px solid #e2e8f0; flex-shrink: 0;
+  }
+  .header-info { flex: 1; }
+  .header-name { font-size: 26px; font-weight: 800; color: #0f172a; letter-spacing: -0.5px; line-height: 1; margin-bottom: 4px; }
+  .header-title { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; color: #64748b; margin-bottom: 8px; }
+  .header-contacts { display: flex; flex-wrap: wrap; gap: 3px 14px; font-size: 12px; color: #475569; }
+  .header-contacts a { color: #2563eb; text-decoration: none; }
+  .header-sep { color: #cbd5e1; }
+  .target-badge {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: #eff6ff; border: 1px solid #bfdbfe;
+    border-radius: 5px; padding: 4px 10px; font-size: 11px; font-weight: 600; color: #1e40af; margin-top: 6px;
+  }
+  .resume-body { display: grid; grid-template-columns: 1fr 240px; gap: 0; }
+  .left-col { padding: 28px 32px 28px 40px; border-right: 1px solid #e8edf3; }
+  .right-col { padding: 28px 24px; background: #f8fafc; }
+  .section-head { font-size: 10px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.14em; color: #2563eb; margin-bottom: 10px; padding-bottom: 5px; border-bottom: 1.5px solid #dbeafe; }
+  .profile-text { font-size: 12.5px; line-height: 1.7; color: #334155; margin-bottom: 22px; }
+  .exp-block { margin-bottom: 16px; }
+  .exp-header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 2px; }
+  .exp-role { font-size: 13px; font-weight: 700; color: #0f172a; }
+  .exp-company { font-size: 11.5px; font-weight: 600; color: #2563eb; }
+  .exp-badge { font-size: 10px; font-weight: 600; color: #64748b; background: #f1f5f9; padding: 2px 7px; border-radius: 4px; white-space: nowrap; flex-shrink: 0; }
+  .exp-bullets { margin-top: 4px; padding-left: 13px; }
+  .exp-bullets li { font-size: 11.5px; color: #334155; line-height: 1.65; margin-bottom: 2px; }
+  .exp-bullets li strong { color: #0f172a; }
+  .exp-sep { border: none; border-top: 1px solid #f1f5f9; margin: 14px 0; }
+  .skill-list { list-style: none; margin-bottom: 20px; }
+  .skill-list li { font-size: 12px; color: #334155; padding: 5px 0; border-bottom: 1px solid #e8edf3; font-weight: 500; }
+  .skill-list li:last-child { border-bottom: none; }
+  .tools-wrap { display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 20px; }
+  .tool-pill { font-size: 10.5px; font-weight: 600; color: #1e40af; background: #eff6ff; border: 1px solid #bfdbfe; padding: 3px 8px; border-radius: 4px; }
+  .kn-list { list-style: none; margin-bottom: 20px; }
+  .kn-list li { font-size: 11.5px; color: #334155; padding: 3px 0; display: flex; align-items: flex-start; gap: 6px; }
+  .kn-list li::before { content: ''; display: inline-block; width: 5px; height: 5px; border-radius: 50%; background: #2563eb; margin-top: 5px; flex-shrink: 0; }
+  .loc-list { list-style: none; }
+  .loc-list li { font-size: 11.5px; color: #334155; padding: 2px 0; }
+  .loc-avail { color: #059669; font-weight: 700; }
+
+  /* ── PRINT ── */
+  @media print {
+    @page { margin: 0.3in 0.35in; size: letter portrait; }
+    * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+    body { background: #fff !important; }
+    .topbar { display: none !important; }
+    .pkg-shell { padding: 0 !important; gap: 0 !important; max-width: 100% !important; }
+    .doc-label { display: none !important; }
+    .cta-inline { display: none !important; }
+    .cover-wrap { box-shadow: none !important; border-radius: 0 !important; padding: 32px 40px !important; page-break-after: always; }
+    .letter-body p { font-size: 13px !important; line-height: 1.65 !important; }
+    .resume-wrap { box-shadow: none !important; border-radius: 0 !important; page-break-before: always; }
+    .resume-header { padding: 10px 24px 8px !important; gap: 14px !important; }
+    .header-photo { width: 52px !important; height: 52px !important; }
+    .header-name { font-size: 20px !important; margin-bottom: 2px !important; }
+    .header-title { font-size: 9px !important; margin-bottom: 4px !important; }
+    .header-contacts { font-size: 9.5px !important; gap: 2px 10px !important; }
+    .target-badge { display: none !important; }
+    .resume-body { grid-template-columns: 1fr 195px !important; }
+    .left-col { padding: 11px 16px 11px 22px !important; }
+    .right-col { padding: 11px 13px !important; }
+    .section-head { font-size: 8.5px !important; margin-bottom: 4px !important; padding-bottom: 3px !important; }
+    .profile-text { font-size: 10.5px !important; line-height: 1.45 !important; margin-bottom: 9px !important; }
+    .exp-block { margin-bottom: 7px !important; }
+    .exp-header { margin-bottom: 1px !important; }
+    .exp-role { font-size: 11px !important; }
+    .exp-company { font-size: 10px !important; }
+    .exp-badge { font-size: 8.5px !important; padding: 1px 5px !important; }
+    .exp-sep { margin: 6px 0 !important; }
+    .exp-bullets { margin-top: 2px !important; padding-left: 11px !important; }
+    .exp-bullets li { font-size: 10.5px !important; line-height: 1.38 !important; margin-bottom: 0 !important; }
+    .skill-list { margin-bottom: 9px !important; }
+    .skill-list li { font-size: 10px !important; padding: 2px 0 !important; }
+    .tools-wrap { gap: 3px !important; margin-bottom: 9px !important; }
+    .tool-pill { font-size: 8.5px !important; padding: 1px 5px !important; }
+    .kn-list { margin-bottom: 9px !important; }
+    .kn-list li { font-size: 10px !important; padding: 1px 0 !important; }
+    .kn-list li::before { width: 4px !important; height: 4px !important; margin-top: 4px !important; }
+    .loc-list li { font-size: 10px !important; padding: 1px 0 !important; }
+  }
+
+  @media (max-width: 700px) {
+    .pkg-shell { padding: 0 !important; }
+    .cover-wrap { border-radius: 0; padding: 28px 24px; }
+    .resume-header { flex-direction: column; align-items: flex-start; padding: 20px; }
+    .resume-body { grid-template-columns: 1fr; }
+    .left-col { border-right: none; border-bottom: 1px solid #e8edf3; padding: 20px; }
+    .right-col { padding: 20px; }
+    .resume-wrap { border-radius: 0; }
+  }
+</style>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NS6QDMBR"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<nav class="topbar">
+  <a href="../pythonjobs-/">← Pipeline</a>
+  <span class="topbar-center">CRB — Application Package</span>
+  <div class="topbar-right">
+    <button class="btn-pdf" onclick="window.print()">⬇ Save as PDF</button>
+    <a href="https://calendly.com/tonybeal40/30min" target="_blank" rel="noopener" class="btn-call">Book a Call</a>
+  </div>
+</nav>
+
+<div class="pkg-shell">
+
+  <span class="doc-label">Cover Letter</span>
+
+  <div class="cover-wrap">
+<div class="page-wrap">
+
+  <div class="letter-sender">
+    <div class="sender-name">Tony Beal</div>
+    <div class="sender-contacts">
+      <a href="mailto:tbeal@tonybeal.net">tbeal@tonybeal.net</a>
+      <span class="sender-sep">·</span>
+      <a href="tel:6182925320">(618) 292-5320</a>
+      <span class="sender-sep">·</span>
+      <a href="https://tonybeal.net">tonybeal.net</a>
+      <span class="sender-sep">·</span>
+      <a href="https://linkedin.com/in/tony-beal40" target="_blank" rel="noopener">linkedin.com/in/tony-beal40</a>
+      <span class="sender-sep">·</span>
+      <span>Greater St. Louis, MO</span>
+    </div>
+  </div>
+
+  <div class="letter-date">March 2026</div>
+
+  <div class="letter-subject">Re: Director, Business Development (Design-Build / Food &amp; Beverage) — CRB</div>
+
+  <div class="letter-salutation">Dear Hiring Manager,</div>
+
+  <div class="letter-body">
+    <p>
+      I know how plant operators think. That's the core of what CRB sells. I'm a Business Development Director with 15+ years building enterprise commercial relationships in food &amp; beverage manufacturing, industrial production, and capital project environments. I've sat across the table from plant managers, facility directors, and operations VPs — and I know the language of capital investment decisions, production constraints, and facility expansion. That's not a pitch; it's the foundation of every conversation I've had with manufacturing leadership for the better part of two decades.
+    </p>
+    <p>
+      At Natoli Engineering, I built commercial relationships with F&amp;B and pharmaceutical manufacturing operations leadership — exactly the buyers CRB engages in its design-build practice. I built account intelligence systems to identify capital project signals, track facility expansion timelines, and prioritize accounts with active investment cycles. I understood that the path to a large contract in that space runs through operational trust built over time — not a single pitch meeting. At ProForm, I built a <strong>$6M+ pipeline from zero</strong> using the same model: strategic account selection, executive relationship development, and proposals built around operational ROI rather than product features.
+    </p>
+    <p>
+      What I'd bring to CRB is a strategic BD approach purpose-built for the F&amp;B manufacturing market — a network of operational and facility management contacts, executive relationship development capability, and the patience to navigate the long sales cycles that large design-build projects require. I understand capital project BD because I've prospected into, qualified, and advanced that kind of opportunity. CRB's design-build model in food and beverage is the intersection of my two strongest domains.
+    </p>
+  </div>
+
+  <div class="letter-closing">
+    <p>CRB's design-build model in food and beverage is the intersection of my two strongest domains. I'd love 30 minutes to explore the opportunity.</p>
+    <p>Thank you for your time.</p>
+    <div class="sig-name">Tony Beal</div>
+    <div class="sig-title">Director of Business Development | F&amp;B &amp; Manufacturing</div>
+  </div>
+
+  <div class="cta-inline">
+    <span>Ready to connect — available immediately.</span>
+    <a href="https://calendly.com/tonybeal40/30min" target="_blank" rel="noopener">Book a 30-Min Call →</a>
+  </div>
+
+</div>
+  </div>
+
+  <span class="doc-label">Resume</span>
+
+  <div class="resume-wrap">
+<div class="page-wrap">
+
+  <header class="resume-header">
+    <img src="../headshot-hero.webp" alt="Tony Beal" class="header-photo"
+         onerror="this.src='../headshot-hero.png'" />
+    <div class="header-info">
+      <div class="header-name">Tony Beal</div>
+      <div class="header-title">Business Development Director &bull; Food &amp; Beverage Manufacturing &bull; Capital Project BD</div>
+      <div class="header-contacts">
+        <a href="mailto:tbeal@tonybeal.net">tbeal@tonybeal.net</a>
+        <span class="header-sep">·</span>
+        <a href="https://tonybeal.net">tonybeal.net</a>
+        <span class="header-sep">·</span>
+        <a href="https://linkedin.com/in/tony-beal40" target="_blank" rel="noopener">linkedin.com/in/tony-beal40</a>
+        <span class="header-sep">·</span>
+        <a href="tel:6182925320">(618) 292-5320</a>
+        <span class="header-sep">·</span>
+        <span>Greater St. Louis, MO</span>
+      </div>
+      <div class="target-badge">&#127919; Applying: Director, Business Development (Design-Build / Food &amp; Beverage) — CRB</div>
+    </div>
+  </header>
+
+  <div class="resume-body">
+
+    <main class="left-col">
+
+      <div class="section-head">Profile</div>
+      <p class="profile-text">
+        Business Development Director with 15+ years building enterprise relationships in food &amp; beverage manufacturing, industrial production, and capital project environments. Proven at identifying and securing large-scale project opportunities through strategic positioning, consultative sales, and executive relationship development. Track record selling complex solutions to manufacturing operations leadership — including capital investment decisions, operational efficiency initiatives, and facility expansion projects. Comfortable navigating long sales cycles, multi-stakeholder environments, and large-dollar consulting engagements.
+      </p>
+
+      <div class="section-head">Experience</div>
+
+      <div class="exp-block">
+        <div class="exp-header">
+          <div>
+            <span class="exp-role">Revenue Operations &amp; Business Development</span>
+            <span style="color:#94a3b8;font-size:12px;"> &mdash; </span>
+            <span class="exp-company">Natoli Engineering</span>
+          </div>
+          <span class="exp-badge">Recent</span>
+        </div>
+        <ul class="exp-bullets">
+          <li>Built commercial relationships with <strong>F&amp;B and pharmaceutical manufacturing operations leadership</strong> — the exact buyer profile CRB engages daily</li>
+          <li>Navigated <strong>capital investment conversations</strong> with plant operations and facility management decision-makers; positioned solutions around ROI and operational efficiency</li>
+          <li>Developed <strong>account intelligence systems</strong> to track facility expansion signals, regulatory events, and capital project indicators across manufacturing client base</li>
+          <li>Managed outreach at scale — <strong>20,000+ contacts</strong> — with CRM-driven segmentation by facility type, production environment, and decision-maker role</li>
+        </ul>
+      </div>
+
+      <hr class="exp-sep" />
+
+      <div class="exp-block">
+        <div class="exp-header">
+          <div>
+            <span class="exp-role">Director of Business Development</span>
+            <span style="color:#94a3b8;font-size:12px;"> &mdash; </span>
+            <span class="exp-company">ProForm Manufacturing</span>
+          </div>
+          <span class="exp-badge">Recent</span>
+        </div>
+        <ul class="exp-bullets">
+          <li>Built <strong>$6M+ pipeline from a cold start</strong> — full commercial infrastructure built from zero across industrial manufacturing sector</li>
+          <li>Owned <strong>strategic account planning</strong>: ICP definition, territory segmentation, target account prioritization, and annual commercial plan execution</li>
+          <li>Developed <strong>ROI-driven proposals</strong> for executive decision-makers; led full sales cycle from prospect qualification to contract close</li>
+          <li>Implemented <strong>Salesforce + HubSpot CRM</strong> from zero: pipeline management, opportunity tracking, forecasting discipline, and performance reporting</li>
+          <li>Collaborated cross-functionally with operations and technical teams to deliver solutions aligned to complex buyer outcomes</li>
+        </ul>
+      </div>
+
+      <hr class="exp-sep" />
+
+      <div class="exp-block">
+        <div class="exp-header">
+          <div>
+            <span class="exp-role">Sales Manager &amp; Operations</span>
+            <span style="color:#94a3b8;font-size:12px;"> &mdash; </span>
+            <span class="exp-company">Wicks Aircraft Supply</span>
+          </div>
+          <span class="exp-badge">Prior</span>
+        </div>
+        <ul class="exp-bullets">
+          <li>Generated <strong>1,000+ new customers</strong> through full-cycle consultative sales in industrial supply distribution — cold territory built from zero</li>
+          <li>Managed distributor and dealer relationships; handled full commercial operations including post-sale satisfaction and account retention</li>
+        </ul>
+      </div>
+
+      <hr class="exp-sep" />
+
+      <div class="exp-block">
+        <div class="exp-header">
+          <div>
+            <span class="exp-role">Regional Sales Manager</span>
+            <span style="color:#94a3b8;font-size:12px;"> &mdash; </span>
+            <span class="exp-company">BioGaia USA</span>
+          </div>
+          <span class="exp-badge">Prior</span>
+        </div>
+        <ul class="exp-bullets">
+          <li>Managed <strong>3,700+ accounts</strong> across multi-state territory; exceeded quota for <strong>8 consecutive years</strong></li>
+          <li>Built <strong>1,200+ active accounts from cold</strong> through systematic territory coverage, executive relationship development, and consultative selling</li>
+          <li>Maintained disciplined <strong>pipeline forecasting, opportunity hygiene</strong>, and account segmentation across large distributor and dealer base</li>
+        </ul>
+      </div>
+
+    </main>
+
+    <aside class="right-col">
+
+      <div class="section-head">Core Skills</div>
+      <ul class="skill-list">
+        <li>Business Development Strategy</li>
+        <li>Pipeline &amp; Forecast Management</li>
+        <li>Strategic Account Planning</li>
+        <li>Consultative / Value-Based Selling</li>
+        <li>ROI Proposals &amp; Justification</li>
+        <li>Executive Relationship Building</li>
+        <li>Capital Project BD</li>
+        <li>Design-Build Sales Cycle</li>
+        <li>F&amp;B / Manufacturing Operations</li>
+      </ul>
+
+      <div class="section-head">Technology &amp; Tools</div>
+      <div class="tools-wrap">
+        <span class="tool-pill">Salesforce</span>
+        <span class="tool-pill">HubSpot</span>
+        <span class="tool-pill">Apollo.io</span>
+        <span class="tool-pill">LinkedIn Sales Nav</span>
+        <span class="tool-pill">ZoomInfo</span>
+        <span class="tool-pill">Microsoft Office</span>
+        <span class="tool-pill">OpenAI API</span>
+        <span class="tool-pill">Google Analytics</span>
+      </div>
+
+      <div class="section-head">Key Numbers</div>
+      <ul class="kn-list">
+        <li>$6M+ pipeline from zero</li>
+        <li>3,700+ accounts managed</li>
+        <li>1,200+ accounts from cold</li>
+        <li>1,000+ new customers (Wicks)</li>
+        <li>8 consecutive years quota</li>
+        <li>15+ years industrial B2B</li>
+        <li>20,000+ contacts reached</li>
+      </ul>
+
+      <div class="section-head">Education</div>
+      <ul class="skill-list">
+        <li style="font-weight:600;">Business Studies</li>
+        <li style="font-size:11px;color:#64748b;font-weight:400;">Some college — no degree</li>
+      </ul>
+
+      <div class="section-head">Location</div>
+      <ul class="loc-list">
+        <li>Greater St. Louis, MO</li>
+        <li>2023 Westport Dr — local</li>
+        <li class="loc-avail">Immediately Available</li>
+      </ul>
+
+    </aside>
+  </div>
+
+  <!-- PRINT-ONLY FOOTER -->
+  <div class="print-book-call" style="display:none;padding:9px 28px;background:#0f172a;align-items:center;justify-content:space-between;gap:16px;">
+    <span style="color:#94a3b8;font-size:10px;">Tony Beal — Director BD Application | CRB</span>
+    <span style="color:#60a5fa;font-size:10px;font-weight:700;">tbeal@tonybeal.net &nbsp;|&nbsp; (618) 292-5320 &nbsp;|&nbsp; tonybeal.net</span>
+  </div>
+
+</div>
+
+<div class="hire-cta-bar" style="max-width:900px;margin:0 auto 40px;background:#0f172a;border-radius:0 0 8px 8px;padding:24px 40px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;">
+  <div>
+    <div style="color:#60a5fa;font-size:0.72rem;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;margin-bottom:4px;">Applying to CRB — Director, Business Development</div>
+    <div style="color:#fff;font-weight:700;font-size:1rem;">Let's connect — 30 minutes, no pressure.</div>
+  </div>
+  <a href="https://calendly.com/tonybeal40/30min" target="_blank" rel="noopener"
+     style="background:#2563eb;color:#fff;padding:11px 22px;border-radius:8px;font-weight:700;text-decoration:none;font-size:0.88rem;white-space:nowrap;">
+    Book a Free 30-Min Call &rarr;
+  </a>
+</div>
+  </div>
+
+</div>
+
+</body>
+</html>

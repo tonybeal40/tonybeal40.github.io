@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Tony Beal | Director of Business Development | Lever1 Application</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Inter', sans-serif; background: #f1f5f9; color: #1e293b; min-height: 100vh; }
+
+  .topbar {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 10px 28px; background: #f8fafc; border-bottom: 1px solid #e2e8f0;
+    font-size: 13px; position: sticky; top: 0; z-index: 100;
+  }
+  .topbar a { font-weight: 700; color: #0f172a; text-decoration: none; }
+  .topbar-right { display: flex; gap: 16px; align-items: center; }
+  .topbar-right a { color: #64748b; text-decoration: none; font-weight: 500; }
+  .topbar-right a:hover { color: #2563eb; }
+  .print-btn {
+    background: #2563EB; color: white; border: none;
+    padding: 6px 14px; border-radius: 6px; font-weight: 600; font-size: 12px; cursor: pointer;
+  }
+
+  .page-wrap {
+    max-width: 900px; margin: 24px auto 40px; background: #fff;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.09); border-radius: 8px; overflow: hidden;
+  }
+
+  .resume-header {
+    padding: 28px 40px 20px; border-bottom: 2px solid #e8edf3;
+    display: flex; align-items: center; gap: 22px;
+  }
+  .header-photo {
+    width: 76px; height: 76px; border-radius: 50%;
+    object-fit: cover; object-position: top center;
+    border: 3px solid #e2e8f0; flex-shrink: 0;
+  }
+  .header-info { flex: 1; }
+  .header-name { font-size: 26px; font-weight: 800; color: #0f172a; letter-spacing: -0.5px; line-height: 1; margin-bottom: 4px; }
+  .header-title { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; color: #64748b; margin-bottom: 8px; }
+  .header-contacts { display: flex; flex-wrap: wrap; gap: 3px 14px; font-size: 12px; color: #475569; }
+  .header-contacts a { color: #2563eb; text-decoration: none; }
+  .header-sep { color: #cbd5e1; }
+  .target-badge {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: #eff6ff; border: 1px solid #bfdbfe;
+    border-radius: 5px; padding: 4px 10px; font-size: 11px;
+    font-weight: 600; color: #1e40af; margin-top: 6px;
+  }
+
+  .resume-body { display: grid; grid-template-columns: 1fr 240px; gap: 0; }
+  .left-col { padding: 28px 32px 28px 40px; border-right: 1px solid #e8edf3; }
+  .right-col { padding: 28px 24px; background: #f8fafc; }
+
+  .section-head {
+    font-size: 10px; font-weight: 800; text-transform: uppercase;
+    letter-spacing: 0.14em; color: #2563eb; margin-bottom: 10px;
+    padding-bottom: 5px; border-bottom: 1.5px solid #dbeafe;
+  }
+
+  .profile-text { font-size: 12.5px; line-height: 1.7; color: #334155; margin-bottom: 22px; }
+
+  .exp-block { margin-bottom: 16px; }
+  .exp-header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 2px; }
+  .exp-role { font-size: 13px; font-weight: 700; color: #0f172a; }
+  .exp-company { font-size: 11.5px; font-weight: 600; color: #2563eb; }
+  .exp-badge {
+    font-size: 10px; font-weight: 600; color: #64748b;
+    background: #f1f5f9; padding: 2px 7px; border-radius: 4px; white-space: nowrap; flex-shrink: 0;
+  }
+  .exp-bullets { margin-top: 4px; padding-left: 13px; }
+  .exp-bullets li { font-size: 11.5px; color: #334155; line-height: 1.65; margin-bottom: 2px; }
+  .exp-bullets li strong { color: #0f172a; }
+  .exp-sep { border: none; border-top: 1px solid #f1f5f9; margin: 14px 0; }
+
+  .skill-list { list-style: none; margin-bottom: 20px; }
+  .skill-list li { font-size: 12px; color: #334155; padding: 5px 0; border-bottom: 1px solid #e8edf3; font-weight: 500; }
+  .skill-list li:last-child { border-bottom: none; }
+
+  .tools-wrap { display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 20px; }
+  .tool-pill { font-size: 10.5px; font-weight: 600; color: #1e40af; background: #eff6ff; border: 1px solid #bfdbfe; padding: 3px 8px; border-radius: 4px; }
+
+  .kn-list { list-style: none; margin-bottom: 20px; }
+  .kn-list li { font-size: 11.5px; color: #334155; padding: 3px 0; display: flex; align-items: flex-start; gap: 6px; }
+  .kn-list li::before { content: ''; display: inline-block; width: 5px; height: 5px; border-radius: 50%; background: #2563eb; margin-top: 5px; flex-shrink: 0; }
+
+  .loc-list { list-style: none; }
+  .loc-list li { font-size: 11.5px; color: #334155; padding: 2px 0; }
+  .loc-avail { color: #059669; font-weight: 700; }
+
+  @media print {
+    @page { margin: 0.2in 0.25in; size: letter portrait; }
+    * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+    body { background: #fff !important; }
+    .topbar { display: none !important; }
+    .hire-cta-bar { display: none !important; }
+    .print-book-call { display: flex !important; }
+    .page-wrap { box-shadow: none !important; margin: 0 !important; border-radius: 0 !important; max-width: 100% !important; }
+    .resume-header { padding: 10px 24px 8px !important; gap: 14px !important; }
+    .header-photo { width: 52px !important; height: 52px !important; }
+    .header-name { font-size: 20px !important; margin-bottom: 2px !important; }
+    .header-title { font-size: 9px !important; margin-bottom: 4px !important; }
+    .header-contacts { font-size: 9.5px !important; gap: 2px 10px !important; }
+    .target-badge { display: none !important; }
+    .resume-body { grid-template-columns: 1fr 195px !important; }
+    .left-col { padding: 11px 16px 11px 22px !important; }
+    .right-col { padding: 11px 13px !important; }
+    .section-head { font-size: 8.5px !important; margin-bottom: 4px !important; padding-bottom: 3px !important; }
+    .profile-text { font-size: 10.5px !important; line-height: 1.45 !important; margin-bottom: 9px !important; }
+    .exp-block { margin-bottom: 7px !important; }
+    .exp-header { margin-bottom: 1px !important; }
+    .exp-role { font-size: 11px !important; }
+    .exp-company { font-size: 10px !important; }
+    .exp-badge { font-size: 8.5px !important; padding: 1px 5px !important; }
+    .exp-sep { margin: 6px 0 !important; }
+    .exp-bullets { margin-top: 2px !important; padding-left: 11px !important; }
+    .exp-bullets li { font-size: 10.5px !important; line-height: 1.38 !important; margin-bottom: 0 !important; }
+    .skill-list { margin-bottom: 9px !important; }
+    .skill-list li { font-size: 10px !important; padding: 2px 0 !important; }
+    .tools-wrap { gap: 3px !important; margin-bottom: 9px !important; }
+    .tool-pill { font-size: 8.5px !important; padding: 1px 5px !important; }
+    .kn-list { margin-bottom: 9px !important; }
+    .kn-list li { font-size: 10px !important; padding: 1px 0 !important; }
+    .kn-list li::before { width: 4px !important; height: 4px !important; margin-top: 4px !important; }
+    .loc-list li { font-size: 10px !important; padding: 1px 0 !important; }
+  }
+
+  @media (max-width: 700px) {
+    .resume-header { flex-direction: column; align-items: flex-start; padding: 20px; }
+    .resume-body { grid-template-columns: 1fr; }
+    .left-col { border-right: none; border-bottom: 1px solid #e8edf3; padding: 20px; }
+    .right-col { padding: 20px; }
+    .page-wrap { margin: 0; border-radius: 0; }
+  }
+</style>
+</head>
+<body>
+
+<nav class="topbar">
+  <a href="../resume.html">← Resume Hub</a>
+  <div class="topbar-right">
+    <a href="../index.html">tonybeal.net</a>
+    <button class="print-btn" onclick="window.print()">Print / Save PDF</button>
+    <a href="https://calendly.com/tonybeal40/30min" target="_blank" rel="noopener"
+       style="background:#2563eb;color:#fff;padding:6px 14px;border-radius:6px;font-weight:600;font-size:12px;text-decoration:none;">Book a Call</a>
+  </div>
+</nav>
+
+<div class="page-wrap">
+
+  <header class="resume-header">
+    <img src="../headshot-hero.webp" alt="Tony Beal" class="header-photo"
+         onerror="this.src='../headshot-hero.png'" />
+    <div class="header-info">
+      <div class="header-name">Tony Beal</div>
+      <div class="header-title">Director of Business Development &bull; Relationship-First Growth &bull; St. Louis Market</div>
+      <div class="header-contacts">
+        <a href="mailto:tbeal@tonybeal.net">tbeal@tonybeal.net</a>
+        <span class="header-sep">·</span>
+        <a href="https://tonybeal.net">tonybeal.net</a>
+        <span class="header-sep">·</span>
+        <a href="https://linkedin.com/in/tony-beal40" target="_blank" rel="noopener">linkedin.com/in/tony-beal40</a>
+        <span class="header-sep">·</span>
+        <a href="tel:6182925320">(618) 292-5320</a>
+        <span class="header-sep">·</span>
+        <span>Greater St. Louis, MO</span>
+      </div>
+      <div class="target-badge">&#127919; Applying: Director of Business Development — Lever1</div>
+    </div>
+  </header>
+
+  <div class="resume-body">
+
+    <main class="left-col">
+
+      <div class="section-head">Profile</div>
+      <p class="profile-text">
+        Director of Business Development with 15+ years building high-value commercial relationships in the St. Louis market and beyond. Strong local network, proven at relationship-driven new business development, and experienced leading the full commercial lifecycle from initial outreach through close. Track record building BD pipelines from zero, representing organizations through community presence and personal brand, and operating at executive level in both outbound development and strategic planning. Ready to bring a director-level BD system to Lever1's relationship-first growth model.
+      </p>
+
+      <div class="section-head">Experience</div>
+
+      <div class="exp-block">
+        <div class="exp-header">
+          <div>
+            <span class="exp-role">Director of Business Development</span>
+            <span style="color:#94a3b8;font-size:12px;"> &mdash; </span>
+            <span class="exp-company">ProForm Manufacturing</span>
+          </div>
+          <span class="exp-badge">Recent</span>
+        </div>
+        <ul class="exp-bullets">
+          <li>Built <strong>$6M+ pipeline from a cold start</strong> — full commercial infrastructure built from zero across industrial manufacturing sector</li>
+          <li>Owned <strong>strategic account planning</strong>: ICP definition, territory segmentation, target account prioritization, and annual commercial plan execution</li>
+          <li>Developed <strong>ROI-driven proposals</strong> for executive decision-makers; led full sales cycle from prospect qualification to contract close</li>
+          <li>Implemented <strong>Salesforce + HubSpot CRM</strong> from zero: pipeline management, opportunity tracking, forecasting discipline, and performance reporting</li>
+          <li>Represented organization externally through <strong>community presence, LinkedIn, and executive networking</strong> — personally owned brand and relationship development</li>
+        </ul>
+      </div>
+
+      <hr class="exp-sep" />
+
+      <div class="exp-block">
+        <div class="exp-header">
+          <div>
+            <span class="exp-role">Revenue Operations &amp; Business Development</span>
+            <span style="color:#94a3b8;font-size:12px;"> &mdash; </span>
+            <span class="exp-company">Natoli Engineering</span>
+          </div>
+          <span class="exp-badge">Recent</span>
+        </div>
+        <ul class="exp-bullets">
+          <li>Led <strong>new business development</strong> across manufacturing sector; built account intelligence systems using custom AI tools and CRM automation</li>
+          <li>Managed outreach programs to <strong>20,000+ contacts</strong>; built pipeline reporting dashboards connecting activity to revenue outcomes</li>
+          <li>Operated as <strong>outward-facing commercial leader</strong> — community engagement, personal brand development, and executive relationship management</li>
+          <li>Designed and executed <strong>outbound BD systems</strong> combining LinkedIn, email, and direct outreach for consistent pipeline generation</li>
+        </ul>
+      </div>
+
+      <hr class="exp-sep" />
+
+      <div class="exp-block">
+        <div class="exp-header">
+          <div>
+            <span class="exp-role">Sales Manager &amp; Operations</span>
+            <span style="color:#94a3b8;font-size:12px;"> &mdash; </span>
+            <span class="exp-company">Wicks Aircraft Supply</span>
+          </div>
+          <span class="exp-badge">Prior</span>
+        </div>
+        <ul class="exp-bullets">
+          <li>Generated <strong>1,000+ new customers</strong> through full-cycle consultative sales — cold territory built from zero through relationship-based outreach</li>
+          <li>Managed distributor and dealer relationships; handled full commercial operations including order fulfillment, post-sale satisfaction, and account retention</li>
+        </ul>
+      </div>
+
+      <hr class="exp-sep" />
+
+      <div class="exp-block">
+        <div class="exp-header">
+          <div>
+            <span class="exp-role">Regional Sales Manager</span>
+            <span style="color:#94a3b8;font-size:12px;"> &mdash; </span>
+            <span class="exp-company">BioGaia USA</span>
+          </div>
+          <span class="exp-badge">Prior</span>
+        </div>
+        <ul class="exp-bullets">
+          <li>Managed <strong>3,700+ accounts</strong> across multi-state territory; exceeded quota for <strong>8 consecutive years</strong></li>
+          <li>Built <strong>1,200+ active accounts from cold</strong> through systematic territory coverage, executive relationship development, and consultative selling</li>
+          <li>Maintained disciplined <strong>pipeline forecasting, opportunity hygiene</strong>, and account segmentation across large distributor and dealer base</li>
+        </ul>
+      </div>
+
+    </main>
+
+    <aside class="right-col">
+
+      <div class="section-head">Core Skills</div>
+      <ul class="skill-list">
+        <li>Business Development Strategy</li>
+        <li>Pipeline &amp; Forecast Management</li>
+        <li>Strategic Account Planning</li>
+        <li>Consultative / Value-Based Selling</li>
+        <li>ROI Proposals &amp; Justification</li>
+        <li>Executive Relationship Building</li>
+        <li>Community &amp; Network-Based BD</li>
+        <li>Director-Level Leadership</li>
+        <li>Cross-Functional Collaboration</li>
+      </ul>
+
+      <div class="section-head">Technology &amp; Tools</div>
+      <div class="tools-wrap">
+        <span class="tool-pill">Salesforce</span>
+        <span class="tool-pill">HubSpot</span>
+        <span class="tool-pill">Apollo.io</span>
+        <span class="tool-pill">LinkedIn Sales Nav</span>
+        <span class="tool-pill">ZoomInfo</span>
+        <span class="tool-pill">Microsoft Office</span>
+        <span class="tool-pill">OpenAI API</span>
+        <span class="tool-pill">Google Analytics</span>
+      </div>
+
+      <div class="section-head">Key Numbers</div>
+      <ul class="kn-list">
+        <li>$6M+ pipeline from zero</li>
+        <li>3,700+ accounts managed</li>
+        <li>1,200+ accounts from cold</li>
+        <li>1,000+ new customers (Wicks)</li>
+        <li>8 consecutive years quota</li>
+        <li>15+ years B2B sales</li>
+        <li>20,000+ contacts reached</li>
+      </ul>
+
+      <div class="section-head">Education</div>
+      <ul class="skill-list">
+        <li style="font-weight:600;">Business Studies</li>
+        <li style="font-size:11px;color:#64748b;font-weight:400;">Some college — no degree</li>
+      </ul>
+
+      <div class="section-head">Location</div>
+      <ul class="loc-list">
+        <li>Greater St. Louis, MO</li>
+        <li>2023 Westport Dr — local</li>
+        <li class="loc-avail">Immediately Available</li>
+      </ul>
+
+    </aside>
+  </div>
+
+  <!-- PRINT-ONLY FOOTER -->
+  <div class="print-book-call" style="display:none;padding:9px 28px;background:#0f172a;align-items:center;justify-content:space-between;gap:16px;">
+    <span style="color:#94a3b8;font-size:10px;">Tony Beal — Director of BD Application | Lever1</span>
+    <span style="color:#60a5fa;font-size:10px;font-weight:700;">tbeal@tonybeal.net &nbsp;|&nbsp; (618) 292-5320 &nbsp;|&nbsp; tonybeal.net</span>
+  </div>
+
+</div>
+
+<div class="hire-cta-bar" style="max-width:900px;margin:0 auto 40px;background:#0f172a;border-radius:0 0 8px 8px;padding:24px 40px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;">
+  <div>
+    <div style="color:#60a5fa;font-size:0.72rem;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;margin-bottom:4px;">Applying to Lever1 — Director of Business Development</div>
+    <div style="color:#fff;font-weight:700;font-size:1rem;">Let's connect — 30 minutes, no pressure.</div>
+  </div>
+  <a href="https://calendly.com/tonybeal40/30min" target="_blank" rel="noopener"
+     style="background:#2563eb;color:#fff;padding:11px 22px;border-radius:8px;font-weight:700;text-decoration:none;font-size:0.88rem;white-space:nowrap;">
+    Book a Free 30-Min Call &rarr;
+  </a>
+</div>
+
+</body>
+</html>
