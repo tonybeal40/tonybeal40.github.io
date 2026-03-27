@@ -135,40 +135,46 @@ html,body{background:#f5f4f1;font-family:'Inter',sans-serif;color:#1a1a1a;font-s
    MOBILE
 ══════════════════════════════════════════ */
 @media(max-width:700px){
-  html,body{font-size:13px}
-  .page-shell{padding:12px 0;gap:16px}
+  html,body{font-size:14px;overflow-x:hidden}
+  .page-shell{padding:0;gap:0;max-width:100%}
 
-  /* Save bar */
-  .save-bar{padding:8px 14px;flex-wrap:wrap;gap:6px}
-  .save-bar-label{font-size:9px;width:100%;margin-right:0;margin-bottom:4px}
-  .btn-save{font-size:11px;padding:7px 14px}
+  /* Save bar — full width, large touch targets */
+  .save-bar{padding:10px 14px;flex-wrap:wrap;gap:8px;position:relative}
+  .save-bar-label{font-size:10px;width:100%;margin-right:0;margin-bottom:2px}
+  .btn-save{font-size:12px;padding:10px 16px;flex:1;justify-content:center;min-width:0}
 
-  /* Cover page — stack left/right */
-  .cover{grid-template-columns:1fr;min-height:auto}
-  .cover-left{padding:28px 20px 24px;flex-direction:row;flex-wrap:wrap;justify-content:center;gap:16px;align-items:flex-start}
-  .cover-photo{width:90px;height:90px;margin-bottom:0}
-  .cover-name-block{text-align:left;margin-bottom:0;flex:1}
-  .cover-name{font-size:20px}
-  .cover-stats-left{width:100%;display:flex;flex-wrap:wrap;gap:0;margin-bottom:12px}
-  .csl-item{width:50%;border-bottom:1px solid rgba(255,255,255,0.07);border-right:none;padding:8px 0}
-  .cover-contacts{flex-direction:row;flex-wrap:wrap;justify-content:center;gap:6px 14px;font-size:10px}
-  .cover-right{padding:28px 20px}
-  .cover-headline{font-size:28px}
-  .cover-sub{font-size:12px}
+  /* Cover page — stacked, centered */
+  .cover{grid-template-columns:1fr;min-height:auto;box-shadow:none}
+  .cover-left{padding:32px 24px 28px;flex-direction:column;align-items:center;gap:0}
+  .cover-photo{width:100px;height:100px;margin-bottom:16px}
+  .cover-name-block{text-align:center;margin-bottom:20px}
+  .cover-name{font-size:22px}
+  .cover-title{font-size:10px}
+  .cover-stats-left{width:100%;display:grid;grid-template-columns:1fr 1fr;margin-bottom:20px}
+  .csl-item{padding:10px 8px;border-bottom:1px solid rgba(255,255,255,0.07)}
+  .cover-contacts{flex-direction:column;align-items:center;gap:5px;font-size:11px}
+  .cover-right{padding:28px 20px 32px}
+  .cover-headline{font-size:26px;line-height:1.2}
+  .cover-sub{font-size:13px;margin-bottom:24px}
   .cover-for-co{font-size:16px}
+  .cover-for-role{font-size:12px}
   .toc-grid{grid-template-columns:1fr}
+  .toc-text{font-size:12px}
 
-  /* Doc header */
-  .doc-hd{padding:20px 20px}
-  .doc-num{font-size:32px;min-width:42px}
-  .doc-title{font-size:17px}
+  /* Doc header + body */
+  .doc{box-shadow:none;border-top:1px solid #e8e4de}
+  .doc-hd{padding:18px 20px;gap:14px}
+  .doc-num{font-size:28px;min-width:36px}
+  .doc-type{font-size:8px}
+  .doc-title{font-size:16px}
   .doc-bd{padding:20px 20px}
 
-  /* Letter */
+  /* Cover letter */
   .l-from-row{flex-direction:column;gap:8px}
   .l-from-contact{text-align:left}
   .l-from-name{font-size:18px}
-  .l-body p,.l-pull{font-size:13px}
+  .l-body p{font-size:13px;line-height:1.7}
+  .l-pull{font-size:13px}
 
   /* Bio */
   .bio-top{grid-template-columns:1fr;gap:16px}
@@ -176,29 +182,36 @@ html,body{background:#f5f4f1;font-family:'Inter',sans-serif;color:#1a1a1a;font-s
   .bio-headline{font-size:18px}
   .bio-stats{gap:16px}
   .bio-body p{font-size:13px}
-  .bio-pillars{grid-template-columns:1fr}
-  .bp-text{font-size:12px}
+  .bio-pillars{grid-template-columns:1fr;gap:10px;margin-top:18px}
+  .bp-text{font-size:13px}
 
   /* Elevator pitch */
-  .ep-q{font-size:13px}
+  .ep-q{font-size:14px}
   .ep-a p{font-size:13px}
 
-  /* Resume */
-  .resume-wrap{padding:16px}
-  .r-header{grid-template-columns:60px 1fr;gap:12px}
-  .r-photo{width:60px;height:60px}
-  .r-name{font-size:18px}
-  .r-title{font-size:10px}
-  .r-contact{gap:8px;font-size:11px}
-  .r-body{grid-template-columns:1fr}
-  .r-sidebar{margin-top:8px}
-  .r-profile{font-size:12px}
-  .r-bullets li{font-size:12px}
+  /* Resume — clean single column */
+  .resume-wrap{padding:20px 16px}
+  .r-header{display:flex;flex-direction:column;align-items:flex-start;gap:10px;margin-bottom:14px;padding-bottom:12px}
+  .r-photo{width:64px;height:64px}
+  .r-name{font-size:20px}
+  .r-title{font-size:10px;line-height:1.5}
+  .r-contact{flex-direction:column;gap:4px;font-size:12px}
+  .r-contact span{display:block}
+  .r-body{grid-template-columns:1fr;gap:0}
+  .r-sidebar{margin-top:16px;padding-top:16px;border-top:1px solid #e8e4de}
+  .r-section{margin-bottom:14px}
+  .r-section-label{font-size:9px;margin-bottom:6px}
+  .r-profile{font-size:13px;line-height:1.65}
+  .r-job{margin-bottom:10px}
+  .r-job-header{flex-wrap:wrap;gap:2px}
   .r-role{font-size:13px}
-  .r-section-label{font-size:9px}
+  .r-company{font-size:12px}
+  .r-date{font-size:11px;width:100%;margin-top:1px}
+  .r-bullets li{font-size:12px;line-height:1.55;margin-bottom:3px}
+  .r-skill{margin-bottom:8px}
   .r-skill-name{font-size:12px}
   .r-tag{font-size:11px;padding:4px 10px}
-  .r-nums{font-size:12px}
+  .r-nums{font-size:13px;line-height:1.9}
 }
 
 /* ══════════════════════════════════════════
@@ -239,24 +252,27 @@ html,body{background:#f5f4f1;font-family:'Inter',sans-serif;color:#1a1a1a;font-s
   .ep-a p{font-size:9px!important;line-height:1.5!important}
   .ep-scenario{margin-bottom:10px!important;padding-bottom:10px!important}
   .ep-q{font-size:11px!important;margin-bottom:5px!important}
-  .resume-wrap{padding:14px 20px!important}
-  .r-header{margin-bottom:10px!important;padding-bottom:8px!important}
-  .r-name{font-size:18px!important}
-  .r-title{font-size:9px!important}
-  .r-contact{font-size:8.5px!important;gap:10px!important}
-  .r-photo{width:60px!important;height:60px!important}
-  .r-section{margin-bottom:7px!important}
-  .r-section-label{font-size:7px!important;padding-bottom:2px!important;margin-bottom:5px!important}
-  .r-profile{font-size:8.5px!important;line-height:1.5!important}
-  .r-job{margin-bottom:5px!important}
-  .r-role{font-size:9.5px!important}
-  .r-company{font-size:8.5px!important}
-  .r-date{font-size:8px!important}
-  .r-bullets li{font-size:8.5px!important;line-height:1.4!important;margin-bottom:0!important}
-  .r-skill-name{font-size:8.5px!important}
-  .r-skill{margin-bottom:5px!important}
-  .r-tag{font-size:7.5px!important;padding:2px 5px!important}
-  .r-nums{font-size:8.5px!important;line-height:1.7!important}
+  .resume-wrap{padding:8px 16px!important}
+  .r-header{margin-bottom:6px!important;padding-bottom:5px!important;gap:12px!important;grid-template-columns:52px 1fr!important}
+  .r-photo{width:52px!important;height:52px!important}
+  .r-name{font-size:15px!important}
+  .r-title{font-size:8px!important;margin-top:2px!important}
+  .r-contact{font-size:8px!important;gap:8px!important;margin-top:4px!important}
+  .r-body{grid-template-columns:1fr 145px!important;gap:14px!important}
+  .r-section{margin-bottom:5px!important}
+  .r-section-label{font-size:7px!important;padding-bottom:2px!important;margin-bottom:4px!important}
+  .r-profile{font-size:7.5px!important;line-height:1.45!important}
+  .r-job{margin-bottom:4px!important}
+  .r-role{font-size:8.5px!important}
+  .r-company{font-size:8px!important}
+  .r-date{font-size:7.5px!important}
+  .r-bullets{margin:2px 0 0 12px!important}
+  .r-bullets li{font-size:7.5px!important;line-height:1.35!important;margin-bottom:0!important}
+  .r-skill-name{font-size:8px!important}
+  .r-skill{margin-bottom:4px!important}
+  .r-skill-bar{height:2px!important}
+  .r-tag{font-size:7px!important;padding:1px 4px!important;margin:1px 1px!important}
+  .r-nums{font-size:7.5px!important;line-height:1.6!important}
   .l-pull,.l-close,.l-from-row,.l-to,.l-sal,
   .bio-top,.bp,.bio-pillars,
   .ep-scenario,.ep-q,
