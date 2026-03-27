@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({"gtm.start":
+new Date().getTime(),event:"gtm.js"});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!="dataLayer"?"&l="+l:"";j.async=true;j.src=
+"https://www.googletagmanager.com/gtm.js?id="+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,"script","dataLayer","GTM-NS6QDMBR");</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Tony Beal | Application Package — Manufacturing Engineering &amp; Supplier Development</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Inter', sans-serif; background: #f1f5f9; color: #1e293b; min-height: 100vh; }
+
+  /* ── TOPBAR ── */
+  .topbar {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 10px 28px; background: #0f172a; border-bottom: 1px solid #1e293b;
+    font-size: 13px; position: sticky; top: 0; z-index: 100;
+  }
+  .topbar a { font-weight: 600; color: #93c5fd; text-decoration: none; }
+  .topbar a:hover { color: #fff; }
+  .topbar-center { font-size: 13px; font-weight: 600; color: #fff; }
+  .topbar-right { display: flex; gap: 12px; align-items: center; }
+  .btn-pdf {
+    background: #2563EB; color: white; border: none;
+    padding: 7px 16px; border-radius: 6px; font-weight: 700; font-size: 12px;
+    cursor: pointer; letter-spacing: 0.02em; transition: background 0.15s;
+  }
+  .btn-pdf:hover { background: #1d4ed8; }
+  .btn-call {
+    background: transparent; color: #93c5fd; border: 1px solid rgba(147,197,253,0.35);
+    padding: 7px 14px; border-radius: 6px; font-weight: 600; font-size: 12px;
+    text-decoration: none; transition: all 0.15s;
+  }
+  .btn-call:hover { background: rgba(147,197,253,0.1); color: #fff; }
+
+  /* ── PAGE SHELL ── */
+  .pkg-shell { max-width: 900px; margin: 0 auto; padding: 32px 0 64px; display: flex; flex-direction: column; gap: 28px; }
+
+  /* ── SECTION LABEL ── */
+  .doc-label { font-size: 10px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.14em; color: #64748b; padding: 0 4px; }
+
+  /* ── COVER LETTER ── */
+  .cover-wrap {
+    background: #fff; border-radius: 8px; box-shadow: 0 2px 20px rgba(0,0,0,0.09);
+    padding: 48px 56px;
+  }
+  .letter-sender { margin-bottom: 28px; }
+  .sender-name { font-size: 22px; font-weight: 800; color: #0f172a; letter-spacing: -0.4px; margin-bottom: 6px; }
+  .sender-contacts { font-size: 12px; color: #475569; display: flex; flex-wrap: wrap; gap: 3px 14px; }
+  .sender-contacts a { color: #2563eb; text-decoration: none; }
+  .sender-sep { color: #cbd5e1; }
+  .letter-date { font-size: 13px; color: #64748b; margin-bottom: 24px; }
+  .letter-subject {
+    font-size: 12px; font-weight: 700; color: #1e40af;
+    background: #eff6ff; border: 1px solid #bfdbfe;
+    border-radius: 5px; padding: 8px 14px; margin-bottom: 24px; display: inline-block;
+  }
+  .letter-salutation { font-size: 14px; font-weight: 600; color: #0f172a; margin-bottom: 18px; }
+  .letter-body p { font-size: 14px; line-height: 1.75; color: #334155; margin-bottom: 18px; }
+  .letter-closing { margin-top: 28px; }
+  .letter-closing p { font-size: 14px; color: #334155; line-height: 1.7; margin-bottom: 4px; }
+  .letter-closing .sig-name { font-size: 16px; font-weight: 800; color: #0f172a; margin-top: 12px; }
+  .letter-closing .sig-title { font-size: 12px; color: #64748b; margin-top: 2px; }
+
+  /* ── RESUME ── */
+  .resume-wrap {
+    background: #fff; border-radius: 8px; box-shadow: 0 2px 20px rgba(0,0,0,0.09); overflow: hidden;
+  }
+  .resume-header {
+    padding: 28px 40px 20px; border-bottom: 2px solid #e8edf3;
+    display: flex; align-items: center; gap: 22px;
+  }
+  .header-photo {
+    width: 76px; height: 76px; border-radius: 50%;
+    object-fit: cover; object-position: top center;
+    border: 3px solid #e2e8f0; flex-shrink: 0;
+  }
+  .header-info { flex: 1; }
+  .header-name { font-size: 26px; font-weight: 800; color: #0f172a; letter-spacing: -0.5px; line-height: 1; margin-bottom: 4px; }
+  .header-title { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; color: #64748b; margin-bottom: 8px; }
+  .header-contacts { display: flex; flex-wrap: wrap; gap: 3px 14px; font-size: 12px; color: #475569; }
+  .header-contacts a { color: #2563eb; text-decoration: none; }
+  .header-sep { color: #cbd5e1; }
+  .target-badge {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: #eff6ff; border: 1px solid #bfdbfe;
+    border-radius: 5px; padding: 4px 10px; font-size: 11px; font-weight: 600; color: #1e40af; margin-top: 6px;
+  }
+  .resume-body { display: grid; grid-template-columns: 1fr 240px; gap: 0; }
+  .left-col { padding: 28px 32px 28px 40px; border-right: 1px solid #e8edf3; }
+  .right-col { padding: 28px 24px; background: #f8fafc; }
+  .section-head { font-size: 10px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.14em; color: #2563eb; margin-bottom: 10px; padding-bottom: 5px; border-bottom: 1.5px solid #dbeafe; }
+  .profile-text { font-size: 12.5px; line-height: 1.7; color: #334155; margin-bottom: 22px; }
+  .exp-block { margin-bottom: 16px; }
+  .exp-header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 2px; }
+  .exp-role { font-size: 13px; font-weight: 700; color: #0f172a; }
+  .exp-company { font-size: 11.5px; font-weight: 600; color: #2563eb; }
+  .exp-badge { font-size: 10px; font-weight: 600; color: #64748b; background: #f1f5f9; padding: 2px 7px; border-radius: 4px; white-space: nowrap; flex-shrink: 0; }
+  .exp-bullets { margin-top: 4px; padding-left: 13px; }
+  .exp-bullets li { font-size: 11.5px; color: #334155; line-height: 1.65; margin-bottom: 2px; }
+  .exp-bullets li strong { color: #0f172a; }
+  .exp-sep { border: none; border-top: 1px solid #f1f5f9; margin: 14px 0; }
+  .skill-list { list-style: none; margin-bottom: 20px; }
+  .skill-list li { font-size: 12px; color: #334155; padding: 5px 0; border-bottom: 1px solid #e8edf3; font-weight: 500; }
+  .skill-list li:last-child { border-bottom: none; }
+  .tools-wrap { display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 20px; }
+  .tool-pill { font-size: 10.5px; font-weight: 600; color: #1e40af; background: #eff6ff; border: 1px solid #bfdbfe; padding: 3px 8px; border-radius: 4px; }
+  .kn-list { list-style: none; margin-bottom: 20px; }
+  .kn-list li { font-size: 11.5px; color: #334155; padding: 3px 0; display: flex; align-items: flex-start; gap: 6px; }
+  .kn-list li::before { content: ''; display: inline-block; width: 5px; height: 5px; border-radius: 50%; background: #2563eb; margin-top: 5px; flex-shrink: 0; }
+  .loc-list { list-style: none; }
+  .loc-list li { font-size: 11.5px; color: #334155; padding: 2px 0; }
+  .loc-avail { color: #059669; font-weight: 700; }
+
+  /* ── PRINT ── */
+  @media print {
+    @page { margin: 0.3in 0.35in; size: letter portrait; }
+    * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+    body { background: #fff !important; }
+    .topbar { display: none !important; }
+    .pkg-shell { padding: 0 !important; gap: 0 !important; max-width: 100% !important; }
+    .doc-label { display: none !important; }
+    .cover-wrap { box-shadow: none !important; border-radius: 0 !important; padding: 32px 40px !important; page-break-after: always; }
+    .letter-body p { font-size: 13px !important; line-height: 1.65 !important; }
+    .resume-wrap { box-shadow: none !important; border-radius: 0 !important; page-break-before: always; }
+    .resume-header { padding: 10px 24px 8px !important; gap: 14px !important; }
+    .header-photo { width: 52px !important; height: 52px !important; }
+    .header-name { font-size: 20px !important; margin-bottom: 2px !important; }
+    .header-title { font-size: 9px !important; margin-bottom: 4px !important; }
+    .header-contacts { font-size: 9.5px !important; gap: 2px 10px !important; }
+    .target-badge { display: none !important; }
+    .resume-body { grid-template-columns: 1fr 195px !important; }
+    .left-col { padding: 11px 16px 11px 22px !important; }
+    .right-col { padding: 11px 13px !important; }
+    .section-head { font-size: 8.5px !important; margin-bottom: 4px !important; padding-bottom: 3px !important; }
+    .profile-text { font-size: 10.5px !important; line-height: 1.45 !important; margin-bottom: 9px !important; }
+    .exp-block { margin-bottom: 7px !important; }
+    .exp-header { margin-bottom: 1px !important; }
+    .exp-role { font-size: 11px !important; }
+    .exp-company { font-size: 10px !important; }
+    .exp-badge { font-size: 8.5px !important; padding: 1px 5px !important; }
+    .exp-sep { margin: 6px 0 !important; }
+    .exp-bullets { margin-top: 2px !important; padding-left: 11px !important; }
+    .exp-bullets li { font-size: 10.5px !important; line-height: 1.38 !important; margin-bottom: 0 !important; }
+    .skill-list { margin-bottom: 9px !important; }
+    .skill-list li { font-size: 10px !important; padding: 2px 0 !important; }
+    .tools-wrap { gap: 3px !important; margin-bottom: 9px !important; }
+    .tool-pill { font-size: 8.5px !important; padding: 1px 5px !important; }
+    .kn-list { margin-bottom: 9px !important; }
+    .kn-list li { font-size: 10px !important; padding: 1px 0 !important; }
+    .kn-list li::before { width: 4px !important; height: 4px !important; margin-top: 4px !important; }
+    .loc-list li { font-size: 10px !important; padding: 1px 0 !important; }
+  }
+
+  @media (max-width: 700px) {
+    .pkg-shell { padding: 0 !important; }
+    .cover-wrap { border-radius: 0; padding: 28px 24px; }
+    .resume-header { flex-direction: column; align-items: flex-start; padding: 20px; }
+    .resume-body { grid-template-columns: 1fr; }
+    .left-col { border-right: none; border-bottom: 1px solid #e8edf3; padding: 20px; }
+    .right-col { padding: 20px; }
+    .resume-wrap { border-radius: 0; }
+  }
+</style>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NS6QDMBR"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<nav class="topbar">
+  <a href="../jobs/">← Jobs</a>
+  <span class="topbar-center">Mfg Engineering &amp; Supplier Dev — Application Package</span>
+  <div class="topbar-right">
+    <button class="btn-pdf" onclick="window.print()">⬇ Save as PDF</button>
+    <a href="https://calendly.com/tonybeal40/30min" target="_blank" rel="noopener" class="btn-call">Book a Call</a>
+  </div>
+</nav>
+
+<div class="pkg-shell">
+
+  <span class="doc-label">Cover Letter</span>
+
+  <div class="cover-wrap">
+    <div class="letter-sender">
+      <div class="sender-name">Tony Beal</div>
+      <div class="sender-contacts">
+        <a href="mailto:tbeal@tonybeal.net">tbeal@tonybeal.net</a>
+        <span class="sender-sep">·</span>
+        <a href="tel:6182925320">(618) 292-5320</a>
+        <span class="sender-sep">·</span>
+        <a href="https://tonybeal.net">tonybeal.net</a>
+        <span class="sender-sep">·</span>
+        <a href="https://linkedin.com/in/tony-beal40" target="_blank" rel="noopener">linkedin.com/in/tony-beal40</a>
+        <span class="sender-sep">·</span>
+        <span>Greater St. Louis, MO</span>
+      </div>
+    </div>
+
+    <div class="letter-date">March 2026</div>
+
+    <div class="letter-subject">Re: Manufacturing Engineering &amp; Supplier Development Manager — Confidential Client</div>
+
+    <div class="letter-salutation">Dear Hiring Manager,</div>
+
+    <div class="letter-body">
+      <p>
+        I understand the real problem this role is trying to solve: leadership wants to focus on growth, and they need someone who can own the post-sale execution without hand-holding — someone who speaks both customer and supplier, bridges technical requirements across global teams, and keeps programs on track when things get complicated. That's the exact environment I've operated in across my career in industrial manufacturing, and it's the gap I'm built to close.
+      </p>
+      <p>
+        At Natoli Engineering, I worked directly with manufacturing operations leadership — the same buyer profile this role serves — managing technical communication, navigating quality expectations, and coordinating across cross-functional teams under real production pressure. I built account intelligence systems to track program status, manage stakeholder relationships, and drive execution across complex multi-touchpoint accounts. At ProForm Manufacturing, I built a <strong>$6M+ commercial program from zero</strong> in custom industrial manufacturing, coordinating with operations, engineering, and quality teams to deliver against customer commitments at scale. I understand that in custom metal parts manufacturing, trust is earned through execution — not promises.
+      </p>
+      <p>
+        What makes me a strong fit for this specific role is the combination: I have the technical vocabulary to hold a credible conversation with engineers and procurement teams, the commercial instincts to identify and develop upsell opportunities within existing accounts, and the systems thinking to build scalable processes where there currently aren't any. The global coordination this role requires — including evening overlap with Asia-based teams — aligns with how I've already operated. I'm available immediately, fully remote-ready, and the compensation range is aligned with my expectations.
+      </p>
+    </div>
+
+    <div class="letter-closing">
+      <p>I'd welcome 30 minutes to walk through how my background maps to what you're building. Thank you for your consideration.</p>
+      <p>Thank you for your time.</p>
+      <div class="sig-name">Tony Beal</div>
+      <div class="sig-title">Manufacturing &amp; Technical Account Management | Industrial B2B</div>
+    </div>
+  </div>
+
+  <span class="doc-label">Resume</span>
+
+  <div class="resume-wrap">
+
+    <header class="resume-header">
+      <img src="../headshot-hero.webp" alt="Tony Beal" class="header-photo"
+           onerror="this.src='../headshot-hero.png'" />
+      <div class="header-info">
+        <div class="header-name">Tony Beal</div>
+        <div class="header-title">Manufacturing &amp; Supplier Development | Technical Account Management | Industrial B2B</div>
+        <div class="header-contacts">
+          <a href="mailto:tbeal@tonybeal.net">tbeal@tonybeal.net</a>
+          <span class="header-sep">·</span>
+          <a href="https://tonybeal.net">tonybeal.net</a>
+          <span class="header-sep">·</span>
+          <a href="https://linkedin.com/in/tony-beal40" target="_blank" rel="noopener">linkedin.com/in/tony-beal40</a>
+          <span class="header-sep">·</span>
+          <a href="tel:6182925320">(618) 292-5320</a>
+          <span class="header-sep">·</span>
+          <span>Greater St. Louis, MO</span>
+        </div>
+        <div class="target-badge">&#127919; Applying: Manufacturing Engineering &amp; Supplier Development Manager — Confidential</div>
+      </div>
+    </header>
+
+    <div class="resume-body">
+
+      <main class="left-col">
+
+        <div class="section-head">Profile</div>
+        <p class="profile-text">
+          Industrial B2B professional with 15+ years managing complex technical accounts, coordinating cross-functional manufacturing programs, and driving execution across global supply chains. Proven track record building commercial programs from zero in custom manufacturing environments — including metal parts, industrial equipment, and precision supply. Strong communicator with the ability to bridge customer expectations, supplier capabilities, and internal engineering requirements. Experience working with OEM-level accounts, navigating quality processes, and identifying growth opportunities within existing customer programs. Immediately available, fully remote-capable, and experienced with global team coordination.
+        </p>
+
+        <div class="section-head">Experience</div>
+
+        <div class="exp-block">
+          <div class="exp-header">
+            <div>
+              <span class="exp-role">Revenue Operations &amp; Technical Account Management</span>
+              <span style="color:#94a3b8;font-size:12px;"> &mdash; </span>
+              <span class="exp-company">Natoli Engineering</span>
+            </div>
+            <span class="exp-badge">Recent</span>
+          </div>
+          <ul class="exp-bullets">
+            <li>Managed <strong>technical account relationships</strong> with manufacturing operations leadership — including engineering, quality, and procurement stakeholders at OEM and production accounts</li>
+            <li>Coordinated across <strong>internal engineering and operations teams</strong> to ensure customer commitments were met on time and to specification</li>
+            <li>Built <strong>account intelligence and tracking systems</strong> to manage program status, escalation risk, and expansion opportunities across 20,000+ contact database</li>
+            <li>Led <strong>technical communication</strong> with plant-level and operations decision-makers; translated customer requirements into internal action across production, quality, and logistics</li>
+          </ul>
+        </div>
+
+        <hr class="exp-sep" />
+
+        <div class="exp-block">
+          <div class="exp-header">
+            <div>
+              <span class="exp-role">Director of Business Development &amp; Operations</span>
+              <span style="color:#94a3b8;font-size:12px;"> &mdash; </span>
+              <span class="exp-company">ProForm Manufacturing</span>
+            </div>
+            <span class="exp-badge">Recent</span>
+          </div>
+          <ul class="exp-bullets">
+            <li>Built <strong>$6M+ commercial program from zero</strong> in custom industrial manufacturing — full coordination with production, quality, and engineering teams</li>
+            <li>Owned <strong>post-sale program execution</strong>: served as primary customer contact from order through delivery, managing expectations, timeline, and escalations</li>
+            <li>Developed <strong>supplier and vendor coordination processes</strong> to improve on-time delivery and reduce quality escapes across production programs</li>
+            <li>Identified and developed <strong>upsell and expansion opportunities</strong> within existing accounts through program review cadences and executive relationship management</li>
+            <li>Implemented <strong>Salesforce + HubSpot CRM</strong> from zero for pipeline visibility, program tracking, and performance reporting</li>
+          </ul>
+        </div>
+
+        <hr class="exp-sep" />
+
+        <div class="exp-block">
+          <div class="exp-header">
+            <div>
+              <span class="exp-role">Sales Manager &amp; Operations</span>
+              <span style="color:#94a3b8;font-size:12px;"> &mdash; </span>
+              <span class="exp-company">Wicks Aircraft Supply</span>
+            </div>
+            <span class="exp-badge">Prior</span>
+          </div>
+          <ul class="exp-bullets">
+            <li>Managed <strong>technical industrial supply accounts</strong> — coordinated fulfillment, quality compliance, and post-order support for aerospace and industrial customers</li>
+            <li>Generated <strong>1,000+ new customers</strong> through systematic prospecting and relationship development in specialty industrial supply distribution</li>
+          </ul>
+        </div>
+
+        <hr class="exp-sep" />
+
+        <div class="exp-block">
+          <div class="exp-header">
+            <div>
+              <span class="exp-role">Regional Account Manager</span>
+              <span style="color:#94a3b8;font-size:12px;"> &mdash; </span>
+              <span class="exp-company">BioGaia USA</span>
+            </div>
+            <span class="exp-badge">Prior</span>
+          </div>
+          <ul class="exp-bullets">
+            <li>Managed <strong>3,700+ accounts</strong> across multi-state territory; exceeded quota for <strong>8 consecutive years</strong></li>
+            <li>Built <strong>1,200+ active accounts from cold</strong> — systematic territory management with disciplined pipeline tracking and forecasting</li>
+          </ul>
+        </div>
+
+      </main>
+
+      <aside class="right-col">
+
+        <div class="section-head">Core Skills</div>
+        <ul class="skill-list">
+          <li>Technical Account Management</li>
+          <li>Supplier Development &amp; Coordination</li>
+          <li>Post-Sale Program Execution</li>
+          <li>Cross-Functional Team Coordination</li>
+          <li>Quality Communication (FAI, PPAP)</li>
+          <li>NPI / New Program Launch Support</li>
+          <li>Global Team Coordination</li>
+          <li>Customer Success &amp; Retention</li>
+          <li>Process &amp; System Building</li>
+        </ul>
+
+        <div class="section-head">Technology &amp; Tools</div>
+        <div class="tools-wrap">
+          <span class="tool-pill">Salesforce</span>
+          <span class="tool-pill">HubSpot</span>
+          <span class="tool-pill">Apollo.io</span>
+          <span class="tool-pill">LinkedIn Sales Nav</span>
+          <span class="tool-pill">Microsoft Office</span>
+          <span class="tool-pill">Google Workspace</span>
+          <span class="tool-pill">OpenAI / AI Tools</span>
+          <span class="tool-pill">Slack / Teams</span>
+        </div>
+
+        <div class="section-head">Key Numbers</div>
+        <ul class="kn-list">
+          <li>$6M+ program built from zero</li>
+          <li>3,700+ accounts managed</li>
+          <li>1,200+ accounts from cold</li>
+          <li>1,000+ new customers (Wicks)</li>
+          <li>8 consecutive years quota</li>
+          <li>15+ years industrial B2B</li>
+          <li>20,000+ contacts managed</li>
+        </ul>
+
+        <div class="section-head">Education</div>
+        <ul class="skill-list">
+          <li style="font-weight:600;">Business Studies</li>
+          <li style="font-size:11px;color:#64748b;font-weight:400;">Some college — no degree</li>
+        </ul>
+
+        <div class="section-head">Location &amp; Availability</div>
+        <ul class="loc-list">
+          <li>Greater St. Louis, MO</li>
+          <li>100% Remote — Available</li>
+          <li>Travel: Asia 2–3x/yr + domestic</li>
+          <li class="loc-avail">Immediately Available</li>
+        </ul>
+
+      </aside>
+    </div>
+
+    <!-- PRINT-ONLY FOOTER -->
+    <div style="display:none;" class="print-footer">
+      <span>Tony Beal — Mfg Engineering &amp; Supplier Dev Application</span>
+      <span>tbeal@tonybeal.net &nbsp;|&nbsp; (618) 292-5320 &nbsp;|&nbsp; tonybeal.net</span>
+    </div>
+
+  </div>
+
+</div>
+
+</body>
+</html>
