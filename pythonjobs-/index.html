@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="en">
+<head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({"gtm.start":
+new Date().getTime(),event:"gtm.js"});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!="dataLayer"?"&l="+l:"";j.async=true;j.src=
+"https://www.googletagmanager.com/gtm.js?id="+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,"script","dataLayer","GTM-NS6QDMBR");</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Job Pipeline | Tony Beal</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+<link rel="icon" href="/favicon.ico" sizes="any" />
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-1GMYP4KZ7C"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-1GMYP4KZ7C');
+</script>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Inter', system-ui, sans-serif; background: #0F172A; color: #F1F5F9; -webkit-font-smoothing: antialiased; line-height: 1.6; }
+  a { color: #60A5FA; text-decoration: none; }
+  a:hover { color: #fff; }
+
+  /* NAV */
+  .site-nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(15,23,42,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(255,255,255,0.07); }
+  .nav-inner { max-width: 1160px; margin: 0 auto; padding: 0 24px; height: 64px; display: flex; align-items: center; justify-content: space-between; }
+  .nav-brand { font-size: 18px; font-weight: 800; background: linear-gradient(135deg, #2563EB, #6366F1); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+  .nav-links { display: flex; align-items: center; gap: 20px; flex-wrap: wrap; }
+  .nav-links a { font-size: 14px; font-weight: 500; color: rgba(255,255,255,0.75); }
+  .nav-links a:hover { color: #fff; }
+  .btn { display: inline-flex; align-items: center; gap: 6px; padding: 9px 18px; border-radius: 8px; font-size: 13px; font-weight: 600; cursor: pointer; border: 1px solid transparent; transition: all 0.2s; text-decoration: none; }
+  .btn-primary { background: #2563EB; color: #fff; border-color: #2563EB; }
+  .btn-primary:hover { background: #1D4ED8; color: #fff; }
+  .btn-outline { background: transparent; color: #93C5FD; border-color: rgba(147,197,253,0.3); }
+  .btn-outline:hover { border-color: #93C5FD; color: #fff; background: rgba(147,197,253,0.08); }
+  .btn-ghost { background: transparent; color: #64748B; border-color: rgba(100,116,139,0.3); font-size: 12px; padding: 7px 14px; }
+  .btn-ghost:hover { color: #CBD5E1; border-color: rgba(203,213,225,0.3); }
+
+  /* HERO */
+  .page-hero { padding: 112px 0 56px; background: linear-gradient(135deg, #0F172A 0%, #1E3A5F 50%, #0F172A 100%); border-bottom: 1px solid rgba(255,255,255,0.07); }
+  .container { max-width: 1160px; margin: 0 auto; padding: 0 24px; }
+  .breadcrumb { display: flex; align-items: center; gap: 8px; font-size: 13px; color: #64748B; margin-bottom: 20px; }
+  .breadcrumb a { color: #60A5FA; }
+  .breadcrumb span { color: #334155; }
+  .page-title { font-size: clamp(30px, 4.5vw, 48px); font-weight: 900; color: #fff; line-height: 1.1; margin-bottom: 12px; }
+  .page-title em { font-style: normal; background: linear-gradient(135deg, #2563EB, #6366F1); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+  .page-sub { font-size: 17px; color: #94A3B8; max-width: 600px; margin-bottom: 28px; line-height: 1.6; }
+  .page-meta { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; }
+  .meta-badge { background: rgba(37,99,235,0.15); border: 1px solid rgba(37,99,235,0.3); border-radius: 999px; padding: 5px 14px; font-size: 12px; font-weight: 600; color: #93C5FD; }
+  .meta-badge.green { background: rgba(5,150,105,0.15); border-color: rgba(5,150,105,0.3); color: #6EE7B7; }
+  .meta-badge.amber { background: rgba(245,158,11,0.12); border-color: rgba(245,158,11,0.3); color: #FCD34D; }
+
+  /* BODY */
+  .page-body { padding: 56px 0 96px; }
+
+  /* JOB GRID */
+  .jobs-grid { display: grid; gap: 20px; }
+
+  /* JOB CARD */
+  .job-card { background: rgba(30,41,59,0.6); border: 1px solid rgba(255,255,255,0.07); border-radius: 16px; overflow: hidden; transition: border-color 0.2s, transform 0.15s; }
+  .job-card:hover { border-color: rgba(37,99,235,0.35); transform: translateY(-1px); }
+  .job-card-inner { padding: 28px 32px; display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap; }
+  .job-info { flex: 1; min-width: 240px; }
+  .job-company { font-size: 22px; font-weight: 800; color: #fff; margin-bottom: 4px; }
+  .job-role { font-size: 14px; font-weight: 500; color: #93C5FD; margin-bottom: 12px; line-height: 1.4; }
+  .job-tags { display: flex; gap: 8px; flex-wrap: wrap; }
+  .job-tag { background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.1); border-radius: 999px; padding: 3px 11px; font-size: 11px; font-weight: 500; color: #CBD5E1; }
+  .job-tag.green { background: rgba(5,150,105,0.12); border-color: rgba(5,150,105,0.25); color: #6EE7B7; }
+  .job-tag.blue { background: rgba(37,99,235,0.12); border-color: rgba(37,99,235,0.25); color: #93C5FD; }
+  .job-tag.amber { background: rgba(245,158,11,0.1); border-color: rgba(245,158,11,0.25); color: #FCD34D; }
+
+  .job-actions { display: flex; flex-direction: column; gap: 8px; align-items: flex-end; flex-shrink: 0; }
+  .job-actions .btn { min-width: 160px; justify-content: center; }
+
+  /* STATUS DOT */
+  .status-dot { width: 9px; height: 9px; border-radius: 50%; display: inline-block; margin-right: 6px; vertical-align: middle; flex-shrink: 0; }
+  .status-dot.active { background: #22C55E; box-shadow: 0 0 6px rgba(34,197,94,0.5); }
+  .status-dot.applied { background: #3B82F6; }
+  .status-dot.pending { background: #F59E0B; }
+  .status-dot.closed { background: #475569; }
+
+  /* SECTION LABEL */
+  .section-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; color: #475569; margin-bottom: 16px; margin-top: 40px; padding-bottom: 8px; border-bottom: 1px solid rgba(255,255,255,0.06); }
+  .section-label:first-child { margin-top: 0; }
+
+  /* DIVIDER */
+  .card-divider { height: 1px; background: rgba(255,255,255,0.05); margin: 0 32px; }
+
+  /* PACKAGE ROW */
+  .pkg-row { padding: 16px 32px; display: flex; align-items: center; gap: 12px; flex-wrap: wrap; background: rgba(15,23,42,0.35); }
+  .pkg-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: #475569; margin-right: 4px; }
+  .pkg-link { display: inline-flex; align-items: center; gap: 6px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.09); border-radius: 6px; padding: 5px 12px; font-size: 12px; font-weight: 600; color: #CBD5E1; transition: all 0.2s; }
+  .pkg-link:hover { background: rgba(37,99,235,0.15); border-color: rgba(37,99,235,0.4); color: #93C5FD; }
+
+  @media (max-width: 640px) {
+    .job-card-inner { flex-direction: column; }
+    .job-actions { flex-direction: row; align-items: flex-start; flex-wrap: wrap; }
+    .job-actions .btn { min-width: auto; }
+  }
+</style>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NS6QDMBR"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a href="/index.html" class="nav-brand">Tony Beal</a>
+    <div class="nav-links">
+      <a href="/job-targets.html">Mission Control</a>
+      <a href="/jobs/">Job Packages</a>
+      <a href="/resume.html">Resumes</a>
+      <a href="https://tonybeal.net">Site</a>
+      <a href="https://calendly.com/tonybeal40/30min" target="_blank" rel="noopener" class="btn btn-primary">Book a Call</a>
+    </div>
+  </div>
+</nav>
+
+<section class="page-hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="/index.html">Home</a>
+      <span>›</span>
+      <span>Job Pipeline</span>
+    </div>
+    <h1 class="page-title">Job <em>Pipeline</em></h1>
+    <p class="page-sub">Active applications, tailored packages, and outreach materials — all in one place.</p>
+    <div class="page-meta">
+      <span class="meta-badge green">● Active</span>
+      <span class="meta-badge">5 Applications</span>
+      <span class="meta-badge amber">Updated 2025</span>
+    </div>
+  </div>
+</section>
+
+<div class="page-body">
+  <div class="container">
+
+    <p class="section-label">Active Applications</p>
+
+    <!-- Airgas -->
+    <div class="job-card">
+      <div class="job-card-inner">
+        <div class="job-info">
+          <div class="job-company">Airgas</div>
+          <div class="job-role">Account Manager / Industrial New Business Development</div>
+          <div class="job-tags">
+            <span class="job-tag green">● Active</span>
+            <span class="job-tag blue">Business Development</span>
+            <span class="job-tag">Industrial</span>
+            <span class="job-tag">St. Louis</span>
+          </div>
+        </div>
+        <div class="job-actions">
+          <a href="/jobs/resume-airgas.html" class="btn btn-primary" onclick="gtag('event','job_package_view',{job:'airgas'})">View Package →</a>
+          <a href="/jobs/cover-airgas.html" class="btn btn-outline">Cover Letter</a>
+        </div>
+      </div>
+      <div class="card-divider"></div>
+      <div class="pkg-row">
+        <span class="pkg-label">Assets:</span>
+        <a href="/jobs/resume-airgas.html" class="pkg-link">📄 Tailored Resume</a>
+        <a href="/jobs/cover-airgas.html" class="pkg-link">✉️ Cover Letter</a>
+        <a href="/resume-bizdev.html" class="pkg-link" target="_blank">🔗 BizDev Resume</a>
+      </div>
+    </div>
+
+    <!-- Lever1 -->
+    <div class="job-card">
+      <div class="job-card-inner">
+        <div class="job-info">
+          <div class="job-company">Lever1</div>
+          <div class="job-role">Director of Business Development</div>
+          <div class="job-tags">
+            <span class="job-tag green">● Active</span>
+            <span class="job-tag blue">Director Level</span>
+            <span class="job-tag">PEO / HR Services</span>
+            <span class="job-tag">Remote</span>
+          </div>
+        </div>
+        <div class="job-actions">
+          <a href="/jobs/resume-lever1.html" class="btn btn-primary" onclick="gtag('event','job_package_view',{job:'lever1'})">View Package →</a>
+          <a href="/jobs/cover-lever1.html" class="btn btn-outline">Cover Letter</a>
+        </div>
+      </div>
+      <div class="card-divider"></div>
+      <div class="pkg-row">
+        <span class="pkg-label">Assets:</span>
+        <a href="/jobs/resume-lever1.html" class="pkg-link">📄 Tailored Resume</a>
+        <a href="/jobs/cover-lever1.html" class="pkg-link">✉️ Cover Letter</a>
+        <a href="/resume-bizdev.html" class="pkg-link" target="_blank">🔗 BizDev Resume</a>
+      </div>
+    </div>
+
+    <!-- CRB -->
+    <div class="job-card">
+      <div class="job-card-inner">
+        <div class="job-info">
+          <div class="job-company">CRB</div>
+          <div class="job-role">Director, Business Development — Design-Build / Food &amp; Beverage</div>
+          <div class="job-tags">
+            <span class="job-tag green">● Active</span>
+            <span class="job-tag blue">Director Level</span>
+            <span class="job-tag">Engineering / Design-Build</span>
+            <span class="job-tag">St. Louis</span>
+          </div>
+        </div>
+        <div class="job-actions">
+          <a href="/jobs/resume-crb.html" class="btn btn-primary" onclick="gtag('event','job_package_view',{job:'crb'})">View Package →</a>
+          <a href="/jobs/cover-crb.html" class="btn btn-outline">Cover Letter</a>
+        </div>
+      </div>
+      <div class="card-divider"></div>
+      <div class="pkg-row">
+        <span class="pkg-label">Assets:</span>
+        <a href="/jobs/resume-crb.html" class="pkg-link">📄 Tailored Resume</a>
+        <a href="/jobs/cover-crb.html" class="pkg-link">✉️ Cover Letter</a>
+        <a href="/resume-bizdev.html" class="pkg-link" target="_blank">🔗 BizDev Resume</a>
+      </div>
+    </div>
+
+    <!-- Vestal -->
+    <div class="job-card">
+      <div class="job-card-inner">
+        <div class="job-info">
+          <div class="job-company">Vestal</div>
+          <div class="job-role">Business Development Manager</div>
+          <div class="job-tags">
+            <span class="job-tag green">● Active</span>
+            <span class="job-tag blue">Business Development</span>
+            <span class="job-tag">Construction / MEP</span>
+            <span class="job-tag">St. Louis</span>
+          </div>
+        </div>
+        <div class="job-actions">
+          <a href="/jobs/resume-vestal.html" class="btn btn-primary" onclick="gtag('event','job_package_view',{job:'vestal'})">View Package →</a>
+          <a href="/jobs/cover-vestal.html" class="btn btn-outline">Cover Letter</a>
+        </div>
+      </div>
+      <div class="card-divider"></div>
+      <div class="pkg-row">
+        <span class="pkg-label">Assets:</span>
+        <a href="/jobs/resume-vestal.html" class="pkg-link">📄 Tailored Resume</a>
+        <a href="/jobs/cover-vestal.html" class="pkg-link">✉️ Cover Letter</a>
+        <a href="/resume-bizdev.html" class="pkg-link" target="_blank">🔗 BizDev Resume</a>
+      </div>
+    </div>
+
+    <!-- Burns & McDonnell -->
+    <div class="job-card">
+      <div class="job-card-inner">
+        <div class="job-info">
+          <div class="job-company">Burns &amp; McDonnell</div>
+          <div class="job-role">Business Development Manager – Power</div>
+          <div class="job-tags">
+            <span class="job-tag green">● Active</span>
+            <span class="job-tag blue">Business Development</span>
+            <span class="job-tag">Engineering / Energy</span>
+            <span class="job-tag">Kansas City / Remote</span>
+          </div>
+        </div>
+        <div class="job-actions">
+          <a href="/jobs/resume-burnsmcd.html" class="btn btn-primary" onclick="gtag('event','job_package_view',{job:'burnsmcd'})">View Package →</a>
+          <a href="/jobs/cover-burnsmcd.html" class="btn btn-outline">Cover Letter</a>
+        </div>
+      </div>
+      <div class="card-divider"></div>
+      <div class="pkg-row">
+        <span class="pkg-label">Assets:</span>
+        <a href="/jobs/resume-burnsmcd.html" class="pkg-link">📄 Tailored Resume</a>
+        <a href="/jobs/cover-burnsmcd.html" class="pkg-link">✉️ Cover Letter</a>
+        <a href="/resume-bizdev.html" class="pkg-link" target="_blank">🔗 BizDev Resume</a>
+      </div>
+    </div>
+
+    <p class="section-label" style="margin-top:48px;">More Resources</p>
+
+    <div style="display:flex;gap:12px;flex-wrap:wrap;">
+      <a href="/resume.html" class="btn btn-outline">All Resumes →</a>
+      <a href="/jobs/" class="btn btn-outline">Full Analysis Dashboard →</a>
+      <a href="https://calendly.com/tonybeal40/30min" target="_blank" rel="noopener" class="btn btn-primary">Book a 15-Minute Call</a>
+    </div>
+
+  </div>
+</div>
+
+</body>
+</html>
