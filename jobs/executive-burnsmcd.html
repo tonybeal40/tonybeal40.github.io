@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Tony Beal — Executive Package | Business Development Manager, Power — Burns &amp; McDonnell</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:#f5f4f1;font-family:'Inter',sans-serif;color:#1a1a1a;font-size:11.5px;line-height:1.7}
+.save-bar{background:#0d1b2a;padding:10px 32px;display:flex;justify-content:flex-end;align-items:center;gap:10px;position:sticky;top:0;z-index:100;}
+.save-bar-label{color:#7ba7c2;font-size:10px;letter-spacing:1px;text-transform:uppercase;margin-right:auto}
+.btn-save{background:#fff;color:#0d1b2a;border:none;padding:8px 20px;font-family:'Inter',sans-serif;font-size:11px;font-weight:600;letter-spacing:0.5px;cursor:pointer;display:flex;align-items:center;gap:6px;transition:background 0.15s;white-space:nowrap;}
+.btn-save:hover{background:#e8e4de}
+.btn-save.primary{background:#e8f0ff;color:#0d1b2a}
+.btn-save.primary:hover{background:#cfdaff}
+.page-shell{max-width:850px;margin:0 auto;padding:32px 0;display:flex;flex-direction:column;gap:32px}
+.doc{background:#fff;box-shadow:0 2px 20px rgba(0,0,0,0.08)}
+.doc-hd{background:#0d1b2a;padding:20px 36px;display:flex;align-items:center;gap:20px}
+.doc-num{font-family:'Playfair Display',serif;font-size:36px;color:rgba(255,255,255,0.12);line-height:1;min-width:48px}
+.doc-type{font-size:9px;text-transform:uppercase;letter-spacing:2px;color:#7ba7c2;margin-bottom:3px}
+.doc-title{font-family:'Playfair Display',serif;font-size:18px;color:#fff;line-height:1.2}
+.resume-wrap{padding:28px 36px}
+.r-header{display:grid;grid-template-columns:80px 1fr;gap:18px;margin-bottom:16px;padding-bottom:14px;border-bottom:2px solid #0d1b2a}
+.r-photo{width:80px;height:80px;border-radius:50%;object-fit:cover;object-position:center top}
+.r-name{font-family:'Playfair Display',serif;font-size:24px;color:#0d1b2a;line-height:1}
+.r-title{font-size:11px;color:#555;margin-top:5px;text-transform:uppercase;letter-spacing:1px}
+.r-contact{font-size:10px;color:#555;display:flex;gap:16px;flex-wrap:wrap;margin-top:8px}
+.r-contact a{color:#0d1b2a;text-decoration:none}
+.r-body{display:grid;grid-template-columns:1fr 185px;gap:24px}
+.r-section{margin-bottom:14px}
+.r-section-label{font-size:8.5px;text-transform:uppercase;letter-spacing:1.5px;font-weight:600;color:#0d1b2a;border-bottom:1px solid #0d1b2a;padding-bottom:3px;margin-bottom:9px}
+.r-profile{font-size:9.5px;line-height:1.65;color:#333}
+.r-job{margin-bottom:10px}
+.r-job-header{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:3px}
+.r-role{font-size:11px;font-weight:600;color:#0d1b2a}
+.r-company{font-size:10px;color:#555;font-weight:400}
+.r-date{font-size:9.5px;color:#888;white-space:nowrap}
+.r-bullets{margin:4px 0 0 14px;padding:0}
+.r-bullets li{font-size:9.5px;color:#333;line-height:1.55;margin-bottom:2px}
+.r-skill{margin-bottom:9px}
+.r-skill-name{font-size:10px;font-weight:500;color:#0d1b2a;margin-bottom:3px}
+.r-skill-bar{height:3px;background:#e8e4de;border-radius:2px}
+.r-skill-fill{height:100%;background:#0d1b2a;border-radius:2px}
+.r-tag{display:inline-block;background:#f0ede8;font-size:9px;color:#333;padding:3px 8px;border-radius:2px;margin:2px 2px 2px 0;line-height:1.4}
+.r-nums{font-size:9.5px;color:#333;line-height:2}
+.r-avail{color:#059669;font-weight:600}
+.doc-cover{display:flex;flex-direction:column}
+.doc-bd{padding:36px 48px;flex:1}
+.l-from-row{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:20px;padding-bottom:14px;border-bottom:1px solid #e8e4de}
+.l-from-name{font-family:'Playfair Display',serif;font-size:22px;color:#0d1b2a}
+.l-from-title{font-size:11px;color:#777;margin-top:3px}
+.l-from-contact{font-size:10px;color:#555;text-align:right;line-height:1.9}
+.l-from-contact a{color:#0d1b2a;text-decoration:none}
+.l-date{font-size:11px;color:#888;margin-bottom:12px}
+.l-to{font-size:11px;color:#1a1a1a;margin-bottom:16px;line-height:1.7}
+.l-to strong{font-weight:600;color:#0d1b2a}
+.l-sal{font-size:12px;font-weight:500;color:#0d1b2a;margin-bottom:14px}
+.l-body p{font-size:10.5px;line-height:1.78;color:#2a2a2a;margin-bottom:12px}
+.l-pull{background:#f8f7f4;border-left:3px solid #0d1b2a;padding:10px 16px;margin:14px 0;font-size:10.5px;line-height:1.75;color:#2a2a2a}
+.l-pull strong{color:#0d1b2a}
+.l-close{margin-top:18px;font-size:11px;color:#2a2a2a;line-height:1.8}
+.l-sig{margin-top:18px;font-family:'Playfair Display',serif;font-size:18px;color:#0d1b2a}
+.l-footer{padding:14px 48px;border-top:1px solid #e8e4de;font-size:9px;color:#aaa;display:flex;justify-content:space-between}
+@media print{
+  @page{margin:0;size:letter}
+  *{-webkit-print-color-adjust:exact!important;print-color-adjust:exact!important;color-adjust:exact!important}
+  html,body{background:#fff!important;padding:0!important}
+  .save-bar{display:none!important}
+  .page-shell{padding:0;max-width:100%;gap:0}
+  .doc{box-shadow:none!important;height:11in;overflow:hidden;page-break-after:always;break-after:page;margin:0;}
+  .doc:last-of-type{page-break-after:auto;break-after:auto;}
+  body.print-resume-only .doc-cover{display:none!important}
+  body.print-resume-only .doc-resume{page-break-after:auto!important;break-after:auto!important}
+  body.print-cover-only .doc-resume{display:none!important}
+  body.print-cover-only .doc-cover{page-break-after:auto!important;break-after:auto!important}
+  .r-job,.r-section,li,p{page-break-inside:avoid!important;break-inside:avoid!important}
+  .r-section-label{page-break-after:avoid!important;break-after:avoid!important}
+  .l-from-row,.l-to,.l-sal,.l-pull,.l-close{page-break-inside:avoid!important;break-inside:avoid!important}
+}
+</style>
+</head>
+<body>
+<div class="save-bar">
+  <span class="save-bar-label">Business Development Manager, Power · Burns &amp; McDonnell</span>
+  <button class="btn-save" onclick="printSection('resume')">&#8681; Resume Only</button>
+  <button class="btn-save" onclick="printSection('cover')">&#8681; Cover Letter Only</button>
+  <button class="btn-save primary" onclick="window.print()">&#8681; Full Package (2 pages)</button>
+</div>
+
+<div class="page-shell">
+
+  <div class="doc doc-resume">
+    <div class="doc-hd">
+      <div class="doc-num">01</div>
+      <div>
+        <div class="doc-type">Professional Resume</div>
+        <div class="doc-title">Tony Beal — Business Development Manager, Power — Burns &amp; McDonnell</div>
+      </div>
+    </div>
+
+    <div class="resume-wrap">
+      <div class="r-header">
+        <img class="r-photo"
+             src="https://tonybeal40.github.io/headshot-hero.webp"
+             onerror="this.src='https://tonybeal40.github.io/headshot-hero.png'"
+             alt="Tony Beal" />
+        <div>
+          <div class="r-name">Tony Beal</div>
+          <div class="r-title">Business Development · Long-Cycle Complex Deals · Infrastructure &amp; Technical Solutions</div>
+          <div class="r-contact">
+            <a href="mailto:tbeal@tonybeal.net">tbeal@tonybeal.net</a>
+            <a href="mailto:tonybeal40@gmail.com">tonybeal40@gmail.com</a>
+            <a href="https://tonybeal.net">tonybeal.net</a>
+            <a href="https://linkedin.com/in/tonybeal">linkedin.com/in/tonybeal</a>
+            <span>(636) 699-0884</span>
+            <span>Greater St. Louis, MO &middot; Remote-Ready</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="r-body">
+        <div class="r-main">
+
+          <div class="r-section">
+            <div class="r-section-label">Profile</div>
+            <div class="r-profile">Business Development professional with 15+ years managing complex, long-cycle commercial relationships in industrial and infrastructure sectors. Proven ability to identify strategic growth opportunities, build executive-level relationships, and coordinate with internal technical delivery teams to secure and grow large-scale project accounts. Strong track record of pipeline development, account management, and revenue contribution in technical solution environments requiring persistent stakeholder engagement, value-based selling, and long-horizon relationship cultivation.</div>
+          </div>
+
+          <div class="r-section">
+            <div class="r-section-label">Experience</div>
+
+            <div class="r-job">
+              <div class="r-job-header">
+                <div><span class="r-role">Director of Business Development</span> <span class="r-company">&mdash; ProForm Manufacturing</span></div>
+                <span class="r-date">2023 &ndash; 2024</span>
+              </div>
+              <ul class="r-bullets">
+                <li>Managed <strong>long-cycle deals</strong> with extended qualification timelines — maintained persistent executive relationships across months-long buying processes</li>
+                <li>Coordinated with <strong>internal technical and delivery teams</strong> throughout the sales cycle to align solution design, capability, and proposal accuracy</li>
+                <li>Built <strong>$6M+ pipeline from a cold start</strong> — strategic account prioritization, stakeholder mapping, and multi-touch engagement across industrial sector</li>
+                <li>Implemented <strong>Salesforce + HubSpot CRM</strong>: opportunity stage tracking, long-cycle forecasting, and executive pipeline reporting from zero</li>
+                <li>Developed <strong>complex, multi-stakeholder proposals</strong> aligned to operational and financial outcomes for executive decision-makers</li>
+              </ul>
+            </div>
+
+            <div class="r-job">
+              <div class="r-job-header">
+                <div><span class="r-role">Revenue Operations &amp; Business Development</span> <span class="r-company">&mdash; Natoli Engineering</span></div>
+                <span class="r-date">2022 &ndash; 2023</span>
+              </div>
+              <ul class="r-bullets">
+                <li>Led <strong>new business development</strong> in technical manufacturing sector; built account intelligence systems using custom AI tools and CRM automation</li>
+                <li>Managed outreach programs to <strong>20,000+ contacts</strong>; built pipeline reporting dashboards connecting activity to revenue outcomes</li>
+                <li>Designed <strong>market intelligence workflows</strong> leveraging data and competitive signals to identify high-potential accounts and prioritize commercial efforts</li>
+              </ul>
+            </div>
+
+            <div class="r-job">
+              <div class="r-job-header">
+                <div><span class="r-role">Sales Manager &amp; Operations</span> <span class="r-company">&mdash; Wicks Aircraft Supply</span></div>
+                <span class="r-date">2019 &ndash; 2022</span>
+              </div>
+              <ul class="r-bullets">
+                <li>Generated <strong>1,000+ new customers</strong> through systematic territory development in specialty industrial distribution</li>
+                <li>Managed technical supply accounts &mdash; coordinated fulfillment, quality compliance, and post-order support</li>
+              </ul>
+            </div>
+
+            <div class="r-job">
+              <div class="r-job-header">
+                <div><span class="r-role">Regional Account Manager</span> <span class="r-company">&mdash; BioGaia USA</span></div>
+                <span class="r-date">2011 &ndash; 2019</span>
+              </div>
+              <ul class="r-bullets">
+                <li>Managed <strong>3,700+ accounts</strong> across multi-state territory; exceeded quota for <strong>8 consecutive years</strong>; built 1,200+ accounts from cold</li>
+                <li>Maintained disciplined pipeline tracking, account segmentation, and executive relationship management at portfolio scale</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="r-section">
+            <div class="r-section-label">Professional Development</div>
+            <div class="r-job">
+              <div class="r-job-header">
+                <div><span class="r-role">AI Prompt Engineering &amp; Systems</span> <span class="r-company">&mdash; Self-directed &middot; 40,000+ Prompts</span></div>
+                <span class="r-date">2021 &ndash; Present</span>
+              </div>
+              <div class="r-bullets">Process automation, pipeline intelligence, and BD tooling using AI platforms.</div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="r-sidebar">
+
+          <div class="r-section">
+            <div class="r-section-label">Core Skills</div>
+            <div class="r-skill"><div class="r-skill-name">Business Development Strategy</div><div class="r-skill-bar"><div class="r-skill-fill" style="width:92%"></div></div></div>
+            <div class="r-skill"><div class="r-skill-name">Pipeline &amp; Forecast Management</div><div class="r-skill-bar"><div class="r-skill-fill" style="width:90%"></div></div></div>
+            <div class="r-skill"><div class="r-skill-name">Long-Cycle BD Management</div><div class="r-skill-bar"><div class="r-skill-fill" style="width:90%"></div></div></div>
+            <div class="r-skill"><div class="r-skill-name">Strategic Account Planning</div><div class="r-skill-bar"><div class="r-skill-fill" style="width:88%"></div></div></div>
+            <div class="r-skill"><div class="r-skill-name">Executive Relationship Building</div><div class="r-skill-bar"><div class="r-skill-fill" style="width:92%"></div></div></div>
+            <div class="r-skill"><div class="r-skill-name">Infrastructure / Technical Solutions</div><div class="r-skill-bar"><div class="r-skill-fill" style="width:85%"></div></div></div>
+            <div class="r-skill"><div class="r-skill-name">Cross-Functional Collaboration</div><div class="r-skill-bar"><div class="r-skill-fill" style="width:88%"></div></div></div>
+            <div class="r-skill"><div class="r-skill-name">ROI Proposals &amp; Justification</div><div class="r-skill-bar"><div class="r-skill-fill" style="width:88%"></div></div></div>
+          </div>
+
+          <div class="r-section">
+            <div class="r-section-label">Tools &amp; Platforms</div>
+            <span class="r-tag">Salesforce</span>
+            <span class="r-tag">HubSpot</span>
+            <span class="r-tag">Apollo.io</span>
+            <span class="r-tag">LinkedIn Sales Nav</span>
+            <span class="r-tag">ZoomInfo</span>
+            <span class="r-tag">Microsoft Office</span>
+            <span class="r-tag">OpenAI API</span>
+            <span class="r-tag">Google Analytics</span>
+          </div>
+
+          <div class="r-section">
+            <div class="r-section-label">Key Numbers</div>
+            <div class="r-nums">
+              $6M+ pipeline built from zero<br/>
+              3,700+ accounts managed<br/>
+              1,200+ accounts from cold<br/>
+              1,000+ new customers (Wicks)<br/>
+              8 yrs quota streak<br/>
+              20,000+ contacts managed<br/>
+              15+ years industrial B2B
+            </div>
+          </div>
+
+          <div class="r-section">
+            <div class="r-section-label">Availability</div>
+            <div class="r-nums">
+              Greater St. Louis, MO<br/>
+              Remote &mdash; Ready<br/>
+              <span class="r-avail">Immediately Available</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="doc doc-cover">
+    <div class="doc-hd">
+      <div class="doc-num">02</div>
+      <div>
+        <div class="doc-type">Cover Letter</div>
+        <div class="doc-title">Business Development Manager, Power — Burns &amp; McDonnell</div>
+      </div>
+    </div>
+
+    <div class="doc-bd">
+      <div class="l-from-row">
+        <div>
+          <div class="l-from-name">Tony Beal</div>
+          <div class="l-from-title">Business Development · Long-Cycle Technical &amp; Infrastructure</div>
+        </div>
+        <div class="l-from-contact">
+          <a href="mailto:tbeal@tonybeal.net">tbeal@tonybeal.net</a><br/>
+          <a href="mailto:tonybeal40@gmail.com">tonybeal40@gmail.com</a><br/>
+          <a href="https://tonybeal.net">tonybeal.net</a><br/>
+          (636) 699-0884<br/>
+          Greater St. Louis, MO
+        </div>
+      </div>
+
+      <div class="l-date">March 2026</div>
+
+      <div class="l-to">
+        Hiring Manager &mdash; Business Development Manager, Power — Burns &amp; McDonnell<br/>
+        <strong>Burns &amp; McDonnell</strong> &nbsp;|&nbsp; Remote / Territory-Based
+      </div>
+
+      <div class="l-sal">Dear Hiring Manager,</div>
+
+      <div class="l-body">
+        <p>Long-cycle, relationship-based BD in technical environments is my specialty. I’m a Business Development professional with 15+ years managing complex, extended-timeline commercial relationships in industrial and infrastructure sectors. The mechanics of large-scale BD — stakeholder mapping, multi-touch relationship development, coordinating with delivery teams, sustaining trust over months-long buying cycles — are not foreign concepts to me. They’re the foundation of how I’ve generated revenue throughout my career.</p>
+
+        <div class="l-pull">I’ve navigated multi-stakeholder buying processes, built executive-level trust over extended timelines, and coordinated with technical and internal delivery teams to convert relationships into contracts. At ProForm Manufacturing, I built a <strong>$6M+ pipeline from a cold start</strong> — which required exactly those skills: persistent executive engagement, proposal development aligned to complex operational outcomes, and the ability to keep opportunities alive and advancing over long sales cycles. I also implemented the CRM and pipeline infrastructure that gave visibility into where every long-cycle deal stood at any moment. The patience and discipline that large BD requires isn’t something I’ve had to develop — it’s how I naturally operate.</div>
+
+        <p>What I’d bring to Burns &amp; McDonnell is disciplined long-cycle pipeline management, executive relationship development that compounds over time, and the persistence that power infrastructure BD requires. I understand that in technical project environments, the BD function is relationship stewardship as much as sales execution — and I’m built for that. I’m also skilled at coordinating internally with technical teams to ensure what I’m promising is deliverable, and that what we’re delivering matches what I’ve positioned.</p>
+
+        <p>My full portfolio is at <a href="https://tonybeal.net">tonybeal.net</a>. I welcome a direct conversation about how my background maps to this opportunity.</p>
+      </div>
+
+      <div class="l-close">
+        Respectfully,<br/>
+        <div class="l-sig">Tony Beal</div>
+        tbeal@tonybeal.net &nbsp;&bull;&nbsp; tonybeal40@gmail.com &nbsp;&bull;&nbsp; (636) 699-0884 &nbsp;&bull;&nbsp; tonybeal.net
+      </div>
+    </div>
+
+    <div class="l-footer">
+      <span>Confidential &mdash; Prepared for Business Development Manager, Power Role — Burns &amp; McDonnell</span>
+      <span>tonybeal.net</span>
+    </div>
+  </div>
+
+</div>
+
+<script>
+function printSection(which) {
+  document.body.classList.remove('print-resume-only','print-cover-only');
+  if (which === 'resume') document.body.classList.add('print-resume-only');
+  if (which === 'cover') document.body.classList.add('print-cover-only');
+  window.print();
+  setTimeout(function(){
+    document.body.classList.remove('print-resume-only','print-cover-only');
+  }, 1000);
+}
+</script>
+</body>
+</html>
