@@ -287,21 +287,29 @@ html,body{background:#f5f4f1;font-family:'Inter',sans-serif;color:#1a1a1a;font-s
   body.print-cl #sec-resume,
   body.print-cl #sec-bio,
   body.print-cl #sec-pitch,
-  body.print-cl #sec-comp{display:none!important}
+  body.print-cl #sec-comp,
+  body.print-cl #sec-qa{display:none!important}
   body.print-cl #sec-cl{page-break-before:avoid!important;break-before:avoid!important}
   body.print-resume .cover,
   body.print-resume #sec-cl,
   body.print-resume #sec-bio,
   body.print-resume #sec-pitch,
-  body.print-resume #sec-comp{display:none!important}
+  body.print-resume #sec-comp,
+  body.print-resume #sec-qa{display:none!important}
   body.print-resume #sec-resume{page-break-before:avoid!important;break-before:avoid!important}
   body.print-business .cover,
   body.print-business #sec-cl,
-  body.print-business #sec-resume{display:none!important}
+  body.print-business #sec-resume,
+  body.print-business #sec-qa{display:none!important}
   body.print-business #sec-bio{page-break-before:avoid!important;break-before:avoid!important}
-}
-</style>
-</head>
+  body.print-qa .cover,
+  body.print-qa #sec-cl,
+  body.print-qa #sec-resume,
+  body.print-qa #sec-bio,
+  body.print-qa #sec-pitch,
+  body.print-qa #sec-comp{display:none!important}
+  body.print-qa #sec-qa{page-break-before:avoid!important;break-before:avoid!important}
+
 <body>
 
 <!-- ── SAVE BAR ── -->
@@ -315,6 +323,7 @@ function printOnly(cls){
 <div class="save-bar">
   <span class="save-bar-label">Confidential &nbsp;&bull;&nbsp; Mfg Engineering &amp; Supplier Development Manager</span>
   <a class="btn-save" href="screening-qa.html" style="text-decoration:none">📋 Screening Q&amp;A</a>
+  <button class="btn-save" onclick="printOnly('print-qa')">&#8595; Q&amp;A Only</button>
   <button class="btn-save" onclick="printOnly('print-cl')">&#8595; Cover Letter</button>
   <button class="btn-save" onclick="printOnly('print-resume')">&#8595; Resume Only</button>
   <button class="btn-save" onclick="printOnly('print-business')">&#8595; Business Doc</button>
@@ -693,3 +702,40 @@ function printOnly(cls){
   </div>
 </div>
 
+<!-- ══ 06 SCREENING Q&A ═══════════════════════════ -->
+<div class="doc" id="sec-qa">
+  <div class="doc-hd">
+    <div class="doc-num">06</div>
+    <div>
+      <div class="doc-type">Document Six</div>
+      <div class="doc-title">CEO Screening Questions &mdash; Responses</div>
+    </div>
+  </div>
+  <div class="doc-bd" style="display:flex;flex-direction:column;gap:32px;padding:40px 48px">
+
+    <div style="border-left:4px solid #0d1b2a;padding-left:20px">
+      <div style="font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#7ba7c2;margin-bottom:8px">Question 1</div>
+      <div style="font-size:13px;font-weight:600;color:#0d1b2a;margin-bottom:14px;line-height:1.5">Can you share specific examples from your time at ProForm or Natoli where you worked directly or closely with die casting, sand casting, investment casting, CNC machining, or sheet metal fabrication? This could include hands-on work or coordination with suppliers or NPI processes.</div>
+      <div style="font-size:12.5px;color:#2a2a2a;line-height:1.8">At ProForm, my role was on the commercial and coordination side rather than hands-on production. I worked directly with customers and internal teams on projects involving CNC machining and fabricated components, aligning customer requirements with shop capabilities, supporting quoting, and moving NPI through early stages including supplier coordination and first article submissions. At Natoli, I managed technical account relationships where customer requirements had to be translated into production action, which meant staying close to both the customer and the engineering side to keep things moving.</div>
+    </div>
+
+    <div style="border-left:4px solid #0d1b2a;padding-left:20px">
+      <div style="font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#7ba7c2;margin-bottom:8px">Question 2</div>
+      <div style="font-size:13px;font-weight:600;color:#0d1b2a;margin-bottom:14px;line-height:1.5">Can you describe your experience working with overseas or Asian suppliers? How have you handled things like evening calls, corrective actions, or coordinating across time zones?</div>
+      <div style="font-size:12.5px;color:#2a2a2a;line-height:1.8">I didn't directly own overseas supplier relationships, but I coordinated across stakeholders and time constraints regularly. I'm comfortable with off-hours communication and keeping corrective actions moving when you can't just walk to someone's desk. Staying organized, communicating clearly in writing, and not letting things stall while waiting on a time zone gap — that's the work, and I'm comfortable operating that way.</div>
+    </div>
+
+    <div style="border-left:4px solid #0d1b2a;padding-left:20px">
+      <div style="font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#7ba7c2;margin-bottom:8px">Question 3</div>
+      <div style="font-size:13px;font-weight:600;color:#0d1b2a;margin-bottom:14px;line-height:1.5">Can you provide examples of times you identified upsell opportunities or expanded existing accounts? How have you managed technical conversations with customers in those situations?</div>
+      <div style="font-size:12.5px;color:#2a2a2a;line-height:1.8">At both ProForm and Natoli I grew accounts by staying close to the customer and asking the right questions. At ProForm, a big part of how the program scaled was identifying adjacent needs within existing accounts and positioning additional capabilities before the customer went looking elsewhere. I approach technical conversations by listening first, clarifying requirements, then aligning those needs with what we can actually deliver.</div>
+    </div>
+
+    <div style="border-left:4px solid #0d1b2a;padding-left:20px">
+      <div style="font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#7ba7c2;margin-bottom:8px">Question 4</div>
+      <div style="font-size:13px;font-weight:600;color:#0d1b2a;margin-bottom:14px;line-height:1.5">Can you tell me about your experience working in a very small, high-growth, or nimble environment? What was your role on the team, and how did you adapt to wearing multiple hats?</div>
+      <div style="font-size:12.5px;color:#2a2a2a;line-height:1.8">Most of my career has been in small, fast-moving environments. At ProForm I built the program infrastructure from scratch — tracking systems, quality documentation, account management — while also owning customer relationships and driving new business. There was no playbook. I figured it out as we went and kept execution moving. That environment is where I operate best: less structure, more ownership, results over process.</div>
+    </div>
+
+  </div>
+</div>
