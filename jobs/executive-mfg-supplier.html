@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="utf-8"/>
@@ -214,6 +214,13 @@ html,body{background:#f5f4f1;font-family:'Inter',sans-serif;color:#1a1a1a;font-s
   .r-nums{font-size:13px;line-height:1.9}
 }
 
+/* ── Q&A SECTION ── */
+.qa-body{display:flex;flex-direction:column;gap:28px;padding:36px 48px}
+.qa-block{border-left:4px solid #0d1b2a;padding-left:20px}
+.qa-label{font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#7ba7c2;margin-bottom:8px}
+.qa-q{font-size:13px;font-weight:600;color:#0d1b2a;margin-bottom:12px;line-height:1.5}
+.qa-a{font-size:11.5px;color:#2a2a2a;line-height:1.75}
+
 /* ══════════════════════════════════════════
    PRINT
 ══════════════════════════════════════════ */
@@ -282,6 +289,12 @@ html,body{background:#f5f4f1;font-family:'Inter',sans-serif;color:#1a1a1a;font-s
   .doc-hd,.r-section-label,.bp-title{page-break-after:avoid!important;break-after:avoid!important}
   p{orphans:3;widows:3}
   .cover-footer{display:none}
+  .qa-body{gap:10px!important;padding:12px 28px!important}
+  .qa-block{padding-left:12px!important;border-left-width:3px!important;page-break-inside:avoid!important;break-inside:avoid!important}
+  .qa-label{font-size:7px!important;margin-bottom:3px!important}
+  .qa-q{font-size:8px!important;margin-bottom:5px!important;line-height:1.35!important}
+  .qa-a{font-size:7.5px!important;line-height:1.4!important}
+  #sec-qa{max-height:none!important;overflow:visible!important}
   /* ── SELECTIVE PRINT ── */
   body.print-cl .cover,
   body.print-cl #sec-resume,
@@ -382,6 +395,7 @@ function printOnly(cls){
         <div class="toc-item"><div class="toc-n">3</div><div class="toc-text">Executive Bio</div></div>
         <div class="toc-item"><div class="toc-n">4</div><div class="toc-text">Elevator Pitch</div></div>
         <div class="toc-item"><div class="toc-n">5</div><div class="toc-text">Compensation Letter</div></div>
+        <div class="toc-item"><div class="toc-n">6</div><div class="toc-text">CEO Screening Q&amp;A</div></div>
       </div>
     </div>
     <div class="cover-footer">Confidential &mdash; Prepared for Confidential Client &nbsp;&bull;&nbsp; tonybeal.net</div>
@@ -713,30 +727,30 @@ function printOnly(cls){
       <div class="doc-title">CEO Screening Questions &mdash; Responses</div>
     </div>
   </div>
-  <div class="doc-bd" style="display:flex;flex-direction:column;gap:32px;padding:40px 48px">
+  <div class="doc-bd qa-body">
 
-    <div style="border-left:4px solid #0d1b2a;padding-left:20px">
-      <div style="font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#7ba7c2;margin-bottom:8px">Question 1</div>
-      <div style="font-size:13px;font-weight:600;color:#0d1b2a;margin-bottom:14px;line-height:1.5">Can you share specific examples from your time at ProForm or Natoli where you worked directly or closely with die casting, sand casting, investment casting, CNC machining, or sheet metal fabrication? This could include hands-on work or coordination with suppliers or NPI processes.</div>
-      <div style="font-size:12.5px;color:#2a2a2a;line-height:1.8">At ProForm, my role was on the commercial and coordination side. I worked directly with customers and internal teams on projects involving CNC machining and fabricated components — aligning requirements with shop capabilities, supporting quoting, and moving NPI through early stages including supplier coordination and first article submissions. Accounts included companies like Forest Concepts and Northrop Grumman. At Natoli, I managed technical account relationships where customer requirements had to be translated into production action. That meant coordinating between procurement and engineering contacts at companies like Duracell, Pfizer, Eli Lilly, Hims &amp; Hers, and BASF — making sure both sides stayed aligned and moving.</div>
+    <div class="qa-block">
+      <div class="qa-label">Question 1</div>
+      <div class="qa-q">Can you share specific examples from your time at ProForm or Natoli where you worked directly or closely with die casting, sand casting, investment casting, CNC machining, or sheet metal fabrication? This could include hands-on work or coordination with suppliers or NPI processes.</div>
+      <div class="qa-a">At ProForm, I was on the commercial and coordination side of NPI programs involving CNC machined components and fabricated parts. My job was to align customer specifications with shop capabilities, support quoting, coordinate first article submissions, and keep programs on schedule. Accounts included Forest Concepts and Northrop Grumman. I was not on the shop floor, but I had to understand process constraints well enough to hold credible conversations with engineers on both sides and catch gaps before they became delivery problems.<br/><br/>At Natoli, the product itself was precision CNC-machined tooling: dies, punches, tips, and heads manufactured to tight tolerances for powder compaction. Managing technical accounts at companies like Duracell, Pfizer, Eli Lilly, Hims &amp; Hers, and BASF required fluency in that language. Engineering and procurement contacts needed someone who understood precision manufacturing requirements and could translate between their specification and what production could actually deliver. I also built a catalog audit system that analyzed Natoli&rsquo;s 8th Edition product catalog, checking spelling, terminology, specification formatting, and index accuracy across hundreds of part families. That required learning the full machined tooling taxonomy cold.</div>
     </div>
 
-    <div style="border-left:4px solid #0d1b2a;padding-left:20px">
-      <div style="font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#7ba7c2;margin-bottom:8px">Question 2</div>
-      <div style="font-size:13px;font-weight:600;color:#0d1b2a;margin-bottom:14px;line-height:1.5">Can you describe your experience working with overseas or Asian suppliers? How have you handled things like evening calls, corrective actions, or coordinating across time zones?</div>
-      <div style="font-size:12.5px;color:#2a2a2a;line-height:1.8">At Natoli I had regular communication with global accounts including Haleon, Catalent, and Lonza Group, as well as accounts across the Philippines (Unilab), India (Sanofi, Sun Pharma), Australia (Mayne Pharma), Switzerland (Tillotts Pharma AG, Lonza), Sweden (Canopus Medical), and Canada (University of Alberta). I managed media scorecards for trade shows worldwide and coordinated outreach across time zones. I didn't own deep supplier corrective action programs, but I kept international accounts moving — off-hours communication, written follow-through, and making sure nothing stalled waiting on a time zone gap.</div>
+    <div class="qa-block">
+      <div class="qa-label">Question 2</div>
+      <div class="qa-q">Can you describe your experience working with overseas or Asian suppliers? How have you handled things like evening calls, corrective actions, or coordinating across time zones?</div>
+      <div class="qa-a">At Natoli I maintained regular communication with active accounts across multiple continents as part of standard operations: Haleon, Catalent, and Lonza Group as global accounts, plus Unilab in the Philippines, Sanofi and Sun Pharma in India, Mayne Pharma in Australia, Tillotts Pharma AG and Lonza in Switzerland, Canopus Medical in Sweden, and University of Alberta in Canada. I managed media scorecards for global trade shows and coordinated account activity across time zones as a routine matter, not an exception.<br/><br/>My approach was simple: don&rsquo;t let time zones become an excuse for delay. I defaulted to written communication with clear action items and deadlines, followed through proactively, and was available for off-hours calls when a program needed it. I also built the CRM and account intelligence infrastructure that tracked these accounts: a full custom CRM system with Apollo.io integration, company enrichment, and status tracking across 20,000+ contacts. I did not own formal supplier corrective action programs at the quality engineer level and I want to be straight about that. What I did own was keeping international programs moving with no gaps on my side. In this role I would be building those formal corrective action and communication protocols from scratch, which is exactly the kind of system-building I do.</div>
     </div>
 
-    <div style="border-left:4px solid #0d1b2a;padding-left:20px">
-      <div style="font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#7ba7c2;margin-bottom:8px">Question 3</div>
-      <div style="font-size:13px;font-weight:600;color:#0d1b2a;margin-bottom:14px;line-height:1.5">Can you provide examples of times you identified upsell opportunities or expanded existing accounts? How have you managed technical conversations with customers in those situations?</div>
-      <div style="font-size:12.5px;color:#2a2a2a;line-height:1.8">At both ProForm and Natoli I grew accounts by staying close to the customer and asking the right questions. At ProForm, the program scaled by identifying adjacent needs within existing accounts — companies like Forest Concepts and Northrop Grumman — and positioning additional capabilities before they went looking elsewhere. At Natoli, I built the communication bridge between engineering and procurement contacts at accounts like Duracell, Pfizer, Eli Lilly, Hims &amp; Hers, and BASF. I approach technical conversations by listening first, clarifying requirements, then aligning those needs with what we can actually deliver.</div>
+    <div class="qa-block">
+      <div class="qa-label">Question 3</div>
+      <div class="qa-q">Can you provide examples of times you identified upsell opportunities or expanded existing accounts? How have you managed technical conversations with customers in those situations?</div>
+      <div class="qa-a">At ProForm, the $6M+ program itself is the upsell story. It grew by staying close to existing accounts and identifying adjacent needs before they went to a competitor: additional component families, new product introductions, adjacent processes. I was always asking what was coming next, not just managing what was already in flight. At Natoli, my technical conversations with accounts like Duracell, Pfizer, Eli Lilly, Hims &amp; Hers, and BASF were built on understanding both sides: what the engineering or procurement contact was actually trying to solve, and what Natoli could deliver. I listened first, clarified requirements in specific terms, then matched our capabilities to their actual need rather than just responding to the stated ask.<br/><br/>I also built the tools to systematize this at scale: a Fortune 50 Lead Engine, Company Enrichment pipeline, Lapsed Customer Enrichment system, and a CRM Governor layer that scored pipeline health and flagged account signals across the full database. The approach was the same whether I was working an individual account conversation or building the system that runs it across thousands of contacts: get close to the customer, understand the need before they formalize it, and be positioned before the RFQ.</div>
     </div>
 
-    <div style="border-left:4px solid #0d1b2a;padding-left:20px">
-      <div style="font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#7ba7c2;margin-bottom:8px">Question 4</div>
-      <div style="font-size:13px;font-weight:600;color:#0d1b2a;margin-bottom:14px;line-height:1.5">Can you tell me about your experience working in a very small, high-growth, or nimble environment? What was your role on the team, and how did you adapt to wearing multiple hats?</div>
-      <div style="font-size:12.5px;color:#2a2a2a;line-height:1.8">Most of my career has been in small, fast-moving environments. At ProForm I built the program infrastructure from scratch — tracking systems, quality documentation, account management — while also owning customer relationships and driving new business. There was no playbook. I figured it out as we went and kept execution moving. That environment is where I operate best: less structure, more ownership, results over process.</div>
+    <div class="qa-block">
+      <div class="qa-label">Question 4</div>
+      <div class="qa-q">Can you tell me about your experience working in a very small, high-growth, or nimble environment? What was your role on the team, and how did you adapt to wearing multiple hats?</div>
+      <div class="qa-a">My entire career has been in environments where the structure did not exist yet and someone had to build it while keeping the business moving. At ProForm I built the $6M+ program from zero: account management, quality documentation, NPI tracking, supplier coordination. No playbook. I wrote it as we went.<br/><br/>At Natoli I did the same thing at a different scale and added a full AI layer on top. The core work was still manufacturing operations: managing technical accounts, coordinating across production and engineering, keeping programs moving. But because there was no support team, I also built the infrastructure to make it scale. I built a full-stack AI operations platform from scratch using Flask, Node.js, PostgreSQL, and integrations with OpenAI, Claude, and Gemini. It included a custom CRM with Apollo.io integration and 25+ validated industry targets, a company intelligence scanner and scoring engine for Natoli&rsquo;s target markets, a Fortune 50 Lead Engine, a Lapsed Customer Enrichment pipeline, a Catalog Audit Tool that analyzed Natoli&rsquo;s entire 8th Edition tooling catalog, and a GMP Validation Document Generator for IQ/OQ/PQ protocols. All of it was built to support manufacturing sales and account execution, not as a technology project. It got built because the job required it and no one else was going to do it.<br/><br/>That is what wearing multiple hats looks like in a high-growth environment: you own the outcome, you build what it takes to get there, and you keep execution moving the entire time.</div>
     </div>
 
   </div>
