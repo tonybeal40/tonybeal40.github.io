@@ -1,0 +1,68 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>GTM CRM Workspace | MeetMeg Strategy</title>
+<meta name="description" content="Working GTM CRM workspace for MeetMeg: ICP tracking, pipeline stages, and KPI-driven execution." />
+<link rel="canonical" href="https://tonybeal.net/meetmeg-growth-partner/crm-workspace.html" />
+<link rel="stylesheet" href="/meetmeg-growth-partner/assets/site.css" />
+<style>
+.controls{display:grid;grid-template-columns:2fr 1fr 1fr 1fr 1fr auto;gap:8px}
+.controls input,.controls select,.controls button{padding:9px 10px;border-radius:10px;border:1px solid var(--line);background:#0b1430;color:var(--text)}
+.controls button{background:linear-gradient(135deg,var(--accent),var(--accent2));color:#051523;border:none;font-weight:700;cursor:pointer}
+.board{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.lane{background:#0f1730;border:1px solid var(--line);border-radius:12px;min-height:220px;padding:10px}
+.lane h3{margin:0 0 8px;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:#c8d8ff}
+.item{background:#172446;border:1px solid #2b3f74;border-radius:10px;padding:8px;margin-bottom:8px}
+.item small{display:block;color:var(--muted)}
+.pill{display:inline-block;padding:3px 8px;border-radius:999px;border:1px solid var(--line);font-size:11px}
+.p-high{color:#ffd89a;border-color:#7a5420;background:rgba(245,158,11,.12)}
+.p-med{color:#b9d4ff;border-color:#2e4c79;background:rgba(73,184,255,.12)}
+.p-low{color:#b9ffd7;border-color:#2e6b4d;background:rgba(47,226,143,.12)}
+@media (max-width:980px){.board{grid-template-columns:1fr 1fr}.controls{grid-template-columns:1fr 1fr}.controls button{grid-column:1/-1}}
+</style>
+</head><body>
+<div class="nav"><div class="wrap row"><div class="brand">Tony Beal <span>x</span> MeetMeg GTM Strategy</div><nav class="navlinks"><a href="/meetmeg-growth-partner/">Overview</a><a href="/meetmeg-growth-partner/strategy.html">Positioning</a><a href="/meetmeg-growth-partner/execution.html">90-Day Plan</a><a href="/meetmeg-growth-partner/outreach.html">Channel Plays</a><a href="/meetmeg-growth-partner/results.html">KPI Model</a><a href="/meetmeg-growth-partner/offer.html">Workstreams</a><a href="/meetmeg-growth-partner/proof.html">Market Case</a><a href="/meetmeg-growth-partner/deck.html">Deck</a><a href="/meetmeg-growth-partner/crm-workspace.html">GTM CRM</a></nav></div></div>
+<main class="wrap" style="padding-top:34px">
+<section><h1>GTM CRM Workspace</h1><p class="sub">Use this directly in your strategy site to track ICP conversations and stage movement.</p></section>
+<section class="grid">
+<div class="card"><div class="label">Prospects</div><div class="value" id="kProspects">0</div></div>
+<div class="card"><div class="label">Conversations</div><div class="value" id="kConvos">0</div></div>
+<div class="card"><div class="label">Pain Identified</div><div class="value" id="kPain">0</div></div>
+<div class="card"><div class="label">Demos</div><div class="value" id="kDemos">0</div></div>
+</section>
+<section class="card">
+<div class="label" style="margin-bottom:8px">Add Lead</div>
+<div class="controls">
+<input id="name" placeholder="Name / Company" />
+<select id="icp"><option>Agency / Consultant</option><option>B2B Founder (1-50)</option><option>Fractional Executive</option></select>
+<select id="stage"><option>Prospect Identified</option><option>Connected</option><option>Conversation Started</option><option>Pain Identified</option><option>Interested</option><option>Demo</option><option>Activated</option></select>
+<select id="pain"><option>Inconsistent posting</option><option>No content strategy</option><option>No inbound</option><option>No time</option></select>
+<select id="prio"><option>High</option><option selected>Medium</option><option>Low</option></select>
+<button onclick="addLead()">Add</button>
+</div>
+</section>
+<section><div class="board" id="board"></div></section>
+<section class="card"><table><thead><tr><th>Name</th><th>ICP</th><th>Stage</th><th>Pain</th><th>Priority</th><th>Updated</th><th></th></tr></thead><tbody id="rows"></tbody></table></section>
+</main>
+<footer class="footer wrap">GTM Strategy Draft · Tony Beal · <a href="https://tonybeal.net/">tonybeal.net</a></footer>
+<script>
+const STAGES=["Prospect Identified","Connected","Conversation Started","Pain Identified","Interested","Demo","Activated"];
+const KEY='meetmeg_gtm_site_crm_v1';
+let leads=[];
+const v=id=>document.getElementById(id).value;
+function load(){try{leads=JSON.parse(localStorage.getItem(KEY)||'[]')}catch(e){leads=[]}render()}
+function save(){localStorage.setItem(KEY,JSON.stringify(leads));render()}
+function addLead(){const name=v('name').trim(); if(!name)return; leads.unshift({id:Date.now(),name,icp:v('icp'),stage:v('stage'),pain:v('pain'),prio:v('prio'),updated:new Date().toISOString()}); document.getElementById('name').value=''; save();}
+function move(id,dir){const i=leads.findIndex(x=>x.id===id); if(i<0)return; const s=STAGES.indexOf(leads[i].stage); const n=Math.max(0,Math.min(STAGES.length-1,s+dir)); leads[i].stage=STAGES[n]; leads[i].updated=new Date().toISOString(); save();}
+function delLead(id){leads=leads.filter(x=>x.id!==id); save();}
+function pill(p){const c=p==='High'?'p-high':(p==='Medium'?'p-med':'p-low'); return `<span class="pill ${c}">${p}</span>`}
+function render(){
+  document.getElementById('kProspects').textContent=leads.length;
+  document.getElementById('kConvos').textContent=leads.filter(x=>['Conversation Started','Pain Identified','Interested','Demo','Activated'].includes(x.stage)).length;
+  document.getElementById('kPain').textContent=leads.filter(x=>x.stage==='Pain Identified').length;
+  document.getElementById('kDemos').textContent=leads.filter(x=>x.stage==='Demo').length;
+  const board=document.getElementById('board');
+  board.innerHTML=STAGES.slice(0,4).map(st=>`<div class="lane"><h3>${st}</h3>${leads.filter(l=>l.stage===st).map(l=>`<div class='item'><div>${l.name}</div><small>${l.icp} · ${l.pain}</small><small>${pill(l.prio)} <button onclick='move(${l.id},1)' style='margin-left:6px;padding:2px 6px'>→</button></small></div>`).join('')}</div>`).join('');
+  document.getElementById('rows').innerHTML=leads.map(l=>`<tr><td>${l.name}</td><td>${l.icp}</td><td>${l.stage}</td><td>${l.pain}</td><td>${pill(l.prio)}</td><td>${new Date(l.updated).toLocaleDateString()}</td><td><button onclick='move(${l.id},-1)' style='padding:4px 8px;margin-right:4px'>←</button><button onclick='move(${l.id},1)' style='padding:4px 8px;margin-right:4px'>→</button><button onclick='delLead(${l.id})' style='padding:4px 8px;background:#7f1d1d;color:#fff;border:none;border-radius:8px'>x</button></td></tr>`).join('');
+}
+load();
+</script>
+</body></html>
