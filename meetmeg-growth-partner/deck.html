@@ -1,16 +1,152 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Executive GTM Deck | MeetMeg</title><meta name="description" content="Executive deck mode for MeetMeg go-to-market strategy presentation." />
-<link rel="canonical" href="https://tonybeal.net/meetmeg-growth-partner/deck.html" /><link rel="stylesheet" href="/meetmeg-growth-partner/assets/site.css" />
-<style>.slide{min-height:78vh;border:1px solid var(--line);border-radius:16px;padding:26px;background:linear-gradient(180deg,#132247,#0e1934);margin:16px 0}.slide h2{margin-top:0}@media print{.nav,.footer{display:none}.slide{page-break-inside:avoid;min-height:auto}}</style>
-</head><body>
-  <div class="nav"><div class="wrap row"><div class="brand">Tony Beal <span>x</span> MeetMeg GTM Strategy</div><nav class="navlinks"><a href="/meetmeg-growth-partner/">Overview</a><a href="/meetmeg-growth-partner/strategy.html">Positioning</a><a href="/meetmeg-growth-partner/execution.html">90-Day Plan</a><a href="/meetmeg-growth-partner/outreach.html">Channel Plays</a><a href="/meetmeg-growth-partner/results.html">KPI Model</a><a href="/meetmeg-growth-partner/offer.html">Workstreams</a><a href="/meetmeg-growth-partner/proof.html">Market Case</a><a href="/meetmeg-growth-partner/deck.html">Deck</a><a href="/meetmeg-growth-partner/crm-workspace.html">GTM CRM</a><a href="/meetmeg-growth-partner/meeting.html">Meeting View</a><a href="/meetmeg-growth-partner/tonyos-crm.html">TonyOS CRM</a></nav></div></div>
-<main class="wrap" style="padding-top:24px">
-<div class="slide"><h2>1. Market Problem</h2><p class="lead">SMEs know consistency matters, but execution breaks down across ideation, writing, and cadence.</p></div>
-<div class="slide"><h2>2. Positioning Strategy</h2><p class="lead">Position MeetMeg as the consistency operating layer for founder-led growth.</p></div>
-<div class="slide"><h2>3. ICP Strategy</h2><p class="lead">Primary: founders/owners 1-50 employees with active but inconsistent presence.</p></div>
-<div class="slide"><h2>4. Channel Motion</h2><p class="lead">LinkedIn-led narrative distribution + Apollo-assisted targeting + conversation workflows.</p></div>
-<div class="slide"><h2>5. 90-Day Plan</h2><p class="lead">Foundation, activation, and optimization phases with weekly KPI loop.</p></div>
-<div class="slide"><h2>6. KPI Dashboard</h2><p class="lead">Track impressions → engagement → conversations → demos → activations.</p></div>
-</main>
-  <footer class="footer wrap">GTM Strategy Draft · Tony Beal · <a href="https://tonybeal.net/">tonybeal.net</a></footer>
-</body></html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Executive GTM Deck | MeetMeg</title>
+  <meta name="description" content="Executive deck for MeetMeg go-to-market strategy." />
+  <link rel="canonical" href="https://tonybeal.net/meetmeg-growth-partner/deck.html" />
+  <style>
+    :root{--bg:#070d1c;--bg2:#0f1d3f;--card:#101a34;--line:#283a68;--text:#edf2ff;--muted:#9fb1da;--accent:#2fe28f;--accent2:#52b8ff;--max:1160px}
+    *{box-sizing:border-box}html,body{margin:0;padding:0}
+    body{font-family:"Avenir Next","Segoe UI",Arial,sans-serif;background:radial-gradient(circle at 15% 0%,#203d7a 0%,var(--bg) 50%),linear-gradient(180deg,var(--bg),var(--bg2));color:var(--text);line-height:1.5}
+    .wrap{width:min(var(--max),92vw);margin:0 auto}
+    .nav{position:sticky;top:0;z-index:30;border-bottom:1px solid #1f2f57;background:rgba(7,13,28,.82);backdrop-filter:blur(9px)}
+    .nav .row{display:flex;align-items:center;justify-content:space-between;padding:12px 0;gap:10px}
+    .brand{font-weight:800;letter-spacing:.03em}.brand span{color:var(--accent)}
+    .links{display:flex;gap:12px;flex-wrap:wrap}.links a{color:var(--text);text-decoration:none;font-size:13px;opacity:.88}
+
+    .hero{padding:32px 0 18px}
+    .eyebrow{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);font-weight:700}
+    h1{margin:10px 0 8px;font-size:clamp(32px,5vw,58px);line-height:1.04;letter-spacing:-.02em}
+    .sub{margin:0;color:var(--muted);font-size:18px;max-width:860px}
+
+    .progress{display:grid;grid-template-columns:repeat(8,1fr);gap:8px;margin:22px 0 10px}
+    .progress div{height:6px;border-radius:99px;background:#1e2d54;border:1px solid #2a3a68}
+    .progress div.active{background:linear-gradient(90deg,var(--accent),var(--accent2));border-color:transparent}
+
+    .slide{min-height:74vh;margin:14px 0 18px;border:1px solid var(--line);border-radius:18px;background:linear-gradient(180deg,#142650,#0f1b39);padding:28px 30px;display:grid;grid-template-rows:auto 1fr auto;box-shadow:0 18px 50px rgba(0,0,0,.45)}
+    .slide-head{display:flex;justify-content:space-between;align-items:flex-start;gap:12px}
+    .num{display:inline-flex;align-items:center;justify-content:center;width:42px;height:42px;border-radius:999px;background:linear-gradient(135deg,var(--accent),var(--accent2));color:#052217;font-weight:900}
+    .title{font-size:clamp(27px,3.8vw,44px);margin:0;line-height:1.1;letter-spacing:-.01em}
+    .tag{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.08em}
+
+    .content{margin-top:18px;display:grid;grid-template-columns:1.1fr .9fr;gap:18px}
+    .panel{border:1px solid var(--line);border-radius:14px;padding:14px;background:#0e1832}
+    .panel h3{margin:0 0 8px;font-size:16px;text-transform:uppercase;letter-spacing:.07em;color:#cde0ff}
+    .panel p{margin:0;color:var(--muted)}
+    .list{margin:0;padding-left:18px;color:#d9e5ff}.list li{margin:7px 0}
+    .quote{border-left:3px solid var(--accent);padding:10px 12px;background:#0b1730;border-radius:10px;color:#dce8ff;margin:0}
+    .footer-note{margin-top:14px;color:var(--muted);font-size:14px}
+
+    .cta-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
+    .btn{display:inline-block;text-decoration:none;border-radius:12px;padding:10px 14px;font-weight:700}
+    .btn.primary{background:linear-gradient(135deg,var(--accent),var(--accent2));color:#052217}
+    .btn.ghost{background:#ffffff08;border:1px solid var(--line);color:var(--text)}
+
+    .deck-footer{padding:16px 0 44px;color:var(--muted);font-size:13px}
+    @media (max-width:900px){.content{grid-template-columns:1fr}.slide{padding:22px 20px;min-height:auto}}
+    @media print{.nav,.deck-footer,.cta-row,.progress{display:none}.slide{page-break-inside:avoid;min-height:auto;margin:0 0 14px;box-shadow:none}}
+  </style>
+</head>
+<body>
+  <div class="nav">
+    <div class="wrap row">
+      <div class="brand">Tony Beal <span>x</span> MeetMeg GTM Strategy</div>
+      <div class="links">
+        <a href="/meetmeg-growth-partner/">Overview</a>
+        <a href="/meetmeg-growth-partner/meeting.html">Meeting View</a>
+        <a href="/meetmeg-growth-partner/results.html">KPI Model</a>
+        <a href="/meetmeg-growth-partner/crm-workspace.html">GTM CRM</a>
+      </div>
+    </div>
+  </div>
+
+  <main class="wrap">
+    <header class="hero">
+      <div class="eyebrow">Executive Presentation</div>
+      <h1>MeetMeg Go-To-Market Deck</h1>
+      <p class="sub">A focused operator plan for positioning, distribution, activation, and scale in an early-stage market.</p>
+      <div class="progress"><div class="active"></div><div class="active"></div><div class="active"></div><div class="active"></div><div class="active"></div><div class="active"></div><div class="active"></div><div class="active"></div></div>
+    </header>
+
+    <section class="slide">
+      <div class="slide-head"><div><div class="tag">Slide 1</div><h2 class="title">Market Problem</h2></div><div class="num">1</div></div>
+      <div class="content">
+        <div class="panel"><h3>Core Issue</h3><p>The growth bottleneck is execution consistency, not idea scarcity. Buyers disappear from market attention because publishing cadence breaks.</p></div>
+        <div class="panel"><h3>Symptoms</h3><ul class="list"><li>Inconsistent posting and low recall</li><li>Weak founder visibility</li><li>Lost pipeline to louder competitors</li></ul></div>
+      </div>
+      <p class="footer-note">Implication: GTM must solve consistency operations, not just content generation.</p>
+    </section>
+
+    <section class="slide">
+      <div class="slide-head"><div><div class="tag">Slide 2</div><h2 class="title">Category Positioning</h2></div><div class="num">2</div></div>
+      <div class="content">
+        <div class="panel"><h3>Positioning Statement</h3><p class="quote">MeetMeg is the consistency engine for founder-led growth teams that cannot afford to disappear online.</p></div>
+        <div class="panel"><h3>Message Hierarchy</h3><ul class="list"><li>Primary: consistency -> authority -> pipeline</li><li>Secondary: speed and low-effort execution</li><li>Tertiary: AI support as leverage, not replacement</li></ul></div>
+      </div>
+      <p class="footer-note">Win the problem space first, then win feature comparisons.</p>
+    </section>
+
+    <section class="slide">
+      <div class="slide-head"><div><div class="tag">Slide 3</div><h2 class="title">ICP Prioritization</h2></div><div class="num">3</div></div>
+      <div class="content">
+        <div class="panel"><h3>Primary ICP</h3><ul class="list"><li>Agency owners and consultants</li><li>Already selling online services</li><li>High urgency around visibility</li></ul></div>
+        <div class="panel"><h3>Secondary ICP</h3><ul class="list"><li>B2B founders (1-50 employees)</li><li>RevOps and growth operators</li><li>Fractional executives</li></ul></div>
+      </div>
+      <p class="footer-note">Focus beats breadth in first 90 days.</p>
+    </section>
+
+    <section class="slide">
+      <div class="slide-head"><div><div class="tag">Slide 4</div><h2 class="title">Channel Strategy</h2></div><div class="num">4</div></div>
+      <div class="content">
+        <div class="panel"><h3>Primary Motion</h3><p>LinkedIn-led operator distribution with Apollo-assisted segmentation and outreach sequencing.</p></div>
+        <div class="panel"><h3>Flow</h3><ul class="list"><li>Problem-first post</li><li>Comments to conversations</li><li>Diagnostic DM flow</li><li>Demo/activation handoff</li></ul></div>
+      </div>
+      <p class="footer-note">Content is awareness; conversations are conversion.</p>
+    </section>
+
+    <section class="slide">
+      <div class="slide-head"><div><div class="tag">Slide 5</div><h2 class="title">90-Day Rollout</h2></div><div class="num">5</div></div>
+      <div class="content">
+        <div class="panel"><h3>Phase 1 (Weeks 1-2)</h3><ul class="list"><li>Message and ICP calibration</li><li>Channel standards and templates</li></ul></div>
+        <div class="panel"><h3>Phase 2/3 (Weeks 3-12)</h3><ul class="list"><li>Campaign activation and cadence</li><li>Conversion optimization and scale loop</li></ul></div>
+      </div>
+      <p class="footer-note">Weekly KPI review governs iteration.</p>
+    </section>
+
+    <section class="slide">
+      <div class="slide-head"><div><div class="tag">Slide 6</div><h2 class="title">KPI Framework</h2></div><div class="num">6</div></div>
+      <div class="content">
+        <div class="panel"><h3>Leading Indicators</h3><ul class="list"><li>Qualified conversations started</li><li>Reply rate by segment</li><li>Demo conversion rate</li></ul></div>
+        <div class="panel"><h3>Outcome Indicators</h3><ul class="list"><li>Activation rate</li><li>Time-to-value</li><li>Pipeline contribution</li></ul></div>
+      </div>
+      <p class="footer-note">Views and likes are context. Activations are the score.</p>
+    </section>
+
+    <section class="slide">
+      <div class="slide-head"><div><div class="tag">Slide 7</div><h2 class="title">Strategic Workstreams</h2></div><div class="num">7</div></div>
+      <div class="content">
+        <div class="panel"><h3>Workstreams</h3><ul class="list"><li>Positioning and narrative architecture</li><li>Channel and campaign operations</li><li>Conversation and demo systems</li><li>Measurement and optimization loop</li></ul></div>
+        <div class="panel"><h3>Execution Tools</h3><ul class="list"><li>GTM CRM workspace</li><li>KPI model</li><li>Channel scripts</li></ul></div>
+      </div>
+      <p class="footer-note">System ownership creates repeatable growth.</p>
+    </section>
+
+    <section class="slide">
+      <div class="slide-head"><div><div class="tag">Slide 8</div><h2 class="title">Decision & Next Step</h2></div><div class="num">8</div></div>
+      <div class="content">
+        <div class="panel"><h3>Decision Needed</h3><p>Approve GTM pilot scope and KPI baseline for the first 30-day cycle.</p></div>
+        <div class="panel"><h3>Immediate Actions</h3><ul class="list"><li>Finalize ICP list v1</li><li>Launch operator-led campaign cadence</li><li>Run weekly GTM review</li></ul></div>
+      </div>
+      <div class="cta-row">
+        <a class="btn primary" href="/meetmeg-growth-partner/meeting.html">Open Meeting View</a>
+        <a class="btn ghost" href="/meetmeg-growth-partner/results.html">Open KPI Model</a>
+        <a class="btn ghost" href="/meetmeg-growth-partner/crm-workspace.html">Open GTM CRM</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="deck-footer wrap">Executive GTM Deck · Tony Beal · <a href="https://tonybeal.net/">tonybeal.net</a></footer>
+</body>
+</html>
