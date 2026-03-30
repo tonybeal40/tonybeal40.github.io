@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="820" viewBox="0 0 1400 820" fill="none">
+  <defs>
+    <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0B1224"/>
+      <stop offset="100%" stop-color="#132B54"/>
+    </linearGradient>
+    <linearGradient id="g2" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#37D67A"/>
+      <stop offset="100%" stop-color="#4DB6FF"/>
+    </linearGradient>
+  </defs>
+  <rect width="1400" height="820" fill="url(#g1)"/>
+  <circle cx="220" cy="90" r="220" fill="#37D67A" opacity="0.16"/>
+  <circle cx="1230" cy="730" r="320" fill="#4DB6FF" opacity="0.12"/>
+  <rect x="120" y="170" width="1160" height="470" rx="28" fill="#0D1A34" stroke="#2A3A64" stroke-width="2"/>
+  <text x="170" y="255" fill="#EAF1FF" font-family="Segoe UI, Arial" font-size="52" font-weight="700">MeetMeg Growth Partner Program</text>
+  <text x="170" y="304" fill="#A9B8D8" font-family="Segoe UI, Arial" font-size="28">StoryBrand × Apollo.io × LinkedIn × Conversion Workflows</text>
+  <rect x="170" y="352" width="310" height="76" rx="16" fill="#132447" stroke="#2A3A64"/>
+  <rect x="510" y="352" width="310" height="76" rx="16" fill="#132447" stroke="#2A3A64"/>
+  <rect x="850" y="352" width="310" height="76" rx="16" fill="#132447" stroke="#2A3A64"/>
+  <text x="195" y="399" fill="#EAF1FF" font-family="Segoe UI, Arial" font-size="24" font-weight="600">Authority Content Engine</text>
+  <text x="541" y="399" fill="#EAF1FF" font-family="Segoe UI, Arial" font-size="24" font-weight="600">Pipeline Conversation System</text>
+  <text x="895" y="399" fill="#EAF1FF" font-family="Segoe UI, Arial" font-size="24" font-weight="600">Demo + Close Framework</text>
+  <path d="M250 500 C 430 580, 560 580, 740 500" stroke="url(#g2)" stroke-width="8" stroke-linecap="round"/>
+  <path d="M740 500 C 920 580, 1050 580, 1230 500" stroke="url(#g2)" stroke-width="8" stroke-linecap="round"/>
+  <circle cx="250" cy="500" r="13" fill="#37D67A"/>
+  <circle cx="740" cy="500" r="13" fill="#37D67A"/>
+  <circle cx="1230" cy="500" r="13" fill="#37D67A"/>
+  <text x="170" y="575" fill="#EAF1FF" font-family="Segoe UI, Arial" font-size="30" font-weight="700">Contract Engagement Ready</text>
+  <text x="170" y="618" fill="#A9B8D8" font-family="Segoe UI, Arial" font-size="24">30-day pilot • 90-day growth • advisor enablement</text>
+</svg>

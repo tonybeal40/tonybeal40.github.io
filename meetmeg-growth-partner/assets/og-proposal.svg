@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0B1224"/>
+      <stop offset="100%" stop-color="#14305E"/>
+    </linearGradient>
+    <linearGradient id="line" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#37D67A"/>
+      <stop offset="100%" stop-color="#4DB6FF"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="160" cy="80" r="170" fill="#37D67A" opacity="0.15"/>
+  <circle cx="1100" cy="560" r="220" fill="#4DB6FF" opacity="0.12"/>
+  <text x="90" y="190" fill="#A9B8D8" font-family="Segoe UI, Arial" font-size="26" letter-spacing="3">TONY BEAL CONTRACT PROPOSAL</text>
+  <text x="90" y="282" fill="#ECF1FF" font-family="Segoe UI, Arial" font-size="64" font-weight="800">MeetMeg Growth Partner</text>
+  <text x="90" y="338" fill="#ECF1FF" font-family="Segoe UI, Arial" font-size="64" font-weight="800">Pipeline Program</text>
+  <text x="90" y="405" fill="#A9B8D8" font-family="Segoe UI, Arial" font-size="34">StoryBrand × Apollo × LinkedIn × Conversion</text>
+  <rect x="90" y="450" width="1020" height="6" rx="3" fill="url(#line)"/>
+  <text x="90" y="530" fill="#ECF1FF" font-family="Segoe UI, Arial" font-size="30">30-day pilot • 90-day scale • Executive reporting</text>
+</svg>

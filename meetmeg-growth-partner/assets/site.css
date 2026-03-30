@@ -22,3 +22,11 @@ section{padding:16px 0}h2{font-size:clamp(25px,3.6vw,40px);margin:18px 0 8px}.le
 .input-grid input{width:100%;padding:9px 10px;border-radius:10px;border:1px solid var(--line);background:#0d1730;color:var(--text)}
 .result{background:#0b1732;border:1px solid var(--line);border-radius:12px;padding:14px;margin-top:12px}
 .badge{display:inline-block;padding:4px 8px;border:1px solid var(--line);border-radius:999px;color:var(--muted);font-size:12px;margin-right:6px}
+.hero-art{margin-top:20px;border:1px solid var(--line);border-radius:16px;overflow:hidden;background:#0b1732}
+.hero-art img{display:block;width:100%;height:auto}
+.print-sheet{background:#fff;color:#111;max-width:960px;margin:24px auto;padding:34px;border:1px solid #c9c9c9}
+.print-sheet h1,.print-sheet h2,.print-sheet h3{color:#111}
+.print-sheet p,.print-sheet li{color:#222}
+.sig-grid{display:grid;grid-template-columns:1fr 1fr;gap:26px;margin-top:34px}
+.sig-box{border-top:1px solid #444;padding-top:8px;min-height:72px}
+@media print{body{background:#fff;color:#111}.nav,.footer{display:none!important}.print-sheet{border:none;margin:0;max-width:none;padding:0}}
