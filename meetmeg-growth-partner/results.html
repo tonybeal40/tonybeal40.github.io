@@ -1,0 +1,23 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Results Model | MeetMeg Growth Partner</title><meta name="description" content="Interactive model for projected demos, wins, and pipeline from outreach and conversion assumptions." />
+<link rel="canonical" href="https://tonybeal.net/meetmeg-growth-partner/results.html" /><link rel="stylesheet" href="/meetmeg-growth-partner/assets/site.css" /></head><body>
+<div class="nav"><div class="wrap row"><div class="brand">Tony Beal <span>x</span> MeetMeg Growth Partner</div><nav class="navlinks"><a href="/meetmeg-growth-partner/">Overview</a><a href="/meetmeg-growth-partner/strategy.html">Strategy</a><a href="/meetmeg-growth-partner/execution.html">Execution</a><a href="/meetmeg-growth-partner/outreach.html">Outreach</a><a href="/meetmeg-growth-partner/results.html">Results Model</a><a href="/meetmeg-growth-partner/offer.html">Partnership Offer</a><a href="/meetmeg-growth-partner/proof.html">Proof</a><a href="/meetmeg-growth-partner/deck.html">Deck</a></nav></div></div>
+<main class="wrap" style="padding-top:34px"><section><h1>Results Model</h1><p class="sub">Use this model live in meetings to show realistic output from consistent execution.</p><span class="badge">30-Day Model</span><span class="badge">Editable Assumptions</span></section>
+<section><div class="input-grid"><div><label>Connections / day</label><input id="connections" type="number" value="40" /></div><div><label>Accept rate %</label><input id="accept" type="number" value="35" /></div><div><label>Reply rate %</label><input id="reply" type="number" value="22" /></div><div><label>Demo rate % (of replies)</label><input id="demo" type="number" value="35" /></div><div><label>Close rate % (of demos)</label><input id="close" type="number" value="25" /></div><div><label>Average deal value ($)</label><input id="acv" type="number" value="500" /></div></div><button class="btn primary" onclick="calc()">Calculate</button><div id="out" class="result"></div></section></main>
+<footer class="footer wrap">Prepared by Tony Beal · <a href="https://tonybeal.net/">tonybeal.net</a></footer>
+<script>
+function pct(v){return Math.max(0,Number(v)||0)/100}
+function n(v){return Math.max(0,Number(v)||0)}
+function calc(){
+  const days=30;
+  const con=n(document.getElementById('connections').value)*days;
+  const acc=con*pct(document.getElementById('accept').value);
+  const rep=acc*pct(document.getElementById('reply').value);
+  const dem=rep*pct(document.getElementById('demo').value);
+  const win=dem*pct(document.getElementById('close').value);
+  const rev=win*n(document.getElementById('acv').value);
+  document.getElementById('out').innerHTML=`<strong>30-Day Projection</strong><ul class="list"><li>Connections sent: ${Math.round(con)}</li><li>Accepted: ${Math.round(acc)}</li><li>Replies: ${Math.round(rep)}</li><li>Demos: ${Math.round(dem)}</li><li>Closed deals: ${Math.round(win)}</li><li><strong>Projected revenue: $${Math.round(rev).toLocaleString()}</strong></li></ul>`;
+}
+calc();
+</script>
+</body></html>
