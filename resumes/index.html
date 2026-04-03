@@ -3,57 +3,57 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tony Beal — Tailored Resumes</title>
+  <title>Tony Beal — Resume Portfolio</title>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     body {
-      font-family: system-ui, sans-serif;
-      background: #f5f7fa;
-      color: #1a1a1a;
+      font-family: Inter, system-ui, sans-serif;
+      background: #f1f5f9;
+      color: #0f172a;
       min-height: 100vh;
     }
     a { color: inherit; text-decoration: none; }
 
     header {
-      background: #fff;
-      border-bottom: 3px solid #1a56a0;
+      background: #ffffff;
+      border-bottom: 3px solid #1d4ed8;
       padding: 28px 40px 22px;
     }
-    header h1 { font-size: 26px; font-weight: 800; color: #1a1a1a; }
-    header p { font-size: 14px; color: #555; margin-top: 4px; }
+    header h1 { font-size: 26px; font-weight: 800; color: #0f172a; }
+    header p { font-size: 14px; color: #475569; margin-top: 4px; }
 
     .container { max-width: 900px; margin: 40px auto; padding: 0 24px; }
 
     .intro {
       background: #fff;
       border-radius: 8px;
-      border: 1px solid #dde4ef;
+      border: 1px solid #dbe4f0;
       padding: 20px 24px;
       margin-bottom: 32px;
       font-size: 14px;
-      color: #444;
+      color: #334155;
       line-height: 1.65;
     }
-    .intro strong { color: #1a56a0; }
-    .intro h2 { font-size: 13px; text-transform: uppercase; letter-spacing: 1px; color: #1a56a0; margin-bottom: 8px; }
+    .intro strong { color: #1d4ed8; }
+    .intro h2 { font-size: 13px; text-transform: uppercase; letter-spacing: 1px; color: #1d4ed8; margin-bottom: 8px; }
 
     .cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(380px, 1fr)); gap: 20px; margin-bottom: 40px; }
 
     .card {
       background: #fff;
-      border: 1px solid #dde4ef;
+      border: 1px solid #dbe4f0;
       border-radius: 10px;
       padding: 24px;
       transition: box-shadow 0.18s, border-color 0.18s;
       display: flex;
       flex-direction: column;
     }
-    .card:hover { box-shadow: 0 4px 18px rgba(26,86,160,.13); border-color: #1a56a0; }
+    .card:hover { box-shadow: 0 6px 20px rgba(29,78,216,.14); border-color: #1d4ed8; }
 
     .card-badge {
       display: inline-block;
-      background: #eef4fc;
-      color: #1a56a0;
+      background: #eaf1ff;
+      color: #1d4ed8;
       font-size: 10.5px;
       font-weight: 700;
       text-transform: uppercase;
@@ -62,16 +62,16 @@
       border-radius: 20px;
       margin-bottom: 12px;
     }
-    .card h3 { font-size: 17px; font-weight: 800; color: #1a1a1a; margin-bottom: 6px; }
-    .card .headline { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: #1a56a0; margin-bottom: 10px; }
-    .card p { font-size: 12.5px; color: #555; line-height: 1.6; margin-bottom: 14px; flex: 1; }
+    .card h3 { font-size: 17px; font-weight: 800; color: #0f172a; margin-bottom: 6px; }
+    .card .headline { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: #1e40af; margin-bottom: 10px; }
+    .card p { font-size: 12.5px; color: #475569; line-height: 1.6; margin-bottom: 14px; flex: 1; }
 
-    .target-label { font-size: 10.5px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.8px; color: #888; margin-bottom: 5px; }
-    .targets { font-size: 12px; color: #444; line-height: 1.6; margin-bottom: 16px; }
+    .target-label { font-size: 10.5px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.8px; color: #64748b; margin-bottom: 5px; }
+    .targets { font-size: 12px; color: #334155; line-height: 1.6; margin-bottom: 16px; }
 
     .card-link {
       display: inline-block;
-      background: #1a56a0;
+      background: #1d4ed8;
       color: #fff;
       padding: 8px 18px;
       border-radius: 5px;
@@ -80,25 +80,25 @@
       text-align: center;
       transition: background 0.15s;
     }
-    .card-link:hover { background: #154a8a; }
+    .card-link:hover { background: #1e40af; }
 
     .print-instructions {
       background: #fff;
-      border: 1px solid #dde4ef;
+      border: 1px solid #dbe4f0;
       border-radius: 8px;
       padding: 20px 24px;
       margin-bottom: 40px;
     }
-    .print-instructions h2 { font-size: 14px; font-weight: 700; color: #1a1a1a; margin-bottom: 10px; }
-    .print-instructions ol { padding-left: 20px; font-size: 13px; color: #444; line-height: 2; }
-    .print-instructions li strong { color: #1a56a0; }
+    .print-instructions h2 { font-size: 14px; font-weight: 700; color: #0f172a; margin-bottom: 10px; }
+    .print-instructions ol { padding-left: 20px; font-size: 13px; color: #334155; line-height: 2; }
+    .print-instructions li strong { color: #1d4ed8; }
 
     footer {
       text-align: center;
       font-size: 12px;
-      color: #999;
+      color: #64748b;
       padding: 24px;
-      border-top: 1px solid #e0e6f0;
+      border-top: 1px solid #dbe4f0;
     }
 
     @media (max-width: 600px) {
@@ -112,14 +112,14 @@
 
 <header>
   <h1>Tony Beal</h1>
-  <p>Tailored Resumes — Keyword-Optimized for Target Roles &amp; Industries</p>
+  <p>Role-Aligned Resume Portfolio for Business Development, Lead Generation, Territory Sales, and Revenue Leadership</p>
 </header>
 
 <div class="container">
 
   <div class="intro">
-    <h2>About These Resumes</h2>
-    Each resume below is tailored to a specific industry and role type, with targeted keywords, headlines, and accomplishment bullets optimized for ATS systems and hiring managers. Select the resume that best matches the opportunity you're evaluating, then print or save to PDF using the button on each page.
+    <h2>How To Use This Portfolio</h2>
+    Each resume highlights the same operating track record through a different business lens. Use the version that best matches your hiring scope, then export to PDF from the print button on each page.
   </div>
 
   <div class="cards">
@@ -128,40 +128,40 @@
       <span class="card-badge">RevOps / GTM</span>
       <h3>Revenue Operations &amp; GTM Systems</h3>
       <div class="headline">Revenue Operations Leader | GTM Systems | AI-Driven Pipeline | CRM Architecture</div>
-      <p>Optimized for modern SaaS and tech-adjacent roles focused on pipeline infrastructure, CRM architecture, and AI-driven revenue systems.</p>
+      <p>Built for teams that need cleaner pipeline governance, stronger CRM accountability, and reliable GTM execution.</p>
       <div class="target-label">Target Companies</div>
       <div class="targets">Superhuman · Vanta · Medallion · Gong · ZoomInfo · Klaviyo · SalesLoft</div>
-      <a class="card-link" href="resume-revops.html">View Resume →</a>
+      <a class="card-link" href="resume-revops.html">Review Resume →</a>
     </div>
 
     <div class="card">
       <span class="card-badge">Industrial / Manufacturing</span>
       <h3>Industrial Sales &amp; Territory Development</h3>
       <div class="headline">Regional Sales Leader | Industrial & Manufacturing Markets | Territory Development | Strategic Accounts</div>
-      <p>Optimized for industrial and manufacturing sales roles requiring territory management, OEM relationships, and plant-level consultative selling.</p>
+      <p>Built for industrial teams that need disciplined territory growth, account expansion, and consultative deal execution.</p>
       <div class="target-label">Target Companies</div>
       <div class="targets">ITT Inc. · Timken · Parker Hannifin · Donaldson · Crown Equipment · Allison Off-Highway · Emerson · Honeywell</div>
-      <a class="card-link" href="resume-industrial.html">View Resume →</a>
+      <a class="card-link" href="resume-industrial.html">Review Resume →</a>
     </div>
 
     <div class="card">
       <span class="card-badge">Consulting / Fractional</span>
       <h3>AI &amp; Revenue Consulting / Fractional RevOps</h3>
       <div class="headline">Fractional RevOps Consultant | AI Sales Systems | Commercial Transformation | GTM Strategy</div>
-      <p>Optimized for consulting engagements, fractional RevOps roles, and commercial excellence programs requiring AI implementation and GTM strategy design.</p>
+      <p>Built for advisory and fractional leadership engagements focused on commercial systems, process lift, and AI-enabled execution.</p>
       <div class="target-label">Target Companies</div>
       <div class="targets">Prophet · Danaher · Emerson Commercial Excellence · Fractional RevOps Platforms</div>
-      <a class="card-link" href="resume-consulting.html">View Resume →</a>
+      <a class="card-link" href="resume-consulting.html">Review Resume →</a>
     </div>
 
     <div class="card">
       <span class="card-badge">Logistics / Supply Chain</span>
       <h3>Logistics &amp; Supply Chain BD</h3>
       <div class="headline">Business Development Leader | Logistics & Supply Chain | Enterprise Accounts | 3PL Partnerships</div>
-      <p>Optimized for logistics, 3PL, distribution, and supply chain business development roles focused on enterprise account acquisition and pipeline generation.</p>
+      <p>Built for logistics and supply chain roles where enterprise account development and predictable pipeline creation are core priorities.</p>
       <div class="target-label">Target Companies</div>
       <div class="targets">NFI Industries · Werner Enterprises · McLane Company · Circle Logistics · Americold · Radial</div>
-      <a class="card-link" href="resume-logistics.html">View Resume →</a>
+      <a class="card-link" href="resume-logistics.html">Review Resume →</a>
     </div>
 
   </div>
@@ -169,7 +169,7 @@
   <div class="print-instructions">
     <h2>How to Print or Save as PDF</h2>
     <ol>
-      <li>Open the resume you want using the <strong>View Resume</strong> button above</li>
+      <li>Open the role-aligned version using the <strong>Review Resume</strong> button above</li>
       <li>Click the <strong>Print / Save PDF</strong> button in the top-right corner of the resume</li>
       <li>In the print dialog, select <strong>Save as PDF</strong> as the destination (Chrome/Edge recommended)</li>
       <li>Set paper size to <strong>Letter</strong>, margins to <strong>Default</strong> or <strong>None</strong></li>
@@ -181,8 +181,8 @@
 
 <footer>
   Tony Beal &nbsp;·&nbsp; Greater St. Louis Area &nbsp;·&nbsp; 618-292-5320 &nbsp;·&nbsp;
-  <a href="mailto:tonybeal40@gmail.com" style="color:#1a56a0;">tonybeal40@gmail.com</a> &nbsp;·&nbsp;
-  <a href="https://linkedin.com/in/tony-beal40" target="_blank" style="color:#1a56a0;">linkedin.com/in/tony-beal40</a>
+  <a href="mailto:tonybeal40@gmail.com" style="color:#1d4ed8;">tonybeal40@gmail.com</a> &nbsp;·&nbsp;
+  <a href="https://linkedin.com/in/tony-beal40" target="_blank" style="color:#1d4ed8;">linkedin.com/in/tony-beal40</a>
 </footer>
 
 </body>

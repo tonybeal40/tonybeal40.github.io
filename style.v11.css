@@ -24,7 +24,7 @@
   --bg-white: #FFFFFF;
   --bg-gray: #F8FAFC;
   --accent-blue: #2563EB;
-  --accent-indigo: #6366F1;
+  --accent-indigo: #2563EB;
   --text-dark: #1E293B;
   --text-muted: #64748B;
   --text-light: #94a3b8;
@@ -78,7 +78,7 @@ a { text-decoration: none; color: inherit; }
 .p-nav-brand {
   font-size: 20px;
   font-weight: 800;
-  background: linear-gradient(135deg, #2563EB, #6366F1);
+  background: linear-gradient(135deg, #2563EB, #2563EB);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -157,7 +157,7 @@ a { text-decoration: none; color: inherit; }
 }
 .p-hero {
   min-height: 100vh;
-  background: linear-gradient(-45deg, #0F172A, #1E3A8A, #0F172A, #312E81);
+  background: linear-gradient(-45deg, #0F172A, #1E3A8A, #0F172A, #1E3A8A);
   background-size: 400% 400%;
   animation: heroGradient 12s ease infinite;
   position: relative;
@@ -1377,7 +1377,7 @@ a { text-decoration: none; color: inherit; }
   .resume-main { padding: 20px; }
 }
 .play-stack { display: flex; flex-direction: column; gap: 8px; }
-.bd-theme { --theme-color: #6366F1; }
+.bd-theme { --theme-color: #2563EB; }
 .ops-board { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; }
 .cadence-list { list-style: none; padding: 0; }
 .cadence-list li {
@@ -1425,7 +1425,7 @@ a { text-decoration: none; color: inherit; }
   --rp-page: #ffffff;
   --rp-navy: #0F172A;
   --rp-blue: #2563EB;
-  --rp-indigo: #6366F1;
+  --rp-indigo: #2563EB;
   --rp-text: #1E293B;
   --rp-muted: #64748B;
   --rp-border: #E2E8F0;
@@ -1921,7 +1921,7 @@ a { text-decoration: none; color: inherit; }
 .p-book-cover:hover { transform: translateY(-6px) scale(1.02); box-shadow: var(--shadow-lg); }
 .p-book-cover span { font-size: 13px; font-weight: 700; color: rgba(255,255,255,0.95); text-align: center; line-height: 1.3; text-shadow: 0 1px 3px rgba(0,0,0,0.4); }
 .bc1 { background: linear-gradient(135deg, #1e3a5f, #2563EB); }
-.bc2 { background: linear-gradient(135deg, #312e81, #6366F1); }
+.bc2 { background: linear-gradient(135deg, #1E3A8A, #2563EB); }
 .bc3 { background: linear-gradient(135deg, #14532d, #16a34a); }
 .bc4 { background: linear-gradient(135deg, #7f1d1d, #dc2626); }
 .bc5 { background: linear-gradient(135deg, #0c4a6e, #0ea5e9); }
