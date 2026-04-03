@@ -2391,3 +2391,214 @@ ul {
 .csi-text { font-size: 13px; color: #94A3B8; line-height: 1.55; margin: 0; }
 .csi-result .csi-label { color: #34D399; }
 .csi-result .csi-text { color: #E2E8F0; font-weight: 500; }
+
+/* ═══════════════════════════════════════════════════════
+   DESIGN UPGRADE v12.1
+   Richer colors · Gradient accents · Hero glow · Card polish
+   ═══════════════════════════════════════════════════════ */
+
+/* ── Primary button: indigo→blue gradient ──────────────── */
+.btn-primary {
+  background:linear-gradient(135deg,#4F46E5 0%,#2563EB 100%);
+  border-color:#4F46E5;
+}
+.btn-primary:hover {
+  background:linear-gradient(135deg,#4338CA 0%,#1D4ED8 100%);
+  border-color:#4338CA;
+  box-shadow:0 6px 24px rgba(79,70,229,0.5);
+  transform:translateY(-2px);
+}
+
+/* ── Section-dark: radial depth gradient ───────────────── */
+.section-dark {
+  background:
+    radial-gradient(ellipse at 20% 50%,rgba(79,70,229,0.15) 0%,transparent 60%),
+    radial-gradient(ellipse at 80% 10%,rgba(37,99,235,0.1) 0%,transparent 50%),
+    #0F172A;
+  color:#F1F5F9;
+}
+
+/* ── Hero: richer cyan+purple ambient glow ──────────────── */
+.hero {
+  background-image:
+    radial-gradient(ellipse 80% 60% at 60% 30%,rgba(99,102,241,0.28) 0%,transparent 55%),
+    radial-gradient(ellipse 50% 40% at 20% 70%,rgba(37,99,235,0.18) 0%,transparent 50%),
+    radial-gradient(ellipse 60% 50% at 85% 80%,rgba(6,182,212,0.1) 0%,transparent 50%),
+    radial-gradient(rgba(79,70,229,0.1) 1px,transparent 1px);
+  background-size:100% 100%,100% 100%,100% 100%,32px 32px;
+}
+
+/* ── Hero photo: indigo/blue glowing ring ──────────────── */
+.hero-photo-frame {
+  border:4px solid rgba(99,102,241,0.85);
+  box-shadow:
+    0 0 0 8px rgba(79,70,229,0.15),
+    0 0 48px rgba(99,102,241,0.55),
+    0 0 100px rgba(37,99,235,0.28),
+    0 32px 64px rgba(0,0,0,0.5);
+}
+
+/* ── "Available for Full-Time Roles" badge ─────────────── */
+.hero-available-badge {
+  display:inline-flex;
+  align-items:center;
+  gap:7px;
+  background:rgba(16,185,129,0.1);
+  border:1px solid rgba(16,185,129,0.3);
+  border-radius:999px;
+  padding:7px 16px;
+  font-size:12px;
+  font-weight:700;
+  color:#34D399;
+  letter-spacing:0.02em;
+}
+.hero-available-badge .badge-dot {
+  width:8px;
+  height:8px;
+  border-radius:50%;
+  background:#34D399;
+  box-shadow:0 0 8px rgba(52,211,153,0.7);
+  animation:statusPing 2s ease-out infinite;
+  flex-shrink:0;
+}
+
+/* ── Proof pills: gradient style ───────────────────────── */
+.proof-pill {
+  background:linear-gradient(135deg,rgba(79,70,229,0.18) 0%,rgba(37,99,235,0.12) 100%);
+  border:1px solid rgba(99,102,241,0.35);
+  color:#A5B4FC;
+}
+
+/* ── Hero h1 em: richer indigo-to-green gradient ──────── */
+.hero-title em {
+  background:linear-gradient(90deg,#818CF8 0%,#60A5FA 50%,#4ADE80 100%);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  background-clip:text;
+  background-size:200% auto;
+  animation:titleShimmer 4s linear infinite;
+}
+
+/* ── Section title: colored underline accent bar ──────── */
+.section-white .section-title,
+.section-gray .section-title {
+  padding-bottom:14px;
+  background-image:linear-gradient(90deg,#4F46E5,#2563EB);
+  background-repeat:no-repeat;
+  background-size:48px 3px;
+  background-position:center bottom;
+}
+.section-white .section-title.text-left,
+.section-gray .section-title.text-left {
+  background-position:left bottom;
+}
+
+/* ── Result cards: gradient left border ─────────────────  */
+.result-card {
+  position:relative;
+  border-left:3px solid #4F46E5;
+  border-top-left-radius:11px;
+  border-bottom-left-radius:11px;
+}
+.result-card:nth-child(2) { border-left-color:#6366F1; }
+.result-card:nth-child(3) { border-left-color:#0EA5E9; }
+.result-card:nth-child(4) { border-left-color:#06B6D4; }
+
+/* ── Result number: gradient text ────────────────────── */
+.result-number {
+  background:linear-gradient(135deg,#818CF8 0%,#60A5FA 100%);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  background-clip:text;
+}
+
+/* ── Meet Tony photo: glow frame ─────────────────────── */
+.tony-photo {
+  border-radius:20px;
+  box-shadow:
+    0 0 0 4px rgba(79,70,229,0.12),
+    0 24px 64px rgba(37,99,235,0.2),
+    0 8px 24px rgba(0,0,0,0.12);
+}
+.tony-photo:hover {
+  box-shadow:
+    0 0 0 6px rgba(79,70,229,0.22),
+    0 32px 80px rgba(37,99,235,0.3),
+    0 12px 32px rgba(0,0,0,0.16);
+}
+
+/* ── Tony quote block: big decorative quotes ────────── */
+.tony-quote {
+  border-left:4px solid #4F46E5;
+  background:linear-gradient(135deg,#EEF2FF 0%,#EFF6FF 100%);
+  border-radius:0 12px 12px 0;
+  font-size:17px;
+  font-style:italic;
+  font-weight:500;
+  color:#1E293B;
+  padding:20px 28px 20px 28px;
+  position:relative;
+  margin:8px 0;
+  overflow:hidden;
+}
+.tony-quote::before {
+  content:'\201C';
+  position:absolute;
+  top:-12px;
+  left:8px;
+  font-size:80px;
+  line-height:1;
+  color:#4F46E5;
+  opacity:0.15;
+  font-family:Georgia,'Times New Roman',serif;
+  pointer-events:none;
+}
+
+/* ── Service items: modern chip/pill badges ─────────── */
+.service-item {
+  background:rgba(30,41,59,0.55);
+  border:1px solid rgba(255,255,255,0.1);
+  border-radius:12px;
+  padding:16px 24px;
+  font-size:15px;
+  font-weight:500;
+  color:#E2E8F0;
+  display:flex;
+  align-items:center;
+  gap:12px;
+  transition:all 0.2s ease;
+  cursor:default;
+}
+.service-item::before {
+  content:'›';
+  font-size:22px;
+  font-weight:700;
+  color:#818CF8;
+  flex-shrink:0;
+  line-height:1;
+}
+.service-item:hover {
+  background:rgba(79,70,229,0.18);
+  border-color:rgba(99,102,241,0.4);
+  color:#F1F5F9;
+  transform:translateX(4px);
+}
+
+/* ── Footer brand: bigger, gradient, impactful ──────── */
+.footer-brand strong {
+  font-size:26px;
+  background:linear-gradient(135deg,#818CF8 0%,#60A5FA 50%,#4ADE80 100%);
+  background-size:200% auto;
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  background-clip:text;
+  animation:titleShimmer 6s linear infinite;
+  letter-spacing:-0.02em;
+  margin-bottom:6px;
+}
+
+/* ── Section top border accent (light sections) ──────── */
+.section-white,
+.section-gray {
+  border-top:1px solid rgba(148,163,184,0.12);
+}
