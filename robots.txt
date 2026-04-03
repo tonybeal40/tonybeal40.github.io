@@ -1,4 +1,7 @@
 User-agent: *
 Allow: /
+Disallow: /bill-weekend-brief-7qk9m2/
+Disallow: /bill-weekend-brief-7qk9m2.html
+Disallow: /bill-private-hub-7qk9m2.html
 
 Sitemap: https://tonybeal.net/sitemap.xml
