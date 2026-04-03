@@ -140,6 +140,40 @@
       margin-top: 24px;
     }
 
+    .hero-brand {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      margin: 22px 0 8px;
+      flex-wrap: wrap;
+    }
+
+    .hero-logo {
+      width: 170px;
+      max-width: 42vw;
+      height: auto;
+      display: block;
+      filter: drop-shadow(0 20px 32px rgba(0, 0, 0, 0.34));
+    }
+
+    .hero-brand-copy {
+      max-width: 32ch;
+    }
+
+    .hero-brand-copy strong {
+      display: block;
+      font-size: 0.86rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 6px;
+    }
+
+    .hero-brand-copy span {
+      color: var(--muted);
+      font-size: 0.98rem;
+    }
+
     .hero-copy h1 {
       margin: 18px 0 18px;
       font-size: clamp(2.8rem, 6vw, 5.5rem);
@@ -735,6 +769,13 @@
 
   <header class="hero shell fade" id="vision">
     <div class="eyebrow">Private Overview · consultant mode</div>
+    <div class="hero-brand">
+      <img class="hero-logo" src="/assets/allpro-logo.png" alt="All Pro Metro East Construction logo" />
+      <div class="hero-brand-copy">
+        <strong>Built around a real company</strong>
+        <span>All Pro Metro East Construction is the proof point behind the system, the pitch, and the case study.</span>
+      </div>
+    </div>
     <div class="hero-grid">
       <div class="hero-copy">
         <h1>Run the business without guessing.</h1>
