@@ -164,12 +164,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <span class="nav-available-badge"><span class="nav-status-dot"></span>Available</span>
         <a href="https://calendly.com/tonybeal40/30min" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm" onclick="gtag('event','book_call_click',{'event_category':'CTA','event_label':'nav'})">Book a Call</a>
       </div>
-      <button class="nav-hamburger" id="nav-hamburger" aria-label="Open menu">
+      <button class="nav-hamburger" id="nav-hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="nav-mobile-menu">
         <span></span><span></span><span></span>
       </button>
     </div>
     <!-- Mobile menu -->
-    <div class="nav-mobile-menu" id="nav-mobile-menu">
+    <div class="nav-mobile-menu" id="nav-mobile-menu" hidden>
       <a href="#systems" onclick="closeMobileNav()">Systems</a>
       <a href="thinking.html" onclick="closeMobileNav()">Thinking</a>
       <a href="resume.html" target="_blank" rel="noopener noreferrer" onclick="closeMobileNav()">Resume</a>
@@ -1631,11 +1631,27 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     const mobileMenu = document.getElementById('nav-mobile-menu');
     if (hamburger && mobileMenu) {
       hamburger.addEventListener('click', () => {
-        mobileMenu.classList.toggle('open');
+        const isOpen = mobileMenu.classList.toggle('open');
+        hamburger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        if (isOpen) {
+          mobileMenu.removeAttribute('hidden');
+          hamburger.setAttribute('aria-label', 'Close menu');
+        } else {
+          mobileMenu.setAttribute('hidden', '');
+          hamburger.setAttribute('aria-label', 'Open menu');
+        }
+      });
+
+      document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') closeMobileNav();
       });
     }
     function closeMobileNav() {
-      if (mobileMenu) mobileMenu.classList.remove('open');
+      if (!mobileMenu || !hamburger) return;
+      mobileMenu.classList.remove('open');
+      mobileMenu.setAttribute('hidden', '');
+      hamburger.setAttribute('aria-expanded', 'false');
+      hamburger.setAttribute('aria-label', 'Open menu');
     }
   </script>
   <script>window.addEventListener("load",function(){var s=document.createElement("script");s.src="https://platform.linkedin.com/badges/js/profile.js";s.async=true;s.defer=true;s.onerror=function(){};document.body.appendChild(s);});</script>
