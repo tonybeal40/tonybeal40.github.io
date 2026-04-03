@@ -7,21 +7,21 @@
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <style>
     :root{
-      --bg:#07070a;
-      --bg2:#0e0f14;
-      --card:#0f1118;
-      --card2:#121521;
-      --ink:#f5f7ff;
-      --muted:#b1b6c8;
-      --muted2:#8b91a8;
-      --line:#222638;
-      --accent:#e11d48;
-      --accent2:#ff3b6a;
-      --accentSoft: rgba(225,29,72,.14);
+      --bg:#07111a;
+      --bg2:#0d1923;
+      --card:#0d1720;
+      --card2:#12202b;
+      --ink:#f7f7f5;
+      --muted:#b4c0c7;
+      --muted2:#8fa1ac;
+      --line:#233544;
+      --accent:#f06b11;
+      --accent2:#ff9b3d;
+      --accentSoft: rgba(240,107,17,.14);
       --good:#22c55e;
       --warn:#fbbf24;
-      --blue:#3b82f6;
-      --purple:#a855f7;
+      --blue:#60a5fa;
+      --purple:#f97316;
       --radius:18px;
       --pill:999px;
       --shadow: 0 18px 45px rgba(0,0,0,.55);
@@ -31,8 +31,9 @@ body{
       margin:0;
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       background:
-        radial-gradient(circle at top, rgba(225,29,72,.12) 0, transparent 42%),
-        radial-gradient(circle at top, #1a1c24 0, #07070a 58%, #030309 100%);
+        radial-gradient(circle at top left, rgba(240,107,17,.16) 0, transparent 34%),
+        radial-gradient(circle at top, rgba(96,165,250,.12) 0, transparent 38%),
+        linear-gradient(180deg, #08131b 0%, #09141d 42%, #050b10 100%);
       color:var(--ink);
       min-height:100vh;
     }
@@ -41,12 +42,17 @@ body{
       align-items:center;
       gap:1rem;
       flex-wrap:wrap;
+      padding: .9rem 1.1rem;
+      border-radius: 20px;
+      background: linear-gradient(135deg, rgba(255,255,255,.05), rgba(255,255,255,.02));
+      border: 1px solid rgba(255,255,255,.06);
+      box-shadow: var(--shadow);
     }
     .brand-logo{
-      width:92px;
+      width:118px;
       height:auto;
       display:block;
-      filter: drop-shadow(0 18px 26px rgba(0,0,0,.35));
+      filter: drop-shadow(0 22px 32px rgba(0,0,0,.38));
     }
     a{ color: var(--accent2); text-decoration:none; }
     a:hover{ text-decoration:underline; }
@@ -81,9 +87,9 @@ body{
       padding:.35rem .9rem;
       border-radius:var(--pill);
       background: var(--accentSoft);
-      border: 1px solid rgba(255,59,106,.45);
+      border: 1px solid rgba(255,155,61,.45);
       font-size:.75rem;
-      color: #ffd0dc;
+      color: #ffe2c4;
       text-transform: uppercase;
       letter-spacing:.1em;
     }
@@ -121,7 +127,7 @@ body{
     .tab:hover{ background:rgba(255,255,255,.08); }
     .tab.active{
       background: linear-gradient(135deg, var(--accent), var(--accent2));
-      color:#0a0a0d;
+      color:#1b1208;
       border-color:transparent;
     }
     .tab-panel{ display:none; }
@@ -165,7 +171,7 @@ body{
     /* Cards */
     .card{
       background:
-        radial-gradient(circle at top left, rgba(255,59,106,.07) 0, transparent 45%),
+        radial-gradient(circle at top left, rgba(240,107,17,.08) 0, transparent 45%),
         linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.01));
       border: 1px solid var(--line);
       border-radius: var(--radius);
@@ -813,7 +819,7 @@ body{
     </div>
 
     <!-- Tabs -->
-    <div class="card" style="border:1px solid rgba(73,184,255,.45); background:linear-gradient(180deg,rgba(73,184,255,.09),rgba(73,184,255,.03)); margin-bottom:1rem;">
+    <div class="card" style="border:1px solid rgba(240,107,17,.38); background:linear-gradient(180deg,rgba(240,107,17,.12),rgba(96,165,250,.04)); margin-bottom:1rem;">
   <div class="card-header">
     <div>
       <h3 class="card-title">All Pro CRM Workspace</h3>
