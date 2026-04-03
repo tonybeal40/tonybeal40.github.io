@@ -2272,7 +2272,7 @@ function updateSheetsUI() {
   }
   
   if (masterSheetId) {
-    statusEl.innerHTML = `<span style="color:var(--good);">Synced to TonyOS Data</span> <a href="https://docs.google.com/spreadsheets/d/${masterSheetId}" target="_blank" style="font-size:.75rem;">Open Sheet</a>`;
+    statusEl.innerHTML = `<span style="color:var(--good);">Synced to TonyOS Data</span> <a href="https://docs.google.com/spreadsheets/d/${masterSheetId}" target="_blank" style="font-size:.75rem;" rel="noopener noreferrer">Open Sheet</a>`;
   } else {
     statusEl.innerHTML = '<span style="color:var(--blue);">Ready to sync</span> <button class="btn-success btn-small" onclick="createMasterSheet()">Create Master Sheet</button>';
   }
@@ -2855,7 +2855,7 @@ async function scanCompanyWebsite() {
               ${a.employees ? `<div><strong>Size:</strong> ${a.employees.toLocaleString()} employees${a.revenue ? `, $${escHtml(a.revenue)} revenue` : ''}</div>` : ''}
               ${pains ? `<div><strong>Natoli Pain Points:</strong></div>${pains}` : ''}
               ${a.why_natoli ? `<div style="margin-top:.5rem;"><strong style="color:var(--good);">Why Natoli:</strong> ${escHtml(a.why_natoli)}</div>` : ''}
-              ${a.account_id ? `<div style="margin-top:.5rem;"><a href="/apollo-crm/account.html?id=${a.account_id}" target="_blank" style="color:#3b82f6; text-decoration:underline;">View Full Account &rarr;</a></div>` : ''}
+              ${a.account_id ? `<div style="margin-top:.5rem;"><a href="/apollo-crm/account.html?id=${a.account_id}" target="_blank" style="color:#3b82f6; text-decoration:underline;" rel="noopener noreferrer">View Full Account &rarr;</a></div>` : ''}
             </div>
           </div>
         `;
@@ -2980,7 +2980,7 @@ async function loadCompanyNewsForIntel(accountId) {
     
     const articlesHtml = data.articles.map(a => `
       <div style="margin-bottom:.6rem; padding-bottom:.6rem; border-bottom:1px solid rgba(255,255,255,.1);">
-        <a href="${escHtml(a.url)}" target="_blank" style="color:#60a5fa; font-weight:500; font-size:.9rem;">${escHtml(a.title)}</a>
+        <a href="${escHtml(a.url)}" target="_blank" style="color:#60a5fa; font-weight:500; font-size:.9rem;" rel="noopener noreferrer">${escHtml(a.title)}</a>
         <div style="font-size:.75rem; color:var(--muted); margin-top:.2rem;">${escHtml(a.source)} - ${formatRelativeDate(a.published_at)}</div>
       </div>
     `).join('');
@@ -3187,7 +3187,7 @@ function viewConnectionDetail(id) {
           <div style="background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:8px;padding:.5rem .75rem;">
             <strong style="color:#fff;">${escHtml(p.name || "Unknown")}</strong>
             <div style="font-size:.75rem;color:#888;">${escHtml(p.title || "")}</div>
-            ${p.linkedin ? `<a href="${escHtml(p.linkedin)}" target="_blank" style="font-size:.7rem;color:#3b82f6;">LinkedIn</a>` : ""}
+            ${p.linkedin ? `<a href="${escHtml(p.linkedin)}" target="_blank" style="font-size:.7rem;color:#3b82f6;" rel="noopener noreferrer">LinkedIn</a>` : ""}
           </div>
         `).join("")}
       </div>
@@ -5582,7 +5582,7 @@ async function loadPresentationNews(accountId) {
     
     const articlesHtml = data.articles.map(a => `
       <div style="padding:12px 0; border-bottom:1px solid rgba(255,255,255,0.08);">
-        <a href="${escHtml(a.url)}" target="_blank" style="color:#60a5fa; font-weight:600; font-size:15px; text-decoration:none;">${escHtml(a.title)}</a>
+        <a href="${escHtml(a.url)}" target="_blank" style="color:#60a5fa; font-weight:600; font-size:15px; text-decoration:none;" rel="noopener noreferrer">${escHtml(a.title)}</a>
         <div style="font-size:13px; color:#888; margin-top:4px;">${escHtml(a.source)} - ${formatRelativeDate(a.published_at)}</div>
       </div>
     `).join('');
