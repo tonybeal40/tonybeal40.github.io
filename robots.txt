@@ -8,5 +8,7 @@ Disallow: /redstone-strategy-room-7qk9m2/index.html
 Disallow: /redstone-strategy-room-7qk9m2/deck.html
 Disallow: /quality-issue-copilot-r4k8m1/
 Disallow: /quality-issue-copilot-r4k8m1/index.html
+Disallow: /supplier-quality-copilot-x9m4p2/
+Disallow: /supplier-quality-copilot-x9m4p2/index.html
 
 Sitemap: https://tonybeal.net/sitemap.xml
