@@ -3,5 +3,8 @@ Allow: /
 Disallow: /bill-weekend-brief-7qk9m2/
 Disallow: /bill-weekend-brief-7qk9m2.html
 Disallow: /bill-private-hub-7qk9m2.html
+Disallow: /redstone-strategy-room-7qk9m2/
+Disallow: /redstone-strategy-room-7qk9m2/index.html
+Disallow: /redstone-strategy-room-7qk9m2/deck.html
 
 Sitemap: https://tonybeal.net/sitemap.xml
