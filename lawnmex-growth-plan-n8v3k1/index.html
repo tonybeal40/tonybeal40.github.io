@@ -26,8 +26,9 @@
     .service-grid,.system-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.mini{padding:16px;border-radius:18px;background:var(--panel2);border:1px solid rgba(255,255,255,.06)} .mini strong{display:block;margin-bottom:8px;color:var(--text)}
     .page-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.page{padding:16px;border-radius:16px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);font-weight:700;color:var(--text)}
     .money{font-size:1.16rem;color:var(--text);font-weight:800}.footer{margin-top:22px;text-align:center;color:var(--muted);font-size:.95rem}
-    @media (max-width:920px){.grid,.steps,.service-grid,.system-grid,.page-grid{grid-template-columns:1fr 1fr}}
-    @media (max-width:680px){.grid,.steps,.service-grid,.system-grid,.page-grid{grid-template-columns:1fr} h1{max-width:12ch}}
+    .example-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:18px}.shot{overflow:hidden;border-radius:18px;border:1px solid rgba(255,255,255,.07);background:rgba(255,255,255,.03)}.shot img{display:block;width:100%;height:260px;object-fit:cover}.shot-copy{padding:14px 16px}.shot-copy strong{display:block;margin-bottom:6px;color:var(--text)}
+    @media (max-width:920px){.grid,.steps,.service-grid,.system-grid,.page-grid,.example-grid{grid-template-columns:1fr 1fr}}
+    @media (max-width:680px){.grid,.steps,.service-grid,.system-grid,.page-grid,.example-grid{grid-template-columns:1fr} h1{max-width:12ch}}
   </style>
 </head>
 <body>
@@ -72,6 +73,22 @@
             <li>Pricing anchor: lawn maintenance, mulching, installs, clear quote CTA.</li>
             <li>Close: stop putting it off — get a quote today.</li>
           </ul>
+        </div>
+      </section>
+
+      <section class="panel">
+        <div class="section-label">Visual direction</div>
+        <h2>Use their real work, but present it better</h2>
+        <p>Yes — the proposal can pull from their existing site photos and reframe them inside a cleaner, higher-converting structure. The point is not to invent fake work. It is to make their real work look more valuable and easier to trust.</p>
+        <div class="example-grid">
+          <div class="shot">
+            <img src="https://static.wixstatic.com/media/0390e8_074629e8572b447d840c49e0bd5579c6~mv2.jpg/v1/fill/w_732,h_640,al_c,q_85,enc_avif,quality_auto/0390e8_074629e8572b447d840c49e0bd5579c6~mv2.jpg" alt="LawnMex current site image example" />
+            <div class="shot-copy"><strong>Example 1: hero / family-business trust image</strong><p>Use a strong real image with cleaner headline, stronger quote CTA, and a trust strip directly under the fold.</p></div>
+          </div>
+          <div class="shot">
+            <img src="https://static.wixstatic.com/media/0390e8_9e79a3c6ef3b438b899a361eb12112a2~mv2.jpeg/v1/fit/w_960,h_720,q_90,enc_avif,quality_auto/0390e8_9e79a3c6ef3b438b899a361eb12112a2~mv2.jpeg" alt="LawnMex landscaping work example" />
+            <div class="shot-copy"><strong>Example 2: project proof / before-after style section</strong><p>Turn service photos into conversion blocks with project type, quick result summary, and a direct estimate CTA.</p></div>
+          </div>
         </div>
       </section>
 
