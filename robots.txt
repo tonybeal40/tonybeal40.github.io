@@ -12,5 +12,7 @@ Disallow: /supplier-quality-copilot-x9m4p2/
 Disallow: /supplier-quality-copilot-x9m4p2/index.html
 Disallow: /lawnmex-growth-plan-n8v3k1/
 Disallow: /lawnmex-growth-plan-n8v3k1/index.html
+Disallow: /lawnmex-outreach-preview-m3t7k4/
+Disallow: /lawnmex-outreach-preview-m3t7k4/index.html
 
 Sitemap: https://tonybeal.net/sitemap.xml
