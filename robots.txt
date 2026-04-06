@@ -6,5 +6,7 @@ Disallow: /bill-private-hub-7qk9m2.html
 Disallow: /redstone-strategy-room-7qk9m2/
 Disallow: /redstone-strategy-room-7qk9m2/index.html
 Disallow: /redstone-strategy-room-7qk9m2/deck.html
+Disallow: /quality-issue-copilot-r4k8m1/
+Disallow: /quality-issue-copilot-r4k8m1/index.html
 
 Sitemap: https://tonybeal.net/sitemap.xml
