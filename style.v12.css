@@ -3022,3 +3022,45 @@ ul {
   font-weight: 400;
 }
 
+
+/* ── Fancy Tech Stack Badges (tonybeal.net) ── */
+.tech-grid-fancy {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+}
+.tbadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: .4rem .9rem;
+  border-radius: 20px;
+  font-size: .8rem;
+  font-weight: 700;
+  letter-spacing: .01em;
+  border: 1px solid transparent;
+  transition: transform .15s, box-shadow .15s;
+  cursor: default;
+}
+.tbadge:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 14px rgba(0,0,0,.35);
+}
+.tbadge-blue {
+  background: rgba(37,99,235,.15);
+  border-color: rgba(59,130,246,.35);
+  color: #93c5fd;
+}
+.tbadge-blue:hover { background: rgba(37,99,235,.3); border-color: #3b82f6; }
+.tbadge-green {
+  background: rgba(16,185,129,.12);
+  border-color: rgba(16,185,129,.3);
+  color: #6ee7b7;
+}
+.tbadge-green:hover { background: rgba(16,185,129,.25); border-color: #10b981; }
+.tbadge-purple {
+  background: rgba(139,92,246,.12);
+  border-color: rgba(139,92,246,.3);
+  color: #c4b5fd;
+}
+.tbadge-purple:hover { background: rgba(139,92,246,.25); border-color: #8b5cf6; }
