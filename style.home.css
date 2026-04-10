@@ -123,7 +123,7 @@ h1, h2, h3 {
 
 /* ══════════════════════════════════════════════════
    GAME COVER HERO
-   Character right · Title left · One light source
+   Photo right · Dark left · One light source
 ══════════════════════════════════════════════════ */
 .cover {
   position: relative;
@@ -131,30 +131,62 @@ h1, h2, h3 {
   height: 100vh;
   min-height: 620px;
   overflow: hidden;
+  /* Photo anchored right, shows face + upper body */
+  background:
+    url('tony-beal.png') no-repeat 72% center / auto 95%;
+  background-color: var(--bg);
 }
 
-/* Layer 1: atmosphere */
+/* Layer 1: Dark split — left panel + top/bottom burn */
 .cover-sky {
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(ellipse 90% 60% at 75% 100%,  #1c0800 0%, transparent 55%),
-    radial-gradient(ellipse 60% 70% at 20% 40%,   #08031a 0%, transparent 65%),
-    linear-gradient(160deg, #030209 0%, #0a0512 45%, #100608 100%);
+    /* Left dark panel — text lives here */
+    linear-gradient(to right,
+      #050408        0%,
+      #050408        30%,
+      rgba(5,4,8,0.90) 44%,
+      rgba(5,4,8,0.55) 56%,
+      rgba(5,4,8,0.15) 70%,
+      rgba(5,4,8,0.40) 100%
+    ),
+    /* Top burn — kills the bright office ceiling */
+    linear-gradient(to bottom,
+      rgba(5,4,8,0.85) 0%,
+      rgba(5,4,8,0.20) 30%,
+      transparent 55%
+    ),
+    /* Bottom burn — grounds the figure */
+    linear-gradient(to top,
+      rgba(5,4,8,0.95) 0%,
+      rgba(5,4,8,0.50) 20%,
+      transparent 45%
+    );
 }
 
-/* Layer 2: single raking light — bottom-right origin */
+/* Color grade overlay — cool shadows, removes the office warmth */
+.cover-sky::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(10, 5, 30, 0.28);
+  mix-blend-mode: multiply;
+  pointer-events: none;
+}
+
+/* Layer 2: single warm light — bottom-right, raking up */
 .cover-light {
   position: absolute;
-  bottom: -80px;
-  right: 5%;
-  width: 600px;
-  height: 700px;
+  bottom: -60px;
+  right: 8%;
+  width: 650px;
+  height: 600px;
   background: radial-gradient(
-    ellipse 55% 65% at 65% 100%,
-    rgba(255,130,20,0.50)   0%,
-    rgba(200, 70, 8, 0.22)  30%,
-    rgba(120, 30, 0, 0.08)  60%,
+    ellipse 60% 55% at 60% 100%,
+    rgba(255,130,20,0.38)   0%,
+    rgba(200, 70, 8, 0.16)  35%,
+    rgba(120, 30, 0, 0.06)  60%,
     transparent             80%
   );
   pointer-events: none;
@@ -165,7 +197,7 @@ h1, h2, h3 {
 .cover-rays {
   position: absolute;
   bottom: 0;
-  right: 18%;
+  right: 22%;
   width: 1px;
   height: 1px;
   pointer-events: none;
@@ -177,95 +209,69 @@ h1, h2, h3 {
   bottom: 0;
   left: 0;
   width: 2px;
-  height: 105vh;
+  height: 100vh;
   transform-origin: bottom center;
   background: linear-gradient(
     to top,
-    rgba(255,145,30,0.16) 0%,
-    rgba(255,145,30,0.05) 45%,
+    rgba(255,145,30,0.12) 0%,
+    rgba(255,145,30,0.04) 45%,
     transparent 100%
   );
 }
 
-.cover-rays .ray:nth-child(1) { transform: rotate(-55deg); opacity: 0.6; }
-.cover-rays .ray:nth-child(2) { transform: rotate(-30deg); opacity: 0.9; width: 3px; }
-.cover-rays .ray:nth-child(3) { transform: rotate(-12deg); opacity: 0.7; }
-.cover-rays .ray:nth-child(4) { transform: rotate(10deg);  opacity: 1.0; width: 3px; }
-.cover-rays .ray:nth-child(5) { transform: rotate(34deg);  opacity: 0.5; }
+.cover-rays .ray:nth-child(1) { transform: rotate(-52deg); opacity: 0.6; }
+.cover-rays .ray:nth-child(2) { transform: rotate(-28deg); opacity: 0.85; width: 3px; }
+.cover-rays .ray:nth-child(3) { transform: rotate(-8deg);  opacity: 0.7; }
+.cover-rays .ray:nth-child(4) { transform: rotate(14deg);  opacity: 1.0; width: 3px; }
+.cover-rays .ray:nth-child(5) { transform: rotate(38deg);  opacity: 0.5; }
 
-/* Layer 4: figure — right side, bleeds off bottom */
-.cover-figure {
-  position: absolute;
-  bottom: 0;
-  right: 4%;
-  z-index: 4;
-  width: 54vw;
-  max-width: 640px;
-  min-width: 320px;
-}
-
-.cover-figure img {
-  width: 100%;
-  display: block;
-  object-fit: contain;
-  object-position: bottom center;
-  /* Cinematic grade: punch contrast, cool shadows, warm highlights edge */
-  filter:
-    contrast(1.35)
-    brightness(0.62)
-    saturate(0.3)
-    sepia(0.15);
-  /* Atmospheric fade: top fades to sky, sides stay solid */
-  mask-image:
-    linear-gradient(to top,  black 0%, black 42%, rgba(0,0,0,0.6) 68%, transparent 90%),
-    linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
-  mask-composite: intersect;
-  -webkit-mask-image:
-    linear-gradient(to top,  black 0%, black 42%, rgba(0,0,0,0.6) 68%, transparent 90%);
-  -webkit-mask-composite: source-in;
-}
+/* Layer 4: figure div — empty, photo is on .cover background */
+.cover-figure { display: none; }
 
 /* Layer 5: ground haze */
 .cover-haze {
   position: absolute;
   bottom: 0;
   left: 0; right: 0;
-  height: 220px;
+  height: 200px;
   background: linear-gradient(to top,
-    rgba(160,60,8,0.15) 0%,
-    rgba(80,20,2,0.05)  50%,
+    rgba(5,4,8,0.96)   0%,
+    rgba(5,4,8,0.40)   40%,
     transparent 100%
   );
   z-index: 5;
   pointer-events: none;
 }
 
-/* Layer 6: vignette — heavy on edges, game-cover style */
+/* Layer 6: edge vignette */
 .cover-vignette {
   position: absolute;
   inset: 0;
   z-index: 6;
   pointer-events: none;
   background:
-    linear-gradient(to right, rgba(3,2,9,0.80) 0%, rgba(3,2,9,0.25) 40%, transparent 65%),
-    radial-gradient(ellipse 110% 100% at 50% 50%, transparent 35%, rgba(3,2,9,0.65) 85%, rgba(3,2,9,0.9) 100%);
+    radial-gradient(ellipse 120% 120% at 50% 50%,
+      transparent 40%,
+      rgba(5,4,8,0.55) 80%,
+      rgba(5,4,8,0.85) 100%
+    );
 }
 
-/* Layer 7: copy — bottom-left, minimal */
+/* Layer 7: copy — bottom-left */
 .cover-copy {
   position: absolute;
   left: 0;
   bottom: 72px;
   z-index: 10;
-  padding: 0 48px;
-  max-width: 560px;
+  padding: 0 52px;
+  max-width: 520px;
 }
 
 .cover-eyebrow {
   font-family: 'Barlow Condensed', sans-serif;
-  font-size: 0.7rem;
+  font-size: 0.68rem;
   font-weight: 600;
-  letter-spacing: 0.22em;
+  letter-spacing: 0.26em;
   text-transform: uppercase;
   color: var(--gold);
   margin-bottom: 14px;
@@ -275,36 +281,35 @@ h1, h2, h3 {
   display: flex;
   flex-direction: column;
   line-height: 0.87;
-  margin-bottom: 16px;
+  margin-bottom: 18px;
 }
 
 .cover-name-first,
 .cover-name-last {
   font-family: 'Cinzel', Georgia, serif;
   font-weight: 900;
-  font-size: clamp(4.5rem, 10vw, 8.5rem);
-  letter-spacing: 0.08em;
-  color: var(--text);
-  text-shadow:
-    0 0 80px  rgba(255,130,20,0.30),
-    0 2px 40px rgba(0,0,0,0.95);
+  font-size: clamp(4rem, 9vw, 8rem);
+  letter-spacing: 0.1em;
+  text-shadow: 0 2px 40px rgba(0,0,0,0.95);
 }
+
+.cover-name-first { color: var(--text); }
 
 .cover-name-last {
   color: var(--gold-lt);
   text-shadow:
-    0 0 100px rgba(255,160,30,0.45),
+    0 0 80px rgba(255,160,30,0.40),
     0 2px 40px rgba(0,0,0,0.95);
 }
 
 .cover-role {
   font-family: 'Barlow Condensed', sans-serif;
-  font-size: clamp(0.75rem, 1.4vw, 0.95rem);
-  font-weight: 300;
-  letter-spacing: 0.26em;
+  font-size: clamp(0.72rem, 1.4vw, 0.9rem);
+  font-weight: 400;
+  letter-spacing: 0.28em;
   text-transform: uppercase;
-  color: rgba(237,230,255,0.55);
-  margin-bottom: 32px;
+  color: rgba(237,230,255,0.50);
+  margin-bottom: 34px;
 }
 
 .cover-btn {
@@ -319,18 +324,17 @@ h1, h2, h3 {
   left: 0; right: 0;
   z-index: 11;
   height: 38px;
-  background: rgba(0,0,0,0.6);
-  border-top: 1px solid rgba(255,140,20,0.18);
+  background: rgba(0,0,0,0.55);
+  border-top: 1px solid rgba(255,140,20,0.15);
   display: flex;
   align-items: center;
-  padding: 0 48px;
-  gap: 0;
+  padding: 0 52px;
   font-family: 'Barlow Condensed', sans-serif;
-  font-size: 0.62rem;
+  font-size: 0.6rem;
   font-weight: 600;
-  letter-spacing: 0.16em;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: rgba(237,230,255,0.32);
+  color: rgba(237,230,255,0.30);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
 }
@@ -341,7 +345,7 @@ h1, h2, h3 {
   height: 3px;
   border-radius: 50%;
   background: var(--gold);
-  opacity: 0.5;
+  opacity: 0.4;
   margin: 0 18px;
   flex-shrink: 0;
 }
