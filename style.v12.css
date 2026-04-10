@@ -979,6 +979,55 @@ ul {
   color:#FFFFFF;
   border-color:#2563EB;
 }
+.skill-showcase-grid {
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:24px;
+  max-width:1100px;
+  margin:0 auto;
+}
+.skill-showcase-card {
+  background:#F8FAFC;
+  border:1px solid #E2E8F0;
+  border-radius:18px;
+  padding:28px 26px;
+  box-shadow:0 10px 30px rgba(15,23,42,0.05);
+}
+.skill-showcase-label {
+  display:inline-block;
+  margin-bottom:14px;
+  padding:5px 10px;
+  border-radius:999px;
+  background:#E0ECFF;
+  color:#1D4ED8;
+  font-size:11px;
+  font-weight:800;
+  letter-spacing:0.08em;
+  text-transform:uppercase;
+}
+.skill-showcase-card h3 {
+  font-size:21px;
+  line-height:1.25;
+  color:#0F172A;
+  margin-bottom:12px;
+}
+.skill-showcase-card p {
+  font-size:14px;
+  line-height:1.7;
+  color:#475569;
+}
+.skill-stack-list {
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin:18px 0 16px;
+}
+.skill-example {
+  margin:0;
+  padding-top:14px;
+  border-top:1px solid #E2E8F0;
+  color:#334155;
+}
 
 /* ═══════════════════════════════════════════════════════
    DASHBOARD MOCKUPS
@@ -1487,6 +1536,9 @@ ul {
     display:none;
   }
   .dashboard-grid {
+    grid-template-columns:1fr;
+  }
+  .skill-showcase-grid {
     grid-template-columns:1fr;
   }
   .visibility-grid {
