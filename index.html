@@ -8,11 +8,11 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Barlow+Condensed:wght@300;400;500;600;700&family=Barlow:wght@300;400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.home.css" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- GRAIN OVERLAY -->
+  <!-- GRAIN -->
   <div class="grain" aria-hidden="true"></div>
 
   <!-- NAV -->
@@ -27,6 +27,245 @@
       </nav>
     </div>
   </header>
+
+  <!-- ═══════════════════════════════════════════
+       GAME COVER HERO
+  ══════════════════════════════════════════════ -->
+  <section class="cover">
+
+    <!-- BG atmosphere -->
+    <div class="cover-sky"        aria-hidden="true"></div>
+
+    <!-- Single light source — bottom-right, raking upward -->
+    <div class="cover-light"      aria-hidden="true"></div>
+
+    <!-- Rays from that source -->
+    <div class="cover-rays"       aria-hidden="true">
+      <div class="ray"></div>
+      <div class="ray"></div>
+      <div class="ray"></div>
+      <div class="ray"></div>
+      <div class="ray"></div>
+    </div>
+
+    <!-- The figure — right-aligned, bleeds off bottom edge -->
+    <div class="cover-figure"     aria-hidden="true">
+      <img src="tony-beal.png" alt="Tony Beal" />
+    </div>
+
+    <!-- Ground haze -->
+    <div class="cover-haze"       aria-hidden="true"></div>
+
+    <!-- Vignette -->
+    <div class="cover-vignette"   aria-hidden="true"></div>
+
+    <!-- LEFT SIDE: title block — minimal, anchored bottom-left -->
+    <div class="cover-copy">
+      <p class="cover-eyebrow">Revenue Ops &nbsp;·&nbsp; AI Systems</p>
+      <h1 class="cover-name">
+        <span class="cover-name-first">TONY</span>
+        <span class="cover-name-last">BEAL</span>
+      </h1>
+      <p class="cover-role">Director of Revenue Operations</p>
+      <a href="mailto:tbeal@tonybeal.net" class="btn btn-primary cover-btn">
+        Let's Talk <span class="btn-arrow">→</span>
+      </a>
+    </div>
+
+    <!-- Bottom bar — thin, data-driven, LinkedIn-style credibility -->
+    <div class="cover-bar" aria-hidden="true">
+      <span>St. Louis, MO</span>
+      <span class="cover-bar-dot" aria-hidden="true"></span>
+      <span>15+ Years B2B Ops</span>
+      <span class="cover-bar-dot" aria-hidden="true"></span>
+      <span>Available Now</span>
+    </div>
+
+  </section>
+
+  <!-- CRED STRIP -->
+  <div class="cred-strip">
+    <div class="container cred-inner">
+      <div class="cred-stat">
+        <strong>Director-Level</strong>
+        <span>Revenue &amp; Ops Background</span>
+      </div>
+      <div class="cred-divider"></div>
+      <div class="cred-stat">
+        <strong>Industrial B2B</strong>
+        <span>Real Account Growth Experience</span>
+      </div>
+      <div class="cred-divider"></div>
+      <div class="cred-stat">
+        <strong>Ships Real Systems</strong>
+        <span>No Decks. No Fluff. Working Tools.</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ACT I — PROBLEMS -->
+  <section class="section" id="problems">
+    <div class="container">
+      <p class="act-label">Act I</p>
+      <h2>Where Small Businesses<br>Get Stuck</h2>
+      <ul class="problem-list">
+        <li>
+          <span class="problem-icon">📭</span>
+          <div>
+            <strong>Leads fall through the cracks.</strong>
+            Inquiries come in but follow-up is inconsistent. You're not sure how many deals you've already lost.
+          </div>
+        </li>
+        <li>
+          <span class="problem-icon">🧠</span>
+          <div>
+            <strong>Everything lives in the owner's head.</strong>
+            No process. No handoff. The whole operation depends on one person knowing everything.
+          </div>
+        </li>
+        <li>
+          <span class="problem-icon">🔗</span>
+          <div>
+            <strong>Your tools don't talk to each other.</strong>
+            CRM, calendar, email, spreadsheet — none connected. Data lives in five places and nowhere at once.
+          </div>
+        </li>
+        <li>
+          <span class="problem-icon">🔁</span>
+          <div>
+            <strong>Time is eaten by repetitive work.</strong>
+            Your team re-enters the same data, sends the same emails, drops handoffs — every week.
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ACT II — WHAT I BUILD -->
+  <section class="section section-dark" id="what-i-build">
+    <div class="container">
+      <p class="act-label">Act II</p>
+      <h2>The Work</h2>
+      <div class="card-grid">
+        <div class="card">
+          <div class="card-icon">📬</div>
+          <h3>Lead Follow-Up Systems</h3>
+          <p>Every lead gets a response. Structured intake and follow-up so nothing slips through.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">🗂️</div>
+          <h3>CRM Cleanup &amp; Setup</h3>
+          <p>Simple workflows your team will actually use — not a complex setup that collects dust.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">⚙️</div>
+          <h3>Sales Ops Workflow</h3>
+          <p>Repeatable processes that keep deals moving without the owner at every step.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">📊</div>
+          <h3>Operator Dashboards</h3>
+          <p>One view of your pipeline, tasks, and priorities. Stop digging through six tabs.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">🤖</div>
+          <h3>AI Workflow Automation</h3>
+          <p>Practical AI that cuts repetitive manual work. No buzzwords — just real time saved.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ACT III — PROOF -->
+  <section class="section" id="proof">
+    <div class="container">
+      <p class="act-label">Act III</p>
+      <h2>Field Reports</h2>
+      <div class="proof-grid">
+        <div class="proof-item">
+          <div class="proof-num">Dispatch 01</div>
+          <h3>CRM + Follow-Up System</h3>
+          <p>Built a lead intake and follow-up workflow for a contractor business. Eliminated missed leads. Cut the owner's daily load by hours per week.</p>
+          <span class="proof-tag">Contractor / Field Services</span>
+        </div>
+        <div class="proof-item">
+          <div class="proof-num">Dispatch 02</div>
+          <h3>Mission Control Dashboard</h3>
+          <p>Operator cockpit surfacing job pipeline, priorities, and key contacts in one place — zero digging.</p>
+          <span class="proof-tag">Internal Ops</span>
+        </div>
+        <div class="proof-item">
+          <div class="proof-num">Dispatch 03</div>
+          <h3>Outreach Automation</h3>
+          <p>Structured commercial outreach for a landscaping business. Built to run with minimal daily input.</p>
+          <span class="proof-tag">Small Business B2B</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ACT IV — ABOUT -->
+  <section class="section section-dark" id="about">
+    <div class="container about-inner">
+      <div class="about-text">
+        <p class="act-label">Act IV</p>
+        <h2>The Operator</h2>
+        <p>15+ years in industrial B2B — account growth, revenue ops, and systems execution at the director level. Environments where sloppy process costs real money.</p>
+        <p>I don't hand you a strategy deck and disappear. I build the system, walk you through it, and make sure it runs. Direct. Calm. No hype.</p>
+      </div>
+      <div class="about-quote">
+        <blockquote>
+          "If your business is trying to grow but stuck in messy follow-up and scattered information — that's exactly the problem I was built to solve."
+        </blockquote>
+        <cite>— Tony Beal</cite>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINALE — OFFER -->
+  <section class="section finale" id="offer">
+    <div class="finale-glow" aria-hidden="true"></div>
+    <div class="container offer-inner">
+      <p class="act-label">Finale</p>
+      <h2>The Mission,<br>If You Choose It</h2>
+      <p class="offer-copy">One clear offer. Flat pricing. No scope creep. I design, build, and hand off a working system.</p>
+      <div class="pricing-row">
+        <div class="pricing-card">
+          <p class="pricing-label">System Setup</p>
+          <p class="pricing-amount">$1,500</p>
+          <p class="pricing-desc">Full design, build &amp; implementation. You get a working system.</p>
+        </div>
+        <div class="pricing-card pricing-card-featured">
+          <p class="pricing-badge">Most Chosen</p>
+          <p class="pricing-label">Setup + Support</p>
+          <p class="pricing-amount">$1,500 <span>+ $500/mo</span></p>
+          <p class="pricing-desc">Setup plus ongoing tuning, adjustments, and operator support.</p>
+        </div>
+      </div>
+      <div class="offer-cta">
+        <a href="mailto:tbeal@tonybeal.net" class="btn btn-primary btn-lg">
+          Book a Free 30-Min Call <span class="btn-arrow">→</span>
+        </a>
+        <p class="offer-note">No commitment. Just a conversation about your workflow.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-left">
+        <span class="nav-logo">T · B</span>
+        <p>Revenue Ops &amp; AI Systems for Small Businesses</p>
+      </div>
+      <div class="footer-right">
+        <a href="mailto:tbeal@tonybeal.net">tbeal@tonybeal.net</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
 
   <!-- HERO -->
   <section class="hero">
@@ -253,4 +492,3 @@
 
 </body>
 </html>
-
