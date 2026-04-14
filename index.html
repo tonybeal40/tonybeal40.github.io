@@ -903,17 +903,26 @@ document.querySelectorAll('.reel-card').forEach(card => {
     if (href.includes('resume')) {
       track('resume_view', { event_category: 'Engagement', event_label: href });
     }
-    if (href.includes('linkedin.com')) {
-      track('linkedin_click', { event_category: 'Social', event_label: 'linkedin' });
+    if (href.includes('linkedin.com/in/')) {
+      track('linkedin_click', { event_category: 'Social', event_label: 'profile' });
     }
-    if (href.includes('mailto:')) {
-      track('email_click', { event_category: 'Contact', event_label: 'email' });
+    if (href.includes('linkedin.com/newsletters/')) {
+      track('newsletter_subscribe', { event_category: 'CTA', event_label: 'linkedin_newsletter' });
+    }
+    if (href.includes('mailto:') || el.hasAttribute('data-e')) {
+      track('email_click', { event_category: 'Contact', event_label: el.textContent.trim() });
     }
     if (href.includes('tel:')) {
       track('phone_click', { event_category: 'Contact', event_label: 'phone' });
     }
     if (href.includes('thinking.html')) {
       track('blog_click', { event_category: 'Engagement', event_label: 'thinking' });
+    }
+    if (href.includes('email-outreach.html') || href.includes('allpro') || el.classList.contains('reel-link')) {
+      track('portfolio_view', { event_category: 'Engagement', event_label: href });
+    }
+    if (href.includes('hire.html') || href.includes('job-targets.html')) {
+      track('hire_page_click', { event_category: 'CTA', event_label: href });
     }
   });
 
