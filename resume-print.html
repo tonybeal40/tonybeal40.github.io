@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="robots" content="noindex, nofollow"/>
+<title>Tony Beal — Resume (Print / PDF)</title>
+<style>
+  /* ── PAGE SETUP ── */
+  @page { size: letter portrait; margin: 0.45in 0.5in; }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Calibri', 'Segoe UI', Arial, sans-serif;
+    font-size: 10.5pt;
+    color: #1e293b;
+    background: #fff;
+    line-height: 1.45;
+  }
+
+  /* ── SCREEN-ONLY NAV ── */
+  .screen-bar {
+    background: #0f172a;
+    color: #fff;
+    padding: 10px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 13px;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  .screen-bar a { color: #93c5fd; text-decoration: none; }
+  .print-btn {
+    background: #2563eb;
+    color: #fff;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 6px;
+    font-weight: 700;
+    font-size: 13px;
+    cursor: pointer;
+  }
+  @media print { .screen-bar { display: none !important; } }
+
+  /* ── WRAPPER ── */
+  .page {
+    max-width: 7.5in;
+    margin: 0 auto;
+    padding: 0.1in 0;
+  }
+
+  /* ── HEADER ── */
+  .hdr {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: start;
+    gap: 12px;
+    padding-bottom: 8px;
+    border-bottom: 2.5px solid #2563eb;
+    margin-bottom: 10px;
+  }
+  .hdr-name {
+    font-size: 24pt;
+    font-weight: 700;
+    color: #0f172a;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+  }
+  .hdr-title {
+    font-size: 10pt;
+    font-weight: 600;
+    color: #2563eb;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-top: 3px;
+  }
+  .hdr-contact {
+    text-align: right;
+    font-size: 9pt;
+    color: #475569;
+    line-height: 1.7;
+  }
+  .hdr-contact a { color: #1d4ed8; text-decoration: none; }
+
+  /* ── TWO-COL BODY ── */
+  .body {
+    display: grid;
+    grid-template-columns: 1fr 2.1in;
+    gap: 0 18px;
+    align-items: start;
+  }
+
+  /* ── SECTION HEADS ── */
+  .sec {
+    font-size: 7.5pt;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: #2563eb;
+    border-bottom: 1px solid #bfdbfe;
+    padding-bottom: 2px;
+    margin: 10px 0 5px;
+  }
+  .sec:first-child { margin-top: 0; }
+
+  /* ── PROFILE ── */
+  .profile {
+    font-size: 10pt;
+    color: #334155;
+    line-height: 1.5;
+  }
+
+  /* ── EXPERIENCE ── */
+  .job { margin-bottom: 8px; }
+  .job-hdr {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 4px;
+  }
+  .job-role { font-weight: 700; font-size: 10.5pt; color: #0f172a; }
+  .job-co   { font-size: 9.5pt; font-weight: 600; color: #2563eb; }
+  .job-date { font-size: 8.5pt; color: #64748b; white-space: nowrap; }
+  .job ul   { margin: 3px 0 0 14px; }
+  .job li   { font-size: 9.5pt; color: #334155; margin-bottom: 1px; }
+  .job li strong { color: #0f172a; }
+  .job-sep  { border: none; border-top: 1px solid #f1f5f9; margin: 7px 0; }
+
+  /* ── RIGHT COLUMN ── */
+  .right { border-left: 1px solid #e2e8f0; padding-left: 14px; }
+
+  .sk-list { list-style: none; margin-bottom: 2px; }
+  .sk-list li {
+    font-size: 9.5pt;
+    color: #334155;
+    padding: 3px 0;
+    border-bottom: 1px solid #f1f5f9;
+    font-weight: 500;
+  }
+  .sk-list li:last-child { border-bottom: none; }
+
+  .pills { display: flex; flex-wrap: wrap; gap: 4px; margin-bottom: 4px; }
+  .pill {
+    font-size: 8pt;
+    font-weight: 600;
+    color: #1e40af;
+    background: #eff6ff;
+    border: 1px solid #bfdbfe;
+    padding: 2px 7px;
+    border-radius: 3px;
+  }
+
+  .kn-list { list-style: none; }
+  .kn-list li {
+    font-size: 9pt;
+    color: #334155;
+    padding: 2px 0;
+    display: flex;
+    gap: 6px;
+    align-items: flex-start;
+  }
+  .kn-list li::before {
+    content: '';
+    display: inline-block;
+    width: 5px; height: 5px;
+    border-radius: 50%;
+    background: #2563eb;
+    margin-top: 4px;
+    flex-shrink: 0;
+  }
+
+  .avail {
+    font-size: 9pt;
+    background: #f0fdf4;
+    border: 1px solid #86efac;
+    border-radius: 4px;
+    padding: 6px 10px;
+    color: #166534;
+    font-weight: 600;
+    margin-top: 4px;
+    line-height: 1.5;
+  }
+
+  /* ── FOOTER (print only) ── */
+  .footer {
+    display: none;
+    margin-top: 12px;
+    padding-top: 6px;
+    border-top: 1px solid #e2e8f0;
+    font-size: 8.5pt;
+    color: #94a3b8;
+    text-align: center;
+  }
+  @media print { .footer { display: block !important; } }
+</style>
+</head>
+<body>
+
+<!-- SCREEN NAV -->
+<div class="screen-bar">
+  <div>
+    <a href="index.html">← tonybeal.net</a>
+    &nbsp;·&nbsp;
+    <a href="resume.html">Resume Hub</a>
+  </div>
+  <button class="print-btn" onclick="window.print()">⬇ Save as PDF / Print</button>
+</div>
+
+<div class="page">
+
+  <!-- HEADER -->
+  <div class="hdr">
+    <div>
+      <div class="hdr-name">Tony Beal</div>
+      <div class="hdr-title">Revenue Operations Manager &nbsp;·&nbsp; Sales Operations &nbsp;·&nbsp; AI Sales Systems</div>
+    </div>
+    <div class="hdr-contact">
+      <a href="mailto:tbeal@tonybeal.net">tbeal@tonybeal.net</a><br/>
+      <a href="tel:6182925320">(618) 292-5320</a><br/>
+      <a href="https://tonybeal.net" target="_blank">tonybeal.net</a><br/>
+      <a href="https://linkedin.com/in/tony-beal40" target="_blank">linkedin.com/in/tony-beal40</a><br/>
+      Greater St. Louis, MO · Remote
+    </div>
+  </div>
+
+  <div class="body">
+
+    <!-- LEFT COLUMN -->
+    <main>
+
+      <div class="sec">Profile</div>
+      <p class="profile">
+        Revenue Operations leader with 15+ years of B2B experience building pipeline infrastructure,
+        CRM architecture, and AI-powered GTM systems. Expert in Salesforce and HubSpot build-out,
+        outbound automation, forecast modeling, and pipeline generation. <strong>8 consecutive years
+        on quota</strong> across manufacturing, pharmaceutical, and food &amp; beverage. Available immediately.
+      </p>
+
+      <div class="sec">Experience</div>
+
+      <div class="job">
+        <div class="job-hdr">
+          <div>
+            <span class="job-role">Revenue Operations &amp; Business Development</span>
+            <span style="color:#94a3b8;font-size:9pt;"> — </span>
+            <span class="job-co">Natoli Engineering</span>
+          </div>
+          <span class="job-date">Recent</span>
+        </div>
+        <ul>
+          <li>Built <strong>RevOps infrastructure</strong>: CRM backend API integration, marketing KPI dashboards, pipeline contribution tracking</li>
+          <li>Executed <strong>marketing automation</strong> campaigns to 20,000+ contacts; LinkedIn content for decision-maker targeting</li>
+          <li>Built custom AI tools via <strong>OpenAI API</strong> for market scanning, prospect intelligence, and outbound sequencing</li>
+          <li>Designed <strong>forecast modeling</strong> dashboards tracking pipeline stage, velocity, and conversion rates</li>
+          <li>Deployed LinkedIn Sales Navigator for structured outbound prospecting across pharma manufacturing markets</li>
+        </ul>
+      </div>
+
+      <hr class="job-sep"/>
+
+      <div class="job">
+        <div class="job-hdr">
+          <div>
+            <span class="job-role">Director of Business Development</span>
+            <span style="color:#94a3b8;font-size:9pt;"> — </span>
+            <span class="job-co">ProForm Manufacturing</span>
+          </div>
+          <span class="job-date">Prior</span>
+        </div>
+        <ul>
+          <li>Built <strong>$6M+ pipeline from zero</strong> using Salesforce and HubSpot with full outbound automation workflow</li>
+          <li>Designed <strong>GTM strategy</strong>: ICP definition, forecast modeling, outreach automation, pipeline generation</li>
+          <li>Implemented pipeline forecasting and territory design across new vertical markets</li>
+        </ul>
+      </div>
+
+      <hr class="job-sep"/>
+
+      <div class="job">
+        <div class="job-hdr">
+          <div>
+            <span class="job-role">Sales Manager &amp; Operations</span>
+            <span style="color:#94a3b8;font-size:9pt;"> — </span>
+            <span class="job-co">Wicks Aircraft Supply</span>
+          </div>
+          <span class="job-date">Prior</span>
+        </div>
+        <ul>
+          <li>Built <strong>sales operations process from scratch</strong>; defined territory structure and coverage model</li>
+          <li>Generated <strong>1,000+ new customers</strong> through consultative full-cycle sales</li>
+          <li>Rebuilt backend website infrastructure; supported all commercial operations</li>
+        </ul>
+      </div>
+
+      <hr class="job-sep"/>
+
+      <div class="job">
+        <div class="job-hdr">
+          <div>
+            <span class="job-role">Regional Sales Manager</span>
+            <span style="color:#94a3b8;font-size:9pt;"> — </span>
+            <span class="job-co">BioGaia USA</span>
+          </div>
+          <span class="job-date">Prior</span>
+        </div>
+        <ul>
+          <li>Managed <strong>3,700+ accounts</strong>; multi-state territory, CRM hygiene, and pipeline discipline</li>
+          <li>Exceeded quota <strong>8 consecutive years</strong>; built 1,200+ active accounts from cold start</li>
+        </ul>
+      </div>
+
+    </main>
+
+    <!-- RIGHT COLUMN -->
+    <aside class="right">
+
+      <div class="sec">Core Skills</div>
+      <ul class="sk-list">
+        <li>Revenue Operations (RevOps)</li>
+        <li>CRM Architecture &amp; Admin</li>
+        <li>Pipeline Forecasting</li>
+        <li>Sales Automation</li>
+        <li>Go-To-Market Strategy</li>
+        <li>AI Prospecting Systems</li>
+        <li>Outbound Sequencing</li>
+        <li>Marketing Automation</li>
+        <li>Territory Management</li>
+        <li>Forecast Modeling</li>
+      </ul>
+
+      <div class="sec">Tools</div>
+      <div class="pills">
+        <span class="pill">Salesforce</span>
+        <span class="pill">HubSpot</span>
+        <span class="pill">Apollo.io</span>
+        <span class="pill">LinkedIn Nav</span>
+        <span class="pill">ZoomInfo</span>
+        <span class="pill">OpenAI API</span>
+        <span class="pill">Python</span>
+        <span class="pill">Google Analytics</span>
+        <span class="pill">GitHub</span>
+        <span class="pill">Docker</span>
+        <span class="pill">SQL</span>
+        <span class="pill">Lusha</span>
+      </div>
+
+      <div class="sec">Key Numbers</div>
+      <ul class="kn-list">
+        <li>$15M+ pipeline generated</li>
+        <li>3,700+ accounts managed</li>
+        <li>$6M+ program built from zero</li>
+        <li>8 consecutive quota years</li>
+        <li>1,200+ accounts from cold</li>
+        <li>40,000+ AI prompts engineered</li>
+        <li>20,000+ email campaign reach</li>
+        <li>11,000+ LinkedIn followers</li>
+      </ul>
+
+      <div class="sec">Industries</div>
+      <ul class="kn-list">
+        <li>Manufacturing</li>
+        <li>Pharmaceutical / Life Sciences</li>
+        <li>Food &amp; Beverage</li>
+        <li>Industrial / B2B</li>
+        <li>Aviation / Aerospace Supply</li>
+      </ul>
+
+      <div class="sec">Availability</div>
+      <div class="avail">
+        ✅ Available immediately<br/>
+        Full-time W2 · Contract<br/>
+        Remote nationwide<br/>
+        St. Louis metro (hybrid)
+      </div>
+
+    </aside>
+  </div>
+
+  <div class="footer">
+    tonybeal.net &nbsp;·&nbsp; tbeal@tonybeal.net &nbsp;·&nbsp; (618) 292-5320 &nbsp;·&nbsp; linkedin.com/in/tony-beal40
+  </div>
+
+</div>
+</body>
+</html>

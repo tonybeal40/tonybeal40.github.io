@@ -1,0 +1,116 @@
+======================================================
+BACKLINK PROFILE CONTENT — COPY/PASTE FOR EACH SITE
+All link back to: https://tonybeal.net
+======================================================
+
+
+── DEV.TO ──────────────────────────────────────────
+URL: https://dev.to/settings/profile
+Username: tonybeal40
+
+Name: Tony Beal
+Location: St. Louis, MO
+Work: Revenue Operations Manager | AI Sales Systems
+Website URL: https://tonybeal.net
+
+Bio (250 chars max):
+Revenue Operations leader. 15 years B2B. I build AI-powered pipeline systems, CRM architecture, and outbound workflows for manufacturing & pharma companies. $15M+ pipeline generated. Available for hire.
+
+Social links:
+- GitHub: tonybeal40
+- LinkedIn: tony-beal40
+
+First post title (publish this to get indexed):
+  "5 AI Prompts I Use Every Week to Run B2B Outbound at Scale"
+
+First post body: (see linkedin-article.txt — reformat as a dev.to article)
+
+──────────────────────────────────────────────────
+
+
+── ABOUT.ME ────────────────────────────────────────
+URL: https://about.me/signup or https://about.me/tonybeal40
+
+Name: Tony Beal
+Headline: Revenue Operations Manager | AI Sales Systems | Available for Hire
+Location: St. Louis, MO
+
+Bio:
+I'm a Revenue Operations Manager and Sales Operations leader with 15 years
+building pipeline systems, CRM architecture, and AI-powered GTM workflows
+for B2B companies in manufacturing, pharmaceutical, and food & beverage.
+
+Numbers: $15M+ pipeline generated · 3,700+ accounts managed · 8 yrs on quota
+
+I'm currently available for Revenue Operations, Sales Operations, Technical
+Account Management, and Customer Success roles — full-time or contract.
+
+Website: https://tonybeal.net
+LinkedIn: https://linkedin.com/in/tony-beal40/
+GitHub: https://github.com/tonybeal40
+
+Background image: use assets/linkedin-banner-1584x396.png
+
+──────────────────────────────────────────────────
+
+
+── GRAVATAR ─────────────────────────────────────────
+URL: https://gravatar.com (sign in with tonybeal40@gmail.com)
+
+Display name: Tony Beal
+About: Revenue Operations Manager. 15 years B2B. AI sales systems, CRM architecture, pipeline generation. Available for hire. tonybeal.net
+
+Website URL: https://tonybeal.net
+
+──────────────────────────────────────────────────
+
+
+── CRUNCHBASE (FREE) ────────────────────────────────
+URL: https://crunchbase.com/person/add
+
+Name: Tony Beal
+Primary role: Revenue Operations Manager
+Location: St. Louis, Missouri
+Bio: Revenue Operations Manager and Sales Operations leader. 15 years in manufacturing, pharma, and B2B. $15M+ pipeline. Available for hire.
+Website: https://tonybeal.net
+
+──────────────────────────────────────────────────
+
+
+── MUCK RACK / JOURNALIST PROFILE ──────────────────
+URL: https://muckrack.com/tony-beal (if available)
+
+Title: Revenue Operations Manager | AI Sales Systems Writer
+Bio: Tony Beal writes about CRM design, revenue operations, and practical AI for B2B sales teams. 15 years in the field. tonybeal.net
+
+──────────────────────────────────────────────────
+
+
+── SPEAKERHUB (FREE) ────────────────────────────────
+URL: https://speakerhub.com/signup
+
+Name: Tony Beal
+Topic: Revenue Operations, AI in Sales, CRM Strategy, B2B Pipeline Systems
+Bio: Revenue Operations Manager with 15 years in B2B. I speak on practical AI implementation for sales teams, CRM architecture, and building outbound pipeline at scale. $15M+ pipeline. tonybeal.net
+
+──────────────────────────────────────────────────
+
+
+── LINKEDIN FEATURED SECTION (not a new site — enhance existing) ──
+Make sure these are in your LinkedIn Featured section:
+1. tonybeal.net (add as a link with title "Full Background & Work Samples")
+2. tonybeal.net/hire.html (add as "Available for Hire — Role Fit & Availability")
+3. Your LinkedIn article once published
+
+──────────────────────────────────────────────────
+
+
+── PRIORITY ORDER ───────────────────────────────────
+Do these first (highest DA / fastest indexed):
+1. Gravatar      — 2 min, helps Google associate email with identity
+2. about.me      — 5 min, DA 92, indexes fast
+3. dev.to        — 15 min, DA 90, publish one article
+4. Crunchbase    — 10 min, DA 91
+5. SpeakerHub    — 10 min, DA 58
+
+======================================================
