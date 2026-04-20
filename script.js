@@ -50,3 +50,38 @@ document.querySelectorAll('a[data-e]').forEach(function(link) {
     window.location.href = 'mailto:' + build();
   });
 });
+// Counter animation for credits section
+(function () {
+  const counters = document.querySelectorAll('.count');
+  if (!counters.length) return;
+
+  const animateCounter = (el) => {
+    const target = +el.getAttribute('data-target');
+    const duration = 1500;
+    const step = target / (duration / 16);
+    let current = 0;
+
+    const update = () => {
+      current += step;
+      if (current < target) {
+        el.textContent = Math.floor(current).toLocaleString();
+        requestAnimationFrame(update);
+      } else {
+        el.textContent = target.toLocaleString();
+      }
+    };
+    requestAnimationFrame(update);
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        counters.forEach(animateCounter);
+        observer.disconnect();
+      }
+    });
+  }, { threshold: 0.3 });
+
+  const section = document.querySelector('.credits-section');
+  if (section) observer.observe(section);
+})();
