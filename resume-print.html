@@ -10,11 +10,13 @@
   @page { size: letter portrait; margin: 0.45in 0.5in; }
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
+  html, body { height: 100%; }
+
   body {
     font-family: 'Calibri', 'Segoe UI', Arial, sans-serif;
     font-size: 10.5pt;
     color: #1e293b;
-    background: #fff;
+    background: #f8fafc;
     line-height: 1.45;
   }
 
@@ -48,6 +50,15 @@
     max-width: 7.5in;
     margin: 0 auto;
     padding: 0.1in 0;
+    background: #fff;
+    min-height: 10.1in;
+    display: flex;
+    flex-direction: column;
+  }
+
+  @media print {
+    html, body { background: #fff; }
+    .page { min-height: 0; box-shadow: none; }
   }
 
   /* ── HEADER ── */
@@ -88,7 +99,8 @@
     display: grid;
     grid-template-columns: 1fr 2.1in;
     gap: 0 18px;
-    align-items: start;
+    align-items: stretch;
+    flex: 1;
   }
 
   /* ── SECTION HEADS ── */
@@ -129,7 +141,14 @@
   .job-sep  { border: none; border-top: 1px solid #f1f5f9; margin: 7px 0; }
 
   /* ── RIGHT COLUMN ── */
-  .right { border-left: 1px solid #e2e8f0; padding-left: 14px; }
+  .right {
+    border-left: 1px solid #e2e8f0;
+    padding-left: 14px;
+    background: #f8fafc;
+    padding-top: 4px;
+    padding-bottom: 14px;
+    padding-right: 4px;
+  }
 
   .sk-list { list-style: none; margin-bottom: 2px; }
   .sk-list li {
