@@ -202,6 +202,27 @@
     line-height: 1.5;
   }
 
+  /* ── NOTABLE CLIENTS GRID ── */
+  .clients-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 3px 8px;
+    margin-bottom: 4px;
+  }
+  .clients-grid span {
+    font-size: 9pt;
+    color: #334155;
+    font-weight: 500;
+    padding: 2px 0;
+    border-bottom: 1px solid #f1f5f9;
+  }
+
+  /* ── EDUCATION ── */
+  .edu-row { display: flex; flex-direction: column; gap: 5px; }
+  .edu-item { display: flex; flex-direction: column; }
+  .edu-school { font-size: 9.5pt; font-weight: 700; color: #0f172a; }
+  .edu-deg    { font-size: 9pt; color: #475569; }
+
   /* ── FOOTER (print only) ── */
   .footer {
     display: none;
@@ -327,7 +348,27 @@
         <ul>
           <li>Managed <strong>3,700+ accounts</strong>; multi-state territory, CRM hygiene, and pipeline discipline</li>
           <li>Exceeded quota <strong>8 consecutive years</strong>; built 1,200+ active accounts from cold start</li>
+          <li>Developed <strong>physician and pharmacy channel strategy</strong>; grew repeat order rate through structured follow-up cadences</li>
         </ul>
+      </div>
+
+      <div class="sec">Notable Clients &amp; Accounts</div>
+      <div class="clients-grid">
+        <span>Pfizer</span><span>Eli Lilly</span><span>BASF</span><span>Haleon</span>
+        <span>Catalent</span><span>Lonza</span><span>Duracell</span><span>Nalco Water</span>
+        <span>Ajinomoto</span><span>Astellia</span><span>Novozymes</span><span>Eurofins</span>
+      </div>
+
+      <div class="sec">Education &amp; Development</div>
+      <div class="edu-row">
+        <div class="edu-item">
+          <span class="edu-school">Southern Illinois University Edwardsville</span>
+          <span class="edu-deg">B.S. Business Administration</span>
+        </div>
+        <div class="edu-item">
+          <span class="edu-school">Continuous Development</span>
+          <span class="edu-deg">OpenAI API · Python · CRM Systems · Revenue Operations · Sales Navigator</span>
+        </div>
       </div>
 
     </main>
