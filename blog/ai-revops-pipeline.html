@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>How I Built a $15M Pipeline Using AI-Powered RevOps Systems | Tony Beal</title>
+  <meta name="description" content="Tony Beal breaks down the exact AI-powered revenue operations system he used to build a $15M+ pipeline across manufacturing, pharma, and B2B accounts. CRM architecture, outreach automation, and pipeline management." />
+  <link rel="canonical" href="https://tonybeal.net/blog/ai-revops-pipeline.html" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="How I Built a $15M Pipeline Using AI-Powered RevOps Systems | Tony Beal" />
+  <meta property="og:description" content="Tony Beal breaks down the exact AI-powered revenue operations system he used to build a $15M+ pipeline." />
+  <meta property="og:url" content="https://tonybeal.net/blog/ai-revops-pipeline.html" />
+  <meta property="og:image" content="https://tonybeal.net/assets/tony-headshot-main.png" />
+  <meta name="author" content="Tony Beal" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "How I Built a $15M Pipeline Using AI-Powered RevOps Systems",
+    "description": "Tony Beal breaks down the exact AI-powered revenue operations system he used to build a $15M+ pipeline across manufacturing, pharma, and B2B accounts.",
+    "author": {
+      "@type": "Person",
+      "name": "Tony Beal",
+      "url": "https://tonybeal.net/",
+      "@id": "https://tonybeal.net/#tony-beal"
+    },
+    "publisher": {
+      "@type": "Person",
+      "name": "Tony Beal",
+      "url": "https://tonybeal.net/"
+    },
+    "datePublished": "2026-04-23",
+    "dateModified": "2026-04-23",
+    "mainEntityOfPage": "https://tonybeal.net/blog/ai-revops-pipeline.html",
+    "url": "https://tonybeal.net/blog/ai-revops-pipeline.html",
+    "keywords": "Tony Beal, Revenue Operations, AI sales systems, pipeline architecture, manufacturing sales, RevOps"
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500&family=Barlow+Condensed:wght@600;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Barlow', sans-serif; background: #0a0c10; color: #c8cdd8; line-height: 1.75; }
+    .nav { padding: 18px 32px; border-bottom: 1px solid rgba(255,255,255,.06); display: flex; align-items: center; gap: 24px; }
+    .nav a { color: #8a93a8; text-decoration: none; font-size: .85rem; letter-spacing: .04em; }
+    .nav a:hover { color: #fff; }
+    .nav-logo { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 1.1rem; color: #fff; letter-spacing: .1em; margin-right: auto; }
+    .wrap { max-width: 760px; margin: 0 auto; padding: 60px 24px 100px; }
+    .post-label { font-size: .7rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: #5b8fff; margin-bottom: 16px; }
+    h1 { font-family: 'Barlow Condensed', sans-serif; font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 700; color: #fff; line-height: 1.15; margin-bottom: 20px; }
+    .post-meta { font-size: .8rem; color: #5a6278; margin-bottom: 40px; border-bottom: 1px solid rgba(255,255,255,.06); padding-bottom: 20px; }
+    .post-meta a { color: #5b8fff; text-decoration: none; }
+    h2 { font-family: 'Barlow Condensed', sans-serif; font-size: 1.5rem; font-weight: 700; color: #e0e4ef; margin: 40px 0 12px; }
+    h3 { font-size: 1.1rem; font-weight: 600; color: #c0c8db; margin: 28px 0 10px; }
+    p { margin-bottom: 18px; font-size: .95rem; color: #9aa0b2; }
+    strong { color: #c8cdd8; }
+    ul, ol { padding-left: 22px; margin-bottom: 18px; }
+    li { font-size: .95rem; color: #9aa0b2; margin-bottom: 6px; }
+    blockquote { border-left: 3px solid #5b8fff; padding: 14px 20px; margin: 28px 0; background: rgba(91,143,255,.06); border-radius: 0 8px 8px 0; }
+    blockquote p { color: #c8cdd8; font-style: italic; margin: 0; }
+    .cta-box { margin-top: 60px; padding: 32px; background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.08); border-radius: 12px; text-align: center; }
+    .cta-box h3 { margin: 0 0 10px; color: #fff; font-size: 1.2rem; }
+    .cta-box p { margin: 0 0 18px; font-size: .9rem; }
+    .btn { display: inline-block; padding: 12px 28px; background: #5b8fff; color: #fff; text-decoration: none; border-radius: 6px; font-weight: 600; font-size: .9rem; letter-spacing: .04em; }
+    .tag { display: inline-block; background: rgba(91,143,255,.12); color: #5b8fff; border-radius: 4px; padding: 3px 10px; font-size: .75rem; font-weight: 600; letter-spacing: .06em; margin: 2px 3px; }
+  </style>
+</head>
+<body>
+
+<nav class="nav">
+  <span class="nav-logo">T · B</span>
+  <a href="https://tonybeal.net/">Home</a>
+  <a href="https://tonybeal.net/#what-i-build">Work</a>
+  <a href="mailto:tbeal@tonybeal.net">Contact</a>
+</nav>
+
+<div class="wrap">
+  <div class="post-label">Revenue Operations · AI Systems · Pipeline Architecture</div>
+  <h1>How I Built a $15M Pipeline Using AI-Powered RevOps Systems</h1>
+  <div class="post-meta">
+    By <a href="https://tonybeal.net/">Tony Beal</a> &nbsp;·&nbsp; April 2026 &nbsp;·&nbsp; Revenue Operations, AI Sales Systems, Pipeline Architecture
+  </div>
+
+  <p>Most pipeline problems aren't prospecting problems. They're systems problems. After 15 years in B2B sales across manufacturing, pharma, and industrial markets — and building a $15M+ pipeline from a standing start — the thing I've learned is that the difference between a rep who hits quota and one who doesn't usually comes down to one thing: <strong>whether their process can run without them thinking about it.</strong></p>
+
+  <p>This is what revenue operations actually is. Not dashboards. Not CRM hygiene lectures. It's the architecture that makes your sales motion systematic, measurable, and repeatable.</p>
+
+  <p>Here's how I built mine.</p>
+
+  <h2>Step 1: Define the Account Universe Before You Touch the CRM</h2>
+  <p>The first mistake most reps and operators make is jumping into CRM setup before defining who they're actually targeting. I started by building what I call the <strong>Account Universe</strong> — a filtered, scored list of every company that could realistically become a customer.</p>
+  <p>For manufacturing and pharma, that meant:</p>
+  <ul>
+    <li>Industry vertical (NAICS code filters)</li>
+    <li>Revenue band ($10M–$500M for mid-market)</li>
+    <li>Employee count as a proxy for org complexity</li>
+    <li>Geographic territory alignment</li>
+    <li>Signal data: hiring patterns, tech stack, recent news</li>
+  </ul>
+  <p>With 3,700+ accounts identified, I had a defined universe. That's not a list — it's a foundation. Every downstream decision flows from it.</p>
+
+  <h2>Step 2: Build a CRM Architecture That Reflects How You Actually Sell</h2>
+  <p>Most CRM implementations fail because they're configured for how a vendor thinks sales works, not how it actually works in the field. I rebuilt from scratch.</p>
+  <p>The core principle: <strong>every account must have a status, a next action, and a date.</strong> If any of those three things is missing, the account is effectively invisible in the pipeline.</p>
+  <p>My stage structure:</p>
+  <ul>
+    <li><strong>Identified</strong> — in universe, not yet touched</li>
+    <li><strong>Signal Detected</strong> — buying trigger observed (hiring, news, tech change)</li>
+    <li><strong>First Touch</strong> — outreach sent, not yet responded</li>
+    <li><strong>Engaged</strong> — response received, conversation started</li>
+    <li><strong>Discovery</strong> — needs identified, qualified</li>
+    <li><strong>Proposal</strong> — solution presented</li>
+    <li><strong>Closed Won / Closed Lost</strong></li>
+  </ul>
+  <p>Simple. But with 3,700 accounts, that simplicity is what makes it manageable.</p>
+
+  <h2>Step 3: Use AI to Solve the Personalization-at-Scale Problem</h2>
+  <p>Here's the central tension in outbound: personalization works, but it doesn't scale. Generic messages scale, but they don't work.</p>
+  <p>I solved this with an AI-powered outreach system built on 40,000+ engineered prompts. The system ingests account data — industry, role, company news, pain signal — and generates account-specific first messages that don't read like templates.</p>
+
+  <blockquote>
+    <p>"The goal isn't to write one great email. It's to build a system that writes a great email for every account, every time, faster than any human could do it manually."</p>
+  </blockquote>
+
+  <p>Practically, that means I can run a 500-account outreach sequence with individualized messaging in the time most reps spend personalizing 10 emails by hand. That's the leverage point.</p>
+
+  <h2>Step 4: Build the Follow-Up Cadence Into the System (Not Your Head)</h2>
+  <p>Most pipeline leaks at follow-up. Not because reps don't know they need to follow up — they do — but because follow-up is stored in their head instead of in the system. When the day gets busy, it gets skipped.</p>
+  <p>My rule: <strong>every touchpoint sets the next touchpoint.</strong> Every email sent auto-creates a follow-up task 5 business days out. Every call completed logs outcome and creates next action before the rep hangs up.</p>
+  <p>The system doesn't let accounts go dark by accident. It requires an active decision to deprioritize — which is a completely different cognitive load than hoping you remember to follow up.</p>
+
+  <h2>Step 5: Measure What Predicts Revenue, Not What's Easy to Count</h2>
+  <p>Activity metrics are a trap. Calls made, emails sent, meetings booked — these are outputs, not leading indicators. What actually predicts whether revenue lands:</p>
+  <ul>
+    <li><strong>Pipeline coverage ratio</strong> — do you have 3–4x your quota in qualified pipeline?</li>
+    <li><strong>Stage velocity</strong> — how long are deals sitting in each stage?</li>
+    <li><strong>Engagement depth</strong> — are conversations moving to phone/email, or staying stuck in LinkedIn?</li>
+    <li><strong>Account coverage</strong> — what percentage of your universe has been touched in the last 90 days?</li>
+  </ul>
+  <p>I track these weekly. They tell me where the pipeline is leaking before it shows up in closed-lost numbers.</p>
+
+  <h2>The Result</h2>
+  <p>$15M+ pipeline. 8 consecutive years on quota. 87% account coverage across manufacturing, pharma, and food &amp; beverage. One operator running what looks like an enterprise-scale outbound program.</p>
+  <p>None of it happened because I worked harder than everyone else. It happened because I built systems that work while I'm not thinking about them.</p>
+  <p>That's RevOps. That's the actual job.</p>
+
+  <div class="cta-box">
+    <h3>Need a System Like This for Your Pipeline?</h3>
+    <p>I'm available for full-time and contract RevOps engagements. Let's talk about what a systematic pipeline looks like for your team.</p>
+    <a href="mailto:tbeal@tonybeal.net?subject=RevOps+Inquiry" class="btn">Start a Conversation →</a>
+  </div>
+
+  <p style="margin-top:48px;font-size:.8rem;color:#3a4155;">
+    <span class="tag">Revenue Operations</span>
+    <span class="tag">AI Sales Systems</span>
+    <span class="tag">Pipeline Architecture</span>
+    <span class="tag">Tony Beal</span>
+    <span class="tag">Manufacturing Sales</span>
+    <span class="tag">CRM Design</span>
+  </p>
+</div>
+
+</body>
+</html>
