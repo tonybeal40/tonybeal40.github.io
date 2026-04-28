@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>How to Build a B2B AI Outreach System That Actually Books Meetings | Tony Beal</title>
+  <meta name="description" content="Tony Beal shares the exact framework he used to build a B2B AI outreach system across 3,700+ accounts in manufacturing and pharma — the ICP, the sequence structure, the AI layer, and what most people get wrong." />
+  <link rel="canonical" href="https://tonybeal.net/blog/b2b-ai-outreach-system.html" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="How to Build a B2B AI Outreach System That Actually Books Meetings | Tony Beal" />
+  <meta property="og:description" content="The exact framework Tony Beal used to run personalized outreach across 3,700+ B2B accounts using AI — ICP, sequence structure, and what most people get wrong." />
+  <meta property="og:url" content="https://tonybeal.net/blog/b2b-ai-outreach-system.html" />
+  <meta property="og:image" content="https://tonybeal.net/assets/tony-headshot-main.webp" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="How to Build a B2B AI Outreach System | Tony Beal" />
+  <meta name="twitter:description" content="How to run personalized B2B outreach at scale using AI — the ICP, the sequence, and what most people get wrong." />
+  <meta name="twitter:image" content="https://tonybeal.net/assets/tony-headshot-main.webp" />
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+  <meta name="author" content="Tony Beal" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "How to Build a B2B AI Outreach System That Actually Books Meetings",
+    "description": "Tony Beal shares the exact framework he used to build a B2B AI outreach system across 3,700+ accounts in manufacturing and pharma — ICP, sequence structure, the AI layer, and what most people get wrong.",
+    "author": {
+      "@type": "Person",
+      "name": "Tony Beal",
+      "url": "https://tonybeal.net/",
+      "@id": "https://tonybeal.net/#tony-beal"
+    },
+    "publisher": { "@type": "Person", "name": "Tony Beal", "url": "https://tonybeal.net/" },
+    "datePublished": "2026-04-28",
+    "dateModified": "2026-04-28",
+    "mainEntityOfPage": "https://tonybeal.net/blog/b2b-ai-outreach-system.html",
+    "url": "https://tonybeal.net/blog/b2b-ai-outreach-system.html",
+    "keywords": "B2B AI outreach system, AI sales outreach, cold email AI, outreach personalization, B2B lead generation, AI sales system, Tony Beal"
+  }
+  </script>
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500&family=Barlow+Condensed:wght@600;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Barlow', sans-serif; background: #0a0c10; color: #c8cdd8; line-height: 1.75; }
+    .nav { padding: 18px 32px; border-bottom: 1px solid rgba(255,255,255,.06); display: flex; align-items: center; gap: 24px; flex-wrap: wrap; }
+    .nav a { color: #8a93a8; text-decoration: none; font-size: .85rem; letter-spacing: .04em; }
+    .nav a:hover { color: #fff; }
+    .nav-logo { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 1.1rem; color: #fff; letter-spacing: .1em; margin-right: auto; text-decoration: none; }
+    .wrap { max-width: 760px; margin: 0 auto; padding: 60px 24px 100px; }
+    .post-label { font-size: .7rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: #5b8fff; margin-bottom: 16px; }
+    h1 { font-family: 'Barlow Condensed', sans-serif; font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 700; color: #fff; line-height: 1.15; margin-bottom: 20px; }
+    .post-meta { font-size: .8rem; color: #5a6278; margin-bottom: 40px; border-bottom: 1px solid rgba(255,255,255,.06); padding-bottom: 20px; }
+    .post-meta a { color: #5b8fff; text-decoration: none; }
+    h2 { font-family: 'Barlow Condensed', sans-serif; font-size: 1.5rem; font-weight: 700; color: #e0e4ef; margin: 40px 0 12px; }
+    h3 { font-size: 1.1rem; font-weight: 600; color: #c0c8db; margin: 28px 0 10px; }
+    p { margin-bottom: 18px; font-size: .95rem; color: #9aa0b2; }
+    strong { color: #c8cdd8; }
+    ul, ol { padding-left: 22px; margin-bottom: 18px; }
+    li { font-size: .95rem; color: #9aa0b2; margin-bottom: 6px; }
+    blockquote { border-left: 3px solid #5b8fff; padding: 14px 20px; margin: 28px 0; background: rgba(91,143,255,.06); border-radius: 0 8px 8px 0; }
+    blockquote p { color: #c8cdd8; font-style: italic; margin: 0; }
+    .cta-box { margin-top: 60px; padding: 32px; background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.08); border-radius: 12px; text-align: center; }
+    .cta-box h3 { margin: 0 0 10px; color: #fff; font-size: 1.2rem; }
+    .cta-box p { margin: 0 0 18px; font-size: .9rem; }
+    .btn { display: inline-block; padding: 12px 28px; background: #5b8fff; color: #fff; text-decoration: none; border-radius: 6px; font-weight: 600; font-size: .9rem; letter-spacing: .04em; }
+    .tag { display: inline-block; background: rgba(91,143,255,.12); color: #5b8fff; border-radius: 4px; padding: 3px 10px; font-size: .75rem; font-weight: 600; letter-spacing: .06em; margin: 2px 3px; }
+    .step-box { background: rgba(255,255,255,.03); border: 1px solid rgba(255,255,255,.07); border-radius: 10px; padding: 20px 24px; margin: 20px 0; }
+    .step-num { font-family: 'Barlow Condensed', sans-serif; font-size: .75rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: #5b8fff; margin-bottom: 6px; }
+    .step-title { font-family: 'Barlow Condensed', sans-serif; font-size: 1.15rem; font-weight: 700; color: #e0e4ef; margin-bottom: 8px; }
+  </style>
+</head>
+<body>
+
+<nav class="nav">
+  <a href="https://tonybeal.net/" class="nav-logo">T · B</a>
+  <a href="https://tonybeal.net/">Home</a>
+  <a href="https://tonybeal.net/thinking.html">Articles</a>
+  <a href="https://tonybeal.net/#work">Work</a>
+  <a href="https://tonybeal.net/#contact">Contact</a>
+</nav>
+
+<div class="wrap">
+  <div class="post-label">AI Sales Systems · B2B Outreach · Prospecting</div>
+  <h1>How to Build a B2B AI Outreach System That Actually Books Meetings</h1>
+  <div class="post-meta">
+    By <a href="https://tonybeal.net/">Tony Beal</a> · April 28, 2026 · 10 min read ·
+    <span class="tag">AI Outreach</span>
+    <span class="tag">B2B Sales</span>
+    <span class="tag">Lead Generation</span>
+  </div>
+
+  <p>Most "AI outreach" advice online is either surface-level fluff ("use ChatGPT to write your emails!") or completely disconnected from what actually happens when you try to run outreach at real scale.</p>
+
+  <p>I ran a B2B outreach program across 3,700+ accounts in manufacturing, pharma, and food and beverage — as one person, without a full SDR team. Here's the actual system, not the theory.</p>
+
+  <h2>First: What We're Building</h2>
+
+  <p>An AI outreach system has five components. Most people build one or two and wonder why it doesn't work. You need all five:</p>
+
+  <ol>
+    <li><strong>A defined ICP</strong> — who you're actually targeting and why</li>
+    <li><strong>A clean account list</strong> — sourced, enriched, and prioritized</li>
+    <li><strong>An AI personalization layer</strong> — what makes each message different</li>
+    <li><strong>A sequence structure</strong> — how many touches, which channels, what cadence</li>
+    <li><strong>A response system</strong> — what happens when someone replies</li>
+  </ol>
+
+  <p>If you skip step 5, you'll generate replies and lose deals because you weren't ready to handle them. I've seen this happen more than once.</p>
+
+  <h2>Step 1: Define Your ICP With Enough Specificity to Actually Target It</h2>
+
+  <p>ICP means Ideal Customer Profile. Most B2B companies have one that's too vague to use: "mid-market companies in the US with 50–500 employees." That's not an ICP. That's a quarter of the economy.</p>
+
+  <p>A usable ICP has:</p>
+
+  <ul>
+    <li><strong>Industry vertical</strong> (not "manufacturing" — "precision contract manufacturers serving pharma and med device")</li>
+    <li><strong>Company size with a proxy signal</strong> (revenue range OR headcount range + a specific indicator like "has a Director of Procurement")</li>
+    <li><strong>Trigger event</strong> — what makes this the right time to reach them? New facility, new leadership, recent funding, supply chain disruption, compliance change.</li>
+    <li><strong>Pain that's already costing them</strong> — not theoretical pain. What are they already losing money on that your solution directly addresses?</li>
+  </ul>
+
+  <p>The more specific your ICP, the better your AI can personalize — because there's something real to reference.</p>
+
+  <h2>Step 2: Build the Account List the Right Way</h2>
+
+  <p>Tools I've used across 3,700+ accounts: LinkedIn Sales Navigator, Apollo.io, Lusha, and ZoomInfo. Each has tradeoffs. For most B2B teams, Apollo.io is the best starting point — it has solid coverage and lets you export contact-level data at a reasonable cost.</p>
+
+  <p>What you want for each account before AI personalization can work:</p>
+
+  <ul>
+    <li>Company name, industry, headcount, revenue estimate</li>
+    <li>Contact name, title, LinkedIn URL</li>
+    <li>One "anchor" — a recent trigger (LinkedIn post, news mention, job posting, technology they use)</li>
+  </ul>
+
+  <p>That anchor is what the AI uses to make the message feel real instead of templated. Without it, you're just mail merge with a ChatGPT veneer.</p>
+
+  <h2>Step 3: Build the AI Personalization Layer</h2>
+
+  <p>Here's where most people go wrong: they ask the AI to "write a personalized cold email" and pass it one or two fields. The output is generic because the input is generic.</p>
+
+  <p>A well-engineered prompt for outreach personalization contains:</p>
+
+  <div class="step-box">
+    <div class="step-num">The prompt structure</div>
+    <div class="step-title">Role + Context + Account Data + Pain + Constraint</div>
+    <p style="margin-top:10px;margin-bottom:0;">You are a B2B sales rep at [Company] who sells [Solution]. You're writing to [Name], [Title] at [Company], which is a [Industry] company with [Headcount] employees. They recently [Trigger Event]. Your goal is to open a conversation about [Pain Point]. Keep the email under 80 words. Do not use phrases like "I hope this finds you well" or "I wanted to reach out."</p>
+  </div>
+
+  <p>That's a real prompt architecture, not a shortcut. The output quality difference between a sloppy prompt and a tight one is enormous.</p>
+
+  <p>I built 40,000+ prompt variations across verticals for this reason. Each industry (pharma vs. food and bev vs. precision mfg) has different language, different compliance concerns, different buyer priorities. Your AI layer has to account for that or the personalization is fake.</p>
+
+  <h2>Step 4: The Sequence Structure</h2>
+
+  <p>My default sequence for B2B cold outreach in complex manufacturing/pharma environments:</p>
+
+  <ol>
+    <li><strong>Day 1 — LinkedIn connection request</strong> (with a short, non-pitchy note)</li>
+    <li><strong>Day 3 — Email #1</strong> (short, relevant, one question — AI personalized from anchor)</li>
+    <li><strong>Day 7 — LinkedIn message</strong> (lighter, reference the email if they didn't respond)</li>
+    <li><strong>Day 14 — Email #2</strong> (different angle, different pain point, still short)</li>
+    <li><strong>Day 21 — Breakup email</strong> (genuinely close the loop — "no hard feelings, leaving you alone after this")</li>
+  </ol>
+
+  <p>Five touches over three weeks. No more than that. B2B buyers in complex industries don't respond to 12-touch sequences — they block you. Five sharp, personalized touches outperform 12 generic ones every time.</p>
+
+  <blockquote>
+    <p>The goal of every touch except the last one is to get a reply. Not a meeting. Just a reply. Meetings come from conversations.</p>
+  </blockquote>
+
+  <h2>Step 5: The Response System</h2>
+
+  <p>This is the part nobody talks about. You will generate replies. Some of them will be "not interested." Some will be "reach me next quarter." Some will be "actually, yeah, tell me more."</p>
+
+  <p>All three need a predefined next action, ideally automated or semi-automated. In my system:</p>
+
+  <ul>
+    <li>"Not interested" → tagged in CRM as no-contact, removed from sequence</li>
+    <li>"Later" → auto-scheduled reactivation sequence in 90 days</li>
+    <li>"Tell me more" → immediate personal reply within 1 hour, Calendly link, moved to active pipeline stage</li>
+  </ul>
+
+  <p>If you don't have this mapped before you launch, warm replies will sit in your inbox for days while you figure out what to do. That's how deals die.</p>
+
+  <h2>What Most People Get Wrong</h2>
+
+  <p><strong>They automate before they've validated the message manually.</strong> Send 20 emails manually first. See what actually gets replies. Then automate the version that works, not the version you think will work.</p>
+
+  <p><strong>They personalize at the surface level.</strong> Referencing someone's company name or job title is not personalization. Referencing a specific challenge their industry is dealing with right now — that's personalization.</p>
+
+  <p><strong>They optimize for volume over quality.</strong> 500 bad emails will get you blocked. 50 great ones will get you 8–10 conversations and 2–3 meetings. The math always favors quality at the ICP-targeting stage.</p>
+
+  <h2>The Bottom Line</h2>
+
+  <p>An AI outreach system is not a magic button. It's infrastructure — and like all infrastructure, it only works as well as the inputs. Garbage ICP, garbage list, garbage prompt = garbage results with AI attached.</p>
+
+  <p>Build the foundation right, and one operator can run an outbound program that used to require a team of five. That's the actual leverage. I've done it. It works.</p>
+
+  <div class="cta-box">
+    <h3>Want This Built for Your Business?</h3>
+    <p>I build B2B AI outreach systems end-to-end — ICP definition, account list architecture, prompt engineering, sequence design, and CRM integration. 15 years in B2B, 3,700+ accounts managed.</p>
+    <a href="https://calendly.com/tonybeal40/30min" target="_blank" rel="noopener" class="btn">Book a 30-Min Call →</a>
+  </div>
+
+</div>
+
+</body>
+</html>
