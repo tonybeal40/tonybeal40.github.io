@@ -1,45 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
   <!-- ===== CORE PAGES ===== -->
-  <url><loc>https://tonybeal.net/</loc><lastmod>2026-04-20</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
-  <url><loc>https://tonybeal.net/resume.html</loc><lastmod>2026-04-20</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-    <url><loc>https://tonybeal.net/private-ai-setup.html</loc><lastmod>2026-04-20</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-    <url><loc>https://tonybeal.net/st-louis.html</loc><lastmod>2026-04-22</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://tonybeal.net/hire.html</loc><lastmod>2026-04-20</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://tonybeal.net/thinking.html</loc><lastmod>2026-04-20</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://tonybeal.net/</loc><lastmod>2026-04-28</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://tonybeal.net/work.html</loc><lastmod>2026-04-28</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://tonybeal.net/hire.html</loc><lastmod>2026-04-28</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://tonybeal.net/thinking.html</loc><lastmod>2026-04-28</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
   <url><loc>https://tonybeal.net/now.html</loc><lastmod>2026-04-20</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://tonybeal.net/press.html</loc><lastmod>2026-04-23</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://tonybeal.net/private-ai-setup.html</loc><lastmod>2026-04-20</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://tonybeal.net/st-louis.html</loc><lastmod>2026-04-22</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
 
-  <!-- ===== PORTFOLIO & PROJECTS ===== -->
-  <url><loc>https://tonybeal.net/email-outreach.html</loc><lastmod>2026-04-20</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://tonybeal.net/allpro-crm.html</loc><lastmod>2026-04-20</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://tonybeal.net/allpro-email-outreach.html</loc><lastmod>2026-04-20</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://tonybeal.net/apollo-meetmeg-system.html</loc><lastmod>2026-04-20</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://tonybeal.net/dcp.html</loc><lastmod>2026-04-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://tonybeal.net/visibility-system.html</loc><lastmod>2026-04-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://tonybeal.net/playbook.html</loc><lastmod>2026-04-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://tonybeal.net/slides.html</loc><lastmod>2026-04-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-
-  <!-- ===== CAREER & JOB SEARCH ===== -->
-  <url><loc>https://tonybeal.net/job-targets.html</loc><lastmod>2026-04-20</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://tonybeal.net/cover-letters.html</loc><lastmod>2026-04-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-
-  <!-- ===== RESUME VARIANTS (root) ===== -->
-  <url><loc>https://tonybeal.net/resume-ai.html</loc><lastmod>2026-04-20</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <!-- ===== RESUME ===== -->
+  <url><loc>https://tonybeal.net/resume.html</loc><lastmod>2026-04-20</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
   <url><loc>https://tonybeal.net/resume-revops.html</loc><lastmod>2026-04-20</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://tonybeal.net/work.html</loc><lastmod>2026-04-20</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://tonybeal.net/resume-revops2.html</loc><lastmod>2026-04-20</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://tonybeal.net/resume-salesops.html</loc><lastmod>2026-04-20</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://tonybeal.net/resume-print.html</loc><lastmod>2026-04-20</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://tonybeal.net/resume-ai.html</loc><lastmod>2026-04-20</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://tonybeal.net/resume-bizdev.html</loc><lastmod>2026-04-20</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://tonybeal.net/resume-marketing.html</loc><lastmod>2026-04-20</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://tonybeal.net/resume-tech.html</loc><lastmod>2026-04-20</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-
-  <!-- ===== RESUME VARIANTS (/resumes/) ===== -->
+  <url><loc>https://tonybeal.net/resume-marketing.html</loc><lastmod>2026-04-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://tonybeal.net/resume-tech.html</loc><lastmod>2026-04-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://tonybeal.net/resumes/</loc><lastmod>2026-04-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://tonybeal.net/resumes/resume-consulting.html</loc><lastmod>2026-04-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://tonybeal.net/resumes/resume-industrial.html</loc><lastmod>2026-04-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://tonybeal.net/resumes/resume-logistics.html</loc><lastmod>2026-04-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://tonybeal.net/resumes/resume-revops.html</loc><lastmod>2026-04-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+
+  <!-- ===== BLOG / ARTICLES ===== -->
+  <url><loc>https://tonybeal.net/blog/ai-revops-pipeline.html</loc><lastmod>2026-04-23</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://tonybeal.net/blog/manufacturing-crm-architecture.html</loc><lastmod>2026-04-23</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://tonybeal.net/blog/ai-outreach-b2b.html</loc><lastmod>2026-04-23</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+
+  <!-- ===== PORTFOLIO & PROJECTS ===== -->
+  <url><loc>https://tonybeal.net/allpro-crm.html</loc><lastmod>2026-04-20</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://tonybeal.net/allpro-email-outreach.html</loc><lastmod>2026-04-20</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://tonybeal.net/apollo-meetmeg-system.html</loc><lastmod>2026-04-20</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://tonybeal.net/visibility-system.html</loc><lastmod>2026-04-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://tonybeal.net/playbook.html</loc><lastmod>2026-04-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+
+  <!-- ===== CAREER ===== -->
+  <url><loc>https://tonybeal.net/job-targets.html</loc><lastmod>2026-04-20</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://tonybeal.net/cover-letters.html</loc><lastmod>2026-04-20</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
 
   <!-- ===== MEETMEG PORTFOLIO ===== -->
   <url><loc>https://tonybeal.net/meetmeg-growth-partner/</loc><lastmod>2026-04-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
@@ -51,25 +50,9 @@
   <url><loc>https://tonybeal.net/meetmeg-growth-partner/execution.html</loc><lastmod>2026-04-20</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://tonybeal.net/meetmeg-growth-partner/outreach.html</loc><lastmod>2026-04-20</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://tonybeal.net/meetmeg-growth-partner/crm-workspace.html</loc><lastmod>2026-04-20</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://tonybeal.net/meetmeg-growth-partner/tonyos-crm.html</loc><lastmod>2026-04-20</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-
-  <!-- ===== VISIBILITY & TOOLS ===== -->
-  <url><loc>https://tonybeal.net/visibility-system/</loc><lastmod>2026-04-20</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://tonybeal.net/apollo-meetmeg-system/</loc><lastmod>2026-04-20</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://tonybeal.net/linkedin-banner.html</loc><lastmod>2026-04-20</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
-  <url><loc>https://tonybeal.net/optout.html</loc><lastmod>2026-04-20</lastmod><changefreq>monthly</changefreq><priority>0.4</priority></url>
-
-  <!-- ===== BLOG POSTS ===== -->
-  <url><loc>https://tonybeal.net/blog/ai-revops-pipeline.html</loc><lastmod>2026-04-23</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://tonybeal.net/blog/manufacturing-crm-architecture.html</loc><lastmod>2026-04-23</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://tonybeal.net/blog/ai-outreach-b2b.html</loc><lastmod>2026-04-23</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-
-  <!-- ===== PRESS ===== -->
-  <url><loc>https://tonybeal.net/press.html</loc><lastmod>2026-04-23</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
 
   <!-- ===== LEGAL ===== -->
   <url><loc>https://tonybeal.net/privacy.html</loc><lastmod>2026-04-20</lastmod><changefreq>monthly</changefreq><priority>0.4</priority></url>
   <url><loc>https://tonybeal.net/terms.html</loc><lastmod>2026-04-20</lastmod><changefreq>monthly</changefreq><priority>0.4</priority></url>
+
 </urlset>
-
-
